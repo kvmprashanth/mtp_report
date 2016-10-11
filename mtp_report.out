@@ -1,14 +1,17 @@
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
 \BOOKMARK [1][-]{section.1.1}{Elastic Resource Provisioning for cloud services}{chapter.1}% 2
-\BOOKMARK [2][-]{subsection.1.1.1}{Provisioning Memory as a Resource for Linux Containers}{section.1.1}% 3
-\BOOKMARK [2][-]{subsection.1.1.2}{Considering the above setup to derivative cloud}{section.1.1}% 4
+\BOOKMARK [2][-]{subsection.1.1.1}{Provisioning Memory as a Resource using Linux Containers}{section.1.1}% 3
+\BOOKMARK [2][-]{subsection.1.1.2}{Amplification of problem in derivative cloud environment}{section.1.1}% 4
 \BOOKMARK [1][-]{section.1.2}{Problem Statement}{chapter.1}% 5
 \BOOKMARK [1][-]{section.1.3}{Outline}{chapter.1}% 6
 \BOOKMARK [0][-]{chapter.2}{Background}{}% 7
-\BOOKMARK [0][-]{chapter.3}{Design of Empherical Evaluation}{}% 8
-\BOOKMARK [1][-]{section.3.1}{Experimental Guidelines}{chapter.3}% 9
-\BOOKMARK [1][-]{section.3.2}{Experimental Configurations}{chapter.3}% 10
-\BOOKMARK [1][-]{section.3.3}{Workloads}{chapter.3}% 11
-\BOOKMARK [2][-]{subsection.3.3.1}{Synthetic Workloads}{section.3.3}% 12
-\BOOKMARK [2][-]{subsection.3.3.2}{Real Workloads}{section.3.3}% 13
-\BOOKMARK [2][-]{subsection.3.3.3}{YCSB Benchmark}{section.3.3}% 14
+\BOOKMARK [1][-]{section.2.1}{Containers}{chapter.2}% 8
+\BOOKMARK [2][-]{subsection.2.1.1}{Control groups}{section.2.1}% 9
+\BOOKMARK [1][-]{section.2.2}{Memory Management between processes in Linux}{chapter.2}% 10
+\BOOKMARK [0][-]{chapter.3}{Design of Empherical Evaluation}{}% 11
+\BOOKMARK [1][-]{section.3.1}{Experimental Guidelines}{chapter.3}% 12
+\BOOKMARK [1][-]{section.3.2}{Experimental Configurations}{chapter.3}% 13
+\BOOKMARK [1][-]{section.3.3}{Workloads}{chapter.3}% 14
+\BOOKMARK [2][-]{subsection.3.3.1}{Synthetic Workloads}{section.3.3}% 15
+\BOOKMARK [2][-]{subsection.3.3.2}{Real Workloads}{section.3.3}% 16
+\BOOKMARK [2][-]{subsection.3.3.3}{YCSB Benchmark}{section.3.3}% 17

@@ -2,6 +2,13 @@
   author = {Joe McKendrick},
   title = {Forbes Bussiness Magzine: Is All-Cloud Computing Inevitable? Analysts Suggest It Is},
   year = 2016,
+  urldate = {2016-10-09}
+}
+
+@online{forbes,
+  author = {Joe McKendrick},
+  title = {Forbes Bussiness Magzine: Is All-Cloud Computing Inevitable? Analysts Suggest It Is},
+  year = 2016,
   note={\url{http://www.forbes.com/sites/joemckendrick/2016/07/05/is-all-cloud-computing-inevitable-analysts-suggest-it-is}},
   urldate = {2016-10-09}
 }
@@ -98,3 +105,83 @@ International Symposium On},
   pages={88--96},
   year={2013}
 }
+
+@online{docker,
+  author = {Docker Inc.},
+  title = {Docker Offical Documentation},
+  year = 2016,
+  note={\url{https://docs.docker.com/}},
+  urldate = {2016-10-10}
+}
+
+@online{lxd,
+  title = {Linux Container Hypervisor},
+  year = 2016,
+  note={\url{https://linuxcontainers.org/lxd/}},
+  urldate = {2016-10-10}
+}
+
+@article{kolyshkin2006virtualization,
+  title={Virtualization in linux},
+  author={Kolyshkin, Kirill},
+  journal={White paper, OpenVZ},
+  volume={3},
+  pages={39},
+  year={2006}
+}
+
+
+@inproceedings{sharma2015spotcheck,
+  title={Spotcheck: Designing a derivative iaas cloud on the spot market},
+  author={Sharma, Prateek and Lee, Stephen and Guo, Tian and Irwin, David and Shenoy, Prashant},
+  booktitle={Proceedings of the Tenth European Conference on Computer Systems},
+  pages={16},
+  year={2015},
+  organization={ACM}
+}
+
+@online{picloud,
+  title = {PiCloud},
+  note={\url{http://www.multyvac.com}},
+  urldate = {2016-10-09}
+}
+
+@online{heroku,
+  title = {Heroku},
+  note={\url{http://www.heroku.com}},
+  urldate = {2016-10-09}
+}
+
+@online{stress,
+  title = {Stress Workload Generator},
+  note={\url{http://people.seas.harvard.edu/~apw/stress/}},
+  urldate = {2016-10-09}
+}
+
+@online{mongodb,
+  title = {MongoDB},
+  note={\url{https://docs.mongodb.com/v3.2/}},
+  urldate = {2016-10-09}
+}
+
+@online{redis,
+  title = {Redis In-Memory key-value store},
+  note={\url{http://redis.io/}},
+  urldate = {2016-10-09}
+}
+
+@inproceedings{cooper2010benchmarking,
+  title={Benchmarking cloud serving systems with YCSB},
+  author={Cooper, Brian F and Silberstein, Adam and Tam, Erwin and Ramakrishnan, Raghu and Sears, Russell},
+  booktitle={Proceedings of the 1st ACM symposium on Cloud computing},
+  pages={143--154},
+  year={2010},
+  organization={ACM}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

@@ -1,0 +1,8 @@
+set term png size 600, 500
+set output "../redis.png"
+set title 'Plot between Time - Application Throughput for Redis'
+set xlabel 'Time (s)'
+set ylabel 'Throughput (op/s)'
+
+plot '../app_met.dat' using 1:4 with linespoints t 'Redis-Low' lt rgb "blue" , \
+	 '../app_met.dat' using 1:5 with linespoints t 'Redis-High' lt rgb "#ff00ff" 

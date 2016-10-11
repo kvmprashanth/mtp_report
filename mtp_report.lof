@@ -1,4 +1,9 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces A depiction of a derivative IaaS cloud platform, Source:\cite {sharma2015spotcheck}\relax }}{2}{figure.caption.4}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces A depiction of a derivative IaaS cloud platform, Source:\cite {slideshare}\relax }}{7}{figure.caption.9}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Control groups illustration using 3 controllers, Source:\cite {manual}\relax }}{8}{figure.caption.10}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Mapping of pages to LRU lists\relax }}{11}{figure.caption.16}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Kernel Function Call Trace for System-Wide Reclamation\relax }}{12}{figure.caption.17}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Existing policy for Memory Reclamation\relax }}{13}{figure.caption.18}
 \addvspace {10\p@ }

@@ -55,7 +55,7 @@ provided in the coming chapters.
 
     \begin{figure}
       \centering
-      \includegraphics[width=0.8\textwidth]{images/derivative_cloud.png}
+      \includegraphics[width=0.7\textwidth]{images/derivative_cloud.png}
       \caption{A depiction of a derivative IaaS cloud platform, Source:\cite{sharma2015spotcheck}}
       \label{img_derivative_cloud}
     \end{figure}
@@ -72,7 +72,7 @@ systems running on a Linux kernel. Our entire work would focus on elastic provis
 extend its implications to the derivative setup. However at this stage, we focus on elastic provisioning of memory as a resource. We aspire 
 to look into other resources as a part of our future work.
    
-    \subsection{Provisioning Memory as a Resource for Linux Containers}
+    \subsection{Provisioning Memory as a Resource using Linux Containers}
   
       Memory as a resource has gained popularity recently with emergence of more memory intensive applications in various fields of 
 computing like data analytics, caching that have a very strong correlation with application performance that is dependent on the memory 
@@ -152,8 +152,8 @@ which free memory in the system gradually reduces by generating of memory pressu
 	\begin{itemize}
 	  \setlist{nosep,after=\vspace{\baselineskip}}
 	  \item Case-1: Running applications natively in a system with 1:2 memory assignments and no pressure 
-	  \item Case-2: Observed throughputs after provisioning with existing knobs with pressure
-	  \item Case-3: Desired throughputs with pressure
+	  \item Case-2: Observed throughputs after provisioning with existing knobs under pressure
+	  \item Case-3: Desired throughputs under pressure
 	\end{itemize}
 	
 	Fig:\ref{plot_intro_native} shows the simple case where both the containers achieve desired throughputs when running on a system 
@@ -167,7 +167,7 @@ better if not same as shown in Fig:\ref{plot_intro_desired} considering its high
 	\begin{table}
 	  \begin{center}
 	    \begin{tabular}{ l | c | c | c }	      	    
-		  & Without Pressure & Observed & Desired \\ 
+		  & No Pressure & Observed & Desired \\ 
 	      \hline
 	      \hline
 	      Mongo-Low  & 1825 & 1268 & 1255$-$ \\  
@@ -190,7 +190,7 @@ example here, we can conclude by saying that
 were promised higher QOS) than those which aren't.
 	\end{enumerate}
     
-    \subsection{Considering the above setup to derivative cloud}
+    \subsection{Amplification of problem in derivative cloud environment}
     
       Considering the above described setup to derivative cloud where the native cloud provider is using VMs to provision customer demands. 
 This VM acquired from the native cloud provider is again repacked and resold by the derivative cloud provider to specific customers. In 
@@ -231,6 +231,6 @@ questions. Once this has been established, we could move to purposing a solution
   
     This report is organized as follows, Chapter 2 provides the background required to read and understand the rest of the report, Chapter 
 3 presents the design of the empirical evaluation, and Chapter 4 presents preliminary results.  Chapter 5 provides key insights to the 
-newly required design. Chapter 6 concludes with the future work.
+desired system design. Chapter 6 concludes with the future work.
 
   

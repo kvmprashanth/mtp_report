@@ -1,0 +1,139 @@
+
+\chapter{Background}
+
+  \section{Containers}
+  
+    Container in simple terms can be defined as, 
+  
+    \begin{center}
+      \textbf{``Container is a process or set of processes grouped together along \\ with its dependent resources into a single logical OS 
+entity. \\It enables multiple isolated user-space instances on a host machine.''} 
+    \end{center}
+    
+    Containers \cite{manual} are built as an extension to the existing operating system and not as an independent system. Container 
+provides virtualization of isolated user spaces at an OS-level and hence containers executing on a host machine reuse the functionalities of 
+the host kernel. This makes it better by reducing redudant kernel pages as used in VMs but comes at the cost of containers only of host OS 
+type to execute on a system.
+
+     \begin{figure}
+      \centering
+      \includegraphics[width=0.5\textwidth]{images/vm_vs_container.jpg}
+      \caption{A depiction of a derivative IaaS cloud platform, Source:\cite{slideshare}}
+      \label{img_difference}
+    \end{figure}
+
+A high level difference between a VM and containers can be seen in Fig:\ref{img_difference}. The biggest advantage of using containers over 
+virtual machines is that they provide much lesser performance overheads. Containers are usally managed by container managers, which are 
+entities similar to how Hypervisors are to VMs. Container managers are shipped by different organizations like Docker \cite{docker}, LXD 
+\cite{lxd}, OpenVZ \cite{kolyshkin2006virtualization} etc. All container managers makes use of 3 linux kernel components and combine 
+them to form the building structure. The deploy their own controllers on top of this. 
+    
+    \begin{enumerate}
+      \item Control Groups: Used for resource accounting and control
+      \item Namespaces: Resource isolation among resources provisioned to different users on the same system
+      \item Disk Images: The disk image which provides the ROOTFS for a container to execute. It contains the distribution related 
+packages, libraries, and application programs.
+    \end{enumerate}
+    
+    For the pupose of this discussion, we would focus on control cgroups (cgroups) as this provides the mechanism to control resources 
+which includes performing memory management.
+
+    
+    \subsection{Control groups}
+      
+      \begin{figure}
+	\centering
+	\includegraphics[width=1\textwidth]{images/cgroups.png}
+	\caption{Control groups illustration using 3 controllers, Source:\cite{manual}}
+	\label{img_cgroup}
+      \end{figure}
+      
+      A solution to process group control and accounting was proposed by Google in 2007 which was originally called Generic Process 
+Containers \cite{menage2007adding} and was later renamed to Control Groups (cgroups), to avoid confusion with the term Containers. A 
+cgroup/subsystem refers to a resource controller for a certain type of CPU resource. Eg- Memory cgroup, Network cgroup etc. It is derives 
+ideas and extends the process-tracking design used for cpusets system present in the Linux kernel. There are 12 different 
+cgroups/subsystems, one for each resource type classified.
+
+      For the purpose of our discussion we will stick to subsystem as the terminology referring to individual resource control and cgroup 
+to refer a cgroup node in hierarchy. The Linux kernel by default enables most subsystems. The overheads introduced by cgroups are 
+negligible. Most subsystems follow their own hierarchy for their individual resource. The Linux exposes Pseudo file systems as userspace 
+APIs to interact with them.
+
+      Fig:\ref{img_cgroup} illustrates a minimalistic outline of a cgroups hierarchy with 3 subsystems mounted in a system onto their own 
+  hierarchies. The three subsystem mounted are - memory, cpuset and blkio and are mounted at \texttt{/sys/fs/cgroups/}. Memory root cgroup 
+of   8GB is divided into two cgroups M1 and M2 of 4GB each. cpuset root cgroup of 4CPUs is divided into two cgroups C1 and C2 of 3CPUs and 
+1CPU   respectively. blkio root cgroup of is divided into two cgroups B1 and B2 of 1000 and 500 as relative weights respectively. Every 
+process   which attaches itself to the same set of subsystems are referred by a single \texttt{css\_set} which in turn points to the 
+cgroup node the   process is attached to. In the Fig, processes 1,2 attach itself to the blue \texttt{css\_set} and 3,4,5 to the red one. 
+The \texttt{css\_set} in turn has pointers to \texttt{container\_subsys\_state} that is one for each cgroup. Notice how the blue 
+\texttt{css\_set} points to the   root cpuset cgroup there by assigning it all the CPUs in the system which is also a valid and 
+default value to attach processes.
+      
+      \subsubsection{Memory subsystem}
+	
+	Memory subsystem use a common data structure and support library for tracking usage and imposing limits using the "resource 
+counter". Resource controller is an existing Linux implementation for tracking resource usage. Memory cgroup subsystem allocates three 
+\texttt{res\_counters}. The three of them are described below.
+
+      \textbf{i. Accounting:} Accounting memory for each process group. Keeps track of pages used by each group. Pages can be classified 
+into four types. 
+      \begin{itemize}
+	\item Anonymous: Stack, heap etc.
+	\item Active: Recently used pages
+	\item Inactive: Pages read for eviction
+	\item File: Reads/Writes/mmap from block devices
+      \end{itemize}
+	
+      \textbf{ii. Limits:} Limits can be set on each cgroups. Limits are of two types - soft and hard. Soft limit is the limit up to which 
+the system guarantees availability. Hard limit is the limit up to which the system tries to accommodate, but cannot guaranty this if 
+system is under memory pressure. Limits can be set in terms of byte for,
+      \begin{itemize}
+	\item Physical memory
+	\item Kernel memory
+	\item Total memory (Physical + Swap)
+      \end{itemize}
+
+      \textbf{iii. OOM:} Out Of Memory killers are used to kill processes or trigger any other such event on reaching hard limit by a 
+process group. 
+
+	More about memory management using memory subsystem in the Linux kernel shall be described in the coming section.
+      
+  
+  \section{Memory Management between processes in Linux}
+  
+    Memory is allocated/deallocated in terms of pages in any operating system. Memory management in Linux is done using techniques like 
+virtual memory, demand paging, swapping caching etc. They separate between the memory needed by a process and the memory physically 
+allocated on the RAM. The OS creates a large virtual address space for each process. In this section we focus on how memory is managed 
+between processes or a group of processes. We mainly focus on how memory is assigned and reclaimed between them.  
+  
+    \subsubsection{Memory Pages used by a process}
+      Memory used by processes are divided into 2 types of pages
+	
+      \begin{enumerate}	
+	\item Anonymous Pages: Pages those which are not associated with any files on disk. They are process memory pages.
+	\item Page cache pages: Are an in-memory representation of a part files on the disks.	
+      \end{enumerate}
+
+  
+    \subsubsection{Memory Allocation}
+      When the process needs memory to be allocated, Linux decides the how this memory is going to be allocated physically on the RAM. The 
+process/ application does not see in physical RAM addresses. It only sees virtual addresses from the virtual space assigned to each process.
+The OS uses a page file located on the disk to assist with memory requests in addition to the RAM. Less RAM means more pressure on the Page 
+file. When the OS tries to find a piece of memory that's not in the RAM, it will try to find in the page file, and in this case they call it 
+a page miss. The actual physical memory allocated (RSS) to a process depends on how much free memory is available in the system. On free 
+memory becoming freshly available in the system, the OS tries to equally distribute the available memory to processes that are demanding 
+more memory.
+
+    \subsubsection{Memory Reclamation}
+      When the system memory starts to get tight, the kernel can free memory by cleaning up its own internal data structures - reducing the 
+size of the inode and dentry caches however most pages in the system are user process pages. Hence the kernel, in order to accommodate 
+current demands for user pages, must find some existing pages to toss out. A proper balance between anonymous and page cache pages must be 
+maintained for the system to perform well. Kernel offers a knob called swappiness, that specifies how much favor anonymous versus page 
+cache pages while reclamation. The default value for swappiness favors the eviction of page cache pages. 
+      
+      The system maintains two LRU lists commonly referred as LRU/2, one active list containing all the pages that were recently used and 
+another inactive list which contains all the pages that weren't used recently. One pair (active and inactive) for anonymous pages and one 
+pair for page cache pages. The kernel favors reclamation from page cache pages over anonymous pages and inactive pages over active pages 
+and iterates these lists to satisfy reclamation requests.
+    
+    \subsubsection{Support for containers}

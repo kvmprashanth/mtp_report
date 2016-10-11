@@ -55,7 +55,7 @@ provided in the coming chapters.
 
     \begin{figure}
       \centering
-      \includegraphics[width=0.8\textwidth]{images/derivative_cloud.png}
+      \includegraphics[width=0.7\textwidth]{images/derivative_cloud.png}
       \caption{A depiction of a derivative IaaS cloud platform, Source:\cite{sharma2015spotcheck}}
       \label{img_derivative_cloud}
     \end{figure}
@@ -146,48 +146,49 @@ relative priorities of each of the containers.
 	  \end{subfigure}
 	\end{figure*}
 	
-	Consider 3 cases as described below. In cases 2 and 3 containers are allowed to run normally for about 100s and there after 
-which free memory in the system gradually reduces due to generation of memory pressure by an external entity. 
+	Consider 3 cases as described below. In cases 2 and 3, containers are allowed to run normally for about 100s and there after 
+which free memory in the system gradually reduces by generating of memory pressure by an external entity. 
 	
 	\begin{itemize}
 	  \setlist{nosep,after=\vspace{\baselineskip}}
 	  \item Case-1: Running applications natively in a system with 1:2 memory assignments and no pressure 
-	  \item Case-2: Observed throughputs after provisioning with existing knobs with pressure
-	  \item Case-3: Desired throughputs with pressure
+	  \item Case-2: Observed throughputs after provisioning with existing knobs under pressure
+	  \item Case-3: Desired throughputs under pressure
 	\end{itemize}
 	
-	Fig:\ref{plot_intro_no_pressure} shows the simple case where both the containers achieve desired throughputs. The containers 
-start execution with no memory pressure and hence are able to each equal throughputs initially in all 4 cases. In observed throughputs 
-under pressure Fig:\ref{plot_intro_above_sl}, Fig:\ref{plot_intro_below_sl} we observe that throughputs of Mongo-High (Container 
-with higher priority) is negatively affected at some point or the other, when in reality its throughput had to be better if not same as 
-shown in Fig:\ref{plot_intro_expected} considering its higher resource allocations. 
+	Fig:\ref{plot_intro_native} shows the simple case where both the containers achieve desired throughputs when running on a system 
+with no container specific provisioning. The containers start execution with no memory pressure and hence are able to each equal 
+throughputs initially in all 3 cases. In observed throughputs under pressure Fig:\ref{plot_intro_observed}, we observe that throughputs of 
+Mongo-High (Container with higher priority) is negatively affected at some point or the other, when in reality its throughput had to be 
+better if not same as shown in Fig:\ref{plot_intro_desired} considering its higher resource allocations. 
 	
 	\pagebreak
 
 	\begin{table}
 	  \begin{center}
-	    \begin{tabular}{ l | p{3cm} | p{2.2cm} | p{2.2cm} | p{2.2cm} }	      	    
-		  & Without Pressure & Observed Type-1 & Observed Type-2 & Desired Throughput \\ 
+	    \begin{tabular}{ l | c | c | c }	      	    
+		  & No Pressure & Observed & Desired \\ 
 	      \hline
 	      \hline
-	      Mongo-Low  & 1612 op/s & 1108 op/s & 1254 op/s & 1270 op/s \\  
+	      Mongo-Low  & 1825 & 1268 & 1255$-$ \\  
 	      \hline
-	      Mongo-High & 1598 op/s & 804 op/s & 1289 op/s & 1270 op/s \\
+	      Mongo-High & 1972 & 1242 & 1255$+$ \\
 		
 	    \end{tabular}
-	  \caption{Average throughput in each case}
+	  \caption{Average throughput in each case (op/s)}
 	  \label{table_intro_th}
 	  \end{center}	  
 	\end{table}
 	
-	Table:\ref{table_intro_th} shows how average throughputs vary in each case. It can be seen that the average throughput in case-3 
-almost matches with the desired throughput however, it has to be taken into consideration of high variance in throughput throughout its 
-execution and that this matching of throughput is merely a coincidence in this case. 
-
-	By looking at the example here, we can conclude by saying that memory allocations work well with container framework where there 
-doesn't exist any \textbf{memory pressure along with overcommitment}. However when the two are involved which is a common scenario at cloud 
-servers, \textbf{memory reclamation may adversely affects containers which are better provisioned} (since they were promised higher QOS) 
-than those which aren't.
+	Table:\ref{table_intro_th} shows how average throughputs vary in each case. It can be seen that the average throughput in case-2 
+which is the provisioning of containers using existing knobs may negatively impact containers with higher allocations. By looking at the 
+example here, we can conclude by saying that 
+	
+	\begin{enumerate}
+	  \item Memory allocations work well with containers where there doesn't exist any memory overcommitment and pressure
+	  \item However when the two occur, memory reclamation may adversely affects containers which are better provisioned (since they 
+were promised higher QOS) than those which aren't.
+	\end{enumerate}
     
     \subsection{Considering the above setup to derivative cloud}
     
@@ -203,7 +204,9 @@ this case, this situation further complicated due to two reasons,
       In the native case, memory overcommitment was a required condition for the previously described situation to arise. Conisder the case 
 where all containers were assigned memory considering the available system memory in such a way that there is no overcommitment, however 
 now the native cloud provider (host system) could reduce the memory available to the system using different memory reclamation policies at 
-the host. This reclamation could be trigger by a host driver like the \textit{Balloon Driver} that is widely used by the \textit{Hypervisor} 
+the host. 
+
+      The reclamation could be trigger by a host driver like the \textit{Balloon Driver} that is widely used by the \textit{Hypervisor} 
 (Entity that manages VMs) by cloud providers. This leads to further discrepancies in the memory management at the container level. 
   
   \pagebreak

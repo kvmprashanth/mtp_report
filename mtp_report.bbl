@@ -5,6 +5,16 @@ P.~Sharma, S.~Lee, T.~Guo, D.~Irwin, and P.~Shenoy, ``Spotcheck: Designing a
   derivative iaas cloud on the spot market,'' in {\em Proceedings of the Tenth
   European Conference on Computer Systems}, p.~16, ACM, 2015.
 
+\bibitem{slideshare}
+R.~Davies, ``Linux containers: the future of iaas,'' 2016.
+\newblock
+  \url{http://www.slideshare.net/InternetWorld2014/19th-1400-elastic-hosts-richard-davies}.
+
+\bibitem{manual}
+``Getting your hands dirty with containers.''
+\newblock
+  \url{https://www.cse.iitb.ac.in/~prashanth/containers/seminar/manual.pdf}.
+
 \bibitem{forbes}
 J.~McKendrick, ``Forbes bussiness magzine: Is all-cloud computing inevitable?
   analysts suggest it is,'' 2016.
@@ -70,6 +80,22 @@ M.~S. Rathore, M.~Hidell, and P.~Sj{\"o}din, ``Kvm vs. lxc: comparing
 \bibitem{heroku}
 ``Heroku.''
 \newblock \url{http://www.heroku.com}.
+
+\bibitem{docker}
+D.~Inc., ``Docker offical documentation,'' 2016.
+\newblock \url{https://docs.docker.com/}.
+
+\bibitem{lxd}
+``Linux container hypervisor,'' 2016.
+\newblock \url{https://linuxcontainers.org/lxd/}.
+
+\bibitem{kolyshkin2006virtualization}
+K.~Kolyshkin, ``Virtualization in linux,'' {\em White paper, OpenVZ}, vol.~3,
+  p.~39, 2006.
+
+\bibitem{menage2007adding}
+P.~B. Menage, ``Adding generic process containers to the linux kernel,'' in
+  {\em Proceedings of the Linux Symposium}, vol.~2, pp.~45--57, Citeseer, 2007.
 
 \bibitem{stress}
 ``Stress workload generator.''
