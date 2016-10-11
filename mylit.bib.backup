@@ -1,0 +1,100 @@
+@online{forbes,
+  author = {Joe McKendrick},
+  title = {Forbes Bussiness Magzine: Is All-Cloud Computing Inevitable? Analysts Suggest It Is},
+  year = 2016,
+  note={\url{http://www.forbes.com/sites/joemckendrick/2016/07/05/is-all-cloud-computing-inevitable-analysts-suggest-it-is}},
+  urldate = {2016-10-09}
+}
+
+@inproceedings{dornemann2009demand,
+  title={On-demand resource provisioning for BPEL workflows using Amazon's elastic compute cloud},
+  author={D{\"o}rnemann, Tim and Juhnke, Ernst and Freisleben, Bernd},
+  booktitle={Cluster Computing and the Grid, 2009. CCGRID'09. 9th IEEE/ACM International Symposium on},
+  pages={140--147},
+  year={2009},
+  organization={IEEE}
+}
+
+@inproceedings{shen2011cloudscale,
+  title={Cloudscale: elastic resource scaling for multi-tenant cloud systems},
+  author={Shen, Zhiming and Subbiah, Sethuraman and Gu, Xiaohui and Wilkes, John},
+  booktitle={Proceedings of the 2nd ACM Symposium on Cloud Computing},
+  pages={5},
+  year={2011},
+  organization={ACM}
+}
+
+@inproceedings{moreno2009elastic,
+  title={Elastic management of cluster-based services in the cloud},
+  author={Moreno-Vozmediano, Rafael and Montero, Ruben S and Llorente, Ignacio M},
+  booktitle={Proceedings of the 1st workshop on Automated control for datacenters and clouds},
+  pages={19--24},
+  year={2009},
+  organization={ACM}
+}
+
+@article{calheiros2012aneka,
+  title={The Aneka platform and QoS-driven resource provisioning for elastic applications on hybrid Clouds},
+  author={Calheiros, Rodrigo N and Vecchiola, Christian and Karunamoorthy, Dileban and Buyya, Rajkumar},
+  journal={Future Generation Computer Systems},
+  volume={28},
+  number={6},
+  pages={861--870},
+  year={2012},
+  publisher={Elsevier}
+}
+
+@online{amazonec2,
+  title = {Amazon Elastic Compute Cloud},
+  note={\url{https://aws.amazon.com/ec2/}},
+  urldate = {2016-10-09}
+}
+
+@inproceedings{felter2015updated,
+  title={An updated performance comparison of virtual machines and linux containers},
+  author={Felter, Wes and Ferreira, Alexandre and Rajamony, Ram and Rubio, 
+Juan},
+  booktitle={Performance Analysis of Systems and Software (ISPASS), 2015 IEEE 
+International Symposium On},
+  pages={171--172},
+  year={2015},
+  organization={IEEE}
+}
+
+@inproceedings{morabito2015hypervisors,
+  title={Hypervisors vs. Lightweight Virtualization: a Performance Comparison},
+  author={Morabito, Roberto and Kjallman, Jimmy and Komu, Miika},
+  booktitle={Cloud Engineering (IC2E), 2015 IEEE International Conference on},
+  pages={386--393},
+  year={2015},
+  organization={IEEE}
+}
+
+@inproceedings{agarwal2015containing,
+  title={Containing the hype},
+  author={Agarwal, Kavita and Jain, Bhushan and Porter, Donald E},
+  booktitle={Proceedings of the 6th Asia-Pacific Workshop on Systems},
+  pages={8},
+  year={2015},
+  organization={ACM}
+}
+
+
+@inproceedings{beserra2015performance,
+  title={Performance Analysis of LXC for HPC Environments},
+  author={Beserra, David and Moreno, Edward David and Takako Endo, Patricia and Barreto, Jymmy and Sadok, Djamel and Fernandes, St{\^e}nio},
+  booktitle={Complex, Intelligent, and Software Intensive Systems (CISIS), 2015 Ninth International Conference on},
+  pages={358--363},
+  year={2015},
+  organization={IEEE}
+}
+
+@article{rathore2013kvm,
+  title={KVM vs. LXC: comparing performance and isolation of hardware-assisted virtual routers},
+  author={Rathore, Muhammad Siraj and Hidell, Markus and Sj{\"o}din, Peter},
+  journal={American Journal of Networks and Communications},
+  volume={2},
+  number={4},
+  pages={88--96},
+  year={2013}
+}

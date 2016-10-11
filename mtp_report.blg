@@ -1,0 +1,68 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: mtp_report.aux
+A level-1 auxiliary file: intro/introduction.aux
+A level-1 auxiliary file: background/background.aux
+A level-1 auxiliary file: design/design.aux
+The style file: ieeetr.bst
+Database file #1: mylit.bib
+Warning--entry type for "forbes" isn't style-file defined
+--line 1 of file mylit.bib
+Repeated entry---line 8 of file mylit.bib
+ : @online{forbes
+ :               ,
+I'm skipping whatever remains of this entry
+Warning--entry type for "amazonec2" isn't style-file defined
+--line 54 of file mylit.bib
+Warning--entry type for "picloud" isn't style-file defined
+--line 118 of file mylit.bib
+Warning--entry type for "heroku" isn't style-file defined
+--line 124 of file mylit.bib
+Warning--entry type for "stress" isn't style-file defined
+--line 130 of file mylit.bib
+Warning--entry type for "mongodb" isn't style-file defined
+--line 136 of file mylit.bib
+Warning--entry type for "redis" isn't style-file defined
+--line 142 of file mylit.bib
+You've used 18 entries,
+            1876 wiz_defined-function locations,
+            567 strings with 6578 characters,
+and the built_in function-call counts, 4407 in all, are:
+= -- 424
+> -- 161
+< -- 0
++ -- 62
+- -- 44
+* -- 278
+:= -- 570
+add.period$ -- 18
+call.type$ -- 18
+change.case$ -- 18
+chr.to.int$ -- 0
+cite$ -- 18
+duplicate$ -- 231
+empty$ -- 482
+format.name$ -- 44
+if$ -- 1114
+int.to.chr$ -- 0
+int.to.str$ -- 18
+missing$ -- 11
+newline$ -- 63
+num.names$ -- 12
+pop$ -- 120
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 151
+stack$ -- 0
+substring$ -- 248
+swap$ -- 79
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 39
+width$ -- 20
+write$ -- 163
+(There was 1 error message)

@@ -1,0 +1,57 @@
+java -cp /home/prashanth/Workspace/mem_reclamation/experiments/ycsb/redis-binding/conf:/home/prashanth/Workspace/mem_reclamation/experiments/ycsb/conf:/home/prashanth/Workspace/mem_reclamation/experiments/ycsb/lib/htrace-core4-4.1.0-incubating.jar:/home/prashanth/Workspace/mem_reclamation/experiments/ycsb/lib/core-0.11.0.jar:/home/prashanth/Workspace/mem_reclamation/experiments/ycsb/lib/jackson-core-asl-1.9.4.jar:/home/prashanth/Workspace/mem_reclamation/experiments/ycsb/lib/jackson-mapper-asl-1.9.4.jar:/home/prashanth/Workspace/mem_reclamation/experiments/ycsb/lib/HdrHistogram-2.1.4.jar:/home/prashanth/Workspace/mem_reclamation/experiments/ycsb/redis-binding/lib/commons-pool-1.5.5.jar:/home/prashanth/Workspace/mem_reclamation/experiments/ycsb/redis-binding/lib/redis-binding-0.11.0.jar:/home/prashanth/Workspace/mem_reclamation/experiments/ycsb/redis-binding/lib/jedis-2.0.0.jar com.yahoo.ycsb.Client -db com.yahoo.ycsb.db.RedisClient -s -P ycsb/workloads/workloada -p redis.host=127.0.0.1 -p redis.port=3001 -t
+YCSB Client 0.11.0
+Command line: -db com.yahoo.ycsb.db.RedisClient -s -P ycsb/workloads/workloada -p redis.host=127.0.0.1 -p redis.port=3001 -t
+Loading workload...
+Starting test.
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+2016-10-02 06:13:05:178 0 sec: 1 operations; ∞ current ops/sec; est completion in 0 seconds [UPDATE: Count=1, Max=14023, Min=14016, Avg=14020, 90=14023, 99=14023, 99.9=14023, 99.99=14023] 
+2016-10-02 06:13:15:082 10 sec: 5240 operations; 523.85 current ops/sec; est completion in 15 minutes [READ: Count=2644, Max=691199, Min=257, Avg=1914.33, 90=3349, 99=12295, 99.9=27231, 99.99=691199] [UPDATE: Count=2596, Max=51903, Min=249, Avg=1713.71, 90=3195, 99=12455, 99.9=33151, 99.99=51903] 
+2016-10-02 06:13:25:082 20 sec: 10674 operations; 543.4 current ops/sec; est completion in 15 minutes [READ: Count=2695, Max=56671, Min=207, Avg=1887.67, 90=3821, 99=14215, 99.9=39935, 99.99=56671] [UPDATE: Count=2739, Max=89407, Min=197, Avg=1700.57, 90=3213, 99=11831, 99.9=22319, 99.99=89407] 
+2016-10-02 06:13:35:083 30 sec: 16424 operations; 575 current ops/sec; est completion in 14 minutes [READ: Count=2819, Max=36127, Min=205, Avg=1721.69, 90=3397, 99=12527, 99.9=21615, 99.99=36127] [UPDATE: Count=2934, Max=34399, Min=189, Avg=1697.07, 90=3049, 99=14191, 99.9=26143, 99.99=34399] 
+2016-10-02 06:13:45:082 40 sec: 21990 operations; 556.6 current ops/sec; est completion in 14 minutes [READ: Count=2807, Max=43487, Min=216, Avg=1761.1, 90=3363, 99=10991, 99.9=22287, 99.99=43487] [UPDATE: Count=2756, Max=145151, Min=185, Avg=1781.91, 90=3315, 99=13063, 99.9=24175, 99.99=145151] 
+2016-10-02 06:13:55:082 50 sec: 26481 operations; 449.1 current ops/sec; est completion in 14 minutes [READ: Count=2275, Max=74303, Min=217, Avg=2393.02, 90=4951, 99=20543, 99.9=36927, 99.99=74303] [UPDATE: Count=2215, Max=40735, Min=211, Avg=1995.84, 90=4207, 99=14319, 99.9=33983, 99.99=40735] 
+2016-10-02 06:14:05:082 60 sec: 32487 operations; 600.6 current ops/sec; est completion in 14 minutes [READ: Count=2972, Max=54655, Min=209, Avg=1669.65, 90=3255, 99=12567, 99.9=25023, 99.99=54655] [UPDATE: Count=3039, Max=85439, Min=171, Avg=1612.37, 90=3081, 99=11447, 99.9=27535, 99.99=85439] 
+2016-10-02 06:14:15:081 70 sec: 37012 operations; 452.55 current ops/sec; est completion in 14 minutes [READ: Count=2248, Max=900095, Min=216, Avg=2103.68, 90=3165, 99=8751, 99.9=19551, 99.99=900095] [UPDATE: Count=2274, Max=1272831, Min=191, Avg=2275.19, 90=3139, 99=9695, 99.9=36639, 99.99=1272831] 
+2016-10-02 06:14:25:085 80 sec: 41865 operations; 485.11 current ops/sec; est completion in 14 minutes [READ: Count=2491, Max=44543, Min=223, Avg=2159.47, 90=4183, 99=14655, 99.9=26607, 99.99=44543] [UPDATE: Count=2361, Max=33247, Min=200, Avg=1907.73, 90=3635, 99=16007, 99.9=23103, 99.99=33247] 
+redis.clients.jedis.exceptions.JedisConnectionException: java.net.SocketTimeoutException: Read timed out
+	at redis.clients.jedis.Protocol.process(Protocol.java:74)
+	at redis.clients.jedis.Protocol.read(Protocol.java:122)
+	at redis.clients.jedis.Connection.getStatusCodeReply(Connection.java:152)
+	at redis.clients.jedis.Jedis.hmset(Jedis.java:726)
+	at com.yahoo.ycsb.db.RedisClient.update(RedisClient.java:137)
+	at com.yahoo.ycsb.DBWrapper.update(DBWrapper.java:216)
+	at com.yahoo.ycsb.workloads.CoreWorkload.doTransactionUpdate(CoreWorkload.java:800)
+	at com.yahoo.ycsb.workloads.CoreWorkload.doTransaction(CoreWorkload.java:633)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:458)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:127)
+	at redis.clients.util.RedisInputStream.fill(RedisInputStream.java:110)
+	at redis.clients.util.RedisInputStream.readByte(RedisInputStream.java:46)
+	at redis.clients.jedis.Protocol.process(Protocol.java:59)
+	... 9 more
+redis.clients.jedis.exceptions.JedisConnectionException: java.net.SocketTimeoutException: Read timed out
+	at redis.clients.jedis.Protocol.process(Protocol.java:74)
+	at redis.clients.jedis.Protocol.read(Protocol.java:122)
+	at redis.clients.jedis.Connection.getStatusCodeReply(Connection.java:152)
+	at redis.clients.jedis.Jedis.hmset(Jedis.java:726)
+	at com.yahoo.ycsb.db.RedisClient.update(RedisClient.java:137)
+	at com.yahoo.ycsb.DBWrapper.update(DBWrapper.java:216)
+	at com.yahoo.ycsb.workloads.CoreWorkload.doTransactionUpdate(CoreWorkload.java:800)
+	at com.yahoo.ycsb.workloads.CoreWorkload.doTransaction(CoreWorkload.java:633)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:458)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:127)
+	at redis.clients.util.RedisInputStream.fill(RedisInputStream.java:110)
+	at redis.clients.util.RedisInputStream.readByte(RedisInputStream.java:46)
+	at redis.clients.jedis.Protocol.process(Protocol.java:59)
+	... 9 more

@@ -1,0 +1,104 @@
+/usr/bin/java  -classpath /home/prashanth/testing/ycsb/conf:/home/prashanth/testing/ycsb/core/target/core-0.12.0-SNAPSHOT.jar:/home/prashanth/testing/ycsb/redis/target/redis-binding-0.12.0-SNAPSHOT.jar:/home/prashanth/testing/ycsb/redis/target/dependency/commons-pool-1.5.5.jar:/home/prashanth/testing/ycsb/redis/target/dependency/jedis-2.0.0.jar com.yahoo.ycsb.Client -t -db com.yahoo.ycsb.db.RedisClient -s -P workloads/workload1 -p redis.host=10.129.28.6 -p redis.port=3001 -p maxexecutiontime=440 -threads 2
+YCSB Client 0.12.0-SNAPSHOT
+Command line: -t -db com.yahoo.ycsb.db.RedisClient -s -P workloads/workload1 -p redis.host=10.129.28.6 -p redis.port=3001 -p maxexecutiontime=440 -threads 2
+Loading workload...
+Starting test.
+Maximum execution time specified as: 440 secs
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+2016-10-08 03:17:59:871 0 sec: 0 operations; est completion in 0 seconds 
+2016-10-08 03:18:09:793 10 sec: 5266 operations; 526.6 current ops/sec; est completion in 1 hours 3 minutes [READ: Count=2654, Max=43455, Min=235, Avg=3612.37, 90=7843, 99=20207, 99.9=30415, 99.99=43455] [UPDATE: Count=2620, Max=48607, Min=304, Avg=3767.27, 90=8295, 99=21247, 99.9=28479, 99.99=48607] 
+2016-10-08 03:18:19:792 20 sec: 10499 operations; 523.3 current ops/sec; est completion in 1 hours 3 minutes [READ: Count=2569, Max=166271, Min=261, Avg=3762.17, 90=8343, 99=18591, 99.9=30575, 99.99=166271] [UPDATE: Count=2659, Max=162943, Min=202, Avg=3830.83, 90=8119, 99=18687, 99.9=39423, 99.99=162943] 
+2016-10-08 03:18:29:792 30 sec: 15403 operations; 490.4 current ops/sec; est completion in 1 hours 4 minutes [READ: Count=2454, Max=43647, Min=288, Avg=4164.75, 90=9551, 99=23087, 99.9=35423, 99.99=43647] [UPDATE: Count=2447, Max=35231, Min=310, Avg=3953.98, 90=9287, 99=19727, 99.9=30143, 99.99=35231] 
+2016-10-08 03:18:39:793 40 sec: 21002 operations; 559.9 current ops/sec; est completion in 1 hours 2 minutes [READ: Count=2706, Max=76159, Min=317, Avg=3586.5, 90=7615, 99=19791, 99.9=38623, 99.99=76159] [UPDATE: Count=2894, Max=71487, Min=296, Avg=3527.2, 90=7599, 99=19775, 99.9=30431, 99.99=71487] 
+2016-10-08 03:18:49:792 50 sec: 26196 operations; 519.4 current ops/sec; est completion in 1 hours 2 minutes [READ: Count=2596, Max=449791, Min=282, Avg=3878.02, 90=8575, 99=20591, 99.9=33087, 99.99=449791] [UPDATE: Count=2597, Max=449535, Min=262, Avg=3788.23, 90=8679, 99=18815, 99.9=32959, 99.99=449535] 
+2016-10-08 03:18:59:792 60 sec: 31755 operations; 555.9 current ops/sec; est completion in 1 hours 1 minutes [READ: Count=2710, Max=38079, Min=316, Avg=3710.6, 90=7947, 99=20735, 99.9=31311, 99.99=38079] [UPDATE: Count=2849, Max=35871, Min=352, Avg=3463.58, 90=7559, 99=19295, 99.9=29167, 99.99=35871] 
+2016-10-08 03:19:09:792 70 sec: 35888 operations; 413.3 current ops/sec; est completion in 1 hours 3 minutes [READ: Count=2079, Max=1475583, Min=324, Avg=5406.91, 90=8407, 99=20175, 99.9=49823, 99.99=1475583] [UPDATE: Count=2054, Max=196991, Min=288, Avg=4226.31, 90=8187, 99=19919, 99.9=142847, 99.99=196991] 
+2016-10-08 03:19:19:792 80 sec: 39623 operations; 373.5 current ops/sec; est completion in 1 hours 5 minutes [READ: Count=1894, Max=1830911, Min=248, Avg=6381.76, 90=9727, 99=23487, 99.9=37567, 99.99=1830911] [UPDATE: Count=1842, Max=62911, Min=318, Avg=4263.47, 90=9159, 99=23967, 99.9=37055, 99.99=62911] 
+2016-10-08 03:19:29:792 90 sec: 44308 operations; 468.5 current ops/sec; est completion in 1 hours 6 minutes [READ: Count=2404, Max=707583, Min=240, Avg=4213.84, 90=7979, 99=20943, 99.9=46591, 99.99=707583] [UPDATE: Count=2284, Max=708095, Min=268, Avg=4290.58, 90=8391, 99=19983, 99.9=85311, 99.99=708095] 
+2016-10-08 03:19:39:792 100 sec: 50007 operations; 569.9 current ops/sec; est completion in 1 hours 5 minutes [READ: Count=2886, Max=36383, Min=270, Avg=3554.24, 90=7331, 99=19007, 99.9=33247, 99.99=36383] [UPDATE: Count=2809, Max=37727, Min=277, Avg=3431.85, 90=7315, 99=17711, 99.9=29567, 99.99=37727] 
+2016-10-08 03:19:49:792 110 sec: 54008 operations; 400.1 current ops/sec; est completion in 1 hours 6 minutes [READ: Count=1980, Max=50431, Min=311, Avg=5122.32, 90=11455, 99=24175, 99.9=44607, 99.99=50431] [UPDATE: Count=2025, Max=44927, Min=321, Avg=4833.91, 90=11367, 99=23919, 99.9=31599, 99.99=44927] 
+2016-10-08 03:19:59:792 120 sec: 59240 operations; 523.2 current ops/sec; est completion in 1 hours 5 minutes [READ: Count=2544, Max=31311, Min=272, Avg=3909.26, 90=8383, 99=19759, 99.9=30255, 99.99=31311] [UPDATE: Count=2684, Max=34751, Min=349, Avg=3711.48, 90=8231, 99=18559, 99.9=29583, 99.99=34751] 
+2016-10-08 03:20:09:792 130 sec: 62452 operations; 321.2 current ops/sec; est completion in 1 hours 7 minutes [READ: Count=1580, Max=2199551, Min=227, Avg=8495.57, 90=6183, 99=18255, 99.9=1669119, 99.99=2199551] [UPDATE: Count=1634, Max=1669119, Min=273, Avg=3995.93, 90=6043, 99=18527, 99.9=275455, 99.99=1669119] 
+2016-10-08 03:20:19:792 140 sec: 68200 operations; 574.8 current ops/sec; est completion in 1 hours 6 minutes [READ: Count=2893, Max=38975, Min=317, Avg=3581.2, 90=8407, 99=20879, 99.9=31647, 99.99=38975] [UPDATE: Count=2853, Max=35711, Min=289, Avg=3351.14, 90=7759, 99=19935, 99.9=31999, 99.99=35711] 
+2016-10-08 03:20:29:795 150 sec: 75306 operations; 710.46 current ops/sec; est completion in 1 hours 3 minutes [READ: Count=3600, Max=36351, Min=307, Avg=2817.81, 90=6191, 99=17535, 99.9=30079, 99.99=36351] [UPDATE: Count=3509, Max=36671, Min=285, Avg=2792.32, 90=6231, 99=15143, 99.9=24095, 99.99=36671] 
+2016-10-08 03:20:39:792 160 sec: 80207 operations; 490.2 current ops/sec; est completion in 1 hours 3 minutes [READ: Count=2474, Max=581119, Min=206, Avg=3435.4, 90=5775, 99=14495, 99.9=488703, 99.99=581119] [UPDATE: Count=2424, Max=488703, Min=260, Avg=2607.8, 90=5555, 99=13655, 99.9=28495, 99.99=488703] 
+2016-10-08 03:20:49:792 170 sec: 80669 operations; 46.2 current ops/sec; est completion in 1 hours 7 minutes [READ: Count=219, Max=3678207, Min=388, Avg=62525.26, 90=29631, 99=1980415, 99.9=3678207, 99.99=3678207] [UPDATE: Count=243, Max=3678207, Min=265, Avg=46927.33, 90=12415, 99=1501183, 99.9=3678207, 99.99=3678207] 
+2016-10-08 03:20:59:792 180 sec: 87394 operations; 672.5 current ops/sec; est completion in 1 hours 5 minutes [READ: Count=3385, Max=3440639, Min=197, Avg=4057.02, 90=2165, 99=10479, 99.9=291839, 99.99=3440639] [UPDATE: Count=3345, Max=1868799, Min=184, Avg=1866.41, 90=1869, 99=8455, 99.9=58047, 99.99=1868799] 
+2016-10-08 03:21:09:792 190 sec: 104724 operations; 1733 current ops/sec; est completion in 57 minutes [READ: Count=8550, Max=110719, Min=204, Avg=1165.08, 90=1563, 99=8091, 99.9=66431, 99.99=108735] [UPDATE: Count=8788, Max=110783, Min=184, Avg=1129.09, 90=1550, 99=7583, 99.9=69823, 99.99=108799] 
+2016-10-08 03:21:19:792 200 sec: 111471 operations; 674.7 current ops/sec; est completion in 56 minutes [READ: Count=3362, Max=1399807, Min=172, Avg=1877.27, 90=2479, 99=9615, 99.9=67775, 99.99=1399807] [UPDATE: Count=3372, Max=1986559, Min=204, Avg=3172.97, 90=2561, 99=12791, 99.9=228863, 99.99=1986559] 
+2016-10-08 03:21:29:792 210 sec: 124536 operations; 1306.5 current ops/sec; est completion in 52 minutes [READ: Count=6437, Max=623103, Min=173, Avg=1373.07, 90=1109, 99=6375, 99.9=117119, 99.99=623103] [UPDATE: Count=6628, Max=3227647, Min=181, Avg=2099.8, 90=1067, 99=6143, 99.9=145279, 99.99=3227647] 
+2016-10-08 03:21:39:792 220 sec: 143921 operations; 1938.5 current ops/sec; est completion in 47 minutes [READ: Count=9566, Max=134143, Min=188, Avg=1079.78, 90=1122, 99=6547, 99.9=73407, 99.99=134143] [UPDATE: Count=9819, Max=121343, Min=165, Avg=981.9, 90=1132, 99=6751, 99.9=61791, 99.99=103871] 
+2016-10-08 03:21:49:793 230 sec: 164845 operations; 2092.19 current ops/sec; est completion in 42 minutes [READ: Count=10507, Max=132223, Min=162, Avg=966.69, 90=1172, 99=6983, 99.9=54143, 99.99=103999] [UPDATE: Count=10421, Max=131967, Min=163, Avg=933.62, 90=1177, 99=7019, 99.9=47071, 99.99=92863] 
+2016-10-08 03:21:59:792 240 sec: 177492 operations; 1264.83 current ops/sec; est completion in 41 minutes [READ: Count=6269, Max=1318911, Min=182, Avg=1661.95, 90=1066, 99=5887, 99.9=84287, 99.99=1318911] [UPDATE: Count=6377, Max=1308671, Min=187, Avg=1490.64, 90=1054, 99=6011, 99.9=70079, 99.99=828927] 
+2016-10-08 03:22:09:792 250 sec: 198430 operations; 2093.8 current ops/sec; est completion in 37 minutes [READ: Count=10486, Max=152063, Min=180, Avg=830.42, 90=925, 99=4955, 99.9=71103, 99.99=117311] [UPDATE: Count=10449, Max=1334271, Min=173, Avg=1069.44, 90=941, 99=5287, 99.9=70335, 99.99=1334271] 
+2016-10-08 03:22:19:792 260 sec: 218530 operations; 2010 current ops/sec; est completion in 35 minutes [READ: Count=10062, Max=88767, Min=174, Avg=977.01, 90=1356, 99=7643, 99.9=38591, 99.99=57503] [UPDATE: Count=10039, Max=172543, Min=167, Avg=1001.04, 90=1328, 99=7411, 99.9=53535, 99.99=172543] 
+2016-10-08 03:22:29:792 270 sec: 237433 operations; 1890.3 current ops/sec; est completion in 33 minutes [READ: Count=9517, Max=115903, Min=175, Avg=1037.58, 90=1259, 99=7267, 99.9=76671, 99.99=115391] [UPDATE: Count=9385, Max=93439, Min=158, Avg=979.71, 90=1334, 99=7271, 99.9=45183, 99.99=85311] 
+2016-10-08 03:22:39:793 280 sec: 241965 operations; 453.2 current ops/sec; est completion in 33 minutes [READ: Count=2251, Max=2869247, Min=205, Avg=5235.87, 90=1054, 99=9791, 99.9=1840127, 99.99=2869247] [UPDATE: Count=2281, Max=2871295, Min=205, Avg=3602.35, 90=1142, 99=9295, 99.9=748031, 99.99=2871295] 
+2016-10-08 03:22:49:792 290 sec: 245095 operations; 313 current ops/sec; est completion in 34 minutes [READ: Count=1610, Max=1805311, Min=253, Avg=3493.79, 90=2261, 99=10911, 99.9=29247, 99.99=1805311] [UPDATE: Count=1520, Max=5242879, Min=188, Avg=9948.88, 90=2291, 99=14551, 99.9=738815, 99.99=5242879] 
+2016-10-08 03:22:59:792 300 sec: 262425 operations; 1733 current ops/sec; est completion in 33 minutes [READ: Count=8656, Max=658943, Min=170, Avg=1212.81, 90=1340, 99=7103, 99.9=62271, 99.99=658943] [UPDATE: Count=8675, Max=362495, Min=188, Avg=1085.74, 90=1437, 99=6503, 99.9=29743, 99.99=361983] 
+2016-10-08 03:23:09:794 310 sec: 281417 operations; 1899.01 current ops/sec; est completion in 31 minutes [READ: Count=9423, Max=753663, Min=202, Avg=1040.13, 90=1290, 99=7279, 99.9=46495, 99.99=94783] [UPDATE: Count=9568, Max=753663, Min=172, Avg=1051.83, 90=1343, 99=6859, 99.9=23743, 99.99=106047] 
+2016-10-08 03:23:19:792 320 sec: 300767 operations; 1935.19 current ops/sec; est completion in 30 minutes [READ: Count=9656, Max=400639, Min=182, Avg=1021.02, 90=1207, 99=6555, 99.9=52479, 99.99=400383] [UPDATE: Count=9694, Max=231423, Min=185, Avg=1003.95, 90=1250, 99=7331, 99.9=41439, 99.99=230655] 
+2016-10-08 03:23:29:792 330 sec: 307172 operations; 640.5 current ops/sec; est completion in 30 minutes [READ: Count=3210, Max=1808383, Min=177, Avg=2440.43, 90=1147, 99=6639, 99.9=585727, 99.99=1808383] [UPDATE: Count=3195, Max=1407999, Min=209, Avg=3692.91, 90=1190, 99=9311, 99.9=1096703, 99.99=1407999] 
+2016-10-08 03:23:39:792 340 sec: 322816 operations; 1564.4 current ops/sec; est completion in 29 minutes [READ: Count=7853, Max=1242111, Min=163, Avg=1440.65, 90=1045, 99=6215, 99.9=33279, 99.99=1242111] [UPDATE: Count=7791, Max=1114111, Min=157, Avg=1183.78, 90=1039, 99=6371, 99.9=33311, 99.99=529919] 
+2016-10-08 03:23:49:792 350 sec: 344090 operations; 2127.4 current ops/sec; est completion in 28 minutes [READ: Count=10593, Max=152831, Min=177, Avg=925.23, 90=1324, 99=6863, 99.9=15191, 99.99=122495] [UPDATE: Count=10681, Max=152831, Min=122, Avg=942.06, 90=1276, 99=7511, 99.9=17087, 99.99=122495] 
+2016-10-08 03:23:59:792 360 sec: 365412 operations; 2132.2 current ops/sec; est completion in 26 minutes [READ: Count=10720, Max=112575, Min=0, Avg=844.85, 90=1202, 99=5591, 99.9=10639, 99.99=63359] [UPDATE: Count=10615, Max=811007, Min=0, Avg=1020.61, 90=1201, 99=6099, 99.9=13239, 99.99=811007] 
+2016-10-08 03:24:09:792 370 sec: 373811 operations; 839.9 current ops/sec; est completion in 26 minutes [READ: Count=4190, Max=2521087, Min=200, Avg=2391.92, 90=920, 99=4959, 99.9=14007, 99.99=2521087] [UPDATE: Count=4199, Max=2455551, Min=184, Avg=2362.69, 90=916, 99=5119, 99.9=15623, 99.99=2455551] 
+2016-10-08 03:24:19:792 380 sec: 395105 operations; 2129.4 current ops/sec; est completion in 25 minutes [READ: Count=10717, Max=228607, Min=187, Avg=938.86, 90=1287, 99=6507, 99.9=15311, 99.99=203391] [UPDATE: Count=10574, Max=228351, Min=149, Avg=926.99, 90=1224, 99=6115, 99.9=16271, 99.99=200191] 
+2016-10-08 03:24:29:792 390 sec: 410304 operations; 1519.9 current ops/sec; est completion in 25 minutes [READ: Count=7543, Max=2031615, Min=175, Avg=1357.24, 90=1456, 99=7755, 99.9=57311, 99.99=112959] [UPDATE: Count=7659, Max=2031615, Min=198, Avg=1263.08, 90=1427, 99=7067, 99.9=24591, 99.99=113023] 
+2016-10-08 03:24:39:793 400 sec: 427813 operations; 1750.9 current ops/sec; est completion in 24 minutes [READ: Count=8688, Max=571391, Min=197, Avg=1170.23, 90=1362, 99=6751, 99.9=38879, 99.99=488959] [UPDATE: Count=8822, Max=570879, Min=158, Avg=1102.72, 90=1364, 99=6847, 99.9=32191, 99.99=488703] 
+2016-10-08 03:24:49:792 410 sec: 433860 operations; 604.7 current ops/sec; est completion in 24 minutes [READ: Count=3015, Max=2134015, Min=219, Avg=3283.62, 90=1841, 99=15375, 99.9=427519, 99.99=2134015] [UPDATE: Count=3028, Max=2136063, Min=182, Avg=2177.59, 90=1865, 99=9479, 99.9=205439, 99.99=2136063] 
+2016-10-08 03:24:59:792 420 sec: 441330 operations; 747 current ops/sec; est completion in 24 minutes [READ: Count=3712, Max=2373631, Min=0, Avg=2824.29, 90=2111, 99=24271, 99.9=135423, 99.99=2373631] [UPDATE: Count=3762, Max=2373631, Min=185, Avg=3438.66, 90=1965, 99=34399, 99.9=363775, 99.99=2373631] 
+2016-10-08 03:25:09:792 430 sec: 447664 operations; 633.4 current ops/sec; est completion in 24 minutes [READ: Count=3180, Max=187391, Min=201, Avg=1720.73, 90=1971, 99=17407, 99.9=110527, 99.99=187391] [UPDATE: Count=3150, Max=154111, Min=179, Avg=1681.78, 90=1928, 99=19599, 99.9=93375, 99.99=154111] 
+redis.clients.jedis.exceptions.JedisConnectionException: It seems like server has closed the connection.
+	at redis.clients.util.RedisInputStream.readLine(RedisInputStream.java:91)
+	at redis.clients.jedis.Protocol.processStatusCodeReply(Protocol.java:80)
+	at redis.clients.jedis.Protocol.process(Protocol.java:69)
+	at redis.clients.jedis.Protocol.read(Protocol.java:122)
+	at redis.clients.jedis.Connection.getStatusCodeReply(Connection.java:152)redis.clients.jedis.exceptions.JedisConnectionException: It seems like server has closed the connection.
+	at redis.clients.util.RedisInputStream.readLine(RedisInputStream.java:91)
+	at redis.clients.jedis.Protocol.processStatusCodeReply(Protocol.java:80)
+	at redis.clients.jedis.Protocol.process(Protocol.java:69)
+	at redis.clients.jedis.Protocol.read(Protocol.java:122)
+	at redis.clients.jedis.Connection.getStatusCodeReply(Connection.java:152)
+	at redis.clients.jedis.Jedis.hmset(Jedis.java:726)
+	at com.yahoo.ycsb.db.RedisClient.update(RedisClient.java:137)
+	at com.yahoo.ycsb.DBWrapper.update(DBWrapper.java:216)
+	at com.yahoo.ycsb.workloads.CoreWorkload.doTransactionUpdate(CoreWorkload.java:800)
+	at com.yahoo.ycsb.workloads.CoreWorkload.doTransaction(CoreWorkload.java:633)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:458)
+	at java.lang.Thread.run(Thread.java:745)
+redis.clients.jedis.exceptions.JedisConnectionException: It seems like server has closed the connection.
+	at redis.clients.util.RedisInputStream.readLine(RedisInputStream.java:91)
+	at redis.clients.jedis.Protocol.processMultiBulkReply(Protocol.java:110)
+	at redis.clients.jedis.Protocol.process(Protocol.java:63)
+	at redis.clients.jedis.Protocol.read(Protocol.java:122)
+	at redis.clients.jedis.Connection.getBinaryMultiBulkReply(Connection.java:189)
+	at redis.clients.jedis.Jedis.hgetAll(Jedis.java:861)
+	at com.yahoo.ycsb.db.RedisClient.read(RedisClient.java:99)
+	at com.yahoo.ycsb.DBWrapper.read(DBWrapper.java:151)
+	at com.yahoo.ycsb.workloads.CoreWorkload.doTransactionRead(CoreWorkload.java:708)
+	at com.yahoo.ycsb.workloads.CoreWorkload.doTransaction(CoreWorkload.java:630)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:458)
+	at java.lang.Thread.run(Thread.java:745)
+
+	at redis.clients.jedis.Jedis.hmset(Jedis.java:726)
+	at com.yahoo.ycsb.db.RedisClient.update(RedisClient.java:137)
+	at com.yahoo.ycsb.DBWrapper.update(DBWrapper.java:216)
+	at com.yahoo.ycsb.workloads.CoreWorkload.doTransactionUpdate(CoreWorkload.java:800)
+	at com.yahoo.ycsb.workloads.CoreWorkload.doTransaction(CoreWorkload.java:633)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:458)
+	at java.lang.Thread.run(Thread.java:745)
+redis.clients.jedis.exceptions.JedisConnectionException: It seems like server has closed the connection.
+	at redis.clients.util.RedisInputStream.readLine(RedisInputStream.java:91)
+	at redis.clients.jedis.Protocol.processMultiBulkReply(Protocol.java:110)
+	at redis.clients.jedis.Protocol.process(Protocol.java:63)
+	at redis.clients.jedis.Protocol.read(Protocol.java:122)
+	at redis.clients.jedis.Connection.getBinaryMultiBulkReply(Connection.java:189)
+	at redis.clients.jedis.Jedis.hgetAll(Jedis.java:861)
+	at com.yahoo.ycsb.db.RedisClient.read(RedisClient.java:99)
+	at com.yahoo.ycsb.DBWrapper.read(DBWrapper.java:151)
+	at com.yahoo.ycsb.workloads.CoreWorkload.doTransactionRead(CoreWorkload.java:708)
+	at com.yahoo.ycsb.workloads.CoreWorkload.doTransaction(CoreWorkload.java:630)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:458)
+	at java.lang.Thread.run(Thread.java:745)

@@ -1,0 +1,107 @@
+\documentclass[11pt,a4paper,openright]{report}
+
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage[margin=1in]{geometry}
+\usepackage[moderate]{savetrees}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[svgnames]{xcolor}
+\usepackage[colorlinks=true, linkcolor=Blue, urlcolor=cyan, citecolor=red]{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{amssymb}
+\usepackage{pifont}
+\usepackage{array}
+
+% Referencing macros
+\newcommand{\Eqref}[1]{Equation~\eqref{#1}}
+\newcommand{\Tabref}[1]{Table~\ref{#1}}
+\newcommand{\Figref}[1]{Figure~\ref{#1}}
+\newcommand{\Appref}[1]{Appendix~\ref{#1}}
+\newcommand{\putiitblogo}{\includegraphics[width=10em]{iitb-black}}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
+% Formatting
+\titleformat{\chapter}{\normalfont\huge\bf}{\thechapter.}{20pt}{\huge\bf}
+\linespread{1.05}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.3em}
+\setitemize[0]{leftmargin=2em,itemindent=0.5em}
+
+\begin{document}
+
+  % Coverpage
+  \begin{titlepage}    
+    \begin{center}
+   
+      \Large \textbf{Elastic memory management \\for \\container based services}  \\
+      \vspace{5em}
+      
+      \large \textbf{M.Tech Stage-1 Report} \\
+      \vspace{5em}
+      
+      \normalsize Submitted in partial fulfillment of the requirements \\ for the degree of \\
+      \vspace{1em}      
+      \large \textbf{Master of Technology} \\
+      \vspace{5em}
+      
+      \normalsize by \\
+      \vspace{1em}      
+      \large \textbf{Prashanth} \\ 
+      \vspace{0.5em}
+      \normalsize Roll No: 153050095 \\
+      
+      \vspace{5em}
+      \normalsize under the guidance of \\
+      \vspace{0.5em}      
+      \large \textbf{Prof. Purushottam Kulkarni} \\
+      \vspace{5em}
+      
+      \putiitblogo \\
+      \Large 
+      Department of Computer Science and Engineering \\
+      Indian Institute of Technology, Bombay \\
+      Mumbai
+      
+    \end{center}
+  \end{titlepage} 
+  
+  % Abstract
+  %\begin{abstract}
+    %Abstract goes here. Will fill this up when report is complete.
+  %\end{abstract}
+  
+  \pagenumbering{roman}
+  \tableofcontents
+  \listoftables
+  \listoffigures
+  \cleardoublepage
+  \setcounter{page}{1}
+  \pagenumbering{arabic}
+  \setlength{\parskip}{1em}
+  
+  %\include{intro/introduction}  
+  %\include{initial_attempts/initial_attempts}  
+  %\include{containers/containers}
+  %\include{comparison/comparison} 
+  %\include{disk_images/disk_images}
+  %\include{applications/applications}
+  %\include{conclusions/conclusions}
+  
+  \bibliographystyle{ieeetr}
+  \bibliography{mylit}  
+  
+  \appendix
+  %\include{appendix/demos}
+  %\include{appendix/benchmarks}
+
+\end{document}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 

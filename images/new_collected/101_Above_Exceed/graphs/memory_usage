@@ -1,0 +1,13 @@
+set term png size 1200, 800
+set output "../memory_usage.png"
+set title 'Plot between Time - Memory usage'
+set xlabel 'Time (s)'
+set ylabel 'Memory Usage (MB)'
+set yrange [:5000]
+set xzeroaxis
+plot '../collected.dat' using 1:(($2)/1048576) with linespoints t 'Mongo-Low', \
+	 '../collected.dat' using 1:(($5)/1048576) with linespoints t 'Mongo-High', \
+	 '../collected.dat' using 1:(($8)/1048576) with linespoints t 'Redis-Low', \
+	 '../collected.dat' using 1:(($11)/1048576) with linespoints t 'Redis-High', \
+	 '../collected.dat' using 1:(($14)/1048576) with lines t 'Free Memory in System
+

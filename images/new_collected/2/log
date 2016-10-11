@@ -1,0 +1,645 @@
+Sep 27 07:02:18 mtp dockerd[2235]: time="2016-09-27T07:02:18.962224957+05:30" level=error msg="Handler for DELETE /v1.24/containers/c1 returned error: No such container: c1"
+Sep 27 07:02:18 mtp dockerd[2235]: time="2016-09-27T07:02:18.963456601+05:30" level=error msg="Handler for DELETE /v1.24/containers/c2 returned error: No such container: c2"
+Sep 27 07:02:18 mtp dockerd[2235]: time="2016-09-27T07:02:18.963831305+05:30" level=error msg="Handler for DELETE /v1.24/containers/c3 returned error: No such container: c3"
+Sep 27 07:02:18 mtp dockerd[2235]: time="2016-09-27T07:02:18.964594809+05:30" level=error msg="Handler for DELETE /v1.24/containers/c4 returned error: No such container: c4"
+Sep 27 07:02:18 mtp dockerd[2235]: time="2016-09-27T07:02:18.964957615+05:30" level=error msg="Handler for DELETE /v1.24/containers/c5 returned error: No such container: c5"
+Sep 27 07:02:18 mtp kernel: [ 1067.214112] MTP: New memcg created ! 
+Sep 27 07:02:19 mtp kernel: [ 1067.238030] MEM-RECLAMATION MODULE: --------------------------- Initializing --------------------------- 
+Sep 27 07:03:22 mtp systemd-udevd[6150]: Could not generate persistent MAC address for veth85f8032: No such file or directory
+Sep 27 07:03:22 mtp NetworkManager[1175]: <warn>  [1474940002.3239] device (veth85f8032): failed to find device 14 'veth85f8032' with udev
+Sep 27 07:03:22 mtp systemd-udevd[6151]: Could not generate persistent MAC address for vethcf12234: No such file or directory
+Sep 27 07:03:22 mtp NetworkManager[1175]: <info>  [1474940002.3253] manager: (veth85f8032): new Veth device (/org/freedesktop/NetworkManager/Devices/18)
+Sep 27 07:03:22 mtp NetworkManager[1175]: <warn>  [1474940002.3257] device (vethcf12234): failed to find device 15 'vethcf12234' with udev
+Sep 27 07:03:22 mtp NetworkManager[1175]: <info>  [1474940002.3267] manager: (vethcf12234): new Veth device (/org/freedesktop/NetworkManager/Devices/19)
+Sep 27 07:03:22 mtp kernel: [ 1130.544578] docker0: port 1(vethcf12234) entered blocking state
+Sep 27 07:03:22 mtp kernel: [ 1130.544585] docker0: port 1(vethcf12234) entered disabled state
+Sep 27 07:03:22 mtp kernel: [ 1130.544669] device vethcf12234 entered promiscuous mode
+Sep 27 07:03:22 mtp kernel: [ 1130.544996] IPv6: ADDRCONF(NETDEV_UP): vethcf12234: link is not ready
+Sep 27 07:03:22 mtp NetworkManager[1175]: <info>  [1474940002.3589] devices added (path: /sys/devices/virtual/net/veth85f8032, iface: veth85f8032)
+Sep 27 07:03:22 mtp NetworkManager[1175]: <info>  [1474940002.3590] device added (path: /sys/devices/virtual/net/veth85f8032, iface: veth85f8032): no ifupdown configuration found.
+Sep 27 07:03:22 mtp NetworkManager[1175]: <info>  [1474940002.3799] devices added (path: /sys/devices/virtual/net/vethcf12234, iface: vethcf12234)
+Sep 27 07:03:22 mtp NetworkManager[1175]: <info>  [1474940002.3800] device added (path: /sys/devices/virtual/net/vethcf12234, iface: vethcf12234): no ifupdown configuration found.
+Sep 27 07:03:27 mtp dockerd[2235]: time="2016-09-27T07:03:27.756254774+05:30" level=info msg="No non-localhost DNS nameservers are left in resolv.conf. Using default external servers : [nameserver 8.8.8.8 nameserver 8.8.4.4]"
+Sep 27 07:03:27 mtp dockerd[2235]: time="2016-09-27T07:03:27.756403203+05:30" level=info msg="IPv6 enabled; Adding default IPv6 external servers : [nameserver 2001:4860:4860::8888 nameserver 2001:4860:4860::8844]"
+Sep 27 07:03:33 mtp kernel: [ 1141.281580] MTP: New memcg created ! 
+Sep 27 07:03:33 mtp NetworkManager[1175]: <info>  [1474940013.1257] device (veth85f8032): driver 'veth' does not support carrier detection.
+Sep 27 07:03:33 mtp kernel: [ 1141.349453] eth0: renamed from veth85f8032
+Sep 27 07:03:33 mtp NetworkManager[1175]: <info>  [1474940013.1311] devices removed (path: /sys/devices/virtual/net/veth85f8032, iface: veth85f8032)
+Sep 27 07:03:33 mtp kernel: [ 1141.361234] IPv6: ADDRCONF(NETDEV_CHANGE): vethcf12234: link becomes ready
+Sep 27 07:03:33 mtp kernel: [ 1141.361361] docker0: port 1(vethcf12234) entered blocking state
+Sep 27 07:03:33 mtp kernel: [ 1141.361365] docker0: port 1(vethcf12234) entered forwarding state
+Sep 27 07:03:33 mtp NetworkManager[1175]: <info>  [1474940013.1382] device (vethcf12234): link connected
+Sep 27 07:03:33 mtp NetworkManager[1175]: <info>  [1474940013.1383] device (docker0): link connected
+Sep 27 07:03:33 mtp NetworkManager[1175]: <warn>  [1474940013.2377] device (veth353ee9c): failed to find device 16 'veth353ee9c' with udev
+Sep 27 07:03:33 mtp systemd-udevd[6224]: Could not generate persistent MAC address for veth4d9ebaa: No such file or directory
+Sep 27 07:03:33 mtp NetworkManager[1175]: <info>  [1474940013.2390] manager: (veth353ee9c): new Veth device (/org/freedesktop/NetworkManager/Devices/20)
+Sep 27 07:03:33 mtp NetworkManager[1175]: <warn>  [1474940013.2394] device (veth4d9ebaa): failed to find device 17 'veth4d9ebaa' with udev
+Sep 27 07:03:33 mtp NetworkManager[1175]: <info>  [1474940013.2406] manager: (veth4d9ebaa): new Veth device (/org/freedesktop/NetworkManager/Devices/21)
+Sep 27 07:03:33 mtp systemd-udevd[6223]: Could not generate persistent MAC address for veth353ee9c: No such file or directory
+Sep 27 07:03:33 mtp NetworkManager[1175]: <info>  [1474940013.2649] devices added (path: /sys/devices/virtual/net/veth4d9ebaa, iface: veth4d9ebaa)
+Sep 27 07:03:33 mtp NetworkManager[1175]: <info>  [1474940013.2651] device added (path: /sys/devices/virtual/net/veth4d9ebaa, iface: veth4d9ebaa): no ifupdown configuration found.
+Sep 27 07:03:33 mtp kernel: [ 1141.493703] docker0: port 2(veth4d9ebaa) entered blocking state
+Sep 27 07:03:33 mtp kernel: [ 1141.493709] docker0: port 2(veth4d9ebaa) entered disabled state
+Sep 27 07:03:33 mtp kernel: [ 1141.493817] device veth4d9ebaa entered promiscuous mode
+Sep 27 07:03:33 mtp kernel: [ 1141.493891] IPv6: ADDRCONF(NETDEV_UP): veth4d9ebaa: link is not ready
+Sep 27 07:03:33 mtp kernel: [ 1141.493894] docker0: port 2(veth4d9ebaa) entered blocking state
+Sep 27 07:03:33 mtp kernel: [ 1141.493896] docker0: port 2(veth4d9ebaa) entered forwarding state
+Sep 27 07:03:33 mtp NetworkManager[1175]: <info>  [1474940013.2736] devices added (path: /sys/devices/virtual/net/veth353ee9c, iface: veth353ee9c)
+Sep 27 07:03:33 mtp NetworkManager[1175]: <info>  [1474940013.2736] device added (path: /sys/devices/virtual/net/veth353ee9c, iface: veth353ee9c): no ifupdown configuration found.
+Sep 27 07:03:33 mtp dockerd[2235]: time="2016-09-27T07:03:33.320383076+05:30" level=info msg="No non-localhost DNS nameservers are left in resolv.conf. Using default external servers : [nameserver 8.8.8.8 nameserver 8.8.4.4]"
+Sep 27 07:03:33 mtp dockerd[2235]: time="2016-09-27T07:03:33.320443964+05:30" level=info msg="IPv6 enabled; Adding default IPv6 external servers : [nameserver 2001:4860:4860::8888 nameserver 2001:4860:4860::8844]"
+Sep 27 07:03:33 mtp kernel: [ 1141.621390] MTP: New memcg created ! 
+Sep 27 07:03:33 mtp NetworkManager[1175]: <info>  [1474940013.4571] device (veth353ee9c): driver 'veth' does not support carrier detection.
+Sep 27 07:03:33 mtp kernel: [ 1141.681086] eth0: renamed from veth353ee9c
+Sep 27 07:03:33 mtp NetworkManager[1175]: <info>  [1474940013.4639] devices removed (path: /sys/devices/virtual/net/veth353ee9c, iface: veth353ee9c)
+Sep 27 07:03:33 mtp NetworkManager[1175]: <info>  [1474940013.4739] device (veth4d9ebaa): link connected
+Sep 27 07:03:33 mtp kernel: [ 1141.696847] IPv6: ADDRCONF(NETDEV_CHANGE): veth4d9ebaa: link becomes ready
+Sep 27 07:03:33 mtp systemd-udevd[6310]: Could not generate persistent MAC address for vethb1e14dd: No such file or directory
+Sep 27 07:03:33 mtp kernel: [ 1141.783737] docker0: port 3(vethb1e14dd) entered blocking state
+Sep 27 07:03:33 mtp kernel: [ 1141.783742] docker0: port 3(vethb1e14dd) entered disabled state
+Sep 27 07:03:33 mtp kernel: [ 1141.783825] device vethb1e14dd entered promiscuous mode
+Sep 27 07:03:33 mtp kernel: [ 1141.783902] IPv6: ADDRCONF(NETDEV_UP): vethb1e14dd: link is not ready
+Sep 27 07:03:33 mtp kernel: [ 1141.783904] docker0: port 3(vethb1e14dd) entered blocking state
+Sep 27 07:03:33 mtp kernel: [ 1141.783906] docker0: port 3(vethb1e14dd) entered forwarding state
+Sep 27 07:03:33 mtp NetworkManager[1175]: <warn>  [1474940013.5622] device (vethc26e847): failed to find device 18 'vethc26e847' with udev
+Sep 27 07:03:33 mtp systemd-udevd[6309]: Could not generate persistent MAC address for vethc26e847: No such file or directory
+Sep 27 07:03:33 mtp NetworkManager[1175]: <info>  [1474940013.5635] manager: (vethc26e847): new Veth device (/org/freedesktop/NetworkManager/Devices/22)
+Sep 27 07:03:33 mtp NetworkManager[1175]: <warn>  [1474940013.5639] device (vethb1e14dd): failed to find device 19 'vethb1e14dd' with udev
+Sep 27 07:03:33 mtp NetworkManager[1175]: <info>  [1474940013.5653] manager: (vethb1e14dd): new Veth device (/org/freedesktop/NetworkManager/Devices/23)
+Sep 27 07:03:33 mtp dockerd[2235]: time="2016-09-27T07:03:33.578538388+05:30" level=info msg="No non-localhost DNS nameservers are left in resolv.conf. Using default external servers : [nameserver 8.8.8.8 nameserver 8.8.4.4]"
+Sep 27 07:03:33 mtp dockerd[2235]: time="2016-09-27T07:03:33.578596472+05:30" level=info msg="IPv6 enabled; Adding default IPv6 external servers : [nameserver 2001:4860:4860::8888 nameserver 2001:4860:4860::8844]"
+Sep 27 07:03:33 mtp NetworkManager[1175]: <info>  [1474940013.5864] devices added (path: /sys/devices/virtual/net/vethc26e847, iface: vethc26e847)
+Sep 27 07:03:33 mtp NetworkManager[1175]: <info>  [1474940013.5865] device added (path: /sys/devices/virtual/net/vethc26e847, iface: vethc26e847): no ifupdown configuration found.
+Sep 27 07:03:33 mtp NetworkManager[1175]: <info>  [1474940013.6024] devices added (path: /sys/devices/virtual/net/vethb1e14dd, iface: vethb1e14dd)
+Sep 27 07:03:33 mtp NetworkManager[1175]: <info>  [1474940013.6024] device added (path: /sys/devices/virtual/net/vethb1e14dd, iface: vethb1e14dd): no ifupdown configuration found.
+Sep 27 07:03:33 mtp kernel: [ 1141.913344] MTP: New memcg created ! 
+Sep 27 07:03:33 mtp kernel: [ 1141.980824] eth0: renamed from vethc26e847
+Sep 27 07:03:33 mtp NetworkManager[1175]: <info>  [1474940013.7699] devices removed (path: /sys/devices/virtual/net/vethc26e847, iface: vethc26e847)
+Sep 27 07:03:33 mtp NetworkManager[1175]: <info>  [1474940013.7700] device (vethc26e847): driver 'veth' does not support carrier detection.
+Sep 27 07:03:33 mtp kernel: [ 1141.992928] IPv6: ADDRCONF(NETDEV_CHANGE): vethb1e14dd: link becomes ready
+Sep 27 07:03:33 mtp NetworkManager[1175]: <info>  [1474940013.7714] device (vethb1e14dd): link connected
+Sep 27 07:03:33 mtp systemd-udevd[6396]: Could not generate persistent MAC address for veth97e9d8c: No such file or directory
+Sep 27 07:03:33 mtp NetworkManager[1175]: <warn>  [1474940013.8942] device (veth97e9d8c): failed to find device 20 'veth97e9d8c' with udev
+Sep 27 07:03:33 mtp systemd-udevd[6397]: Could not generate persistent MAC address for veth909051f: No such file or directory
+Sep 27 07:03:33 mtp NetworkManager[1175]: <info>  [1474940013.8956] manager: (veth97e9d8c): new Veth device (/org/freedesktop/NetworkManager/Devices/24)
+Sep 27 07:03:33 mtp NetworkManager[1175]: <warn>  [1474940013.8960] device (veth909051f): failed to find device 21 'veth909051f' with udev
+Sep 27 07:03:33 mtp NetworkManager[1175]: <info>  [1474940013.8973] manager: (veth909051f): new Veth device (/org/freedesktop/NetworkManager/Devices/25)
+Sep 27 07:03:33 mtp kernel: [ 1142.117208] docker0: port 4(veth909051f) entered blocking state
+Sep 27 07:03:33 mtp kernel: [ 1142.117212] docker0: port 4(veth909051f) entered disabled state
+Sep 27 07:03:33 mtp kernel: [ 1142.117301] device veth909051f entered promiscuous mode
+Sep 27 07:03:33 mtp kernel: [ 1142.117598] IPv6: ADDRCONF(NETDEV_UP): veth909051f: link is not ready
+Sep 27 07:03:33 mtp kernel: [ 1142.117600] docker0: port 4(veth909051f) entered blocking state
+Sep 27 07:03:33 mtp kernel: [ 1142.117602] docker0: port 4(veth909051f) entered forwarding state
+Sep 27 07:03:33 mtp dockerd[2235]: time="2016-09-27T07:03:33.908428868+05:30" level=info msg="No non-localhost DNS nameservers are left in resolv.conf. Using default external servers : [nameserver 8.8.8.8 nameserver 8.8.4.4]"
+Sep 27 07:03:33 mtp dockerd[2235]: time="2016-09-27T07:03:33.908499914+05:30" level=info msg="IPv6 enabled; Adding default IPv6 external servers : [nameserver 2001:4860:4860::8888 nameserver 2001:4860:4860::8844]"
+Sep 27 07:03:33 mtp NetworkManager[1175]: <info>  [1474940013.9136] devices added (path: /sys/devices/virtual/net/veth909051f, iface: veth909051f)
+Sep 27 07:03:33 mtp NetworkManager[1175]: <info>  [1474940013.9137] device added (path: /sys/devices/virtual/net/veth909051f, iface: veth909051f): no ifupdown configuration found.
+Sep 27 07:03:33 mtp NetworkManager[1175]: <info>  [1474940013.9157] devices added (path: /sys/devices/virtual/net/veth97e9d8c, iface: veth97e9d8c)
+Sep 27 07:03:33 mtp NetworkManager[1175]: <info>  [1474940013.9157] device added (path: /sys/devices/virtual/net/veth97e9d8c, iface: veth97e9d8c): no ifupdown configuration found.
+Sep 27 07:03:34 mtp kernel: [ 1142.257394] MTP: New memcg created ! 
+Sep 27 07:03:34 mtp kernel: [ 1142.336945] eth0: renamed from veth97e9d8c
+Sep 27 07:03:34 mtp kernel: [ 1142.361742] IPv6: ADDRCONF(NETDEV_CHANGE): veth909051f: link becomes ready
+Sep 27 07:03:34 mtp NetworkManager[1175]: <info>  [1474940014.1386] devices removed (path: /sys/devices/virtual/net/veth97e9d8c, iface: veth97e9d8c)
+Sep 27 07:03:34 mtp NetworkManager[1175]: <info>  [1474940014.1387] device (veth97e9d8c): driver 'veth' does not support carrier detection.
+Sep 27 07:03:34 mtp NetworkManager[1175]: <info>  [1474940014.1390] device (veth909051f): link connected
+Sep 27 07:03:34 mtp kernel: [ 1142.448352] docker0: port 5(vethb66422a) entered blocking state
+Sep 27 07:03:34 mtp kernel: [ 1142.448357] docker0: port 5(vethb66422a) entered disabled state
+Sep 27 07:03:34 mtp kernel: [ 1142.448451] device vethb66422a entered promiscuous mode
+Sep 27 07:03:34 mtp kernel: [ 1142.448574] IPv6: ADDRCONF(NETDEV_UP): vethb66422a: link is not ready
+Sep 27 07:03:34 mtp kernel: [ 1142.448577] docker0: port 5(vethb66422a) entered blocking state
+Sep 27 07:03:34 mtp kernel: [ 1142.448579] docker0: port 5(vethb66422a) entered forwarding state
+Sep 27 07:03:34 mtp NetworkManager[1175]: <warn>  [1474940014.2251] device (vethb34e439): failed to find device 22 'vethb34e439' with udev
+Sep 27 07:03:34 mtp systemd-udevd[6495]: Could not generate persistent MAC address for vethb34e439: No such file or directory
+Sep 27 07:03:34 mtp systemd-udevd[6496]: Could not generate persistent MAC address for vethb66422a: No such file or directory
+Sep 27 07:03:34 mtp NetworkManager[1175]: <info>  [1474940014.2264] manager: (vethb34e439): new Veth device (/org/freedesktop/NetworkManager/Devices/26)
+Sep 27 07:03:34 mtp NetworkManager[1175]: <warn>  [1474940014.2268] device (vethb66422a): failed to find device 23 'vethb66422a' with udev
+Sep 27 07:03:34 mtp NetworkManager[1175]: <info>  [1474940014.2278] manager: (vethb66422a): new Veth device (/org/freedesktop/NetworkManager/Devices/27)
+Sep 27 07:03:34 mtp NetworkManager[1175]: <info>  [1474940014.2454] devices added (path: /sys/devices/virtual/net/vethb66422a, iface: vethb66422a)
+Sep 27 07:03:34 mtp NetworkManager[1175]: <info>  [1474940014.2454] device added (path: /sys/devices/virtual/net/vethb66422a, iface: vethb66422a): no ifupdown configuration found.
+Sep 27 07:03:34 mtp NetworkManager[1175]: <info>  [1474940014.2649] devices added (path: /sys/devices/virtual/net/vethb34e439, iface: vethb34e439)
+Sep 27 07:03:34 mtp NetworkManager[1175]: <info>  [1474940014.2649] device added (path: /sys/devices/virtual/net/vethb34e439, iface: vethb34e439): no ifupdown configuration found.
+Sep 27 07:03:34 mtp dockerd[2235]: time="2016-09-27T07:03:34.270510640+05:30" level=info msg="No non-localhost DNS nameservers are left in resolv.conf. Using default external servers : [nameserver 8.8.8.8 nameserver 8.8.4.4]"
+Sep 27 07:03:34 mtp dockerd[2235]: time="2016-09-27T07:03:34.270564975+05:30" level=info msg="IPv6 enabled; Adding default IPv6 external servers : [nameserver 2001:4860:4860::8888 nameserver 2001:4860:4860::8844]"
+Sep 27 07:03:34 mtp kernel: [ 1142.569331] MTP: New memcg created ! 
+Sep 27 07:03:34 mtp kernel: [ 1142.688957] eth0: renamed from vethb34e439
+Sep 27 07:03:34 mtp NetworkManager[1175]: <info>  [1474940014.4939] devices removed (path: /sys/devices/virtual/net/vethb34e439, iface: vethb34e439)
+Sep 27 07:03:34 mtp kernel: [ 1142.717186] IPv6: ADDRCONF(NETDEV_CHANGE): vethb66422a: link becomes ready
+Sep 27 07:03:34 mtp NetworkManager[1175]: <info>  [1474940014.4940] device (vethb34e439): driver 'veth' does not support carrier detection.
+Sep 27 07:03:34 mtp NetworkManager[1175]: <info>  [1474940014.4944] device (vethb66422a): link connected
+Sep 27 07:03:34 mtp avahi-daemon[1100]: Joining mDNS multicast group on interface veth4d9ebaa.IPv6 with address fe80::6c7d:91ff:fe3b:5d57.
+Sep 27 07:03:34 mtp avahi-daemon[1100]: New relevant interface veth4d9ebaa.IPv6 for mDNS.
+Sep 27 07:03:34 mtp avahi-daemon[1100]: Registering new address record for fe80::6c7d:91ff:fe3b:5d57 on veth4d9ebaa.*.
+Sep 27 07:03:34 mtp avahi-daemon[1100]: Joining mDNS multicast group on interface vethcf12234.IPv6 with address fe80::fc83:d0ff:fe5f:17a8.
+Sep 27 07:03:34 mtp avahi-daemon[1100]: New relevant interface vethcf12234.IPv6 for mDNS.
+Sep 27 07:03:34 mtp avahi-daemon[1100]: Registering new address record for fe80::fc83:d0ff:fe5f:17a8 on vethcf12234.*.
+Sep 27 07:03:34 mtp avahi-daemon[1100]: Joining mDNS multicast group on interface vethb1e14dd.IPv6 with address fe80::e02c:9bff:fe5d:3a66.
+Sep 27 07:03:34 mtp avahi-daemon[1100]: New relevant interface vethb1e14dd.IPv6 for mDNS.
+Sep 27 07:03:34 mtp avahi-daemon[1100]: Registering new address record for fe80::e02c:9bff:fe5d:3a66 on vethb1e14dd.*.
+Sep 27 07:03:35 mtp avahi-daemon[1100]: Joining mDNS multicast group on interface veth909051f.IPv6 with address fe80::8d8:26ff:fe78:55c3.
+Sep 27 07:03:35 mtp avahi-daemon[1100]: New relevant interface veth909051f.IPv6 for mDNS.
+Sep 27 07:03:35 mtp avahi-daemon[1100]: Registering new address record for fe80::8d8:26ff:fe78:55c3 on veth909051f.*.
+Sep 27 07:03:36 mtp avahi-daemon[1100]: Joining mDNS multicast group on interface vethb66422a.IPv6 with address fe80::4456:f2ff:fea6:a302.
+Sep 27 07:03:36 mtp avahi-daemon[1100]: New relevant interface vethb66422a.IPv6 for mDNS.
+Sep 27 07:03:36 mtp avahi-daemon[1100]: Registering new address record for fe80::4456:f2ff:fea6:a302 on vethb66422a.*.
+Sep 27 07:03:55 mtp kernel: [ 1164.061767] MTP: Global Reclaim-0 
+Sep 27 07:03:55 mtp kernel: [ 1164.063588] MTP: Global Reclaim-163 
+Sep 27 07:03:55 mtp kernel: [ 1164.069807] MTP: Global Reclaim-693 
+Sep 27 07:03:55 mtp kernel: [ 1164.073165] MTP: Global Reclaim-314 
+Sep 27 07:03:55 mtp kernel: [ 1164.084099] MTP: Global Reclaim-1230 
+Sep 27 07:03:55 mtp kernel: [ 1164.086343] MTP: Global Reclaim-351 
+Sep 27 07:03:55 mtp kernel: [ 1164.093064] MTP: Global Reclaim-1763 
+Sep 27 07:03:55 mtp kernel: [ 1164.095223] MTP: Global Reclaim-499 
+Sep 27 07:03:55 mtp kernel: [ 1164.109117] MTP: Soft Reclaim-0 
+Sep 27 07:03:55 mtp kernel: [ 1164.111060] MTP: Global Reclaim-195 
+Sep 27 07:03:55 mtp kernel: [ 1164.123426] MTP: Global Reclaim-1690 
+Sep 27 07:03:56 mtp kernel: [ 1164.644443] MTP: Soft Reclaim-0 
+Sep 27 07:03:56 mtp kernel: [ 1164.646584] MTP: Global Reclaim-193 
+Sep 27 07:03:58 mtp kernel: [ 1166.282341] MTP: Global Reclaim-888 
+Sep 27 07:03:58 mtp kernel: [ 1166.339025] MTP: Global Reclaim-3119 
+Sep 27 07:03:58 mtp kernel: [ 1166.373343] MTP: Global Reclaim-1567 
+Sep 27 07:03:58 mtp kernel: [ 1166.439342] MTP: Global Reclaim-6194 
+Sep 27 07:03:59 mtp kernel: [ 1168.186432] MTP: Soft Reclaim-70401 
+Sep 27 07:03:59 mtp kernel: [ 1168.187428] MTP: Global Reclaim-44 
+Sep 27 07:03:59 mtp kernel: [ 1168.187434] MTP: Soft Reclaim-0 
+Sep 27 07:03:59 mtp kernel: [ 1168.187509] MTP: Global Reclaim-0 
+Sep 27 07:04:00 mtp kernel: [ 1168.738307] MTP: Soft Reclaim-72872 
+Sep 27 07:04:00 mtp kernel: [ 1168.741189] MTP: Global Reclaim-193 
+Sep 27 07:04:00 mtp kernel: [ 1168.766470] MTP: Soft Reclaim-75799 
+Sep 27 07:04:00 mtp kernel: [ 1168.783600] MTP: Global Reclaim-207 
+Sep 27 07:04:00 mtp kernel: [ 1168.981590] MTP: Soft Reclaim-72183 
+Sep 27 07:04:00 mtp kernel: [ 1168.990984] MTP: Global Reclaim-197 
+Sep 27 07:04:00 mtp kernel: [ 1169.019729] MTP: Soft Reclaim-78418 
+Sep 27 07:04:00 mtp kernel: [ 1169.022220] MTP: Global Reclaim-223 
+Sep 27 07:04:01 mtp kernel: [ 1169.524771] MTP: Soft Reclaim-71665 
+Sep 27 07:04:01 mtp kernel: [ 1169.525083] MTP: Soft Reclaim-73741 
+Sep 27 07:04:01 mtp kernel: [ 1169.525251] MTP: Global Reclaim-7 
+Sep 27 07:04:01 mtp kernel: [ 1169.525255] MTP: Soft Reclaim-0 
+Sep 27 07:04:01 mtp kernel: [ 1169.525361] MTP: Global Reclaim-0 
+Sep 27 07:04:01 mtp kernel: [ 1169.529468] MTP: Global Reclaim-42 
+Sep 27 07:04:01 mtp kernel: [ 1169.529475] MTP: Soft Reclaim-0 
+Sep 27 07:04:01 mtp kernel: [ 1169.529576] MTP: Global Reclaim-0 
+Sep 27 07:04:01 mtp kernel: [ 1169.569464] MTP: Soft Reclaim-75109 
+Sep 27 07:04:01 mtp kernel: [ 1169.569717] MTP: Global Reclaim-64 
+Sep 27 07:04:01 mtp kernel: [ 1169.569720] MTP: Soft Reclaim-0 
+Sep 27 07:04:01 mtp kernel: [ 1169.569787] MTP: Global Reclaim-0 
+Sep 27 07:04:01 mtp kernel: [ 1169.570354] MTP: Soft Reclaim-76180 
+Sep 27 07:04:01 mtp kernel: [ 1169.574792] MTP: Soft Reclaim-76354 
+Sep 27 07:04:01 mtp kernel: [ 1169.575850] MTP: Global Reclaim-211 
+Sep 27 07:04:01 mtp kernel: [ 1169.575908] MTP: Global Reclaim-57 
+Sep 27 07:04:01 mtp kernel: [ 1169.575913] MTP: Soft Reclaim-0 
+Sep 27 07:04:01 mtp kernel: [ 1169.576034] MTP: Global Reclaim-0 
+Sep 27 07:04:01 mtp kernel: [ 1169.693868] MTP: Soft Reclaim-73310 
+Sep 27 07:04:01 mtp kernel: [ 1169.694599] MTP: Global Reclaim-88 
+Sep 27 07:04:01 mtp kernel: [ 1169.694604] MTP: Soft Reclaim-0 
+Sep 27 07:04:01 mtp kernel: [ 1169.694701] MTP: Global Reclaim-0 
+Sep 27 07:04:01 mtp kernel: [ 1169.701712] MTP: Soft Reclaim-71020 
+Sep 27 07:04:01 mtp kernel: [ 1169.702048] MTP: Global Reclaim-62 
+Sep 27 07:04:01 mtp kernel: [ 1169.702052] MTP: Soft Reclaim-0 
+Sep 27 07:04:01 mtp kernel: [ 1169.702131] MTP: Global Reclaim-0 
+Sep 27 07:04:01 mtp kernel: [ 1169.703598] MTP: Soft Reclaim-71359 
+Sep 27 07:04:01 mtp kernel: [ 1169.706167] MTP: Global Reclaim-193 
+Sep 27 07:04:01 mtp kernel: [ 1169.731315] MTP: Soft Reclaim-77993 
+Sep 27 07:04:01 mtp kernel: [ 1169.741629] MTP: Global Reclaim-226 
+Sep 27 07:04:01 mtp kernel: [ 1169.800912] MTP: Soft Reclaim-69023 
+Sep 27 07:04:01 mtp kernel: [ 1169.801243] MTP: Global Reclaim-79 
+Sep 27 07:04:01 mtp kernel: [ 1169.801246] MTP: Soft Reclaim-0 
+Sep 27 07:04:01 mtp kernel: [ 1169.801322] MTP: Global Reclaim-0 
+Sep 27 07:04:01 mtp kernel: [ 1169.888245] MTP: Soft Reclaim-69494 
+Sep 27 07:04:01 mtp kernel: [ 1169.888497] MTP: Global Reclaim-151 
+Sep 27 07:04:01 mtp kernel: [ 1169.888499] MTP: Soft Reclaim-0 
+Sep 27 07:04:01 mtp kernel: [ 1169.888567] MTP: Global Reclaim-0 
+Sep 27 07:04:01 mtp kernel: [ 1170.013291] MTP: Soft Reclaim-0 
+Sep 27 07:04:01 mtp kernel: [ 1170.013566] MTP: Global Reclaim-0 
+Sep 27 07:04:01 mtp kernel: [ 1170.018640] MTP: Soft Reclaim-70895 
+Sep 27 07:04:01 mtp kernel: [ 1170.019498] MTP: Global Reclaim-146 
+Sep 27 07:04:01 mtp kernel: [ 1170.036867] MTP: Soft Reclaim-72306 
+Sep 27 07:04:01 mtp kernel: [ 1170.040065] MTP: Global Reclaim-223 
+Sep 27 07:04:01 mtp kernel: [ 1170.044544] MTP: Soft Reclaim-69513 
+Sep 27 07:04:01 mtp kernel: [ 1170.138195] MTP: Soft Reclaim-69534 
+Sep 27 07:04:01 mtp kernel: [ 1170.141917] MTP: Global Reclaim-199 
+Sep 27 07:04:01 mtp kernel: [ 1170.146448] MTP: Soft Reclaim-63754 
+Sep 27 07:04:01 mtp kernel: [ 1170.146734] MTP: Global Reclaim-70 
+Sep 27 07:04:01 mtp kernel: [ 1170.146737] MTP: Soft Reclaim-0 
+Sep 27 07:04:01 mtp kernel: [ 1170.146823] MTP: Global Reclaim-0 
+Sep 27 07:04:02 mtp kernel: [ 1170.298462] MTP: Soft Reclaim-64148 
+Sep 27 07:04:02 mtp kernel: [ 1170.301822] MTP: Global Reclaim-198 
+Sep 27 07:04:02 mtp kernel: [ 1170.354533] MTP: Soft Reclaim-74108 
+Sep 27 07:04:02 mtp kernel: [ 1170.359166] MTP: Global Reclaim-479 
+Sep 27 07:04:02 mtp kernel: [ 1170.627488] MTP: Soft Reclaim-61098 
+Sep 27 07:04:02 mtp kernel: [ 1170.627960] MTP: Global Reclaim-78 
+Sep 27 07:04:02 mtp kernel: [ 1170.627963] MTP: Soft Reclaim-0 
+Sep 27 07:04:02 mtp kernel: [ 1170.628071] MTP: Global Reclaim-0 
+Sep 27 07:04:02 mtp kernel: [ 1170.987401] MTP: Soft Reclaim-69372 
+Sep 27 07:04:02 mtp kernel: [ 1170.990957] MTP: Global Reclaim-241 
+Sep 27 07:04:02 mtp kernel: [ 1170.995727] MTP: Soft Reclaim-73888 
+Sep 27 07:04:02 mtp kernel: [ 1170.998978] MTP: Global Reclaim-247 
+Sep 27 07:04:02 mtp kernel: [ 1171.002729] MTP: Soft Reclaim-57821 
+Sep 27 07:04:02 mtp kernel: [ 1171.003067] MTP: Global Reclaim-83 
+Sep 27 07:04:02 mtp kernel: [ 1171.003070] MTP: Soft Reclaim-0 
+Sep 27 07:04:02 mtp kernel: [ 1171.003149] MTP: Global Reclaim-0 
+Sep 27 07:04:02 mtp kernel: [ 1171.020930] MTP: Soft Reclaim-64784 
+Sep 27 07:04:02 mtp kernel: [ 1171.024055] MTP: Global Reclaim-219 
+Sep 27 07:04:02 mtp kernel: [ 1171.032324] MTP: Soft Reclaim-66314 
+Sep 27 07:04:02 mtp kernel: [ 1171.032722] MTP: Global Reclaim-75 
+Sep 27 07:04:02 mtp kernel: [ 1171.032728] MTP: Soft Reclaim-0 
+Sep 27 07:04:02 mtp kernel: [ 1171.032826] MTP: Global Reclaim-0 
+Sep 27 07:04:02 mtp kernel: [ 1171.040155] MTP: Soft Reclaim-65497 
+Sep 27 07:04:02 mtp kernel: [ 1171.040441] MTP: Global Reclaim-132 
+Sep 27 07:04:02 mtp kernel: [ 1171.040445] MTP: Soft Reclaim-0 
+Sep 27 07:04:02 mtp kernel: [ 1171.040522] MTP: Global Reclaim-0 
+Sep 27 07:04:02 mtp kernel: [ 1171.132492] MTP: Soft Reclaim-0 
+Sep 27 07:04:02 mtp kernel: [ 1171.132671] MTP: Global Reclaim-0 
+Sep 27 07:04:02 mtp kernel: [ 1171.168624] MTP: Soft Reclaim-63979 
+Sep 27 07:04:02 mtp kernel: [ 1171.171445] MTP: Global Reclaim-229 
+Sep 27 07:04:02 mtp kernel: [ 1171.182201] MTP: Soft Reclaim-62742 
+Sep 27 07:04:02 mtp kernel: [ 1171.183426] MTP: Global Reclaim-178 
+Sep 27 07:04:02 mtp kernel: [ 1171.196770] MTP: Soft Reclaim-60241 
+Sep 27 07:04:02 mtp kernel: [ 1171.200501] MTP: Global Reclaim-339 
+Sep 27 07:04:02 mtp kernel: [ 1171.214823] MTP: Soft Reclaim-64849 
+Sep 27 07:04:02 mtp kernel: [ 1171.215116] MTP: Global Reclaim-111 
+Sep 27 07:04:02 mtp kernel: [ 1171.215123] MTP: Soft Reclaim-0 
+Sep 27 07:04:02 mtp kernel: [ 1171.215233] MTP: Global Reclaim-0 
+Sep 27 07:04:03 mtp kernel: [ 1171.266991] MTP: Soft Reclaim-0 
+Sep 27 07:04:03 mtp kernel: [ 1171.267173] MTP: Global Reclaim-0 
+Sep 27 07:04:03 mtp kernel: [ 1171.300209] MTP: Soft Reclaim-66844 
+Sep 27 07:04:03 mtp kernel: [ 1171.302687] MTP: Global Reclaim-399 
+Sep 27 07:04:03 mtp kernel: [ 1171.307749] MTP: Soft Reclaim-63817 
+Sep 27 07:04:03 mtp kernel: [ 1171.309145] MTP: Global Reclaim-107 
+Sep 27 07:04:03 mtp kernel: [ 1171.440614] MTP: Soft Reclaim-61352 
+Sep 27 07:04:03 mtp kernel: [ 1171.440970] MTP: Global Reclaim-108 
+Sep 27 07:04:03 mtp kernel: [ 1171.440973] MTP: Soft Reclaim-0 
+Sep 27 07:04:03 mtp kernel: [ 1171.441050] MTP: Global Reclaim-0 
+Sep 27 07:04:04 mtp kernel: [ 1172.985198] MTP: Soft Reclaim-59714 
+Sep 27 07:04:04 mtp kernel: [ 1172.987427] MTP: Global Reclaim-306 
+Sep 27 07:04:04 mtp kernel: [ 1173.206894] MTP: Soft Reclaim-66052 
+Sep 27 07:04:06 mtp kernel: [ 1174.873592] MTP: Soft Reclaim-61484 
+Sep 27 07:04:06 mtp kernel: [ 1174.875763] MTP: Global Reclaim-305 
+Sep 27 07:04:07 mtp kernel: [ 1175.419440] MTP: Soft Reclaim-55282 
+Sep 27 07:04:07 mtp kernel: [ 1175.419727] MTP: Global Reclaim-71 
+Sep 27 07:04:07 mtp kernel: [ 1175.419730] MTP: Soft Reclaim-0 
+Sep 27 07:04:07 mtp kernel: [ 1175.419798] MTP: Global Reclaim-0 
+Sep 27 07:04:09 mtp kernel: [ 1177.293826] MTP: Soft Reclaim-55571 
+Sep 27 07:04:09 mtp kernel: [ 1177.294111] MTP: Global Reclaim-73 
+Sep 27 07:04:09 mtp kernel: [ 1177.294114] MTP: Soft Reclaim-0 
+Sep 27 07:04:09 mtp kernel: [ 1177.294260] MTP: Global Reclaim-0 
+Sep 27 07:04:09 mtp kernel: [ 1177.998183] MTP: Soft Reclaim-0 
+Sep 27 07:04:09 mtp kernel: [ 1177.998361] MTP: Global Reclaim-8 
+Sep 27 07:04:09 mtp kernel: [ 1178.018953] MTP: Soft Reclaim-59869 
+Sep 27 07:04:09 mtp kernel: [ 1178.021372] MTP: Global Reclaim-303 
+Sep 27 07:04:10 mtp kernel: [ 1178.740746] MTP: Soft Reclaim-59131 
+Sep 27 07:04:10 mtp kernel: [ 1178.741109] MTP: Global Reclaim-78 
+Sep 27 07:04:10 mtp kernel: [ 1178.741112] MTP: Soft Reclaim-0 
+Sep 27 07:04:10 mtp kernel: [ 1178.741199] MTP: Global Reclaim-0 
+Sep 27 07:04:10 mtp kernel: [ 1179.023634] MTP: Soft Reclaim-55385 
+Sep 27 07:04:10 mtp kernel: [ 1179.025668] MTP: Global Reclaim-334 
+Sep 27 07:04:10 mtp kernel: [ 1179.029045] MTP: Soft Reclaim-57045 
+Sep 27 07:04:10 mtp kernel: [ 1179.029397] MTP: Global Reclaim-81 
+Sep 27 07:04:10 mtp kernel: [ 1179.029400] MTP: Soft Reclaim-0 
+Sep 27 07:04:10 mtp kernel: [ 1179.029515] MTP: Global Reclaim-0 
+Sep 27 07:04:12 mtp kernel: [ 1180.230457] MTP: Soft Reclaim-54770 
+Sep 27 07:04:12 mtp kernel: [ 1180.485168] MTP: Soft Reclaim-57963 
+Sep 27 07:04:12 mtp kernel: [ 1180.490447] MTP: Global Reclaim-405 
+Sep 27 07:04:12 mtp kernel: [ 1180.808850] MTP: Soft Reclaim-60042 
+Sep 27 07:04:12 mtp kernel: [ 1180.814782] MTP: Global Reclaim-367 
+Sep 27 07:04:12 mtp kernel: [ 1180.819486] MTP: Soft Reclaim-55390 
+Sep 27 07:04:12 mtp kernel: [ 1180.819742] MTP: Global Reclaim-93 
+Sep 27 07:04:12 mtp kernel: [ 1180.819745] MTP: Soft Reclaim-0 
+Sep 27 07:04:12 mtp kernel: [ 1180.819961] MTP: Global Reclaim-0 
+Sep 27 07:04:12 mtp kernel: [ 1180.882599] MTP: Soft Reclaim-59739 
+Sep 27 07:04:12 mtp kernel: [ 1180.885029] MTP: Global Reclaim-352 
+Sep 27 07:04:12 mtp kernel: [ 1180.956079] MTP: Soft Reclaim-0 
+Sep 27 07:04:12 mtp kernel: [ 1180.956345] MTP: Global Reclaim-0 
+Sep 27 07:04:12 mtp kernel: [ 1181.003661] MTP: Soft Reclaim-55492 
+Sep 27 07:04:12 mtp kernel: [ 1181.005360] MTP: Global Reclaim-137 
+Sep 27 07:04:12 mtp kernel: [ 1181.010797] MTP: Soft Reclaim-53973 
+Sep 27 07:04:12 mtp kernel: [ 1181.014094] MTP: Global Reclaim-392 
+Sep 27 07:04:12 mtp kernel: [ 1181.037221] MTP: Soft Reclaim-52390 
+Sep 27 07:04:12 mtp kernel: [ 1181.037521] MTP: Global Reclaim-83 
+Sep 27 07:04:12 mtp kernel: [ 1181.037525] MTP: Soft Reclaim-0 
+Sep 27 07:04:12 mtp kernel: [ 1181.037593] MTP: Global Reclaim-0 
+Sep 27 07:04:12 mtp kernel: [ 1181.062484] MTP: Soft Reclaim-0 
+Sep 27 07:04:12 mtp kernel: [ 1181.062658] MTP: Global Reclaim-0 
+Sep 27 07:04:12 mtp kernel: [ 1181.076519] MTP: Soft Reclaim-0 
+Sep 27 07:04:12 mtp kernel: [ 1181.076634] MTP: Soft Reclaim-0 
+Sep 27 07:04:12 mtp kernel: [ 1181.079224] MTP: Global Reclaim-336 
+Sep 27 07:04:12 mtp kernel: [ 1181.079401] MTP: Global Reclaim-0 
+Sep 27 07:04:12 mtp kernel: [ 1181.087650] MTP: Soft Reclaim-56017 
+Sep 27 07:04:12 mtp kernel: [ 1181.088561] MTP: Global Reclaim-81 
+Sep 27 07:04:12 mtp kernel: [ 1181.088566] MTP: Soft Reclaim-0 
+Sep 27 07:04:12 mtp kernel: [ 1181.088708] MTP: Global Reclaim-0 
+Sep 27 07:04:12 mtp kernel: [ 1181.090657] MTP: Soft Reclaim-51772 
+Sep 27 07:04:12 mtp kernel: [ 1181.094136] MTP: Global Reclaim-340 
+Sep 27 07:04:12 mtp kernel: [ 1181.209201] MTP: Soft Reclaim-52298 
+Sep 27 07:04:13 mtp kernel: [ 1182.189145] MTP: Soft Reclaim-54315 
+Sep 27 07:04:13 mtp kernel: [ 1182.189948] MTP: Global Reclaim-83 
+Sep 27 07:04:13 mtp kernel: [ 1182.189953] MTP: Soft Reclaim-0 
+Sep 27 07:04:13 mtp kernel: [ 1182.190031] MTP: Global Reclaim-0 
+Sep 27 07:04:14 mtp kernel: [ 1182.278547] MTP: Soft Reclaim-60364 
+Sep 27 07:04:14 mtp kernel: [ 1182.281144] MTP: Global Reclaim-364 
+Sep 27 07:04:14 mtp kernel: [ 1182.374265] MTP: Soft Reclaim-53604 
+Sep 27 07:04:14 mtp kernel: [ 1182.374521] MTP: Global Reclaim-67 
+Sep 27 07:04:14 mtp kernel: [ 1182.374524] MTP: Soft Reclaim-0 
+Sep 27 07:04:14 mtp kernel: [ 1182.374609] MTP: Global Reclaim-0 
+Sep 27 07:04:14 mtp kernel: [ 1182.402545] MTP: Soft Reclaim-57237 
+Sep 27 07:04:14 mtp kernel: [ 1182.404725] MTP: Global Reclaim-341 
+Sep 27 07:04:14 mtp kernel: [ 1182.407546] MTP: Soft Reclaim-50510 
+Sep 27 07:04:14 mtp kernel: [ 1182.408264] MTP: Global Reclaim-115 
+Sep 27 07:04:14 mtp kernel: [ 1182.408267] MTP: Soft Reclaim-0 
+Sep 27 07:04:14 mtp kernel: [ 1182.408336] MTP: Global Reclaim-0 
+Sep 27 07:04:14 mtp kernel: [ 1182.502156] MTP: Soft Reclaim-58456 
+Sep 27 07:04:14 mtp kernel: [ 1182.503896] MTP: Global Reclaim-350 
+Sep 27 07:04:14 mtp kernel: [ 1182.698135] MTP: Soft Reclaim-54249 
+Sep 27 07:04:14 mtp kernel: [ 1182.698664] MTP: Global Reclaim-87 
+Sep 27 07:04:14 mtp kernel: [ 1182.698668] MTP: Soft Reclaim-0 
+Sep 27 07:04:14 mtp kernel: [ 1182.698743] MTP: Global Reclaim-0 
+Sep 27 07:04:14 mtp kernel: [ 1182.901284] MTP: Soft Reclaim-54429 
+Sep 27 07:04:14 mtp kernel: [ 1182.905387] MTP: Global Reclaim-419 
+Sep 27 07:04:14 mtp kernel: [ 1182.905534] MTP: Soft Reclaim-0 
+Sep 27 07:04:14 mtp kernel: [ 1182.905709] MTP: Global Reclaim-0 
+Sep 27 07:04:14 mtp kernel: [ 1182.986846] MTP: Soft Reclaim-51262 
+Sep 27 07:04:14 mtp kernel: [ 1182.987179] MTP: Global Reclaim-86 
+Sep 27 07:04:14 mtp kernel: [ 1182.987182] MTP: Soft Reclaim-0 
+Sep 27 07:04:14 mtp kernel: [ 1182.987258] MTP: Global Reclaim-0 
+Sep 27 07:04:14 mtp kernel: [ 1183.001998] MTP: Soft Reclaim-57859 
+Sep 27 07:04:14 mtp kernel: [ 1183.008616] MTP: Global Reclaim-374 
+Sep 27 07:04:14 mtp kernel: [ 1183.124265] MTP: Soft Reclaim-51885 
+Sep 27 07:04:14 mtp kernel: [ 1183.126096] MTP: Global Reclaim-352 
+Sep 27 07:04:15 mtp kernel: [ 1183.851199] MTP: Soft Reclaim-53246 
+Sep 27 07:04:15 mtp kernel: [ 1183.851894] MTP: Global Reclaim-70 
+Sep 27 07:04:15 mtp kernel: [ 1183.851897] MTP: Soft Reclaim-0 
+Sep 27 07:04:15 mtp kernel: [ 1183.851988] MTP: Global Reclaim-0 
+Sep 27 07:04:16 mtp kernel: [ 1184.634753] MTP: Soft Reclaim-49384 
+Sep 27 07:04:16 mtp kernel: [ 1184.642264] MTP: Global Reclaim-82 
+Sep 27 07:04:16 mtp kernel: [ 1184.642273] MTP: Soft Reclaim-0 
+Sep 27 07:04:16 mtp kernel: [ 1184.642314] MTP: Soft Reclaim-51111 
+Sep 27 07:04:16 mtp kernel: [ 1184.642382] MTP: Global Reclaim-0 
+Sep 27 07:04:16 mtp kernel: [ 1184.643934] MTP: Global Reclaim-115 
+Sep 27 07:04:16 mtp kernel: [ 1184.697334] MTP: Soft Reclaim-50308 
+Sep 27 07:04:16 mtp kernel: [ 1184.703301] MTP: Global Reclaim-343 
+Sep 27 07:04:16 mtp kernel: [ 1184.736316] MTP: Soft Reclaim-51426 
+Sep 27 07:04:16 mtp kernel: [ 1184.739085] MTP: Global Reclaim-448 
+Sep 27 07:04:18 mtp kernel: [ 1186.942418] MTP: Soft Reclaim-56052 
+Sep 27 07:04:18 mtp kernel: [ 1186.945753] MTP: Global Reclaim-333 
+Sep 27 07:04:18 mtp kernel: [ 1186.949494] MTP: Soft Reclaim-46666 
+Sep 27 07:04:18 mtp kernel: [ 1186.949819] MTP: Global Reclaim-86 
+Sep 27 07:04:18 mtp kernel: [ 1186.949821] MTP: Soft Reclaim-0 
+Sep 27 07:04:18 mtp kernel: [ 1186.949886] MTP: Global Reclaim-0 
+Sep 27 07:04:19 mtp kernel: [ 1187.372397] MTP: Soft Reclaim-51833 
+Sep 27 07:04:19 mtp kernel: [ 1187.372612] MTP: Global Reclaim-85 
+Sep 27 07:04:19 mtp kernel: [ 1187.372614] MTP: Soft Reclaim-0 
+Sep 27 07:04:19 mtp kernel: [ 1187.372680] MTP: Global Reclaim-0 
+Sep 27 07:04:19 mtp kernel: [ 1187.515773] MTP: Soft Reclaim-48344 
+Sep 27 07:04:19 mtp kernel: [ 1187.516589] MTP: Global Reclaim-67 
+Sep 27 07:04:19 mtp kernel: [ 1187.516593] MTP: Soft Reclaim-0 
+Sep 27 07:04:19 mtp kernel: [ 1187.516670] MTP: Global Reclaim-0 
+Sep 27 07:04:19 mtp kernel: [ 1188.027287] MTP: Soft Reclaim-55536 
+Sep 27 07:04:19 mtp kernel: [ 1188.029658] MTP: Global Reclaim-354 
+Sep 27 07:04:19 mtp kernel: [ 1188.094842] MTP: Soft Reclaim-53848 
+Sep 27 07:04:19 mtp kernel: [ 1188.097837] MTP: Global Reclaim-337 
+Sep 27 07:04:21 mtp kernel: [ 1189.510722] MTP: Soft Reclaim-52320 
+Sep 27 07:04:21 mtp kernel: [ 1189.521614] MTP: Global Reclaim-342 
+Sep 27 07:04:21 mtp kernel: [ 1189.920626] MTP: Soft Reclaim-47516 
+Sep 27 07:04:21 mtp kernel: [ 1189.922257] MTP: Global Reclaim-333 
+Sep 27 07:04:22 mtp kernel: [ 1190.278540] MTP: Soft Reclaim-45951 
+Sep 27 07:04:22 mtp kernel: [ 1190.278871] MTP: Global Reclaim-83 
+Sep 27 07:04:22 mtp kernel: [ 1190.278878] MTP: Soft Reclaim-0 
+Sep 27 07:04:22 mtp kernel: [ 1190.278943] MTP: Global Reclaim-0 
+Sep 27 07:04:22 mtp kernel: [ 1190.313012] MTP: Soft Reclaim-47592 
+Sep 27 07:04:22 mtp kernel: [ 1190.314988] MTP: Global Reclaim-363 
+Sep 27 07:04:22 mtp kernel: [ 1190.318659] MTP: Soft Reclaim-45464 
+Sep 27 07:04:22 mtp kernel: [ 1190.319165] MTP: Global Reclaim-78 
+Sep 27 07:04:22 mtp kernel: [ 1190.319169] MTP: Soft Reclaim-0 
+Sep 27 07:04:22 mtp kernel: [ 1190.319239] MTP: Global Reclaim-0 
+Sep 27 07:04:23 mtp kernel: [ 1191.793948] MTP: Soft Reclaim-46928 
+Sep 27 07:04:23 mtp kernel: [ 1191.794176] MTP: Global Reclaim-98 
+Sep 27 07:04:23 mtp kernel: [ 1191.794178] MTP: Soft Reclaim-0 
+Sep 27 07:04:23 mtp kernel: [ 1191.794242] MTP: Global Reclaim-0 
+Sep 27 07:04:24 mtp kernel: [ 1192.470440] MTP: Soft Reclaim-46478 
+Sep 27 07:04:24 mtp kernel: [ 1192.470651] MTP: Global Reclaim-101 
+Sep 27 07:04:24 mtp kernel: [ 1192.470654] MTP: Soft Reclaim-0 
+Sep 27 07:04:24 mtp kernel: [ 1192.470719] MTP: Global Reclaim-0 
+Sep 27 07:04:25 mtp kernel: [ 1193.270087] MTP: Soft Reclaim-48658 
+Sep 27 07:04:25 mtp kernel: [ 1193.270704] MTP: Global Reclaim-79 
+Sep 27 07:04:25 mtp kernel: [ 1193.270707] MTP: Soft Reclaim-0 
+Sep 27 07:04:25 mtp kernel: [ 1193.270778] MTP: Global Reclaim-0 
+Sep 27 07:04:25 mtp kernel: [ 1193.438484] MTP: Soft Reclaim-52271 
+Sep 27 07:04:25 mtp kernel: [ 1193.598281] MTP: Soft Reclaim-52184 
+Sep 27 07:04:25 mtp kernel: [ 1193.608105] MTP: Global Reclaim-345 
+Sep 27 07:04:26 mtp kernel: [ 1194.683017] MTP: Soft Reclaim-52743 
+Sep 27 07:04:26 mtp kernel: [ 1194.686285] MTP: Global Reclaim-339 
+Sep 27 07:04:26 mtp kernel: [ 1194.745666] MTP: Soft Reclaim-51007 
+Sep 27 07:04:26 mtp kernel: [ 1194.748247] MTP: Global Reclaim-347 
+Sep 27 07:04:26 mtp kernel: [ 1194.805001] MTP: Soft Reclaim-47729 
+Sep 27 07:04:26 mtp kernel: [ 1194.805356] MTP: Global Reclaim-96 
+Sep 27 07:04:26 mtp kernel: [ 1194.805360] MTP: Soft Reclaim-0 
+Sep 27 07:04:26 mtp kernel: [ 1194.805573] MTP: Global Reclaim-0 
+Sep 27 07:04:26 mtp kernel: [ 1194.942946] MTP: Soft Reclaim-45182 
+Sep 27 07:04:26 mtp kernel: [ 1194.943150] MTP: Global Reclaim-127 
+Sep 27 07:04:26 mtp kernel: [ 1194.943153] MTP: Soft Reclaim-0 
+Sep 27 07:04:26 mtp kernel: [ 1194.943215] MTP: Global Reclaim-0 
+Sep 27 07:04:26 mtp kernel: [ 1194.999434] MTP: Soft Reclaim-46251 
+Sep 27 07:04:26 mtp kernel: [ 1194.999969] MTP: Global Reclaim-90 
+Sep 27 07:04:26 mtp kernel: [ 1194.999972] MTP: Soft Reclaim-0 
+Sep 27 07:04:26 mtp kernel: [ 1195.000161] MTP: Global Reclaim-0 
+Sep 27 07:04:28 mtp kernel: [ 1197.088290] MTP: Soft Reclaim-0 
+Sep 27 07:04:28 mtp kernel: [ 1197.088521] MTP: Global Reclaim-22 
+Sep 27 07:04:28 mtp kernel: [ 1197.091675] MTP: Soft Reclaim-46956 
+Sep 27 07:04:28 mtp kernel: [ 1197.092968] MTP: Global Reclaim-97 
+Sep 27 07:04:28 mtp kernel: [ 1197.145991] MTP: Soft Reclaim-50031 
+Sep 27 07:04:28 mtp kernel: [ 1197.147595] MTP: Global Reclaim-367 
+Sep 27 07:04:29 mtp kernel: [ 1197.360936] MTP: Soft Reclaim-44392 
+Sep 27 07:04:29 mtp kernel: [ 1197.367309] MTP: Global Reclaim-335 
+Sep 27 07:04:29 mtp kernel: [ 1197.367336] MTP: Soft Reclaim-48213 
+Sep 27 07:04:29 mtp kernel: [ 1197.369716] MTP: Soft Reclaim-49026 
+Sep 27 07:04:29 mtp kernel: [ 1197.370327] MTP: Global Reclaim-107 
+Sep 27 07:04:29 mtp kernel: [ 1197.370408] MTP: Global Reclaim-391 
+Sep 27 07:04:29 mtp kernel: [ 1197.371496] MTP: Soft Reclaim-42781 
+Sep 27 07:04:29 mtp kernel: [ 1197.371790] MTP: Global Reclaim-99 
+Sep 27 07:04:29 mtp kernel: [ 1197.371794] MTP: Soft Reclaim-0 
+Sep 27 07:04:29 mtp kernel: [ 1197.371871] MTP: Global Reclaim-0 
+Sep 27 07:04:29 mtp kernel: [ 1197.567788] MTP: Soft Reclaim-43486 
+Sep 27 07:04:29 mtp kernel: [ 1197.568272] MTP: Global Reclaim-81 
+Sep 27 07:04:29 mtp kernel: [ 1197.568276] MTP: Soft Reclaim-0 
+Sep 27 07:04:29 mtp kernel: [ 1197.568346] MTP: Global Reclaim-0 
+Sep 27 07:04:29 mtp kernel: [ 1197.625133] MTP: Soft Reclaim-45200 
+Sep 27 07:04:29 mtp kernel: [ 1197.626718] MTP: Global Reclaim-415 
+Sep 27 07:04:29 mtp kernel: [ 1197.630449] MTP: Soft Reclaim-41187 
+Sep 27 07:04:29 mtp kernel: [ 1197.630729] MTP: Global Reclaim-78 
+Sep 27 07:04:29 mtp kernel: [ 1197.630732] MTP: Soft Reclaim-0 
+Sep 27 07:04:29 mtp kernel: [ 1197.630799] MTP: Global Reclaim-0 
+Sep 27 07:04:29 mtp kernel: [ 1197.636680] MTP: Soft Reclaim-44293 
+Sep 27 07:04:29 mtp kernel: [ 1197.636934] MTP: Global Reclaim-83 
+Sep 27 07:04:29 mtp kernel: [ 1197.636937] MTP: Soft Reclaim-0 
+Sep 27 07:04:29 mtp kernel: [ 1197.637005] MTP: Global Reclaim-0 
+Sep 27 07:04:29 mtp kernel: [ 1197.695341] MTP: Soft Reclaim-0 
+Sep 27 07:04:29 mtp kernel: [ 1197.695527] MTP: Global Reclaim-0 
+Sep 27 07:04:29 mtp kernel: [ 1197.698628] MTP: Soft Reclaim-44281 
+Sep 27 07:04:29 mtp kernel: [ 1197.699695] MTP: Global Reclaim-115 
+Sep 27 07:04:29 mtp kernel: [ 1197.710247] MTP: Soft Reclaim-49340 
+Sep 27 07:04:29 mtp kernel: [ 1197.717550] MTP: Global Reclaim-392 
+Sep 27 07:04:29 mtp kernel: [ 1197.721350] MTP: Soft Reclaim-42057 
+Sep 27 07:04:29 mtp kernel: [ 1197.722189] MTP: Global Reclaim-183 
+Sep 27 07:04:29 mtp kernel: [ 1197.763177] MTP: Soft Reclaim-44515 
+Sep 27 07:04:29 mtp kernel: [ 1197.766422] MTP: Global Reclaim-394 
+Sep 27 07:04:29 mtp kernel: [ 1197.768816] MTP: Soft Reclaim-47347 
+Sep 27 07:04:29 mtp kernel: [ 1197.770786] MTP: Global Reclaim-330 
+Sep 27 07:04:29 mtp kernel: [ 1197.773778] MTP: Soft Reclaim-41129 
+Sep 27 07:04:29 mtp kernel: [ 1197.774220] MTP: Global Reclaim-92 
+Sep 27 07:04:29 mtp kernel: [ 1197.774223] MTP: Soft Reclaim-0 
+Sep 27 07:04:29 mtp kernel: [ 1197.774291] MTP: Global Reclaim-0 
+Sep 27 07:04:29 mtp kernel: [ 1197.935350] MTP: Soft Reclaim-42779 
+Sep 27 07:04:29 mtp kernel: [ 1197.937120] MTP: Global Reclaim-330 
+Sep 27 07:04:29 mtp kernel: [ 1197.976934] MTP: Soft Reclaim-42108 
+Sep 27 07:04:29 mtp kernel: [ 1197.977184] MTP: Global Reclaim-79 
+Sep 27 07:04:29 mtp kernel: [ 1197.977187] MTP: Soft Reclaim-0 
+Sep 27 07:04:29 mtp kernel: [ 1197.977254] MTP: Global Reclaim-0 
+Sep 27 07:04:30 mtp kernel: [ 1198.220716] MTP: Soft Reclaim-46039 
+Sep 27 07:04:30 mtp kernel: [ 1198.231474] MTP: Soft Reclaim-40521 
+Sep 27 07:04:30 mtp kernel: [ 1198.232084] MTP: Global Reclaim-77 
+Sep 27 07:04:30 mtp kernel: [ 1198.232088] MTP: Soft Reclaim-0 
+Sep 27 07:04:30 mtp kernel: [ 1198.232163] MTP: Global Reclaim-0 
+Sep 27 07:04:30 mtp kernel: [ 1198.232524] MTP: Global Reclaim-769 
+Sep 27 07:04:30 mtp kernel: [ 1198.251107] MTP: Soft Reclaim-44764 
+Sep 27 07:04:30 mtp kernel: [ 1198.252938] MTP: Global Reclaim-343 
+Sep 27 07:04:30 mtp kernel: [ 1198.255336] MTP: Soft Reclaim-38639 
+Sep 27 07:04:30 mtp kernel: [ 1198.255595] MTP: Global Reclaim-100 
+Sep 27 07:04:30 mtp kernel: [ 1198.255597] MTP: Soft Reclaim-0 
+Sep 27 07:04:30 mtp kernel: [ 1198.255664] MTP: Global Reclaim-0 
+Sep 27 07:04:30 mtp kernel: [ 1198.276406] MTP: Soft Reclaim-43350 
+Sep 27 07:04:30 mtp kernel: [ 1198.278072] MTP: Global Reclaim-329 
+Sep 27 07:04:30 mtp kernel: [ 1198.281471] MTP: Soft Reclaim-40580 
+Sep 27 07:04:30 mtp kernel: [ 1198.281702] MTP: Global Reclaim-76 
+Sep 27 07:04:30 mtp kernel: [ 1198.281705] MTP: Soft Reclaim-0 
+Sep 27 07:04:30 mtp kernel: [ 1198.281769] MTP: Global Reclaim-0 
+Sep 27 07:04:30 mtp kernel: [ 1198.341221] MTP: Soft Reclaim-0 
+Sep 27 07:04:30 mtp kernel: [ 1198.341426] MTP: Global Reclaim-0 
+Sep 27 07:04:30 mtp kernel: [ 1198.343710] MTP: Soft Reclaim-40187 
+Sep 27 07:04:30 mtp kernel: [ 1198.344615] MTP: Global Reclaim-80 
+Sep 27 07:04:30 mtp kernel: [ 1198.979391] MTP: Soft Reclaim-41306 
+Sep 27 07:04:30 mtp kernel: [ 1198.985699] MTP: Global Reclaim-337 
+Sep 27 07:04:30 mtp kernel: [ 1199.204215] MTP: Soft Reclaim-40886 
+Sep 27 07:04:30 mtp kernel: [ 1199.207957] MTP: Global Reclaim-468 
+Sep 27 07:04:30 mtp kernel: [ 1199.217469] MTP: Soft Reclaim-40217 
+Sep 27 07:04:30 mtp kernel: [ 1199.217788] MTP: Global Reclaim-78 
+Sep 27 07:04:30 mtp kernel: [ 1199.217792] MTP: Soft Reclaim-0 
+Sep 27 07:04:30 mtp kernel: [ 1199.217880] MTP: Global Reclaim-0 
+Sep 27 07:04:31 mtp kernel: [ 1199.238974] MTP: Soft Reclaim-40889 
+Sep 27 07:04:31 mtp kernel: [ 1199.244731] MTP: Soft Reclaim-41335 
+Sep 27 07:04:31 mtp kernel: [ 1199.246163] MTP: Global Reclaim-216 
+Sep 27 07:04:31 mtp kernel: [ 1199.247302] MTP: Global Reclaim-271 
+Sep 27 07:04:31 mtp kernel: [ 1199.351051] MTP: Soft Reclaim-0 
+Sep 27 07:04:31 mtp kernel: [ 1199.351229] MTP: Global Reclaim-0 
+Sep 27 07:04:31 mtp kernel: [ 1199.371241] MTP: Global Reclaim-341 
+Sep 27 07:04:31 mtp kernel: [ 1199.371455] MTP: Global Reclaim-60 
+Sep 27 07:04:31 mtp kernel: [ 1199.371521] MTP: Global Reclaim-0 
+Sep 27 07:04:31 mtp kernel: [ 1199.387756] MTP: Soft Reclaim-38424 
+Sep 27 07:04:31 mtp kernel: [ 1199.387969] MTP: Global Reclaim-75 
+Sep 27 07:04:31 mtp kernel: [ 1199.387972] MTP: Soft Reclaim-0 
+Sep 27 07:04:31 mtp kernel: [ 1199.388096] MTP: Global Reclaim-0 
+Sep 27 07:04:31 mtp kernel: [ 1199.411156] MTP: Soft Reclaim-41710 
+Sep 27 07:04:31 mtp kernel: [ 1199.439536] MTP: Global Reclaim-369 
+Sep 27 07:04:31 mtp kernel: [ 1199.442282] MTP: Soft Reclaim-35198 
+Sep 27 07:04:31 mtp kernel: [ 1199.442546] MTP: Global Reclaim-89 
+Sep 27 07:04:31 mtp kernel: [ 1199.442548] MTP: Soft Reclaim-0 
+Sep 27 07:04:31 mtp kernel: [ 1199.442619] MTP: Global Reclaim-0 
+Sep 27 07:04:31 mtp kernel: [ 1199.443706] MTP: Soft Reclaim-37994 
+Sep 27 07:04:31 mtp kernel: [ 1199.443920] MTP: Global Reclaim-96 
+Sep 27 07:04:31 mtp kernel: [ 1199.443922] MTP: Soft Reclaim-0 
+Sep 27 07:04:31 mtp kernel: [ 1199.444050] MTP: Global Reclaim-0 
+Sep 27 07:04:31 mtp kernel: [ 1199.538226] MTP: Soft Reclaim-37109 
+Sep 27 07:04:32 mtp kernel: [ 1200.529611] MTP: Soft Reclaim-41620 
+Sep 27 07:04:32 mtp kernel: [ 1200.531359] MTP: Global Reclaim-445 
+Sep 27 07:04:32 mtp kernel: [ 1200.544540] MTP: Soft Reclaim-36449 
+Sep 27 07:04:32 mtp kernel: [ 1200.544791] MTP: Global Reclaim-69 
+Sep 27 07:04:32 mtp kernel: [ 1200.544794] MTP: Soft Reclaim-0 
+Sep 27 07:04:32 mtp kernel: [ 1200.544862] MTP: Global Reclaim-0 
+Sep 27 07:04:32 mtp kernel: [ 1200.670433] MTP: Soft Reclaim-39474 
+Sep 27 07:04:36 mtp kernel: [ 1204.630192] veth85f8032: renamed from eth0
+Sep 27 07:04:36 mtp NetworkManager[1175]: <warn>  [1474940076.4415] device (veth85f8032): failed to find device 14 'veth85f8032' with udev
+Sep 27 07:04:36 mtp kernel: [ 1204.666070] docker0: port 1(vethcf12234) entered disabled state
+Sep 27 07:04:36 mtp NetworkManager[1175]: <info>  [1474940076.4434] manager: (veth85f8032): new Veth device (/org/freedesktop/NetworkManager/Devices/28)
+Sep 27 07:04:36 mtp NetworkManager[1175]: <info>  [1474940076.4474] device (vethcf12234): link disconnected
+Sep 27 07:04:41 mtp dockerd[2235]: time="2016-09-27T07:04:41.444342609+05:30" level=error msg="collecting stats for 314d8ff1723df338fc2fd4a185e97c124df1b7c4a173794b80fa20c511f5391d: rpc error: code = 2 desc = containerd: container not found"
+Sep 27 07:04:46 mtp NetworkManager[1175]: <info>  [1474940086.0384] devices added (path: /sys/devices/virtual/net/veth85f8032, iface: veth85f8032)
+Sep 27 07:04:46 mtp NetworkManager[1175]: <info>  [1474940086.0384] device added (path: /sys/devices/virtual/net/veth85f8032, iface: veth85f8032): no ifupdown configuration found.
+Sep 27 07:04:50 mtp kernel: [ 1218.735726] docker0: port 1(vethcf12234) entered disabled state
+Sep 27 07:04:50 mtp avahi-daemon[1100]: Interface vethcf12234.IPv6 no longer relevant for mDNS.
+Sep 27 07:04:50 mtp avahi-daemon[1100]: Leaving mDNS multicast group on interface vethcf12234.IPv6 with address fe80::fc83:d0ff:fe5f:17a8.
+Sep 27 07:04:50 mtp kernel: [ 1218.741760] device vethcf12234 left promiscuous mode
+Sep 27 07:04:50 mtp kernel: [ 1218.741767] docker0: port 1(vethcf12234) entered disabled state
+Sep 27 07:04:50 mtp kernel: [ 1218.746894] veth97e9d8c: renamed from eth0
+Sep 27 07:04:50 mtp avahi-daemon[1100]: Withdrawing address record for fe80::fc83:d0ff:fe5f:17a8 on vethcf12234.
+Sep 27 07:04:50 mtp kernel: [ 1218.781787] veth353ee9c: renamed from eth0
+Sep 27 07:04:50 mtp kernel: [ 1218.809567] vethb34e439: renamed from eth0
+Sep 27 07:04:50 mtp kernel: [ 1218.837546] docker0: port 4(veth909051f) entered disabled state
+Sep 27 07:04:50 mtp kernel: [ 1218.837663] docker0: port 2(veth4d9ebaa) entered disabled state
+Sep 27 07:04:50 mtp kernel: [ 1218.837849] docker0: port 3(vethb1e14dd) entered disabled state
+Sep 27 07:04:50 mtp kernel: [ 1218.837992] docker0: port 5(vethb66422a) entered disabled state
+Sep 27 07:04:50 mtp kernel: [ 1218.838586] docker0: port 4(veth909051f) entered disabled state
+Sep 27 07:04:50 mtp avahi-daemon[1100]: Interface veth909051f.IPv6 no longer relevant for mDNS.
+Sep 27 07:04:50 mtp avahi-daemon[1100]: Leaving mDNS multicast group on interface veth909051f.IPv6 with address fe80::8d8:26ff:fe78:55c3.
+Sep 27 07:04:50 mtp kernel: [ 1218.850238] device veth909051f left promiscuous mode
+Sep 27 07:04:50 mtp kernel: [ 1218.850245] docker0: port 4(veth909051f) entered disabled state
+Sep 27 07:04:50 mtp kernel: [ 1218.851079] vethc26e847: renamed from eth0
+Sep 27 07:04:50 mtp avahi-daemon[1100]: Withdrawing address record for fe80::8d8:26ff:fe78:55c3 on veth909051f.
+Sep 27 07:04:50 mtp NetworkManager[1175]: <info>  [1474940090.6749] devices removed (path: /sys/devices/virtual/net/veth85f8032, iface: veth85f8032)
+Sep 27 07:04:50 mtp NetworkManager[1175]: <info>  [1474940090.6750] devices removed (path: /sys/devices/virtual/net/vethcf12234, iface: vethcf12234)
+Sep 27 07:04:50 mtp NetworkManager[1175]: <info>  [1474940090.6751] devices added (path: /sys/devices/virtual/net/veth97e9d8c, iface: veth97e9d8c)
+Sep 27 07:04:50 mtp NetworkManager[1175]: <info>  [1474940090.6751] device added (path: /sys/devices/virtual/net/veth97e9d8c, iface: veth97e9d8c): no ifupdown configuration found.
+Sep 27 07:04:50 mtp NetworkManager[1175]: <info>  [1474940090.6753] devices removed (path: /sys/devices/virtual/net/veth97e9d8c, iface: veth97e9d8c)
+Sep 27 07:04:50 mtp NetworkManager[1175]: <info>  [1474940090.6754] devices removed (path: /sys/devices/virtual/net/veth909051f, iface: veth909051f)
+Sep 27 07:04:50 mtp NetworkManager[1175]: <info>  [1474940090.6755] devices added (path: /sys/devices/virtual/net/vethb34e439, iface: vethb34e439)
+Sep 27 07:04:50 mtp NetworkManager[1175]: <info>  [1474940090.6756] device added (path: /sys/devices/virtual/net/vethb34e439, iface: vethb34e439): no ifupdown configuration found.
+Sep 27 07:04:50 mtp NetworkManager[1175]: <info>  [1474940090.6758] devices added (path: /sys/devices/virtual/net/veth353ee9c, iface: veth353ee9c)
+Sep 27 07:04:50 mtp NetworkManager[1175]: <info>  [1474940090.6758] device added (path: /sys/devices/virtual/net/veth353ee9c, iface: veth353ee9c): no ifupdown configuration found.
+Sep 27 07:04:50 mtp NetworkManager[1175]: <info>  [1474940090.6769] device (veth85f8032): driver 'veth' does not support carrier detection.
+Sep 27 07:04:50 mtp NetworkManager[1175]: <info>  [1474940090.6772] device (vethcf12234): driver 'veth' does not support carrier detection.
+Sep 27 07:04:50 mtp NetworkManager[1175]: <info>  [1474940090.6828] manager: (veth353ee9c): new Veth device (/org/freedesktop/NetworkManager/Devices/29)
+Sep 27 07:04:50 mtp avahi-daemon[1100]: Interface veth4d9ebaa.IPv6 no longer relevant for mDNS.
+Sep 27 07:04:50 mtp avahi-daemon[1100]: Leaving mDNS multicast group on interface veth4d9ebaa.IPv6 with address fe80::6c7d:91ff:fe3b:5d57.
+Sep 27 07:04:50 mtp NetworkManager[1175]: <info>  [1474940090.6871] manager: (vethb34e439): new Veth device (/org/freedesktop/NetworkManager/Devices/30)
+Sep 27 07:04:50 mtp NetworkManager[1175]: <info>  [1474940090.6880] device (veth4d9ebaa): link disconnected
+Sep 27 07:04:50 mtp NetworkManager[1175]: <info>  [1474940090.6888] device (vethb1e14dd): link disconnected
+Sep 27 07:04:50 mtp NetworkManager[1175]: <info>  [1474940090.6888] device (vethb66422a): link disconnected
+Sep 27 07:04:50 mtp NetworkManager[1175]: <info>  [1474940090.6903] device (docker0): link disconnected (deferring action for 4 seconds)
+Sep 27 07:04:50 mtp NetworkManager[1175]: <info>  [1474940090.6906] device (veth909051f): driver 'veth' does not support carrier detection.
+Sep 27 07:04:50 mtp NetworkManager[1175]: <warn>  [1474940090.6912] device (vethc26e847): failed to find device 18 'vethc26e847' with udev
+Sep 27 07:04:50 mtp kernel: [ 1218.908933] docker0: port 2(veth4d9ebaa) entered disabled state
+Sep 27 07:04:50 mtp kernel: [ 1218.919637] device veth4d9ebaa left promiscuous mode
+Sep 27 07:04:50 mtp kernel: [ 1218.919642] docker0: port 2(veth4d9ebaa) entered disabled state
+Sep 27 07:04:50 mtp avahi-daemon[1100]: Withdrawing address record for fe80::6c7d:91ff:fe3b:5d57 on veth4d9ebaa.
+Sep 27 07:04:50 mtp NetworkManager[1175]: <info>  [1474940090.6996] manager: (vethc26e847): new Veth device (/org/freedesktop/NetworkManager/Devices/31)
+Sep 27 07:04:50 mtp NetworkManager[1175]: <info>  [1474940090.7119] device (veth353ee9c): driver 'veth' does not support carrier detection.
+Sep 27 07:04:50 mtp NetworkManager[1175]: <info>  [1474940090.7121] device (veth4d9ebaa): driver 'veth' does not support carrier detection.
+Sep 27 07:04:50 mtp NetworkManager[1175]: <info>  [1474940090.7134] devices removed (path: /sys/devices/virtual/net/veth353ee9c, iface: veth353ee9c)
+Sep 27 07:04:50 mtp NetworkManager[1175]: <info>  [1474940090.7140] devices removed (path: /sys/devices/virtual/net/veth4d9ebaa, iface: veth4d9ebaa)
+Sep 27 07:04:50 mtp NetworkManager[1175]: <info>  [1474940090.7142] devices added (path: /sys/devices/virtual/net/vethc26e847, iface: vethc26e847)
+Sep 27 07:04:50 mtp NetworkManager[1175]: <info>  [1474940090.7142] device added (path: /sys/devices/virtual/net/vethc26e847, iface: vethc26e847): no ifupdown configuration found.
+Sep 27 07:04:50 mtp avahi-daemon[1100]: Interface vethb66422a.IPv6 no longer relevant for mDNS.
+Sep 27 07:04:50 mtp avahi-daemon[1100]: Leaving mDNS multicast group on interface vethb66422a.IPv6 with address fe80::4456:f2ff:fea6:a302.
+Sep 27 07:04:50 mtp kernel: [ 1218.944783] docker0: port 5(vethb66422a) entered disabled state
+Sep 27 07:04:50 mtp kernel: [ 1218.947128] device vethb66422a left promiscuous mode
+Sep 27 07:04:50 mtp kernel: [ 1218.947132] docker0: port 5(vethb66422a) entered disabled state
+Sep 27 07:04:50 mtp avahi-daemon[1100]: Withdrawing address record for fe80::4456:f2ff:fea6:a302 on vethb66422a.
+Sep 27 07:04:50 mtp NetworkManager[1175]: <info>  [1474940090.7443] device (vethb34e439): driver 'veth' does not support carrier detection.
+Sep 27 07:04:50 mtp NetworkManager[1175]: <info>  [1474940090.7445] device (vethb66422a): driver 'veth' does not support carrier detection.
+Sep 27 07:04:50 mtp NetworkManager[1175]: <info>  [1474940090.7536] devices removed (path: /sys/devices/virtual/net/vethb34e439, iface: vethb34e439)
+Sep 27 07:04:50 mtp NetworkManager[1175]: <info>  [1474940090.7634] devices removed (path: /sys/devices/virtual/net/vethb66422a, iface: vethb66422a)
+Sep 27 07:04:50 mtp avahi-daemon[1100]: Interface vethb1e14dd.IPv6 no longer relevant for mDNS.
+Sep 27 07:04:50 mtp kernel: [ 1218.990419] docker0: port 3(vethb1e14dd) entered disabled state
+Sep 27 07:04:50 mtp avahi-daemon[1100]: Leaving mDNS multicast group on interface vethb1e14dd.IPv6 with address fe80::e02c:9bff:fe5d:3a66.
+Sep 27 07:04:50 mtp avahi-daemon[1100]: Withdrawing address record for fe80::e02c:9bff:fe5d:3a66 on vethb1e14dd.
+Sep 27 07:04:50 mtp NetworkManager[1175]: <info>  [1474940090.7744] device (vethc26e847): driver 'veth' does not support carrier detection.
+Sep 27 07:04:50 mtp NetworkManager[1175]: <info>  [1474940090.7750] device (vethb1e14dd): driver 'veth' does not support carrier detection.
+Sep 27 07:04:50 mtp kernel: [ 1218.996433] device vethb1e14dd left promiscuous mode
+Sep 27 07:04:50 mtp kernel: [ 1218.996438] docker0: port 3(vethb1e14dd) entered disabled state
+Sep 27 07:04:50 mtp NetworkManager[1175]: <info>  [1474940090.7793] devices removed (path: /sys/devices/virtual/net/vethc26e847, iface: vethc26e847)
+Sep 27 07:04:50 mtp NetworkManager[1175]: <info>  [1474940090.7838] devices removed (path: /sys/devices/virtual/net/vethb1e14dd, iface: vethb1e14dd)
+Sep 27 07:04:50 mtp dockerd[2235]: time="2016-09-27T07:04:50.918431375+05:30" level=error msg="Handler for POST /v1.24/containers/c1/stop returned error: Container c1 is already stopped"
+Sep 27 07:04:50 mtp dockerd[2235]: time="2016-09-27T07:04:50.919889180+05:30" level=error msg="Handler for POST /v1.24/containers/c2/stop returned error: Container c2 is already stopped"
+Sep 27 07:04:50 mtp dockerd[2235]: time="2016-09-27T07:04:50.920828920+05:30" level=error msg="Handler for POST /v1.24/containers/c3/stop returned error: Container c3 is already stopped"
+Sep 27 07:04:50 mtp dockerd[2235]: time="2016-09-27T07:04:50.921725058+05:30" level=error msg="Handler for POST /v1.24/containers/c4/stop returned error: Container c4 is already stopped"
+Sep 27 07:04:50 mtp dockerd[2235]: time="2016-09-27T07:04:50.922618709+05:30" level=error msg="Handler for POST /v1.24/containers/c5/stop returned error: Container c5 is already stopped"
+Sep 27 07:04:54 mtp NetworkManager[1175]: <info>  [1474940094.7800] device (docker0): link disconnected (calling deferred action)
+Sep 27 07:04:58 mtp kernel: [ 1226.304418] MTP: New memcg created ! 
+Sep 27 07:04:58 mtp kernel: [ 1226.317214] MEM-RECLAMATION MODULE: --------------------------- Removed --------------------------- 

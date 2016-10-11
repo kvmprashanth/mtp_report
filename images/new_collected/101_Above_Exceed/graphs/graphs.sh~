@@ -1,0 +1,18 @@
+gnuplot memory_reclaimed
+gnuplot exceed
+python gl_script.py
+gnuplot gl_plot
+gnuplot memory_assigned
+
+# Distributive Plots
+python dist_ma.py
+gnuplot dist_ma
+python dist_mr.py
+gnuplot dist_mr
+
+# Additional Plots
+python additional_ma.py
+gnuplot additional_ma
+python additional_mr.py
+gnuplot additional_mr
+

@@ -1,0 +1,56 @@
+java -cp /home/prashanth/Workspace/mem_reclamation/experiments/ycsb/redis-binding/conf:/home/prashanth/Workspace/mem_reclamation/experiments/ycsb/conf:/home/prashanth/Workspace/mem_reclamation/experiments/ycsb/lib/htrace-core4-4.1.0-incubating.jar:/home/prashanth/Workspace/mem_reclamation/experiments/ycsb/lib/core-0.11.0.jar:/home/prashanth/Workspace/mem_reclamation/experiments/ycsb/lib/jackson-core-asl-1.9.4.jar:/home/prashanth/Workspace/mem_reclamation/experiments/ycsb/lib/jackson-mapper-asl-1.9.4.jar:/home/prashanth/Workspace/mem_reclamation/experiments/ycsb/lib/HdrHistogram-2.1.4.jar:/home/prashanth/Workspace/mem_reclamation/experiments/ycsb/redis-binding/lib/commons-pool-1.5.5.jar:/home/prashanth/Workspace/mem_reclamation/experiments/ycsb/redis-binding/lib/redis-binding-0.11.0.jar:/home/prashanth/Workspace/mem_reclamation/experiments/ycsb/redis-binding/lib/jedis-2.0.0.jar com.yahoo.ycsb.Client -db com.yahoo.ycsb.db.RedisClient -s -P ycsb/workloads/workloada -p redis.host=127.0.0.1 -p redis.port=3001 -t
+YCSB Client 0.11.0
+Command line: -db com.yahoo.ycsb.db.RedisClient -s -P ycsb/workloads/workloada -p redis.host=127.0.0.1 -p redis.port=3001 -t
+Loading workload...
+Starting test.
+2016-10-02 06:00:21:660 0 sec: 0 operations; est completion in 0 seconds 
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+2016-10-02 06:00:31:617 10 sec: 10081 operations; 1008.1 current ops/sec; est completion in 8 minutes [READ: Count=5049, Max=35839, Min=170, Avg=951.55, 90=1680, 99=7327, 99.9=17727, 99.99=33439] [UPDATE: Count=5074, Max=23999, Min=165, Avg=937.5, 90=1628, 99=7019, 99.9=16495, 99.99=23727] 
+2016-10-02 06:00:41:614 20 sec: 17428 operations; 734.7 current ops/sec; est completion in 9 minutes [READ: Count=3589, Max=43679, Min=178, Avg=1384.04, 90=2567, 99=10311, 99.9=25743, 99.99=43679] [UPDATE: Count=3721, Max=53055, Min=186, Avg=1305.08, 90=2449, 99=9751, 99.9=21375, 99.99=53055] 
+2016-10-02 06:00:51:614 30 sec: 25246 operations; 781.8 current ops/sec; est completion in 9 minutes [READ: Count=3910, Max=53183, Min=207, Avg=1249.92, 90=2339, 99=8583, 99.9=18879, 99.99=53183] [UPDATE: Count=3907, Max=30639, Min=196, Avg=1268.63, 90=2285, 99=8847, 99.9=19023, 99.99=30639] 
+2016-10-02 06:01:01:616 40 sec: 32319 operations; 707.3 current ops/sec; est completion in 9 minutes [READ: Count=3530, Max=28415, Min=216, Avg=1405.72, 90=2733, 99=11375, 99.9=23647, 99.99=28415] [UPDATE: Count=3549, Max=30511, Min=224, Avg=1377.58, 90=2625, 99=8575, 99.9=16959, 99.99=30511] 
+2016-10-02 06:01:11:614 50 sec: 38438 operations; 611.9 current ops/sec; est completion in 10 minutes [READ: Count=3031, Max=47935, Min=186, Avg=1586.84, 90=3173, 99=12559, 99.9=24095, 99.99=47935] [UPDATE: Count=3081, Max=24655, Min=211, Avg=1640.39, 90=3325, 99=13151, 99.9=19311, 99.99=24655] 
+2016-10-02 06:01:21:615 60 sec: 46406 operations; 796.72 current ops/sec; est completion in 9 minutes [READ: Count=4008, Max=1702911, Min=155, Avg=1462.26, 90=1884, 99=9407, 99.9=22591, 99.99=1702911] [UPDATE: Count=3957, Max=25743, Min=146, Avg=1015.81, 90=1820, 99=7751, 99.9=16575, 99.99=25743] 
+2016-10-02 06:01:31:614 70 sec: 53048 operations; 664.27 current ops/sec; est completion in 9 minutes [READ: Count=3281, Max=60191, Min=219, Avg=1363.93, 90=2567, 99=9895, 99.9=17855, 99.99=60191] [UPDATE: Count=3361, Max=71359, Min=204, Avg=1436.57, 90=2609, 99=12335, 99.9=28415, 99.99=71359] 
+redis.clients.jedis.exceptions.JedisConnectionException: java.net.SocketTimeoutException: Read timed out
+	at redis.clients.jedis.Protocol.process(Protocol.java:74)
+	at redis.clients.jedis.Protocol.read(Protocol.java:122)
+	at redis.clients.jedis.Connection.getBinaryMultiBulkReply(Connection.java:189)
+	at redis.clients.jedis.Jedis.hgetAll(Jedis.java:861)
+	at com.yahoo.ycsb.db.RedisClient.read(RedisClient.java:99)
+	at com.yahoo.ycsb.DBWrapper.read(DBWrapper.java:151)
+	at com.yahoo.ycsb.workloads.CoreWorkload.doTransactionRead(CoreWorkload.java:708)
+	at com.yahoo.ycsb.workloads.CoreWorkload.doTransaction(CoreWorkload.java:630)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:458)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:127)
+	at redis.clients.util.RedisInputStream.fill(RedisInputStream.java:110)
+	at redis.clients.util.RedisInputStream.readByte(RedisInputStream.java:46)
+	at redis.clients.jedis.Protocol.process(Protocol.java:59)
+	... 9 more
+redis.clients.jedis.exceptions.JedisConnectionException: java.net.SocketTimeoutException: Read timed out
+	at redis.clients.jedis.Protocol.process(Protocol.java:74)
+	at redis.clients.jedis.Protocol.read(Protocol.java:122)
+	at redis.clients.jedis.Connection.getBinaryMultiBulkReply(Connection.java:189)
+	at redis.clients.jedis.Jedis.hgetAll(Jedis.java:861)
+	at com.yahoo.ycsb.db.RedisClient.read(RedisClient.java:99)
+	at com.yahoo.ycsb.DBWrapper.read(DBWrapper.java:151)
+	at com.yahoo.ycsb.workloads.CoreWorkload.doTransactionRead(CoreWorkload.java:708)
+	at com.yahoo.ycsb.workloads.CoreWorkload.doTransaction(CoreWorkload.java:630)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:458)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:127)
+	at redis.clients.util.RedisInputStream.fill(RedisInputStream.java:110)
+	at redis.clients.util.RedisInputStream.readByte(RedisInputStream.java:46)
+	at redis.clients.jedis.Protocol.process(Protocol.java:59)
+	... 9 more

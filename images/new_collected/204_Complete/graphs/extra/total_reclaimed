@@ -1,0 +1,14 @@
+set term png size 1200, 800
+set output "../Total_Reclaimed.png"
+set title 'Cumulative Plot between Time - Total Memory Reclaimed'
+set xlabel 'Time (s)'
+
+m1=0
+cumalative_sum_m1(x)=(m1=m1+x,m1)
+
+m2=0
+cumalative_sum_m2(y)=(m2=m2+y,m2)
+
+set ylabel 'Total Memory Reclaimed (MB)'
+plot '../plot.data' using 1:(cumalative_sum_m1($11)/1048576) with linespoints t 'M1', \
+	 '../plot.data' using 1:(cumalative_sum_m2($12)/1048576) with linespoints t 'M2'
