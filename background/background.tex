@@ -12,20 +12,20 @@ entity. \\It enables multiple isolated user-space instances on a host machine.''
     
     Containers \cite{manual} are built as an extension to the existing operating system and not as an independent system. Container 
 provides virtualization of isolated user spaces at an OS-level and hence containers executing on a host machine reuse the functionalities of 
-the host kernel. This makes it better by reducing redudant kernel pages as used in VMs but comes at the cost of containers only of host OS 
+the host kernel. This makes it better by reducing redundant kernel pages as used in VMs but comes at the cost of containers only of host OS 
 type to execute on a system.
 
      \begin{figure}
       \centering
       \includegraphics[width=0.5\textwidth]{images/vm_vs_container.jpg}
-      \caption{A depiction of a derivative IaaS cloud platform, Source:\cite{slideshare}}
+      \caption{Difference between a VM and Container, Source:\cite{slideshare}}
       \label{img_difference}
     \end{figure}
 
 A high level difference between a VM and containers can be seen in Fig:\ref{img_difference}. The biggest advantage of using containers over 
-virtual machines is that they provide much lesser performance overheads. Containers are usally managed by container managers, which are 
+virtual machines is that they provide much lesser performance overheads. Containers are usually managed by container managers, which are 
 entities similar to how Hypervisors are to VMs. Container managers are shipped by different organizations like Docker \cite{docker}, LXD 
-\cite{lxd}, OpenVZ \cite{kolyshkin2006virtualization} etc. All container managers makes use of 3 linux kernel components and combine 
+\cite{lxd}, OpenVZ \cite{kolyshkin2006virtualization} etc. All container managers makes use of 3 Linux kernel components and combine 
 them to form the building structure. The deploy their own controllers on top of this. 
     
     \begin{enumerate}
@@ -122,10 +122,10 @@ process/ application does not see in physical RAM addresses. It only sees virtua
 The OS uses a page file located on the disk to assist with memory requests in addition to the RAM. Less RAM means more pressure on the Page 
 file. When the OS tries to find a piece of memory that's not in the RAM, it will try to find in the page file, and in this case they call it 
 a page miss. The actual physical memory allocated (RSS) to a process depends on how much free memory is available in the system. On free 
-memory becoming freshly available in the system, the OS tries to equally distribute the available memory to processes that are demanding 
-more memory.
+memory becoming freshly available in the system, the OS tries to equally distribute the available memory to all processes that are 
+demanding for more memory.
 
-    \subsubsection{Native Memory Reclamation}
+    \subsubsection{Memory Reclamation without Container support}
       When the system memory starts to get tight, the kernel can free memory by cleaning up its own internal data structures - reducing the 
 size of the inode and dentry caches however most pages in the system are user process pages. Hence the kernel, in order to accommodate 
 current demands for user pages, must find some existing pages to toss out. A proper balance between anonymous and page cache pages must be 
@@ -145,9 +145,14 @@ and iterates these lists to satisfy reclamation requests there by trying to maxi
 	\caption{Mapping of pages to LRU lists}
 	\label{img_page_mapping}
       \end{figure}
+      
+      Most recent Linux kernels that are even skipped through stable Linux distribution support linux containers. They provide the 
+following set of knobs to provision containers - Hard limit, Soft Limit, OOM Control, Swappiness to name a few important ones. Hard limits 
+can further be specified in terms of process, kernel and tcp memory utilization. However, with respect to reclamation we focus on soft 
+limits here.
     
-      The following section describes the existing policy. The current system-wide policy incorporates memory reclamation keeping in mind 
-the memory cgroups. Reclamation can broadly occur in two situations,
+      The following section describes the existing policy based on theoretical readings and looking upon Linux kernel code. The current 
+system-wide policy incorporates memory reclamation keeping in mind the memory cgroups. Reclamation can broadly occur in two situations,
       \begin{enumerate}
 	\item \textbf{System-Wide (Global) Reclamation:} When the system is under memory pressure when all/most of its pages are occupied
 	\item \textbf{Container Specific (Local) Reclamation:} When only a particular of the container is under pressure due to exceeding 
@@ -192,6 +197,10 @@ intervals using the formula,
 	$ excess = usage - softlimit $
       \end{center}
       
+      \pagebreak
+      
+      \noindent Two types of reclamations after the global reclamation policy used currently, 
+      
       \begin{itemize}
        \item \textbf{Soft Memory Reclamation (SMR):} is the one specific to cgroups where container which exceeds its 
 soft limits by the most is reclaimed from using the per container based LRU. It internally also reclaims from all its child containers.  
@@ -202,3 +211,8 @@ part of
       The existing reclamation policy is illustrated as a flow chart in Fig:\ref{img_high_level}. In simple terms the global reclamation 
 policy is a combination of both Soft Memory Reclamation and the native global LRU based reclamation. The reclamation algorithm tries to 
 maximize most of the requested reclamation from SMR and prefers GLR only when requests aren't being satisfied by SMR.
+
+      All above container specific memory reclamation patterns were derived based on theoretical readings and looking upon Linux kernel 
+code. We need to establish the correctness our hypotheses, and understand the existing system and how it impacts applications running 
+inside containers in a native container setup and derivative cloud setup. Hence the coming section describes the empirical evaluations to 
+do the same.  

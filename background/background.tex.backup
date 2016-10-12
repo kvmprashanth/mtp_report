@@ -6,7 +6,7 @@
     Container in simple terms can be defined as, 
   
     \begin{center}
-      \textbf{``Container is a process or set of processes grouped together along \\ with its dependent resources into a single logical OS 
+      \textit{``Container is a process or set of processes grouped together along \\ with its dependent resources into a single logical OS 
 entity. \\It enables multiple isolated user-space instances on a host machine.''} 
     \end{center}
     
@@ -98,6 +98,7 @@ process group.
 
 	More about memory management using memory subsystem in the Linux kernel shall be described in the coming section.
       
+  \pagebreak
   
   \section{Memory Management between processes in Linux}
   
@@ -124,7 +125,7 @@ a page miss. The actual physical memory allocated (RSS) to a process depends on 
 memory becoming freshly available in the system, the OS tries to equally distribute the available memory to processes that are demanding 
 more memory.
 
-    \subsubsection{Memory Reclamation}
+    \subsubsection{Memory Reclamation without Container support}
       When the system memory starts to get tight, the kernel can free memory by cleaning up its own internal data structures - reducing the 
 size of the inode and dentry caches however most pages in the system are user process pages. Hence the kernel, in order to accommodate 
 current demands for user pages, must find some existing pages to toss out. A proper balance between anonymous and page cache pages must be 
@@ -134,6 +135,83 @@ cache pages while reclamation. The default value for swappiness favors the evict
       The system maintains two LRU lists commonly referred as LRU/2, one active list containing all the pages that were recently used and 
 another inactive list which contains all the pages that weren't used recently. One pair (active and inactive) for anonymous pages and one 
 pair for page cache pages. The kernel favors reclamation from page cache pages over anonymous pages and inactive pages over active pages 
-and iterates these lists to satisfy reclamation requests.
+and iterates these lists to satisfy reclamation requests there by trying to maximize application performance while satisfying requests.
     
-    \subsubsection{Support for containers}
+    \subsubsection{Memory Reclamation with Container support}
+      
+      \begin{figure}
+	\centering
+	\includegraphics[width=0.7\textwidth]{images/page_mapping.jpg}
+	\caption{Mapping of pages to LRU lists}
+	\label{img_page_mapping}
+      \end{figure}
+      
+      Most recent Linux kernels that are even skipped through stable Linux distribution support linux containers. They provide the 
+following set of knobs to provision containers - Hard limit, Soft Limit, OOM Control, Swappiness to name a few important ones. Hard limits 
+can further be specified in terms of process, kernel and tcp memory utilization. However, with respect to reclamation we focus on soft 
+limits here.
+    
+      The following section describes the existing policy. The current system-wide policy incorporates memory reclamation keeping in mind 
+the memory cgroups. Reclamation can broadly occur in two situations,
+      \begin{enumerate}
+	\item \textbf{System-Wide (Global) Reclamation:} When the system is under memory pressure when all/most of its pages are occupied
+	\item \textbf{Container Specific (Local) Reclamation:} When only a particular of the container is under pressure due to exceeding 
+its hard limit
+      \end{enumerate}
+      
+      For the purposes of our problem, we focus on System-Wide Reclamation. It must be remembered that System-wide reclamation can again 
+broadly occur in two situations,       
+      \begin{enumerate}
+	\item \textbf{Synchronous:} When system is under memory pressure due to new page requests and not enough free pages available
+	\item \textbf{Asynchronous:} System clears up memory routinely when free
+      \end{enumerate}         
+      
+      Both Synchronous and Asynchronous global reclamation ultimately end up taking a similar path for memory reclamation, with little 
+differences when it comes to regions to reclaim from and how much to reclaim. A kernel function call trace for system-wide reclamation is 
+described in Fig:\ref{img_call_trace}. It shows how sync and async requests are ultimately mapped to the same set of function calls.
+
+      \begin{figure}
+	\centering
+	\includegraphics[width=1\textwidth]{images/reclamation_call_trace.jpg}
+	\caption{Kernel Function Call Trace for System-Wide Reclamation}
+	\label{img_call_trace}
+      \end{figure}
+
+      \begin{figure}
+	\centering
+	\includegraphics[width=1\textwidth]{images/High_level_Reclamation.png}
+	\caption{Existing policy for Memory Reclamation}
+	\label{img_high_level}
+      \end{figure}  
+      
+      As shown in Fig:\ref{img_page_mapping}, in recent linux kernels a LRU (LRU/2, but LRU used for simplicity) list is stored for every 
+container created also there is a Global LRU list which contains the pages of all processes in the system (including in the ones in a new 
+container). All processes are by default put into the default container and hence its pages are a part of the global LRU.  Once a process is 
+moved to a specific container, its pages also become a part of its local per container LRU list also.
+    
+      An container (Memory cgroup) when has its soft limit set, has a value called excess computed for it at every container node. The 
+system internally makes use of a RBTree to store the exceeds. The exceed is computed at \texttt{mem\_cgroup\_update\_tree()} at regular 
+intervals using the formula,
+      
+      \begin{center}
+	$ excess = usage - softlimit $
+      \end{center}
+      
+      \pagebreak
+      
+      \noindent Two types of reclamations after the global reclamation policy used currently, 
+      
+      \begin{itemize}
+       \item \textbf{Soft Memory Reclamation (SMR):} is the one specific to cgroups where container which exceeds its 
+soft limits by the most is reclaimed from using the per container based LRU. It internally also reclaims from all its child containers.  
+       \item \textbf{Global LRU reclamation policy (GLR):} reclaims based on the global LRU list in which all processes in the system are a 
+part of
+      \end{itemize}     
+      
+      The existing reclamation policy is illustrated as a flow chart in Fig:\ref{img_high_level}. In simple terms the global reclamation 
+policy is a combination of both Soft Memory Reclamation and the native global LRU based reclamation. The reclamation algorithm tries to 
+maximize most of the requested reclamation from SMR and prefers GLR only when requests aren't being satisfied by SMR.
+
+      All above container specific memory reclamation patterns were derived based on theoretical readings and looking upon Linux kernel 
+code. We need to establish the correctness our hypotheses, and understand the existing system in depth. Hence the coming section describes 
+the empirical evaluations.  

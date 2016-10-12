@@ -1,5 +1,5 @@
 
-\chapter{Design of Empherical Evaluation}
+\chapter{Design of Empirical Evaluation}
 
   \section{Experimental Guidelines}
     \label{section_guidelines}
@@ -39,8 +39,13 @@ containers are executing.
     \end{itemize}  
     
   \section{Workloads}
+  
+    This section presents the list of workloads that we have used as primary candidates to evaluate our empirical evaluations. All 
+workloads are chosen keeping in mind the memory intensive nature as mentioned in \ref{section_guidelines}.  
     
     \subsection{Synthetic Workloads}
+    
+      These are the list of Synthetic workloads we have used to establish our problem.
       
       \subsubsection{Stress}
 	Stress \cite{stress} is a deliberately simple workload generator for POSIX systems. It imposes a configurable amount of CPU, 
@@ -54,11 +59,121 @@ writes to these array locations. This only consumes anonymous memory pages.
 	File Hogger is a simple python program that creates a file with specified size and repeatedly updates it line by line there by 
 consuming both anonymous pages and file backed pages.
 
-    \subsection{Real Workloads}  
+    \subsection{Real Workloads}
+    
+      These are the list of real workloads we have used to show how the existing problems affect real work applications.
       
       \subsubsection{MongoDB}
 	MongoDB \cite{mongodb} is an open-source, document database designed for ease of development and scaling. Classified as a NoSQL 
 database program, MongoDB avoids the traditional table-based relational database structure in favor of JSON-like documents with dynamic 
-schemas. It is a memory follows a memory hungry approach where it tries to use up most of system and it actually leaves it up to the OS's 
+schemas. It follows a memory hungry approach where it tries to use up most of system and it actually leaves it up to the OS's 
 VMM to tell it to release the memory.
+
+      \subsubsection{Redis}
+	Redis \cite{redis} is a in-memory data structure store, used as database, cache and message broker. It is used to store a large 
+number of in-memory key-value pairs. Its in-memory nature makes it a prime candidate to use it as a workload in our empirical evaluations.
+   
+    \subsection{YCSB Benchmark}
+	We use YCSB \cite{cooper2010benchmarking} (Yahoo Cloud Server Benchmark) project as the benchmark to generate the clients evaluate 
+to the performance of our real workloads i.e MongoDB and Redis servers. The goal of YSCB is to develop performance comparisons of the new 
+generation of cloud data serving systems. It is a framework and common set of workloads for evaluating the performance of different 
+“key-value” stores.
+
+  \section{Experimental Setup}
+  
+    The following section describes the experimental setups used. There were two experimental setups used.  The second setup which involved 
+a derivative cloud setup was used to establish the problem in the derivative cloud setup using Real workloads.
+    
+    \subsection{Native container testbed}
+      
+       The native testbed consisted of running containers inside a host machine (running inside VM in our case) in complete isolation from 
+the external environment. This setup which involved a native container testbed, was used to understand the existing memory reclamations and 
+establish the problem in a native system using \textbf{synthetic workloads}.
+	
+      \subsubsection{Host}
+	
+	\begin{enumerate}
+	  \item Intel Core i5-4430 processor @ 3.00GHz
+	  \item 4 cores of cpu (with hyperthreading support)
+	  \item 1 TB of hard disk space
+	  \item 8 GB RAM
+	  \item Ubuntu 14.04 LTS desktop, 64 bit 
+	  \item Kernel version 4.5
+	  \item KVM Hypervisor
+	\end{enumerate}
+      
+      \subsubsection{Guest}
+	
+	\begin{enumerate}
+	  \item 3 cores of cpu (with hyperthreading support)
+	  \item 20 GB of virtual disk space
+	  \item 2-6 GB RAM (based on experimental configuration)
+	  \item Ubuntu 16.04 LTS desktop, 64 bit
+	  \item Kernel version 4.7
+	\end{enumerate}
+	
+      \subsubsection{Workloads Used}
+	
+	Memory Hogger and File Hogger was used to generate the memory pressure inside the containers. External pressure was generated 
+using Stress workload running directly on the host machine.
+
+      \subsubsection{Experimental Flow}
+	
+	Most experiments involved setting up of two containers. Workloads were used to introduce system memory pressure from containers. At 
+this point there was no memory pressure in the system (free memory was still available). Now the external pressure using Stress was 
+introduced which created memory pressure in the system that triggered reclamation. 
+
+    \subsection{Derivative cloud testbed}
+      
+       The derivative cloud testbed consisted of running server containers inside a virtual machine (VM-1) which was running on top of a 
+physical host machine. Another virtual machine (VM-2) was used to generate clients who connected to servers containers running inside VM-1. 
+This setup was used to understand the impact of existing memory reclamation patterns on real workloads running on a derivative cloud 
+setting.
+	
+      \subsubsection{Host}
+	
+	\begin{enumerate}
+	  \item Intel Xeon E5507 @ 2.27GHz
+	  \item 8 cores of cpu (with hyperthreading support)
+	  \item 125 GB of attached storage, Unlimited NFS attached storage 
+	  \item 24 GB RAM
+	  \item Ubuntu 14.04 LTS server, 64 bit 
+	  \item Kernel version 3.13
+	  \item KVM Hypervisor with memory ballooning enabled
+	  \item Guest machines were connected using a software bridge
+	\end{enumerate}
+      
+      \subsubsection{Guest}
+	
+	The two VMs used in this setup are described here.
+	
+	\noindent \textbf{VM-1:} Running server containers
+	\begin{enumerate}
+	  \item 6 cores of pinned cpus (with hyperthreading support)
+	  \item 175 GB of virtual disk space (Storage was provisioned using NFS)
+	  \item 16 GB RAM
+	  \item Ubuntu 16.04 LTS desktop, 64 bit
+	  \item Kernel version 4.7
+	  \item Containers inside guest were multiplexed using NAT forwarding
+	\end{enumerate}
+	
+	\noindent \textbf{VM-2:} Running clients that connect to server containers
+	\begin{enumerate}
+	  \item 1 core of pinned cpus (with hyperthreading support)
+	  \item 20 GB of virtual disk space (Storage was provisioned using NFS)
+	  \item 6 GB RAM
+	  \item Ubuntu 16.04 LTS desktop, 64 bit
+	  \item Kernel version 4.7
+	\end{enumerate}
+	
+      \subsubsection{Workloads Used}
+	
+	Redis and MongoDB was used to generate the memory pressure inside the containers. External pressure was generated by varying guest 
+balloon size triggered from the host.
+
+      \subsubsection{Experimental Flow}
+	
+	Most experiments involved setting up of 4 containers (2 redis containers and 2 mongoDB containers). Workloads were used to 
+introduce system memory pressure from containers. At this point there was no memory pressure in the system (free memory was still 
+available). Now the external pressure was introduced by reducing the guest VM size which intrun trigger memory reclamation at the guest VM. 
 	

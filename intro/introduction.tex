@@ -56,7 +56,7 @@ provided in the coming chapters.
     \begin{figure}
       \centering
       \includegraphics[width=0.7\textwidth]{images/derivative_cloud.png}
-      \caption{A depiction of a derivative IaaS cloud platform, Source:\cite{sharma2015spotcheck}}
+      \caption{Depiction of a derivative IaaS cloud platform, Source:\cite{sharma2015spotcheck}}
       \label{img_derivative_cloud}
     \end{figure}
 
@@ -144,6 +144,7 @@ relative priorities of each of the containers.
 	    \caption{Desired throughputs after provisioning}
 	    \label{plot_intro_desired}
 	  \end{subfigure}
+	  \caption{Plots for problem establishment}
 	\end{figure*}
 	
 	Consider 3 cases as described below. In cases 2 and 3, containers are allowed to run normally for about 100s and there after 
@@ -201,7 +202,7 @@ this case, this situation further complicated due to two reasons,
 	  \item Memory pressure maybe introduced by three factor described earlier or an external host system driver (eg: Balloon Driver)
        \end{enumerate}
 
-      In the native case, memory overcommitment was a required condition for the previously described situation to arise. Conisder the case 
+      In the native case, memory overcommitment was a required condition for the previously described situation to arise. Consider the case 
 where all containers were assigned memory considering the available system memory in such a way that there is no overcommitment, however 
 now the native cloud provider (host system) could reduce the memory available to the system using different memory reclamation policies at 
 the host. 
