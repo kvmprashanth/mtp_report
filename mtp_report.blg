@@ -4,7 +4,8 @@ The top-level auxiliary file: mtp_report.aux
 A level-1 auxiliary file: intro/introduction.aux
 A level-1 auxiliary file: background/background.aux
 A level-1 auxiliary file: design/design.aux
-A level-1 auxiliary file: experimentation/experimentation.aux
+A level-1 auxiliary file: native_exp/native.aux
+A level-1 auxiliary file: derived_exp/derived.aux
 A level-1 auxiliary file: solution/solution.aux
 A level-1 auxiliary file: conclusions/conclusions.aux
 The style file: ieeetr.bst
@@ -37,7 +38,7 @@ Warning--entry type for "redis" isn't style-file defined
 --line 192 of file mylit.bib
 You've used 24 entries,
             1876 wiz_defined-function locations,
-            596 strings with 7291 characters,
+            597 strings with 7300 characters,
 and the built_in function-call counts, 5380 in all, are:
 = -- 525
 > -- 179

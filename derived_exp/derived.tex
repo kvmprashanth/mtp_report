@@ -1,0 +1,60 @@
+
+\chapter{Empirical Analysis in derived cloud}
+
+  The list of questions mentioned in section:\ref{section_questions} are questions of interest that would help us understand the existing 
+memory management techniques better. We have tried answer the listed questions by mapping them into appropriate experiments. Inferences 
+were drawn based on the observations in the experiments. There were 3 different categories of questions we have tried to answer using 
+empirical analysis in a native container environment as listed below,
+  
+  \begin{enumerate}
+    \item Verify the correctness of our hypotheses
+    \item Understand parts of memory management for which hypothesis couldn't be drawn
+    %\item Understand the implications of existing memory management on application performance
+  \end{enumerate}
+  
+  The configuration in Table:\ref{table_native_base} is the base configuration for all experiments in this section. Any changes the base 
+configuration has been mentioned in the procedure of each of the experiment.
+
+    \begin{table}	 
+      \begin{center}
+	\begin{tabular}{ l | c | c }
+	  & Container-1 (M1) & Container-2 (M2) \\ 
+	  \hline
+	  \hline
+	  Size of VM & \multicolumn{2}{c}{2 GB} \\	      
+	  \hline
+	  Workload & Memory Hogger & Memory Hogger \\
+	  \hline
+	  Hard Limit & 1000 MB & 1000 MB \\  
+	  \hline
+	  Soft Limit & 150 MB & 150 MB \\  
+	  \hline
+	  Memory Usage & 500 MB & 500 MB \\
+	  \hline
+	  Exceed & 350 MB & 350 MB \\
+	  \hline 
+	  External Pressure & \multicolumn{2}{l}{ 200 - 400 - 600 - 800 - 1000 MB} \\
+	\end{tabular}	    
+	\caption{Base Configuration}
+	\label{table_native_base}
+      \end{center}
+    \end{table}
+    
+    Most experiments involved setting up of 2 containers. Workloads were used to introduce system memory pressure from containers. At 
+this point there was no memory pressure in the system (free memory was still available). Now the external pressure using Stress was 
+introduced after about 20s which created memory pressure in the system that triggered reclamation. The external pressure kept on increasing 
+by 200 MB in intervals of 40s. Each interval had a gap of 10s for memory to be reassigned to containers.
+  
+  %For the sake of simplicity, questions of category 1 and 2 were answered using the native testbed using synthetic workloads as described 
+%in section:\ref{section_testbed_native}. Questions of category 3 were answered using the derivative testbed using real workloads as 
+%described in section:\ref{section_testbed_derivative}
+
+  \section{Verification of hypotheses}
+    
+    
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  
+  \section{Conclusions}
+    
+    

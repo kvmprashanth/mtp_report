@@ -37,7 +37,21 @@ that is running in the host system.
       \item \textbf{Size of machine:} Size of Machine refers to the maximum memory available in the system inside which all the 
 containers are executing.      
     \end{itemize}  
-    
+  
+  \section{Metrics of Interest}
+  
+    The following are the metrics of interest to us that would help us analyze the experiments.
+      
+	\begin{enumerate}
+	 \item \textbf{Memory assigned to each container:} Total memory assigned to a container at any given instant
+	 \item \textbf{Soft memory reclaimed for each container:} Memory reclaimed from each container using SMR
+	 \item \textbf{Total memory reclaimed for each container:} Total Memory reclaimed from container (SMR + GLR)
+	 \item \textbf{Memory reclaimed using GLR:} Memory reclaimed from all containers and other processes running on system using GLR
+	 \item \textbf{Memory reassigned for each container:} Memory reassigned to each container on freeing up of memory
+	 \item \textbf{Application specific metrics:} Application metrics of the workload running inside containers like throughput, total 
+time taken etc.
+	\end{enumerate}
+  
   \section{Workloads}
   
     This section presents the list of workloads that we have used as primary candidates to evaluate our empirical evaluations. All 
@@ -85,6 +99,7 @@ generation of cloud data serving systems. It is a framework and common set of wo
 a derivative cloud setup was used to establish the problem in the derivative cloud setup using Real workloads.
     
     \subsection{Native container testbed}
+      \label{section_testbed_native}
       
        The native testbed consisted of running containers inside a host machine (running inside VM in our case) in complete isolation from 
 the external environment. This setup which involved a native container testbed, was used to understand the existing memory reclamations and 
@@ -121,9 +136,10 @@ using Stress workload running directly on the host machine.
 	
 	Most experiments involved setting up of two containers. Workloads were used to introduce system memory pressure from containers. At 
 this point there was no memory pressure in the system (free memory was still available). Now the external pressure using Stress was 
-introduced which created memory pressure in the system that triggered reclamation. 
+introduced after about 20s which created memory pressure in the system that triggered reclamation. 
 
     \subsection{Derivative cloud testbed}
+      \label{section_testbed_derivative}
       
        The derivative cloud testbed consisted of running server containers inside a virtual machine (VM-1) which was running on top of a 
 physical host machine. Another virtual machine (VM-2) was used to generate clients who connected to servers containers running inside VM-1. 
@@ -175,5 +191,58 @@ balloon size triggered from the host.
 	
 	Most experiments involved setting up of 4 containers (2 redis containers and 2 mongoDB containers). Workloads were used to 
 introduce system memory pressure from containers. At this point there was no memory pressure in the system (free memory was still 
-available). Now the external pressure was introduced by reducing the guest VM size which intrun trigger memory reclamation at the guest VM. 
+available). Now the external pressure was introduced by reducing the guest VM size after 100s, which in turn trigger memory reclamation at 
+the guest VM. 
+
+  \section{Experimental Scenarios}
+    
+    The following are the possible experimental Scenarios under which memory pressure maybe generated. And our main focus would be to 
+understand how memory pressure would affect applications in these scenarios,
+
+    \begin{enumerate}
+      \item All containers exceed: All containers are above soft limits)
+      \item None of the containers exceed: All containers are below soft limits or have no soft limits
+      \item Few containers exceed and the rest don't
+    \end{enumerate}
+  
+  \section{Questions of interest}
+    \label{section_questions}
+  
+    The following are the list of questions of interest in each of the above described scenarios,
+    
+    \subsection{All containers exceed}
+      
+      \begin{enumerate}
+	\item Is SMR purely based on exceed value of the container ?
+	\item Does only SMR occur when containers are exceeding ? if not, how much of memory is reclaimed using GLR ?  In what ratio does 
+SMR and GLR vary based on system memory pressure ?
+	\item How much of memory is reclaimed from a container in a single reclamation request ?
+	\item In what ratio does SMR and GLR vary based on container soft limits ?
+	%\item How is memory reassigned to containers when system pressure reduces ?
+	
+	\item Does setting containers with higher memory limits using existing memory reservations always guarantee higher priority to a 
+one container over the other while reclamation ?
+	\item When containers are exceeding by the same values, in what order and how much of memory reclamation occurs from different 
+containers ?
+	\item When containers are exceeding by the different values, in what order and how much of memory reclamation occurs from different 
+containers ?
+      \end{enumerate}
+  
+  \subsection{None of the containers exceed}
+  
+    \begin{enumerate}
+      \item Does our hypotheses of reclamation below soft limits falling back to native system reclamation hold good ?
+      \item Both containers not exceeding / containers without soft limits behave similarly ? 
+    \end{enumerate}
+  
+  \subsection{A few containers exceed, but the others don’t}
+  
+    \begin{enumerate}
+      \item Is the soft limit that is assigned to a container a definite guarantee ? If not, what role does it play in memory reclamation ?
+      \item How is memory is reclaimed from the containers that exceed and the containers that don’t ? Which of the two are more penalized ?
+    \end{enumerate}
+    
+  Experiments were designed to answer the above questions and experiments with key insights are discussed in the upcoming chapter.
+
+
 	

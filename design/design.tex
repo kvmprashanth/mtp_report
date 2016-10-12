@@ -37,7 +37,21 @@ that is running in the host system.
       \item \textbf{Size of machine:} Size of Machine refers to the maximum memory available in the system inside which all the 
 containers are executing.      
     \end{itemize}  
-    
+  
+  \section{Metrics of Interest}
+  
+    The following are the metrics of interest to us that would help us analyze the experiments.
+      
+	\begin{enumerate}
+	 \item \textbf{Memory assigned to each container:} Total memory assigned to a container at any given instant
+	 \item \textbf{Soft memory reclaimed for each container:} Memory reclaimed from each container using SMR
+	 \item \textbf{Total memory reclaimed for each container:} Total Memory reclaimed from container (SMR + GLR)
+	 \item \textbf{Memory reclaimed using GLR:} Memory reclaimed from all containers and other processes running on system using GLR
+	 \item \textbf{Memory reassigned for each container:} Memory reassigned to each container on freeing up of memory
+	 \item \textbf{Application specific metrics:} Application metrics of the workload running inside containers like throughput, total 
+time taken etc.
+	\end{enumerate}
+  
   \section{Workloads}
   
     This section presents the list of workloads that we have used as primary candidates to evaluate our empirical evaluations. All 
@@ -120,9 +134,10 @@ using Stress workload running directly on the host machine.
 
       \subsubsection{Experimental Flow}
 	
-	Most experiments involved setting up of two containers. Workloads were used to introduce system memory pressure from containers. At 
+	Most experiments involved setting up of 2 containers. Workloads were used to introduce system memory pressure from containers. At 
 this point there was no memory pressure in the system (free memory was still available). Now the external pressure using Stress was 
-introduced which created memory pressure in the system that triggered reclamation. 
+introduced after about 20s which created memory pressure in the system that triggered reclamation. The external pressure kept on increasing 
+by 200 MB in intervals of 40s. Each interval had a gap of 10s for memory to be reassigned to containers.
 
     \subsection{Derivative cloud testbed}
       \label{section_testbed_derivative}
@@ -177,7 +192,8 @@ balloon size triggered from the host.
 	
 	Most experiments involved setting up of 4 containers (2 redis containers and 2 mongoDB containers). Workloads were used to 
 introduce system memory pressure from containers. At this point there was no memory pressure in the system (free memory was still 
-available). Now the external pressure was introduced by reducing the guest VM size which intrun trigger memory reclamation at the guest VM. 
+available). Now the external pressure was introduced by reducing the guest VM size after 100s, which in turn trigger memory reclamation at 
+the guest VM. 
 
   \section{Experimental Scenarios}
     
@@ -199,17 +215,18 @@ understand how memory pressure would affect applications in these scenarios,
       
       \begin{enumerate}
 	\item Is SMR purely based on exceed value of the container ?
-	\item Does only SMR occur when containers are exceeding ? if not, how much of memory is reclaimed using GLR ?
+	\item Does only SMR occur when containers are exceeding ? if not, how much of memory is reclaimed using GLR ?  In what ratio does 
+SMR and GLR vary based on system memory pressure ?
+	\item How much of memory is reclaimed from a container in a single reclamation request ?
+	\item In what ratio does SMR and GLR vary based on container soft limits ?
+	%\item How is memory reassigned to containers when system pressure reduces ?
+	
+	\item Does setting containers with higher memory limits using existing memory reservations always guarantee higher priority to a 
+one container over the other while reclamation ?
 	\item When containers are exceeding by the same values, in what order and how much of memory reclamation occurs from different 
 containers ?
 	\item When containers are exceeding by the different values, in what order and how much of memory reclamation occurs from different 
 containers ?
-	\item How much of memory is reclaimed from a container in a single reclamation request ?
-	\item In what ratio does SMR and GLR vary based on container soft limits ?
-	\item In what ratio does SMR and GLR vary based on system memory pressure ?
-	\item Does setting containers with higher memory limits using existing memory reservations always guarantee higher priority to a 
-one container over the other while reclamation ?
-	\item How is memory reassigned to containers when system pressure reduces ?
       \end{enumerate}
   
   \subsection{None of the containers exceed}

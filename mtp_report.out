@@ -11,25 +11,33 @@
 \BOOKMARK [0][-]{chapter.3}{Design of Empirical Evaluation}{}% 11
 \BOOKMARK [1][-]{section.3.1}{Experimental Guidelines}{chapter.3}% 12
 \BOOKMARK [1][-]{section.3.2}{Experimental Configurations}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.3}{Workloads}{chapter.3}% 14
-\BOOKMARK [2][-]{subsection.3.3.1}{Synthetic Workloads}{section.3.3}% 15
-\BOOKMARK [2][-]{subsection.3.3.2}{Real Workloads}{section.3.3}% 16
-\BOOKMARK [2][-]{subsection.3.3.3}{YCSB Benchmark}{section.3.3}% 17
-\BOOKMARK [1][-]{section.3.4}{Experimental Setup}{chapter.3}% 18
-\BOOKMARK [2][-]{subsection.3.4.1}{Native container testbed}{section.3.4}% 19
-\BOOKMARK [2][-]{subsection.3.4.2}{Derivative cloud testbed}{section.3.4}% 20
-\BOOKMARK [1][-]{section.3.5}{Experimental Scenarios}{chapter.3}% 21
-\BOOKMARK [1][-]{section.3.6}{Questions of interest}{chapter.3}% 22
-\BOOKMARK [2][-]{subsection.3.6.1}{All containers exceed}{section.3.6}% 23
-\BOOKMARK [2][-]{subsection.3.6.2}{None of the containers exceed}{section.3.6}% 24
-\BOOKMARK [2][-]{subsection.3.6.3}{A few containers exceed, but the others don’t}{section.3.6}% 25
-\BOOKMARK [0][-]{chapter.4}{Empirical Analysis}{}% 26
-\BOOKMARK [1][-]{section.4.1}{Experiments to understand existing memory management in native environment}{chapter.4}% 27
-\BOOKMARK [2][-]{subsection.4.1.1}{Experiment-1}{section.4.1}% 28
-\BOOKMARK [2][-]{subsection.4.1.2}{Key Inferences}{section.4.1}% 29
-\BOOKMARK [1][-]{section.4.2}{Experiments to understand memory management implications in a derivative cloud}{chapter.4}% 30
-\BOOKMARK [2][-]{subsection.4.2.1}{Experiment-1}{section.4.2}% 31
-\BOOKMARK [2][-]{subsection.4.2.2}{Key Inferences}{section.4.2}% 32
-\BOOKMARK [1][-]{section.4.3}{Conclusions}{chapter.4}% 33
-\BOOKMARK [0][-]{chapter.5}{Design for Proposed System}{}% 34
-\BOOKMARK [0][-]{chapter.6}{Conclusions}{}% 35
+\BOOKMARK [1][-]{section.3.3}{Metrics of Interest}{chapter.3}% 14
+\BOOKMARK [1][-]{section.3.4}{Workloads}{chapter.3}% 15
+\BOOKMARK [2][-]{subsection.3.4.1}{Synthetic Workloads}{section.3.4}% 16
+\BOOKMARK [2][-]{subsection.3.4.2}{Real Workloads}{section.3.4}% 17
+\BOOKMARK [2][-]{subsection.3.4.3}{YCSB Benchmark}{section.3.4}% 18
+\BOOKMARK [1][-]{section.3.5}{Experimental Setup}{chapter.3}% 19
+\BOOKMARK [2][-]{subsection.3.5.1}{Native container testbed}{section.3.5}% 20
+\BOOKMARK [2][-]{subsection.3.5.2}{Derivative cloud testbed}{section.3.5}% 21
+\BOOKMARK [1][-]{section.3.6}{Experimental Scenarios}{chapter.3}% 22
+\BOOKMARK [1][-]{section.3.7}{Questions of interest}{chapter.3}% 23
+\BOOKMARK [2][-]{subsection.3.7.1}{All containers exceed}{section.3.7}% 24
+\BOOKMARK [2][-]{subsection.3.7.2}{None of the containers exceed}{section.3.7}% 25
+\BOOKMARK [2][-]{subsection.3.7.3}{A few containers exceed, but the others don’t}{section.3.7}% 26
+\BOOKMARK [0][-]{chapter.4}{Empirical Analysis in Native Containers}{}% 27
+\BOOKMARK [1][-]{section.4.1}{Verification of hypotheses}{chapter.4}% 28
+\BOOKMARK [2][-]{subsection.4.1.1}{Exp-1: All containers exceed}{section.4.1}% 29
+\BOOKMARK [2][-]{subsection.4.1.2}{Exp-2: None of the containers exceed}{section.4.1}% 30
+\BOOKMARK [1][-]{section.4.2}{Understand Memory Reclamation}{chapter.4}% 31
+\BOOKMARK [2][-]{subsection.4.2.1}{Exp-3: Affect of system memory pressure on Reclamation}{section.4.2}% 32
+\BOOKMARK [2][-]{subsection.4.2.2}{Exp-4: Memory Reclaimed in a single SMR request}{section.4.2}% 33
+\BOOKMARK [2][-]{subsection.4.2.3}{Exp-5: Affect of Soft Limit on Reclamation}{section.4.2}% 34
+\BOOKMARK [1][-]{section.4.3}{Key Insights}{chapter.4}% 35
+\BOOKMARK [2][-]{subsection.4.3.1}{All containers exceed}{section.4.3}% 36
+\BOOKMARK [2][-]{subsection.4.3.2}{None of the containers exceed}{section.4.3}% 37
+\BOOKMARK [2][-]{subsection.4.3.3}{A few containers exceed, but the others don’t}{section.4.3}% 38
+\BOOKMARK [0][-]{chapter.5}{Empirical Analysis in derived cloud}{}% 39
+\BOOKMARK [1][-]{section.5.1}{Verification of hypotheses}{chapter.5}% 40
+\BOOKMARK [1][-]{section.5.2}{Conclusions}{chapter.5}% 41
+\BOOKMARK [0][-]{chapter.6}{Design for Proposed System}{}% 42
+\BOOKMARK [0][-]{chapter.7}{Conclusions}{}% 43
