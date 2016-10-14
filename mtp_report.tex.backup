@@ -2,13 +2,13 @@
 
 \usepackage{float}
 \usepackage{booktabs}
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=0.9in]{geometry}
 \usepackage[moderate]{savetrees}
 \usepackage{graphicx}
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage[svgnames]{xcolor}
-\usepackage[colorlinks=true, linkcolor=Blue, urlcolor=cyan, citecolor=red]{hyperref}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=red]{hyperref}
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{amssymb}
@@ -28,9 +28,11 @@
 % Formatting
 \titleformat{\chapter}{\normalfont\huge\bf}{\thechapter.}{20pt}{\huge\bf}
 \linespread{1.05}
-\setlength{\parindent}{0em}
+\setlength{\parindent}{2em}
 \setlength{\parskip}{0.3em}
 \setitemize[0]{leftmargin=2em,itemindent=0.5em}
+\setlist[enumerate]{itemsep=0mm}
+\setlist[itemize]{itemsep=0mm}
 
 \begin{document}
 
@@ -38,10 +40,10 @@
   \begin{titlepage}    
     \begin{center}
    
-      \Large \textbf{Elastic memory management \\for \\container based services}  \\
+      \Large \textbf{Adaptive Memory Management \\for \\Container based Services}  \\
       \vspace{5em}
       
-      \large \textbf{M.Tech Stage-1 Report} \\
+      \large \textbf{Master's Thesis Phase-I Report} \\
       \vspace{5em}
       
       \normalsize Submitted in partial fulfillment of the requirements \\ for the degree of \\
@@ -84,18 +86,18 @@
   \pagenumbering{arabic}
   \setlength{\parskip}{1em}
   
-  %\include{intro/introduction}  
-  %\include{initial_attempts/initial_attempts}  
-  %\include{containers/containers}
-  %\include{comparison/comparison} 
-  %\include{disk_images/disk_images}
-  %\include{applications/applications}
-  %\include{conclusions/conclusions}
+  \include{intro/introduction}  
+  \include{background/background}  
+  \include{design/design}
+  \include{native_exp/native}
+  \include{derived_exp/derived}
+  \include{solution/solution}
+  \include{conclusions/conclusions}
   
   \bibliographystyle{ieeetr}
   \bibliography{mylit}  
   
-  \appendix
+  %\appendix
   %\include{appendix/demos}
   %\include{appendix/benchmarks}
 

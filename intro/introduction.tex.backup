@@ -27,52 +27,43 @@ protected from being affected by other customers running on the same system. One
 techniques used but the two techniques we would be focusing are Hardware level virtualization using \textit{Virtual Machines} (VM) and 
 Operating System level virtualization using \textit{Containers}. 
   
-  \section{Elastic Resource Provisioning for cloud services}
+  \section{Deterministic resource provisioning for cloud services}
   
-    Most commomly provisioned resources are compute, storage, network and memory. Most cloud services make use of hardware level 
+    Most commonly provisioned resources are compute, storage, network and memory. Most cloud services make use of hardware level 
 virtualization techniques that use Virtual Machines to provision compute resources as per client requirements. Such use of virtual machines 
 has been done for over a decade now and have gotten relatively stable and secure. Earlier resources were provisioned by cloud providers 
 were static, however static provisioning leaves less room for server consolidation hence providers are moving to a more elastic on-demand 
 model where resources provisioned are over-committed to a group of customer and servers are provisioned as per actual resource needs. A 
 popular example for the same is Amazon's EC2 \cite{amazonec2} that offers elastic web services which expand or compress as per actual 
-needs. 
-
-    Elastic provisioning of resources in a virtualized environment is more tricky task. There are several advanced resource provisioning 
-techniques \cite{dornemann2009demand} \cite{shen2011cloudscale} \cite{moreno2009elastic} \cite{calheiros2012aneka} etc. using virtual 
-machines that make use of horizontal/vertical provisioning techniques to satisfy client QOS (quality of service) requirements at the same 
-time perform server consolidations to reduce operating costs. However, hardware level virtualization layer induces overheads that are 
-caused by dual control loop while scheduling resources, complete hardware stack emulation for each VM, resources used by the hypervisor 
-(entity that manages VMs) etc. These overheads lead to bad cost-benefit ratios which adversely affects customers by overpricing services 
-offer by cloud provider.
+needs. Elastic provisioning of resources in a virtualized environment is more tricky task and leads to a lot of non-determinism. 
   
     A recent trend in virtualization has been towards OS-virtualization that makes use of lightweight containers to provision resources. 
 Several researches \cite{felter2015updated} \cite{morabito2015hypervisors} \cite{agarwal2015containing} \cite{beserra2015performance} 
 \cite{rathore2013kvm} have shown that containers provide provide near about the same features (with a few limitations) as that of virtual 
-machines but with much lesser overheads. Static provisioning using containers can be done easily today, however elastic provisioning of 
-containers is still to be explored in depth. Containers are relatively a young technology that needs further refinement to be used in 
-deployment. Several enterprises are hesitant to move towards containers due to the existing security issues. More about containers shall be 
-provided in the coming chapters.
+machines but with much lesser overheads. Static provisioning using containers can be done easily today, however deterministic provisioning 
+of containers is still to be explored in depth specially in situations of overcommitment. Containers are relatively a young technology that 
+needs further refinement to be used in deployment. Several enterprises are hesitant to move towards containers due to the existing security 
+issues. More about containers shall be provided in the coming chapters.
 
     \begin{figure}
       \centering
       \includegraphics[width=0.7\textwidth]{images/derivative_cloud.png}
-      \caption{A depiction of a derivative IaaS cloud platform, Source:\cite{sharma2015spotcheck}}
+      \caption{Depiction of a derivative IaaS cloud platform, Source:\cite{sharma2015spotcheck}}
       \label{img_derivative_cloud}
     \end{figure}
 
-    This idea of elastic provisioning can be expanded to a \textit{derivative cloud} environment as purposed by P.Sharma in his recent work 
-\cite{sharma2015spotcheck} which repackages and resells resources purchased from native IaaS platforms. A derivative cloud can offer 
-resources to customers with different pricing models and availability guarantees not provided by native platforms using a mix of resources  
-purchased under different contract. Derivative cloud providers rent resources from native cloud providers to resell services to customers 
-as shown in Fig:\ref{img_derivative_cloud}. Pi-Cloud\cite{picloud} and Heroku\cite{heroku} are examples derivative clouds that offer batch 
-processing service and PaaS offerings respectively by repacking native Iaas services. 
+    This idea of deterministic provisioning can be expanded to a \textit{derivative cloud} environment as purposed by P.Sharma in his 
+recent work \cite{sharma2015spotcheck} which repackages and resells resources purchased from native IaaS platforms. A derivative cloud can 
+offer resources to customers with different pricing models and availability guarantees not provided by native platforms using a mix of 
+resources purchased under different contract. Derivative cloud providers rent resources from native cloud providers to resell services to 
+customers as shown in Fig:\ref{img_derivative_cloud}.
 
     Although containers support has been provided in most major operating systems today, it is most popular and widely used in operating 
 systems running on a Linux kernel. Our entire work would focus on elastic provisioning of containers in a native Linux environment and 
-extend its implications to the derivative setup. However at this stage, we focus on elastic provisioning of memory as a resource. We aspire 
-to look into other resources as a part of our future work.
+extend its implications to the derivative setup. However at this stage, we focus on deterministic provisioning of memory as a resource. We 
+aspire to look into other resources as a part of our future work.
    
-    \subsection{Provisioning Memory as a Resource for Linux Containers}
+    \subsection{Provisioning memory as a resource in a native container environment}
   
       Memory as a resource has gained popularity recently with emergence of more memory intensive applications in various fields of 
 computing like data analytics, caching that have a very strong correlation with application performance that is dependent on the memory 
@@ -93,7 +84,7 @@ native Linux system, memory pressure might be generated due to the following
       Let's see how memory overcommitment and pressure can disrupt desired functionality of the existing container framework provided by 
 Linux containers.
     
-      \subsubsection{Illustrate existing problem}
+      \subsection{Illustration of existing issues in native container environment}
 	
 	Consider two containers provisioned for running Mongo-DB containers from 2 different customers on a same host machines. Now that 
 average memory used by the 2 containers are in the ratio of 1:2 and the customers for the 2 containers are also paying for their services in 
@@ -127,23 +118,24 @@ relative priorities of each of the containers.
 	  \begin{subfigure}[t]{0.48\textwidth}
 	    \centering
 	    \includegraphics[width=1\textwidth]{images/intro/native.png}
-	    \caption{App throughput when running applications natively}
+	    \caption{Running applications without containers}
 	    \label{plot_intro_native}
 	  \end{subfigure}
 	  ~ 
 	  \begin{subfigure}[t]{0.48\textwidth}
 	    \centering
 	    \includegraphics[width=1\textwidth]{images/intro/observed.png}
-	    \caption{Observed throughputs after provisioning}
+	    \caption{Observed after provisioning containers using existing knobs}
 	    \label{plot_intro_observed}
 	  \end{subfigure}
 	  ~ 
 	  \begin{subfigure}[t]{0.48\textwidth}
 	    \centering
 	    \includegraphics[width=1\textwidth]{images/intro/desired.png}
-	    \caption{Desired throughputs after provisioning}
+	    \caption{Desired after provisioning containers using knobs}
 	    \label{plot_intro_desired}
 	  \end{subfigure}
+	  \caption{Application throughputs for problem establishment}
 	\end{figure*}
 	
 	Consider 3 cases as described below. In cases 2 and 3, containers are allowed to run normally for about 100s and there after 
@@ -157,10 +149,11 @@ which free memory in the system gradually reduces by generating of memory pressu
 	\end{itemize}
 	
 	Fig:\ref{plot_intro_native} shows the simple case where both the containers achieve desired throughputs when running on a system 
-with no container specific provisioning. The containers start execution with no memory pressure and hence are able to each equal 
-throughputs initially in all 3 cases. In observed throughputs under pressure Fig:\ref{plot_intro_observed}, we observe that throughputs of 
-Mongo-High (Container with higher priority) is negatively affected at some point or the other, when in reality its throughput had to be 
-better if not same as shown in Fig:\ref{plot_intro_desired} considering its higher resource allocations. 
+with no container specific provisioning. The containers start execution with no memory pressure and hence must be able to each equal 
+throughputs initially in all 3 cases although. Case-2 still shows lower levels of application performance for higher provisioned 
+containers even when the system is under no pressure. In observed throughputs under pressure Fig:\ref{plot_intro_observed}, we 
+observe that throughputs of Mongo-High (Container with higher priority) is negatively affected at some point or the other, when in reality 
+its throughput had to be better if not same as shown in Fig:\ref{plot_intro_desired} considering its higher resource allocations. 
 	
 	\pagebreak
 
@@ -185,12 +178,12 @@ which is the provisioning of containers using existing knobs may negatively impa
 example here, we can conclude by saying that 
 	
 	\begin{enumerate}
-	  \item Memory allocations work well with containers where there doesn't exist any memory overcommitment and pressure
+	  \item Native memory allocations work well with containers where there doesn't exist any memory overcommitment and pressure
 	  \item However when the two occur, memory reclamation may adversely affects containers which are better provisioned (since they 
 were promised higher QOS) than those which aren't.
 	\end{enumerate}
     
-    \subsection{Considering the above setup to derivative cloud}
+    \subsection{Amplification of issues in derivative cloud environment}
     
       Considering the above described setup to derivative cloud where the native cloud provider is using VMs to provision customer demands. 
 This VM acquired from the native cloud provider is again repacked and resold by the derivative cloud provider to specific customers. In 
@@ -198,10 +191,10 @@ this case, this situation further complicated due to two reasons,
       
        \begin{enumerate}
 	  \item Memory overcommitment is not a required condition
-	  \item Memory pressure maybe introduced by three factor described earlier or an external host system driver (eg: Balloon Driver)
+	  \item Memory pressure maybe introduced by three factors described earlier or an external host system driver (eg: Balloon Driver)
        \end{enumerate}
 
-      In the native case, memory overcommitment was a required condition for the previously described situation to arise. Conisder the case 
+      In the native case, memory overcommitment was a required condition for the previously described situation to arise. Consider the case 
 where all containers were assigned memory considering the available system memory in such a way that there is no overcommitment, however 
 now the native cloud provider (host system) could reduce the memory available to the system using different memory reclamation policies at 
 the host. 
@@ -211,26 +204,19 @@ the host.
   
   \pagebreak
   
-  \section{Problem Statement}
+  \section{Problem description}
+  
+    In our work we wish to,
     
-    This report presents the preliminary results of an empirical evaluation of memory management patterns in the native container 
-environment and how this is affects real application in a derivative cloud environment. It tries to understand the following questions
-
     \begin{enumerate}
-      \item How is memory management done for Linux containers ?
-      \item What and when are the different types of memory management techniques invoked ?
-      \item How do container memory configurations impact application performance ?
-      \item What effect do the different container knobs have on the existing management policy ?
-      \item Do existing knobs work as desired ?
+      \item Understand the existing memory management policies used by Linux to manage containers.
+      \item Purpose hypotheses on existing memory management in containers and verify them using experimental results.
+      \item Extrapolate this understanding to analyze, how it impacts derivative cloud environment.
+      \item Identify issues with existing policies and purpose requirements for a new policy
     \end{enumerate}
-    
-    An comprehensive empirical evaluation which involves the above scenarios, and uses a set of workloads will help us understand the above 
-questions. Once this has been established, we could move to purposing a solution to tackle the pitfalls of the existing approach.
 
-  \section{Outline}
+  \vspace*{2em}
   
-    This report is organized as follows, Chapter 2 provides the background required to read and understand the rest of the report, Chapter 
-3 presents the design of the empirical evaluation, and Chapter 4 presents preliminary results.  Chapter 5 provides key insights to the 
-newly required design. Chapter 6 concludes with the future work.
-
-  
+    This report is organized as follows, Chapter 2 provides the background required to read and understand the rest of the report. Chapter 
+3 presents related work. Chapter 4 presents the design to analyze existing system, and Chapter 5 and 6 presents preliminary results.  
+Chapter 7 provides requirement for a desired system design. Chapter 8 concludes the key observations and future work.

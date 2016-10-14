@@ -1,3 +1,19 @@
 
-\chapter{Design for Proposed System}
+\chapter{Requirements of new policy}
   
+  The following are the list of requirements of new policy that we would like to enforce,
+  
+    \begin{enumerate}
+      \item \textbf{Prioritized memory allocation:} Currently the notion of priority doesn't exist in container specific memory allocation 
+although the notion of priority exists in other resources. The existing knobs fail to enforce priority used to manage memory in containers. 
+      \item \textbf{Deterministic provisioning:} The policy to be designed must eliminate existing non determinism that exists while 
+managing memory between containers in existing system.
+      \item \textbf{Adaptive:} On changing resources provisioned to the system as in the case of an derivative environment, the policy 
+enforced must still do it's best in maintaining promised QOS.
+      \item \textbf{Differentiated memory reclamation:} The policy could build around the notion of differentiated memory reclamation when 
+the system falls under memory pressure.
+      \item \textbf{Strict enforcement of limits:} The notion of hard and soft limits that exist must be strengthened.      
+    \end{enumerate}
+    
+  We would like to design a new policy keeping the above requirements in mind.
+

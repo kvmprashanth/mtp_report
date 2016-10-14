@@ -1,7 +1,7 @@
 
-\chapter{Design of Empirical Evaluation}
+\chapter{Design of empirical evaluation}
 
-  \section{Experimental Guidelines}
+  \section{Experimental guidelines}
     \label{section_guidelines}
     
     The following are a set of guidelines that any empirical analysis of memory management techniques in a container environment must 
@@ -15,7 +15,7 @@ and no other resource.
       \item All experiments must be reproducible and statistically correct.      
     \end{enumerate}
 
-  \section{Experimental Configurations}
+  \section{Experimental configurations}
     
     As pointed out in section \ref{section_guidelines}, the set of configurations used for an analysis of memory management techniques in a 
 container environment must be relevant, and easy to apply. The following configurations fit this criteria, and have been used for the 
@@ -38,7 +38,7 @@ that is running in the host system.
 containers are executing.      
     \end{itemize}  
   
-  \section{Metrics of Interest}
+  \section{Metrics of interest}
   
     The following are the metrics of interest to us that would help us analyze the experiments.
       
@@ -57,7 +57,7 @@ time taken etc.
     This section presents the list of workloads that we have used as primary candidates to evaluate our empirical evaluations. All 
 workloads are chosen keeping in mind the memory intensive nature as mentioned in \ref{section_guidelines}.  
     
-    \subsection{Synthetic Workloads}
+    \subsection{Synthetic workloads}
     
       These are the list of Synthetic workloads we have used to establish our problem.
       
@@ -65,15 +65,15 @@ workloads are chosen keeping in mind the memory intensive nature as mentioned in
 	Stress \cite{stress} is a deliberately simple workload generator for POSIX systems. It imposes a configurable amount of CPU, 
 memory, I/O, and disk stress on the system. It is written in C and has been developed by people at Harvard university. 
       
-      \subsubsection{Memory Hogger}
+      \subsubsection{Memory hogger}
 	Memory Hogger is a simple C program that allocates an array of specified memory using a simple \texttt{malloc()} and repeatedly 
 writes to these array locations. This only consumes anonymous memory pages.
       
-      \subsubsection{File Hogger}
+      \subsubsection{File hogger}
 	File Hogger is a simple python program that creates a file with specified size and repeatedly updates it line by line there by 
 consuming both anonymous pages and file backed pages.
 
-    \subsection{Real Workloads}
+    \subsection{Real workloads}
     
       These are the list of real workloads we have used to show how the existing problems affect real work applications.
       
@@ -87,13 +87,13 @@ VMM to tell it to release the memory.
 	Redis \cite{redis} is a in-memory data structure store, used as database, cache and message broker. It is used to store a large 
 number of in-memory key-value pairs. Its in-memory nature makes it a prime candidate to use it as a workload in our empirical evaluations.
    
-    \subsection{YCSB Benchmark}
+    \subsection{YCSB benchmark}
 	We use YCSB \cite{cooper2010benchmarking} (Yahoo Cloud Server Benchmark) project as the benchmark to generate the clients evaluate 
 to the performance of our real workloads i.e MongoDB and Redis servers. The goal of YSCB is to develop performance comparisons of the new 
 generation of cloud data serving systems. It is a framework and common set of workloads for evaluating the performance of different 
 “key-value” stores.
 
-  \section{Experimental Setup}
+  \section{Experimental setup}
   
     The following section describes the experimental setups used. There were two experimental setups used.  The second setup which involved 
 a derivative cloud setup was used to establish the problem in the derivative cloud setup using Real workloads.
@@ -127,16 +127,17 @@ establish the problem in a native system using \textbf{synthetic workloads}.
 	  \item Kernel version 4.7
 	\end{enumerate}
 	
-      \subsubsection{Workloads Used}
+      \subsubsection{Workloads used}
 	
 	Memory Hogger and File Hogger was used to generate the memory pressure inside the containers. External pressure was generated 
 using Stress workload running directly on the host machine.
 
-      \subsubsection{Experimental Flow}
+      \subsubsection{Experimental flow}
 	
-	Most experiments involved setting up of two containers. Workloads were used to introduce system memory pressure from containers. At 
+	Most experiments involved setting up of 2 containers. Workloads were used to introduce system memory pressure from containers. At 
 this point there was no memory pressure in the system (free memory was still available). Now the external pressure using Stress was 
-introduced after about 20s which created memory pressure in the system that triggered reclamation. 
+introduced after about 20s which created memory pressure in the system that triggered reclamation. The external pressure kept on increasing 
+by 200 MB in intervals of 40s. Each interval had a gap of 10s for memory to be reassigned to containers.
 
     \subsection{Derivative cloud testbed}
       \label{section_testbed_derivative}
@@ -182,19 +183,19 @@ setting.
 	  \item Kernel version 4.7
 	\end{enumerate}
 	
-      \subsubsection{Workloads Used}
+      \subsubsection{Workloads used}
 	
 	Redis and MongoDB was used to generate the memory pressure inside the containers. External pressure was generated by varying guest 
 balloon size triggered from the host.
 
-      \subsubsection{Experimental Flow}
+      \subsubsection{Experimental flow}
 	
 	Most experiments involved setting up of 4 containers (2 redis containers and 2 mongoDB containers). Workloads were used to 
 introduce system memory pressure from containers. At this point there was no memory pressure in the system (free memory was still 
 available). Now the external pressure was introduced by reducing the guest VM size after 100s, which in turn trigger memory reclamation at 
 the guest VM. 
 
-  \section{Experimental Scenarios}
+  \section{Experimental scenarios}
     
     The following are the possible experimental Scenarios under which memory pressure maybe generated. And our main focus would be to 
 understand how memory pressure would affect applications in these scenarios,

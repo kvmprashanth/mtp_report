@@ -1,26 +1,24 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Depiction of a derivative IaaS cloud platform, Source:\cite {sharma2015spotcheck}\relax }}{2}{figure.caption.4}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Plots for problem establishment\relax }}{4}{figure.caption.7}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Application throughputs for problem establishment\relax }}{4}{figure.caption.6}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Difference between a VM and Container, Source:\cite {slideshare}\relax }}{7}{figure.caption.9}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Control groups illustration using 3 controllers, Source:\cite {manual}\relax }}{8}{figure.caption.10}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Mapping of pages to LRU lists\relax }}{11}{figure.caption.16}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Kernel Function Call Trace for System-Wide Reclamation\relax }}{12}{figure.caption.17}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Existing policy for Memory Reclamation\relax }}{13}{figure.caption.18}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Difference between a VM and Container\relax }}{7}{figure.caption.8}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Control groups illustration using 3 controllers, Source:\cite {manual}\relax }}{8}{figure.caption.9}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Mapping of pages to LRU lists\relax }}{11}{figure.caption.11}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Kernel Function Call Trace for System-Wide Reclamation\relax }}{12}{figure.caption.12}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Existing policy for Memory Reclamation\relax }}{13}{figure.caption.13}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Native container testbed\relax }}{18}{figure.caption.19}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Derivative cloud testbed\relax }}{19}{figure.caption.24}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Memory Exceed Plot for Exp-1\relax }}{21}{figure.caption.35}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Soft Memory Reclaimed Plot for Exp-1\relax }}{22}{figure.caption.36}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces SMR versus GLR for Exp-1\relax }}{22}{figure.caption.37}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Memory Usage Plot for Exp-2\relax }}{23}{figure.caption.42}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces SMR versus GLR Plot for Exp-2\relax }}{24}{figure.caption.43}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces SMR versus GLR for Exp-3a\relax }}{25}{figure.caption.48}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces SMR versus GLR for Exp-3b\relax }}{25}{figure.caption.49}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Exceed plot for Experiment-4a\relax }}{26}{figure.caption.54}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Exceed plot for Experiment-4b\relax }}{27}{figure.caption.55}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces SMR versus GLR for Exp-5a\relax }}{28}{figure.caption.60}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces SMR versus GLR for Exp-5b\relax }}{28}{figure.caption.61}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Exceed plot for Exp-4b\relax }}{29}{figure.caption.62}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Plots for analysis of reclamation when both containers are exceeding by same value (Exp-1)\relax }}{22}{figure.caption.32}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Plots for when both containers are having same usage but no exceeds (Exp-2)\relax }}{23}{figure.caption.37}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Plots for see effects of increasing memory pressure on reclamation\relax }}{24}{figure.caption.42}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Plots for analyzing effect of workloads characteristics on reclamation\relax }}{25}{figure.caption.47}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Plots for understanding how soft limits effect reclamations\relax }}{26}{figure.caption.52}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Plots for analysis while all containers exceeding\relax }}{29}{figure.caption.56}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Plots for analysis when none of the containers are exceeding\relax }}{31}{figure.caption.61}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Plots for analysis of complete reclamation starting from exceeding containers to when they aren't\relax }}{32}{figure.caption.66}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

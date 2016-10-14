@@ -5,11 +5,6 @@ P.~Sharma, S.~Lee, T.~Guo, D.~Irwin, and P.~Shenoy, ``Spotcheck: Designing a
   derivative iaas cloud on the spot market,'' in {\em Proceedings of the Tenth
   European Conference on Computer Systems}, p.~16, ACM, 2015.
 
-\bibitem{slideshare}
-R.~Davies, ``Linux containers: the future of iaas,'' 2016.
-\newblock
-  \url{http://www.slideshare.net/InternetWorld2014/19th-1400-elastic-hosts-richard-davies}.
-
 \bibitem{manual}
 ``Getting your hands dirty with containers.''
 \newblock
@@ -73,14 +68,6 @@ M.~S. Rathore, M.~Hidell, and P.~Sj{\"o}din, ``Kvm vs. lxc: comparing
   American Journal of Networks and Communications}, vol.~2, no.~4, pp.~88--96,
   2013.
 
-\bibitem{picloud}
-``Picloud.''
-\newblock \url{http://www.multyvac.com}.
-
-\bibitem{heroku}
-``Heroku.''
-\newblock \url{http://www.heroku.com}.
-
 \bibitem{docker}
 D.~Inc., ``Docker offical documentation,'' 2016.
 \newblock \url{https://docs.docker.com/}.
@@ -101,11 +88,11 @@ P.~B. Menage, ``Adding generic process containers to the linux kernel,'' in
 ``Stress workload generator.''
 \newblock \url{http://people.seas.harvard.edu/~apw/stress/}.
 
-\bibitem{mongodb}
+\bibitem{Mongodb}
 ``Mongodb.''
 \newblock \url{https://docs.mongodb.com/v3.2/}.
 
-\bibitem{redis}
+\bibitem{Redis}
 ``Redis in-memory key-value store.''
 \newblock \url{http://redis.io/}.
 

@@ -18,12 +18,6 @@ Repeated entry---line 8 of file mylit.bib
 I'm skipping whatever remains of this entry
 Warning--entry type for "amazonec2" isn't style-file defined
 --line 54 of file mylit.bib
-Warning--entry type for "picloud" isn't style-file defined
---line 118 of file mylit.bib
-Warning--entry type for "heroku" isn't style-file defined
---line 124 of file mylit.bib
-Warning--entry type for "slideshare" isn't style-file defined
---line 131 of file mylit.bib
 Warning--entry type for "docker" isn't style-file defined
 --line 139 of file mylit.bib
 Warning--entry type for "lxd" isn't style-file defined
@@ -36,36 +30,36 @@ Warning--entry type for "mongodb" isn't style-file defined
 --line 186 of file mylit.bib
 Warning--entry type for "redis" isn't style-file defined
 --line 192 of file mylit.bib
-You've used 24 entries,
+You've used 21 entries,
             1876 wiz_defined-function locations,
-            597 strings with 7300 characters,
-and the built_in function-call counts, 5380 in all, are:
-= -- 525
-> -- 179
+            589 strings with 7082 characters,
+and the built_in function-call counts, 5032 in all, are:
+= -- 488
+> -- 173
 < -- 0
-+ -- 72
-- -- 48
-* -- 321
-:= -- 693
-add.period$ -- 27
-call.type$ -- 24
-change.case$ -- 24
++ -- 68
+- -- 47
+* -- 313
+:= -- 656
+add.period$ -- 23
+call.type$ -- 21
+change.case$ -- 21
 chr.to.int$ -- 0
-cite$ -- 24
-duplicate$ -- 278
-empty$ -- 608
-format.name$ -- 48
-if$ -- 1371
+cite$ -- 21
+duplicate$ -- 266
+empty$ -- 554
+format.name$ -- 47
+if$ -- 1273
 int.to.chr$ -- 0
-int.to.str$ -- 24
+int.to.str$ -- 21
 missing$ -- 13
-newline$ -- 85
-num.names$ -- 16
-pop$ -- 159
+newline$ -- 73
+num.names$ -- 15
+pop$ -- 134
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 183
+skip$ -- 174
 stack$ -- 0
 substring$ -- 276
 swap$ -- 91
@@ -74,7 +68,7 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 47
-width$ -- 26
-write$ -- 217
+while$ -- 46
+width$ -- 23
+write$ -- 194
 (There was 1 error message)

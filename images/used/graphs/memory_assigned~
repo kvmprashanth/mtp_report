@@ -1,0 +1,7 @@
+set term png size 1200, 800
+set output "../Memory_Assigned.png"
+set title 'Cumulative Plot between Time - Memory Assigned'
+set xlabel 'Time (s)'
+set ylabel 'Memory Assigned (MB)'
+plot '../plot.data' using 1:(($9)/1048576) with linespoints t 'M1', \
+	 '../plot.data' using 1:($10/1048576) with linespoints t 'M2'

@@ -1,43 +1,52 @@
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.1.1}{Elastic Resource Provisioning for cloud services}{chapter.1}% 2
-\BOOKMARK [2][-]{subsection.1.1.1}{Provisioning Memory as a Resource using Linux Containers}{section.1.1}% 3
-\BOOKMARK [2][-]{subsection.1.1.2}{Amplification of problem in derivative cloud environment}{section.1.1}% 4
-\BOOKMARK [1][-]{section.1.2}{Problem Statement}{chapter.1}% 5
-\BOOKMARK [1][-]{section.1.3}{Outline}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.1}{Deterministic resource provisioning for cloud services}{chapter.1}% 2
+\BOOKMARK [2][-]{subsection.1.1.1}{Provisioning memory as a resource in a native container environment}{section.1.1}% 3
+\BOOKMARK [2][-]{subsection.1.1.2}{Illustration of existing issues in native container environment}{section.1.1}% 4
+\BOOKMARK [2][-]{subsection.1.1.3}{Amplification of issues in derivative cloud environment}{section.1.1}% 5
+\BOOKMARK [1][-]{section.1.2}{Problem description}{chapter.1}% 6
 \BOOKMARK [0][-]{chapter.2}{Background}{}% 7
 \BOOKMARK [1][-]{section.2.1}{Containers}{chapter.2}% 8
 \BOOKMARK [2][-]{subsection.2.1.1}{Control groups}{section.2.1}% 9
-\BOOKMARK [1][-]{section.2.2}{Memory Management between processes in Linux}{chapter.2}% 10
-\BOOKMARK [0][-]{chapter.3}{Design of Empirical Evaluation}{}% 11
-\BOOKMARK [1][-]{section.3.1}{Experimental Guidelines}{chapter.3}% 12
-\BOOKMARK [1][-]{section.3.2}{Experimental Configurations}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.3}{Metrics of Interest}{chapter.3}% 14
-\BOOKMARK [1][-]{section.3.4}{Workloads}{chapter.3}% 15
-\BOOKMARK [2][-]{subsection.3.4.1}{Synthetic Workloads}{section.3.4}% 16
-\BOOKMARK [2][-]{subsection.3.4.2}{Real Workloads}{section.3.4}% 17
-\BOOKMARK [2][-]{subsection.3.4.3}{YCSB Benchmark}{section.3.4}% 18
-\BOOKMARK [1][-]{section.3.5}{Experimental Setup}{chapter.3}% 19
-\BOOKMARK [2][-]{subsection.3.5.1}{Native container testbed}{section.3.5}% 20
-\BOOKMARK [2][-]{subsection.3.5.2}{Derivative cloud testbed}{section.3.5}% 21
-\BOOKMARK [1][-]{section.3.6}{Experimental Scenarios}{chapter.3}% 22
-\BOOKMARK [1][-]{section.3.7}{Questions of interest}{chapter.3}% 23
-\BOOKMARK [2][-]{subsection.3.7.1}{All containers exceed}{section.3.7}% 24
-\BOOKMARK [2][-]{subsection.3.7.2}{None of the containers exceed}{section.3.7}% 25
-\BOOKMARK [2][-]{subsection.3.7.3}{A few containers exceed, but the others don’t}{section.3.7}% 26
-\BOOKMARK [0][-]{chapter.4}{Empirical Analysis in Native Containers}{}% 27
-\BOOKMARK [1][-]{section.4.1}{Verification of hypotheses}{chapter.4}% 28
-\BOOKMARK [2][-]{subsection.4.1.1}{Exp-1: All containers exceed}{section.4.1}% 29
-\BOOKMARK [2][-]{subsection.4.1.2}{Exp-2: None of the containers exceed}{section.4.1}% 30
-\BOOKMARK [1][-]{section.4.2}{Understand Memory Reclamation}{chapter.4}% 31
-\BOOKMARK [2][-]{subsection.4.2.1}{Exp-3: Affect of system memory pressure on Reclamation}{section.4.2}% 32
-\BOOKMARK [2][-]{subsection.4.2.2}{Exp-4: Memory Reclaimed in a single SMR request}{section.4.2}% 33
-\BOOKMARK [2][-]{subsection.4.2.3}{Exp-5: Affect of Soft Limit on Reclamation}{section.4.2}% 34
-\BOOKMARK [1][-]{section.4.3}{Key Insights}{chapter.4}% 35
-\BOOKMARK [2][-]{subsection.4.3.1}{All containers exceed}{section.4.3}% 36
-\BOOKMARK [2][-]{subsection.4.3.2}{None of the containers exceed}{section.4.3}% 37
-\BOOKMARK [2][-]{subsection.4.3.3}{A few containers exceed, but the others don’t}{section.4.3}% 38
-\BOOKMARK [0][-]{chapter.5}{Empirical Analysis in derived cloud}{}% 39
-\BOOKMARK [1][-]{section.5.1}{Verification of hypotheses}{chapter.5}% 40
-\BOOKMARK [1][-]{section.5.2}{Conclusions}{chapter.5}% 41
-\BOOKMARK [0][-]{chapter.6}{Design for Proposed System}{}% 42
-\BOOKMARK [0][-]{chapter.7}{Conclusions}{}% 43
+\BOOKMARK [1][-]{section.2.2}{Memory management between processes in Linux}{chapter.2}% 10
+\BOOKMARK [2][-]{subsection.2.2.1}{Memory pages used by a process}{section.2.2}% 11
+\BOOKMARK [2][-]{subsection.2.2.2}{Memory allocation}{section.2.2}% 12
+\BOOKMARK [2][-]{subsection.2.2.3}{Memory reclamation without container support}{section.2.2}% 13
+\BOOKMARK [2][-]{subsection.2.2.4}{Memory reclamation with container support}{section.2.2}% 14
+\BOOKMARK [2][-]{subsection.2.2.5}{Focus on memory reclamation}{section.2.2}% 15
+\BOOKMARK [0][-]{chapter.3}{Design to analyze existing system}{}% 16
+\BOOKMARK [1][-]{section.3.1}{Experimental scenarios}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.2}{Questions of interest}{chapter.3}% 18
+\BOOKMARK [2][-]{subsection.3.2.1}{All containers exceed}{section.3.2}% 19
+\BOOKMARK [2][-]{subsection.3.2.2}{None of the containers exceed}{section.3.2}% 20
+\BOOKMARK [2][-]{subsection.3.2.3}{A few containers exceed, but the others do not}{section.3.2}% 21
+\BOOKMARK [1][-]{section.3.3}{Experimental guidelines}{chapter.3}% 22
+\BOOKMARK [1][-]{section.3.4}{Experimental configurations}{chapter.3}% 23
+\BOOKMARK [1][-]{section.3.5}{Metrics of interest}{chapter.3}% 24
+\BOOKMARK [1][-]{section.3.6}{Workloads}{chapter.3}% 25
+\BOOKMARK [2][-]{subsection.3.6.1}{Synthetic workloads}{section.3.6}% 26
+\BOOKMARK [2][-]{subsection.3.6.2}{Real workloads}{section.3.6}% 27
+\BOOKMARK [2][-]{subsection.3.6.3}{YCSB benchmark}{section.3.6}% 28
+\BOOKMARK [1][-]{section.3.7}{Experimental setup}{chapter.3}% 29
+\BOOKMARK [2][-]{subsection.3.7.1}{Native container testbed}{section.3.7}% 30
+\BOOKMARK [2][-]{subsection.3.7.2}{Derivative cloud testbed}{section.3.7}% 31
+\BOOKMARK [0][-]{chapter.4}{Analysis of memory management in native containers}{}% 32
+\BOOKMARK [1][-]{section.4.1}{Verification of hypotheses}{chapter.4}% 33
+\BOOKMARK [2][-]{subsection.4.1.1}{All containers exceed}{section.4.1}% 34
+\BOOKMARK [2][-]{subsection.4.1.2}{None of the containers exceed}{section.4.1}% 35
+\BOOKMARK [1][-]{section.4.2}{Understand memory reclamation}{chapter.4}% 36
+\BOOKMARK [2][-]{subsection.4.2.1}{Effect of system memory pressure on Reclamation}{section.4.2}% 37
+\BOOKMARK [2][-]{subsection.4.2.2}{Effect of workloads characteristics on reclamation}{section.4.2}% 38
+\BOOKMARK [2][-]{subsection.4.2.3}{Effect of soft limits on reclamation}{section.4.2}% 39
+\BOOKMARK [1][-]{section.4.3}{Key insights}{chapter.4}% 40
+\BOOKMARK [2][-]{subsection.4.3.1}{All containers exceed}{section.4.3}% 41
+\BOOKMARK [2][-]{subsection.4.3.2}{None of the containers exceed}{section.4.3}% 42
+\BOOKMARK [2][-]{subsection.4.3.3}{A few containers exceed, but the others don’t}{section.4.3}% 43
+\BOOKMARK [0][-]{chapter.5}{Impact of current memory management techniques in derived cloud}{}% 44
+\BOOKMARK [1][-]{section.5.1}{Impact analysis}{chapter.5}% 45
+\BOOKMARK [2][-]{subsection.5.1.1}{Reclamation when all containers are exceeding}{section.5.1}% 46
+\BOOKMARK [2][-]{subsection.5.1.2}{Reclamation when none of the containers are exceeding}{section.5.1}% 47
+\BOOKMARK [2][-]{subsection.5.1.3}{Complete reclamation}{section.5.1}% 48
+\BOOKMARK [1][-]{section.5.2}{Key sights and drawbacks of existing system}{chapter.5}% 49
+\BOOKMARK [0][-]{chapter.6}{Requirements of new policy}{}% 50
+\BOOKMARK [0][-]{chapter.7}{Conclusions}{}% 51
+\BOOKMARK [1][-]{section.7.1}{Future Work}{chapter.7}% 52

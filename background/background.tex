@@ -17,8 +17,8 @@ type to execute on a system.
 
      \begin{figure}
       \centering
-      \includegraphics[width=0.5\textwidth]{images/vm_vs_container.jpg}
-      \caption{Difference between a VM and Container, Source:\cite{slideshare}}
+      \includegraphics[width=1\textwidth]{images/container_vs_vm.png}
+      \caption{Difference between a VM and Container}
       \label{img_difference}
     \end{figure}
 
@@ -62,7 +62,7 @@ APIs to interact with them.
       Fig:\ref{img_cgroup} illustrates a minimalistic outline of a cgroups hierarchy with 3 subsystems mounted in a system onto their own 
   hierarchies. The three subsystem mounted are - memory, cpuset and blkio and are mounted at \texttt{/sys/fs/cgroups/}. Memory root cgroup 
 of   8GB is divided into two cgroups M1 and M2 of 4GB each. cpuset root cgroup of 4CPUs is divided into two cgroups C1 and C2 of 3CPUs and 
-1CPU   respectively. blkio root cgroup of is divided into two cgroups B1 and B2 of 1000 and 500 as relative weights respectively. Every 
+1CPU respectively. blkio root cgroup of is divided into two cgroups B1 and B2 of 1000 and 500 as relative weights respectively. Every 
 process   which attaches itself to the same set of subsystems are referred by a single \texttt{css\_set} which in turn points to the 
 cgroup node the   process is attached to. In the Fig, processes 1,2 attach itself to the blue \texttt{css\_set} and 3,4,5 to the red one. 
 The \texttt{css\_set} in turn has pointers to \texttt{container\_subsys\_state} that is one for each cgroup. Notice how the blue 
@@ -100,23 +100,21 @@ process group.
       
   \pagebreak
   
-  \section{Memory Management between processes in Linux}
+  \section{Memory management between processes in Linux}
   
     Memory is allocated/deallocated in terms of pages in any operating system. Memory management in Linux is done using techniques like 
 virtual memory, demand paging, swapping caching etc. They separate between the memory needed by a process and the memory physically 
 allocated on the RAM. The OS creates a large virtual address space for each process. In this section we focus on how memory is managed 
 between processes or a group of processes. We mainly focus on how memory is assigned and reclaimed between them.  
   
-    \subsubsection{Memory Pages used by a process}
-      Memory used by processes are divided into 2 types of pages
-	
+    \subsection{Memory pages used by a process}
+      Memory used by processes are divided into 2 types of pages	
       \begin{enumerate}	
 	\item Anonymous Pages: Pages those which are not associated with any files on disk. They are process memory pages.
 	\item Page cache pages: Are an in-memory representation of a part files on the disks.	
       \end{enumerate}
-
   
-    \subsubsection{Memory Allocation}
+    \subsection{Memory allocation}
       When the process needs memory to be allocated, Linux decides the how this memory is going to be allocated physically on the RAM. The 
 process/ application does not see in physical RAM addresses. It only sees virtual addresses from the virtual space assigned to each process.
 The OS uses a page file located on the disk to assist with memory requests in addition to the RAM. Less RAM means more pressure on the Page 
@@ -125,9 +123,9 @@ a page miss. The actual physical memory allocated (RSS) to a process depends on 
 memory becoming freshly available in the system, the OS tries to equally distribute the available memory to all processes that are 
 demanding for more memory.
 
-    \subsubsection{Memory Reclamation without Container support}
-      When the system memory starts to get tight, the kernel can free memory by cleaning up its own internal data structures - reducing the 
-size of the inode and dentry caches however most pages in the system are user process pages. Hence the kernel, in order to accommodate 
+    \subsection{Memory reclamation without container support}
+       When the system memory starts to get tight, the kernel can free memory by cleaning up its own internal data structures - reducing 
+the size of the inode and dentry caches however most pages in the system are user process pages. Hence the kernel, in order to accommodate 
 current demands for user pages, must find some existing pages to toss out. A proper balance between anonymous and page cache pages must be 
 maintained for the system to perform well. Kernel offers a knob called swappiness, that specifies how much favor anonymous versus page 
 cache pages while reclamation. The default value for swappiness favors the eviction of page cache pages. 
@@ -137,16 +135,16 @@ another inactive list which contains all the pages that weren't used recently. O
 pair for page cache pages. The kernel favors reclamation from page cache pages over anonymous pages and inactive pages over active pages 
 and iterates these lists to satisfy reclamation requests there by trying to maximize application performance while satisfying requests.
     
-    \subsubsection{Memory Reclamation with Container support}
+    \subsection{Memory reclamation with container support}
       
       \begin{figure}
 	\centering
-	\includegraphics[width=0.7\textwidth]{images/page_mapping.jpg}
+	\includegraphics[width=0.8\textwidth]{images/page_mapping.png}
 	\caption{Mapping of pages to LRU lists}
 	\label{img_page_mapping}
       \end{figure}
       
-      Most recent Linux kernels that are even skipped through stable Linux distribution support linux containers. They provide the 
+      Most recent Linux kernels that are even skipped through stable Linux distribution support Linux containers. They provide the 
 following set of knobs to provision containers - Hard limit, Soft Limit, OOM Control, Swappiness to name a few important ones. Hard limits 
 can further be specified in terms of process, kernel and tcp memory utilization. However, with respect to reclamation we focus on soft 
 limits here.
@@ -179,12 +177,12 @@ described in Fig:\ref{img_call_trace}. It shows how sync and async requests are 
 
       \begin{figure}
 	\centering
-	\includegraphics[width=1\textwidth]{images/High_level_Reclamation.png}
+	\includegraphics[width=0.8\textwidth]{images/High_level_Reclamation.png}
 	\caption{Existing policy for Memory Reclamation}
 	\label{img_high_level}
       \end{figure}  
       
-      As shown in Fig:\ref{img_page_mapping}, in recent linux kernels a LRU (LRU/2, but LRU used for simplicity) list is stored for every 
+      As shown in Fig:\ref{img_page_mapping}, in recent Linux kernels a LRU (LRU/2, but LRU used for simplicity) list is stored for every 
 container created also there is a Global LRU list which contains the pages of all processes in the system (including in the ones in a new 
 container). All processes are by default put into the default container and hence its pages are a part of the global LRU.  Once a process is 
 moved to a specific container, its pages also become a part of its local per container LRU list also.
@@ -214,5 +212,12 @@ maximize most of the requested reclamation from SMR and prefers GLR only when re
 
       All above container specific memory reclamation patterns were derived based on theoretical readings and looking upon Linux kernel 
 code. We need to establish the correctness our hypotheses, and understand the existing system and how it impacts applications running 
-inside containers in a native container setup and derivative cloud setup. Hence the coming section describes the empirical evaluations to 
+inside containers in a native container setup and derivative cloud setup. Hence the coming sections describes the empirical analysis to 
 do the same.  
+
+      \subsection{Focus on memory reclamation}
+	Although both memory allocation and reclamation play a role in memory management, we focus on memory reclamation as reclamation is 
+the one that penalizes containers on overcommitment. Once memory reclamation is working as desired, even negative provisioning due to 
+improper memory allocation would still be fixed using the reclamation policy. Hence as the subject for discussion we focus on reclamation.
+      
+ 
