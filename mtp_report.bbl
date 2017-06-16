@@ -1,45 +1,4 @@
-\begin{thebibliography}{10}
-
-\bibitem{sharma2015spotcheck}
-P.~Sharma, S.~Lee, T.~Guo, D.~Irwin, and P.~Shenoy, ``Spotcheck: Designing a
-  derivative iaas cloud on the spot market,'' in {\em Proceedings of the Tenth
-  European Conference on Computer Systems}, p.~16, ACM, 2015.
-
-\bibitem{manual}
-``Getting your hands dirty with containers.''
-\newblock
-  \url{https://www.cse.iitb.ac.in/~prashanth/containers/seminar/manual.pdf}.
-
-\bibitem{forbes}
-J.~McKendrick, ``Forbes bussiness magzine: Is all-cloud computing inevitable?
-  analysts suggest it is,'' 2016.
-
-\bibitem{amazonec2}
-``Amazon elastic compute cloud.''
-\newblock \url{https://aws.amazon.com/ec2/}.
-
-\bibitem{dornemann2009demand}
-T.~D{\"o}rnemann, E.~Juhnke, and B.~Freisleben, ``On-demand resource
-  provisioning for bpel workflows using amazon's elastic compute cloud,'' in
-  {\em Cluster Computing and the Grid, 2009. CCGRID'09. 9th IEEE/ACM
-  International Symposium on}, pp.~140--147, IEEE, 2009.
-
-\bibitem{shen2011cloudscale}
-Z.~Shen, S.~Subbiah, X.~Gu, and J.~Wilkes, ``Cloudscale: elastic resource
-  scaling for multi-tenant cloud systems,'' in {\em Proceedings of the 2nd ACM
-  Symposium on Cloud Computing}, p.~5, ACM, 2011.
-
-\bibitem{moreno2009elastic}
-R.~Moreno-Vozmediano, R.~S. Montero, and I.~M. Llorente, ``Elastic management
-  of cluster-based services in the cloud,'' in {\em Proceedings of the 1st
-  workshop on Automated control for datacenters and clouds}, pp.~19--24, ACM,
-  2009.
-
-\bibitem{calheiros2012aneka}
-R.~N. Calheiros, C.~Vecchiola, D.~Karunamoorthy, and R.~Buyya, ``The aneka
-  platform and qos-driven resource provisioning for elastic applications on
-  hybrid clouds,'' {\em Future Generation Computer Systems}, vol.~28, no.~6,
-  pp.~861--870, 2012.
+\begin{thebibliography}{1}
 
 \bibitem{felter2015updated}
 W.~Felter, A.~Ferreira, R.~Rajamony, and J.~Rubio, ``An updated performance
@@ -52,53 +11,9 @@ R.~Morabito, J.~Kjallman, and M.~Komu, ``Hypervisors vs. lightweight
   virtualization: a performance comparison,'' in {\em Cloud Engineering (IC2E),
   2015 IEEE International Conference on}, pp.~386--393, IEEE, 2015.
 
-\bibitem{agarwal2015containing}
-K.~Agarwal, B.~Jain, and D.~E. Porter, ``Containing the hype,'' in {\em
-  Proceedings of the 6th Asia-Pacific Workshop on Systems}, p.~8, ACM, 2015.
-
-\bibitem{beserra2015performance}
-D.~Beserra, E.~D. Moreno, P.~Takako~Endo, J.~Barreto, D.~Sadok, and
-  S.~Fernandes, ``Performance analysis of lxc for hpc environments,'' in {\em
-  Complex, Intelligent, and Software Intensive Systems (CISIS), 2015 Ninth
-  International Conference on}, pp.~358--363, IEEE, 2015.
-
-\bibitem{rathore2013kvm}
-M.~S. Rathore, M.~Hidell, and P.~Sj{\"o}din, ``Kvm vs. lxc: comparing
-  performance and isolation of hardware-assisted virtual routers,'' {\em
-  American Journal of Networks and Communications}, vol.~2, no.~4, pp.~88--96,
-  2013.
-
-\bibitem{docker}
-D.~Inc., ``Docker offical documentation,'' 2016.
-\newblock \url{https://docs.docker.com/}.
-
-\bibitem{lxd}
-``Linux container hypervisor,'' 2016.
-\newblock \url{https://linuxcontainers.org/lxd/}.
-
-\bibitem{kolyshkin2006virtualization}
-K.~Kolyshkin, ``Virtualization in linux,'' {\em White paper, OpenVZ}, vol.~3,
-  p.~39, 2006.
-
-\bibitem{menage2007adding}
-P.~B. Menage, ``Adding generic process containers to the linux kernel,'' in
-  {\em Proceedings of the Linux Symposium}, vol.~2, pp.~45--57, Citeseer, 2007.
-
-\bibitem{stress}
-``Stress workload generator.''
-\newblock \url{http://people.seas.harvard.edu/~apw/stress/}.
-
-\bibitem{Mongodb}
-``Mongodb.''
-\newblock \url{https://docs.mongodb.com/v3.2/}.
-
-\bibitem{Redis}
-``Redis in-memory key-value store.''
-\newblock \url{http://redis.io/}.
-
-\bibitem{cooper2010benchmarking}
-B.~F. Cooper, A.~Silberstein, E.~Tam, R.~Ramakrishnan, and R.~Sears,
-  ``Benchmarking cloud serving systems with ycsb,'' in {\em Proceedings of the
-  1st ACM symposium on Cloud computing}, pp.~143--154, ACM, 2010.
+\bibitem{sharma2015spotcheck}
+P.~Sharma, S.~Lee, T.~Guo, D.~Irwin, and P.~Shenoy, ``Spotcheck: Designing a
+  derivative iaas cloud on the spot market,'' in {\em Proceedings of the Tenth
+  European Conference on Computer Systems}, p.~16, ACM, 2015.
 
 \end{thebibliography}
