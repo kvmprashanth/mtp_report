@@ -1,74 +1,54 @@
-This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: mtp_report.aux
-A level-1 auxiliary file: intro/introduction.aux
-A level-1 auxiliary file: background/background.aux
-A level-1 auxiliary file: design/design.aux
-A level-1 auxiliary file: native_exp/native.aux
-A level-1 auxiliary file: derived_exp/derived.aux
-A level-1 auxiliary file: solution/solution.aux
-A level-1 auxiliary file: conclusions/conclusions.aux
+A level-1 auxiliary file: 1_intro/introduction.aux
+A level-1 auxiliary file: 2_background/background.aux
+A level-1 auxiliary file: 4_empherical/empherical.aux
+A level-1 auxiliary file: 5_design/design.aux
+A level-1 auxiliary file: 6_implementation/implementation.aux
+A level-1 auxiliary file: 7_evaluation/evaluation.aux
+A level-1 auxiliary file: 8_conclusions/conclusions.aux
+A level-1 auxiliary file: 9_future_work/future_work.aux
 The style file: ieeetr.bst
 Database file #1: mylit.bib
-Warning--entry type for "forbes" isn't style-file defined
---line 1 of file mylit.bib
-Repeated entry---line 8 of file mylit.bib
- : @online{forbes
- :               ,
-I'm skipping whatever remains of this entry
-Warning--entry type for "amazonec2" isn't style-file defined
---line 54 of file mylit.bib
-Warning--entry type for "docker" isn't style-file defined
---line 139 of file mylit.bib
-Warning--entry type for "lxd" isn't style-file defined
---line 147 of file mylit.bib
-Warning--entry type for "manual" isn't style-file defined
---line 173 of file mylit.bib
-Warning--entry type for "stress" isn't style-file defined
---line 180 of file mylit.bib
-Warning--entry type for "mongodb" isn't style-file defined
---line 186 of file mylit.bib
-Warning--entry type for "redis" isn't style-file defined
---line 192 of file mylit.bib
-You've used 21 entries,
+You've used 3 entries,
             1876 wiz_defined-function locations,
-            589 strings with 7082 characters,
-and the built_in function-call counts, 5032 in all, are:
-= -- 488
-> -- 173
+            503 strings with 4409 characters,
+and the built_in function-call counts, 1031 in all, are:
+= -- 94
+> -- 42
 < -- 0
-+ -- 68
-- -- 47
-* -- 313
-:= -- 656
-add.period$ -- 23
-call.type$ -- 21
-change.case$ -- 21
++ -- 15
+- -- 12
+* -- 72
+:= -- 144
+add.period$ -- 3
+call.type$ -- 3
+change.case$ -- 3
 chr.to.int$ -- 0
-cite$ -- 21
-duplicate$ -- 266
-empty$ -- 554
-format.name$ -- 47
-if$ -- 1273
+cite$ -- 3
+duplicate$ -- 59
+empty$ -- 102
+format.name$ -- 12
+if$ -- 251
 int.to.chr$ -- 0
-int.to.str$ -- 21
-missing$ -- 13
-newline$ -- 73
-num.names$ -- 15
-pop$ -- 134
+int.to.str$ -- 3
+missing$ -- 3
+newline$ -- 12
+num.names$ -- 3
+pop$ -- 19
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 174
+skip$ -- 38
 stack$ -- 0
-substring$ -- 276
-swap$ -- 91
+substring$ -- 68
+swap$ -- 23
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 46
-width$ -- 23
-write$ -- 194
-(There was 1 error message)
+while$ -- 10
+width$ -- 4
+write$ -- 32

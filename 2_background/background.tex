@@ -1,0 +1,51 @@
+\chapter{Background}
+
+  
+  \section{Memory management between processes in Linux}
+  
+    Memory is allocated/deallocated in terms of pages in any operating system. Memory management in Linux is done using techniques like 
+virtual memory, demand paging, swapping caching etc. They separate between the memory needed by a process and the memory physically 
+allocated on the RAM. The OS creates a large virtual address space for each process. In this section we focus on how memory is managed 
+between processes or a group of processes. We mainly focus on how memory is assigned and reclaimed between them.  
+  
+    \subsection{Memory pages used by a process}
+      Memory used by processes are divided into 2 types of pages	
+      \begin{enumerate}	
+	\item Anonymous Pages: Pages those which are not associated with any files on disk. They are process memory pages.
+	\item Page cache pages: Are an in-memory representation of a part files on the disks.	
+	\item Mapped pages: File page with VA mappings
+      \end{enumerate}
+  
+    \subsection{Memory allocation}
+      When the process needs memory to be allocated, Linux decides the how this memory is going to be allocated physically on the RAM. The 
+process/ application does not see in physical RAM addresses. It only sees virtual addresses from the virtual space assigned to each process.
+The OS uses a page file located on the disk to assist with memory requests in addition to the RAM. Less RAM means more pressure on the Page 
+file. When the OS tries to find a piece of memory that's not in the RAM, it will try to find in the page file, and in this case they call it 
+a page miss. The actual physical memory allocated (RSS) to a process depends on how much free memory is available in the system. On free 
+memory becoming freshly available in the system, the OS tries to equally distribute the available memory to all processes that are 
+demanding for more memory.
+
+    \subsection{Memory reclamation without container support}
+      Two lists 
+      
+  \section{Containers}
+    \subsection{Control groups (Cgroups)}
+      \subsubsection{Memory Cgroup}
+	\paragraph{Memory reclamation with Cgroups}
+      
+  
+  \section{Caching}
+  
+   \subsection{Hypervisor managed caching}
+      \subsubsection{T-MEM cache}
+    
+   \subsection{Multilevel caches}
+    
+   \subsection{Application specific cache partitoning}
+      \subsubsection{MRC construction}
+      
+   \subsection{Double decker: Second chance cache for derivataive clouds}
+  
+      
+
+      

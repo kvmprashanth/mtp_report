@@ -1,0 +1,22 @@
+
+\chapter{Related work}
+  
+    There have been several attempts to provide efficient memory management for virtual machines. The most prominent used approach is of 
+that Ballooning \cite{waldspurger2002memory}. Ballooning is an mechanism that reclaims pages considered least valuable by the guest OS 
+running inside the virtual machine. This allows the VM to decide which memory pages to release instead of the host trying to determine this.
+Gerḿan Molt́o \cite{molto2013elastic} expands the idea of Ballooning to provide a system to monitor the VM memory and apply vertical 
+elasticity rules in order to dynamically change its memory size by using the memory ballooning technique provided the KVM hypervisor. 
+Overdriver \cite{williams2011overdriver} on the other hand presents a system that handles all durations of memory overload. It adapts its 
+mitigation strategy to balance the trade offs between migration and cooperative swap to handle memory overcommitments. Ex-Tmem 
+\cite{venkatesan2014ex} stores clean pages in a two-level buffering hierarchy with locality-aware data placement and replacement. It 
+enables memory-to-memory swapping by using non-volatile memory and eliminates expensive I/O caused by swapping.
+  
+    Looking at researches that have looked at resource provisioning, Tim Dornemanna \cite{dornemann2009demand} solution that automatically 
+schedules workflow steps to underutilized hosts and provides new hosts using cloud computing infrastructures in peak-load. The system was 
+based on BPEL to support on-demand resource provisioning. CloudScale \cite{shen2011cloudscale} can resolve scaling conflicts between 
+applications using migration, and integrates dynamic CPU voltage/frequency scaling to achieve energy savings with minimal effect on 
+application SLOs.
+  
+
+
+derviateive cloud \cite{sharma2015spotcheck} 

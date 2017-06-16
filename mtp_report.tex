@@ -25,6 +25,12 @@
 \newcommand{\xmark}{\ding{55}}%
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
 
+\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\newline\newline	}
+
+% Table of contents display
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+
 % Formatting
 \titleformat{\chapter}{\normalfont\huge\bf}{\thechapter.}{20pt}{\huge\bf}
 \linespread{1.05}
@@ -40,13 +46,13 @@
   \begin{titlepage}    
     \begin{center}
    
-      \Large \textbf{Deterministic Memory Management \\for \\Container based Services}  \\
+      \Large \textbf{Adapative memory management framework \\for derivative clouds}  \\
       \vspace{5em}
       
-      \large \textbf{Master's Thesis Phase-I Report} \\
+      \large \textbf{Master's Thesis Report} \\
       \vspace{5em}
       
-      \normalsize Submitted in partial fulfillment of the requirements \\ for the degree of \\
+      \normalsize A thesis \\submitted in partial fulfillment of the \\requirements for the degree of \\
       \vspace{1em}      
       \large \textbf{Master of Technology} \\
       \vspace{5em}
@@ -72,11 +78,37 @@
     \end{center}
   \end{titlepage} 
   
-  % Abstract
-  %\begin{abstract}
-    %Abstract goes here. Will fill this up when report is complete.
-  %\end{abstract}
-  
+  \begin{center}
+    \huge \textbf{Abstract}
+  \end{center}
+  \vspace*{3em}
+  \normalsize 
+    Cloud computing has emerged as one of the hot topics in the computing community today. Most servers these days are either 
+already running on cloud, or are in the virtue of shifting base to cloud. Cloud providers traditionally multiplex a set of compute 
+resources, to group of isolated clients using hardware level virtualization techniques that make use of Virtual Machines (VM) to deploy 
+isolated Virtual Environments (VE). 
+
+    Although VMs provide a very effective methodology in provisioning compute over the cloud, they incur heavy overheads there by degrading 
+efficiency while provisioning. Lately, there has been a new direction in the flow of research in virtualization, i.e OS-level virtualization 
+in which compute resources in a system are virtualized at an OS-level to provision light weight isolated VEs called Containers. Containers 
+provide similar features to that as VMs but incur much lesser overheads \cite{felter2015updated} \cite{morabito2015hypervisors} . A recent 
+work \cite{sharma2015spotcheck} has also tried to take it a step ahead, by provisioning compute resources to clients using an nested 
+approach in which repackages and resells resources purchased from native Infrastructure-as-a-service (IaaS) cloud provider. This approach is 
+coined as derivative cloud.
+
+    In this work, we have made an initial attempt to understand memory management between containers. We started off with purposing 
+hypotheses based on theoretical evidences. We performed analysis to verify the correctness of our purposed hypotheses and understand parts 
+of memory management for which hypotheses couldn't be drawn. We then tried to extrapolate its implications on real world applications 
+running inside a derivative cloud environment running VMs on the host machine and containers in the guest machine. These implications 
+strongly suggested that existing memory management techniques may impact higher provisioned containers negatively. We conclude by purposing 
+the requirements of a new desired policy that provides this notion of a differentiated reclamation to enforce deterministic allocation when 
+the system is under memory pressure. The end goal of our work is to provide an adaptive deterministic resource provisioning framework for 
+container based services. 
+
+
+
+
+    
   \pagenumbering{roman}
   \tableofcontents
   \listoftables
@@ -86,14 +118,15 @@
   \pagenumbering{arabic}
   \setlength{\parskip}{1em}
   
-  \include{intro/introduction}  
-  \include{background/background} 
-  %\include{related_work/related_work}
-  \include{design/design}
-  \include{native_exp/native}
-  \include{derived_exp/derived}
-  \include{solution/solution}
-  \include{conclusions/conclusions}
+  \include{1_intro/introduction}  
+  \include{2_background/background} 
+  %\include{3_related_work/related_work}
+  \include{4_empherical/empherical}
+  \include{5_design/design}
+  \include{6_implementation/implementation}
+  \include{7_evaluation/evaluation}
+  \include{8_conclusions/conclusions}
+  \include{9_future_work/future_work}
   
   \bibliographystyle{ieeetr}
   \bibliography{mylit}  
