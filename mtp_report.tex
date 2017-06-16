@@ -25,7 +25,7 @@
 \newcommand{\xmark}{\ding{55}}%
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
 
-\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\newline\newline	}
+\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\newline}
 
 % Table of contents display
 \setcounter{tocdepth}{3}
@@ -37,8 +37,10 @@
 \setlength{\parindent}{2em}
 \setlength{\parskip}{0.3em}
 \setitemize[0]{leftmargin=2em,itemindent=0.5em}
+
 \setlist[enumerate]{itemsep=0mm}
 \setlist[itemize]{itemsep=0mm}
+\setlist[enumerate]{nosep}
 
 \begin{document}
 

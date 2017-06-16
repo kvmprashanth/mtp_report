@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.6.13)  16 JUN 2017 16:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.6.13)  17 JUN 2017 03:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -376,20 +376,20 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 (./8_conclusions/conclusions.aux) (./9_future_work/future_work.aux))
 \openout1 = `mtp_report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -425,7 +425,7 @@ LaTeX Font Info:    ... okay on input line 43.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 43.
+LaTeX Info: Redefining \microtypecontext on input line 45.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -469,7 +469,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box31
-Package hyperref Info: Link coloring ON on input line 43.
+Package hyperref Info: Link coloring ON on input line 45.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -479,9 +479,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count123
 )
-LaTeX Info: Redefining \ref on input line 43.
-LaTeX Info: Redefining \pageref on input line 43.
-LaTeX Info: Redefining \nameref on input line 43.
+LaTeX Info: Redefining \ref on input line 45.
+LaTeX Info: Redefining \pageref on input line 45.
+LaTeX Info: Redefining \nameref on input line 45.
 
 (./mtp_report.out) (./mtp_report.out)
 \@outlinefile=\write3
@@ -493,7 +493,7 @@ Package caption Info: End \AtBeginDocument code.
 <iitb-black.pdf, id=309, 557.08125pt x 533.995pt>
 File: iitb-black.pdf Graphic file (type pdf)
  <use iitb-black.pdf>
-Package pdftex.def Info: iitb-black.pdf used on input line 72.
+Package pdftex.def Info: iitb-black.pdf used on input line 74.
 (pdftex.def)             Requested size: 117.49878pt x 112.62299pt.
  [1
 
@@ -541,7 +541,7 @@ Chapter 1.
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.121   \include{1_intro/introduction}
+l.123   \include{1_intro/introduction}
                                        [1
 
 
@@ -583,65 +583,45 @@ Overfull \vbox (26.36134pt too high) has occurred while \output is active []
 
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 49--52
-
- []
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 54.
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 55.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 54.
-
-Underfull \hbox (badness 10000) in paragraph at lines 68--70
-
- []
-
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 55.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-Underfull \hbox (badness 10000) in paragraph at lines 94--97
-
- []
-
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 98--101
-
- []
-
-<images/correctness/exp_setup.png, id=482, 698.61pt x 441.65pt>
+ [9]
+<images/correctness/exp_setup.png, id=484, 698.61pt x 441.65pt>
 File: images/correctness/exp_setup.png Graphic file (type png)
 
 <use images/correctness/exp_setup.png>
 Package pdftex.def Info: images/correctness/exp_setup.png used on input line 11
-4.
+6.
 (pdftex.def)             Requested size: 420.67763pt x 265.94897pt.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 136.
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--127
 
- []
-
-[10 <./images/correctness/exp_setup.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 128--130
-
- []
-
-) [11]
+(/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 136.
+ [10 <./images/correctness/exp_setup.png>] [11] [12]) [13]
 \openout2 = `6_implementation/implementation.aux'.
 
  (./6_implementation/implementation.tex)
 \openout2 = `7_evaluation/evaluation.aux'.
 
- (./7_evaluation/evaluation.tex)
+
+(./7_evaluation/evaluation.tex)
 \openout2 = `8_conclusions/conclusions.aux'.
 
-
-(./8_conclusions/conclusions.tex
+ (./8_conclusions/conclusions.tex
 Chapter 5.
-) [12
+) [14
 
 
 
@@ -654,47 +634,48 @@ Chapter 5.
 
  (./9_future_work/future_work.tex
 Chapter 6.
-) [13
+) [15
 
 
 
 ] (./mtp_report.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 138.
- [14
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 140.
+ [16
 
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 138.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 140.
  (./mtp_report.aux (./1_intro/introduction.aux)
 (./2_background/background.aux) (./4_empherical/empherical.aux)
 (./5_design/design.aux) (./6_implementation/implementation.aux)
 (./7_evaluation/evaluation.aux) (./8_conclusions/conclusions.aux)
 (./9_future_work/future_work.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 138.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 138.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 140.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 140.
 Package rerunfilecheck Info: File `mtp_report.out' has not changed.
 (rerunfilecheck)             Checksum: 3B18D1B0E4087D4D04CBA98F905FCAAA;6443.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 138.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 140.
  ) 
 Here is how much of TeX's memory you used:
- 10744 strings out of 493029
- 168627 string characters out of 6136234
- 313221 words of memory out of 5000000
- 13838 multiletter control sequences out of 15000+600000
- 21684 words of font info for 115 fonts, out of 8000000 for 9000
+ 10817 strings out of 493029
+ 169677 string characters out of 6136234
+ 313330 words of memory out of 5000000
+ 13861 multiletter control sequences out of 15000+600000
+ 23075 words of font info for 134 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 53i,6n,92p,243b,372s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,10n,92p,243b,447s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on mtp_report.pdf (21 pages, 248372 bytes).
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmtt10.pfb>
+Output written on mtp_report.pdf (23 pages, 271332 bytes).
 PDF statistics:
- 578 PDF objects out of 1000 (max. 8388607)
- 539 compressed objects within 6 object streams
- 129 named destinations out of 1000 (max. 500000)
- 25707 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 614 PDF objects out of 1000 (max. 8388607)
+ 572 compressed objects within 6 object streams
+ 148 named destinations out of 1000 (max. 500000)
+ 26219 words of extra memory for PDF output out of 29859 (max. 10000000)
 
