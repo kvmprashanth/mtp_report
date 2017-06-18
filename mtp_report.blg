@@ -3,52 +3,77 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: mtp_report.aux
 A level-1 auxiliary file: 1_intro/introduction.aux
 A level-1 auxiliary file: 2_background/background.aux
-A level-1 auxiliary file: 4_empherical/empherical.aux
-A level-1 auxiliary file: 5_design/design.aux
-A level-1 auxiliary file: 6_implementation/implementation.aux
-A level-1 auxiliary file: 7_evaluation/evaluation.aux
+A level-1 auxiliary file: 3_related_work/related_work.aux
+A level-1 auxiliary file: 4_controller/controller.aux
+A level-1 auxiliary file: 5_double_decker/dd.aux
 A level-1 auxiliary file: 8_conclusions/conclusions.aux
 A level-1 auxiliary file: 9_future_work/future_work.aux
 The style file: ieeetr.bst
 Database file #1: mylit.bib
-You've used 3 entries,
+Warning--entry type for "docker" isn't style-file defined
+--line 130 of file mylit.bib
+Warning--entry type for "lxd" isn't style-file defined
+--line 138 of file mylit.bib
+Warning--entry type for "manual" isn't style-file defined
+--line 164 of file mylit.bib
+Repeated entry---line 212 of file mylit.bib
+ : @inproceedings{dornemann2009demand
+ :                                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 221 of file mylit.bib
+ : @inproceedings{shen2011cloudscale
+ :                                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 230 of file mylit.bib
+ : @article{calheiros2012aneka
+ :                            ,
+I'm skipping whatever remains of this entry
+Warning--entry type for "stress" isn't style-file defined
+--line 252 of file mylit.bib
+Warning--entry type for "mongodb" isn't style-file defined
+--line 258 of file mylit.bib
+Warning--entry type for "redis" isn't style-file defined
+--line 264 of file mylit.bib
+Warning--can't use both volume and number fields in williams2011overdriver
+You've used 20 entries,
             1876 wiz_defined-function locations,
-            503 strings with 4409 characters,
-and the built_in function-call counts, 1031 in all, are:
-= -- 94
-> -- 42
+            595 strings with 7248 characters,
+and the built_in function-call counts, 5325 in all, are:
+= -- 528
+> -- 178
 < -- 0
-+ -- 15
-- -- 12
-* -- 72
-:= -- 144
-add.period$ -- 3
-call.type$ -- 3
-change.case$ -- 3
++ -- 69
+- -- 49
+* -- 345
+:= -- 691
+add.period$ -- 22
+call.type$ -- 20
+change.case$ -- 20
 chr.to.int$ -- 0
-cite$ -- 3
-duplicate$ -- 59
-empty$ -- 102
-format.name$ -- 12
-if$ -- 251
+cite$ -- 21
+duplicate$ -- 282
+empty$ -- 562
+format.name$ -- 49
+if$ -- 1338
 int.to.chr$ -- 0
-int.to.str$ -- 3
-missing$ -- 3
-newline$ -- 12
-num.names$ -- 3
-pop$ -- 19
+int.to.str$ -- 20
+missing$ -- 14
+newline$ -- 69
+num.names$ -- 15
+pop$ -- 117
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 38
+skip$ -- 195
 stack$ -- 0
-substring$ -- 68
-swap$ -- 23
+substring$ -- 346
+swap$ -- 109
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 10
-width$ -- 4
-write$ -- 32
+warning$ -- 1
+while$ -- 51
+width$ -- 22
+write$ -- 191
+(There were 3 error messages)

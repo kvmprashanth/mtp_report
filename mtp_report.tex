@@ -6,7 +6,7 @@
 \usepackage[moderate]{savetrees}
 \usepackage{graphicx}
 \usepackage{enumitem}
-\usepackage{titlesec}
+%\usepackage{titlesec}
 \usepackage[svgnames]{xcolor}
 \usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=red]{hyperref}
 \usepackage{caption}
@@ -14,6 +14,7 @@
 \usepackage{amssymb}
 \usepackage{pifont}
 \usepackage{array}
+\usepackage{amsmath}
 
 % Referencing macros
 \newcommand{\Eqref}[1]{Equation~\eqref{#1}}
@@ -25,14 +26,19 @@
 \newcommand{\xmark}{\ding{55}}%
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
 
-\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\newline}
+\newcommand{\cg}{Cgroups}
+\newcommand{\dd}{Double-decker}
+\newcommand{\sol}{soft-limit}
+
+%\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\newline}
+\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\\}
 
 % Table of contents display
-\setcounter{tocdepth}{3}
-\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{2}
 
 % Formatting
-\titleformat{\chapter}{\normalfont\huge\bf}{\thechapter.}{20pt}{\huge\bf}
+%\titleformat{\chapter}{\normalfont\huge\bf}{\thechapter.}{20pt}{\huge\bf}
 \linespread{1.05}
 \setlength{\parindent}{2em}
 \setlength{\parskip}{0.3em}
@@ -41,6 +47,7 @@
 \setlist[enumerate]{itemsep=0mm}
 \setlist[itemize]{itemsep=0mm}
 \setlist[enumerate]{nosep}
+\setlist[itemize]{nosep}
 
 \begin{document}
 
@@ -48,7 +55,7 @@
   \begin{titlepage}    
     \begin{center}
    
-      \Large \textbf{Adapative memory management framework \\for derivative clouds}  \\
+      \Large \textbf{Adapative memory management frameworks \\for derivative clouds}  \\
       \vspace{5em}
       
       \large \textbf{Master's Thesis Report} \\
@@ -107,9 +114,6 @@ the requirements of a new desired policy that provides this notion of a differen
 the system is under memory pressure. The end goal of our work is to provide an adaptive deterministic resource provisioning framework for 
 container based services. 
 
-
-
-
     
   \pagenumbering{roman}
   \tableofcontents
@@ -122,11 +126,11 @@ container based services.
   
   \include{1_intro/introduction}  
   \include{2_background/background} 
-  %\include{3_related_work/related_work}
-  \include{4_empherical/empherical}
-  \include{5_design/design}
-  \include{6_implementation/implementation}
-  \include{7_evaluation/evaluation}
+  \include{3_related_work/related_work}
+  \include{4_controller/controller}
+  \include{5_double_decker/dd}
+  %\include{6_implementation/implementation}
+  %\include{7_evaluation/evaluation}
   \include{8_conclusions/conclusions}
   \include{9_future_work/future_work}
   
