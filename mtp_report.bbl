@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{felter2015updated}
 W.~Felter, A.~Ferreira, R.~Rajamony, and J.~Rubio, ``An updated performance
@@ -15,5 +15,89 @@ R.~Morabito, J.~Kjallman, and M.~Komu, ``Hypervisors vs. lightweight
 P.~Sharma, S.~Lee, T.~Guo, D.~Irwin, and P.~Shenoy, ``Spotcheck: Designing a
   derivative iaas cloud on the spot market,'' in {\em Proceedings of the Tenth
   European Conference on Computer Systems}, p.~16, ACM, 2015.
+
+\bibitem{manual}
+``Getting your hands dirty with containers.''
+\newblock
+  \url{https://www.cse.iitb.ac.in/~prashanth/containers/seminar/manual.pdf}.
+
+\bibitem{docker}
+D.~Inc., ``Docker offical documentation,'' 2016.
+\newblock \url{https://docs.docker.com/}.
+
+\bibitem{lxd}
+``Linux container hypervisor,'' 2016.
+\newblock \url{https://linuxcontainers.org/lxd/}.
+
+\bibitem{kolyshkin2006virtualization}
+K.~Kolyshkin, ``Virtualization in linux,'' {\em White paper, OpenVZ}, vol.~3,
+  p.~39, 2006.
+
+\bibitem{menage2007adding}
+P.~B. Menage, ``Adding generic process containers to the linux kernel,'' in
+  {\em Proceedings of the Linux Symposium}, vol.~2, pp.~45--57, Citeseer, 2007.
+
+\bibitem{waldspurger2002memory}
+C.~A. Waldspurger, ``Memory resource management in vmware esx server,'' {\em
+  ACM SIGOPS Operating Systems Review}, vol.~36, no.~SI, pp.~181--194, 2002.
+
+\bibitem{molto2013elastic}
+G.~Molt{\'o}, M.~Caballer, E.~Romero, and C.~de~Alfonso, ``Elastic memory
+  management of virtualized infrastructures for applications with dynamic
+  memory requirements,'' {\em Procedia Computer Science}, vol.~18,
+  pp.~159--168, 2013.
+
+\bibitem{williams2011overdriver}
+D.~Williams, H.~Jamjoom, Y.-H. Liu, and H.~Weatherspoon, ``Overdriver: Handling
+  memory overload in an oversubscribed cloud,'' in {\em ACM SIGPLAN Notices},
+  vol.~46, pp.~205--216, ACM, 2011.
+
+\bibitem{venkatesan2014ex}
+V.~Venkatesan, W.~Qingsong, and Y.~Tay, ``Ex-tmem: Extending transcendent
+  memory with non-volatile memory for virtual machines,'' in {\em High
+  Performance Computing and Communications, 2014 IEEE 6th Intl Symp on
+  Cyberspace Safety and Security, 2014 IEEE 11th Intl Conf on Embedded Software
+  and Syst (HPCC, CSS, ICESS), 2014 IEEE Intl Conf on}, pp.~966--973, IEEE,
+  2014.
+
+\bibitem{shen2011cloudscale}
+Z.~Shen, S.~Subbiah, X.~Gu, and J.~Wilkes, ``Cloudscale: elastic resource
+  scaling for multi-tenant cloud systems,'' in {\em Proceedings of the 2nd ACM
+  Symposium on Cloud Computing}, p.~5, ACM, 2011.
+
+\bibitem{dornemann2009demand}
+T.~D{\"o}rnemann, E.~Juhnke, and B.~Freisleben, ``On-demand resource
+  provisioning for bpel workflows using amazon's elastic compute cloud,'' in
+  {\em Cluster Computing and the Grid, 2009. CCGRID'09. 9th IEEE/ACM
+  International Symposium on}, pp.~140--147, IEEE, 2009.
+
+\bibitem{calheiros2012aneka}
+R.~N. Calheiros, C.~Vecchiola, D.~Karunamoorthy, and R.~Buyya, ``The aneka
+  platform and qos-driven resource provisioning for elastic applications on
+  hybrid clouds,'' {\em Future Generation Computer Systems}, vol.~28, no.~6,
+  pp.~861--870, 2012.
+
+\bibitem{he2012elastic}
+S.~He, L.~Guo, Y.~Guo, C.~Wu, M.~Ghanem, and R.~Han, ``Elastic application
+  container: A lightweight approach for cloud resource provisioning,'' in {\em
+  2012 IEEE 26th International Conference on Advanced Information Networking
+  and Applications}, pp.~15--22, IEEE, 2012.
+
+\bibitem{stress}
+``Stress workload generator.''
+\newblock \url{http://people.seas.harvard.edu/~apw/stress/}.
+
+\bibitem{Mongodb}
+``Mongodb.''
+\newblock \url{https://docs.mongodb.com/v3.2/}.
+
+\bibitem{Redis}
+``Redis in-memory key-value store.''
+\newblock \url{http://redis.io/}.
+
+\bibitem{cooper2010benchmarking}
+B.~F. Cooper, A.~Silberstein, E.~Tam, R.~Ramakrishnan, and R.~Sears,
+  ``Benchmarking cloud serving systems with ycsb,'' in {\em Proceedings of the
+  1st ACM symposium on Cloud computing}, pp.~143--154, ACM, 2010.
 
 \end{thebibliography}
