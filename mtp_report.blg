@@ -34,37 +34,38 @@ Warning--entry type for "mongodb" isn't style-file defined
 --line 256 of file mylit.bib
 Warning--entry type for "redis" isn't style-file defined
 --line 262 of file mylit.bib
+Warning--empty booktitle in doubledecker
 Warning--can't use both volume and number fields in williams2011overdriver
-You've used 20 entries,
+You've used 21 entries,
             1876 wiz_defined-function locations,
-            595 strings with 7248 characters,
-and the built_in function-call counts, 5325 in all, are:
-= -- 528
-> -- 178
+            598 strings with 7370 characters,
+and the built_in function-call counts, 5489 in all, are:
+= -- 539
+> -- 186
 < -- 0
-+ -- 69
-- -- 49
-* -- 345
-:= -- 691
-add.period$ -- 22
-call.type$ -- 20
-change.case$ -- 20
++ -- 72
+- -- 51
+* -- 354
+:= -- 715
+add.period$ -- 23
+call.type$ -- 21
+change.case$ -- 21
 chr.to.int$ -- 0
-cite$ -- 21
-duplicate$ -- 282
-empty$ -- 562
-format.name$ -- 49
-if$ -- 1338
+cite$ -- 23
+duplicate$ -- 294
+empty$ -- 584
+format.name$ -- 51
+if$ -- 1377
 int.to.chr$ -- 0
-int.to.str$ -- 20
-missing$ -- 14
-newline$ -- 69
-num.names$ -- 15
-pop$ -- 117
+int.to.str$ -- 21
+missing$ -- 15
+newline$ -- 72
+num.names$ -- 16
+pop$ -- 126
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 195
+skip$ -- 197
 stack$ -- 0
 substring$ -- 346
 swap$ -- 109
@@ -72,8 +73,8 @@ text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 1
-while$ -- 51
-width$ -- 22
-write$ -- 191
+warning$ -- 2
+while$ -- 52
+width$ -- 23
+write$ -- 198
 (There were 3 error messages)

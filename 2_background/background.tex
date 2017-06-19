@@ -195,9 +195,11 @@ moved to a specific container, its pages also become a part of its local per con
 system internally makes use of a RBTree to store the exceeds. The exceed is computed at \texttt{mem\_cgroup\_update\_tree()} at regular 
 intervals using the formula,
       
-      \begin{center}
-	$ excess = usage - softlimit $
-      \end{center}
+	  \begin{center}
+	    \begin{equation}
+	      Excess = Usage - SoftLimit
+	    \end{equation}
+	  \end{center}
       
       \pagebreak
       
@@ -220,9 +222,78 @@ inside containers in a native container setup and derivative cloud setup. Hence 
 do the same.
       
   
-  \section{Double decker: Second chance cache for derivataive clouds}
+  \section{\dd{}: Second chance cache for derivative clouds}
   
-    TBD
+    \dd{}\cite{doubledecker} is a second cache caching framework developed to support derivative clouds. It's initial intent was to tackle the
+    problem of configuring hypervisor caches in a derivative cloud environment. 
+    
+    \dd{} provides a second chance caching framework for Linux+KVM+LXC.
+    \dd{} is built upon existing the existing \tmem{} second cache caching framework for Linux. There have been implementations\cite{venkatesan2014ex} of \tmem{} 
+    to support a per-VM partitioning schema. \dd{} builds upon this framework by providing a per-container partitioning framework.
+    
+    
+    \subsection{\dd{} features}
+    
+    \noindent The following are a comprehensive list of features supported by \dd{},
+      \begin{enumerate}
+	\item Supports a \textbf{two level configurable caches}. These partitions are either in-memory or at the SSD. 
+	\item A cache partition can be configured on a per-VM basis by the native cloud provider at the hypervisor.
+	\item The cache partitioned at the VM-level can further be partitioned by an derivative cloud provider inside the VM on a \textbf{per-container basis}.
+	\item Cache supports a \textbf{resource conserving nature}, where any cache that is underutilized is provisioned to other applications at need
+	more cache.
+	\item Exclusive caching at all levels.
+      \end{enumerate}
+      
+   \subsection{\dd{} architecture}
+    \label{sec:double_decker_architecture}
+    
+      \begin{figure}
+	\centering
+	\includegraphics[width=1\textwidth]{images/background/double_decker.png}
+	\caption{\dd{} architecture: second cache caching for derivative clouds}
+	\label{img:doube_decker_architecure}
+      \end{figure}
+      
+	The architecture for \dd{} is illustrated in Fig~\ref{img:doube_decker_architecure}. The hypervisor caches are initially partitioned on a per-VM
+	basis by the native cloud provider at the hypervisor. Now, each VM cache partition can be further subdivided by the derivative cloud provider 
+	on a per container basis. Provisioning is done in-terms of \textit{Relative Weights}. The relative weight for an container would map to the
+	actual cache partition as given below,
+	  
+	  \begin{center}
+	    \begin{equation}
+	    \label{eq:cache_allocation}
+	      Container Cache Allocation = ( \frac{Relative Weight of Container}{Total Weight of all Containers} ) * Cache Allocated for VM
+	    \end{equation}
+	  \end{center}
+	  
+	Similarly is the cache partition for each VM calculated but instead of using the VM cache allocation, we would be using the entire 
+	host cache configuration. The cache is partitioned based on a higher level SLA requirements at each of the cloud provider. This SLA could
+	be fixed for a particular container using a higher level policy. 
+	  
+    \subsection{\dd{} internals}
+    
+      \begin{figure}
+	\centering
+	\includegraphics[width=0.75\textwidth]{images/background/single_level_implementation.png}
+	\caption{\dd{} internals}
+	\label{img:doube_decker_internals}
+      \end{figure}
+	  
+	The Fig:~\ref{img:doube_decker_internals} describes the \tmem{} implementation overview of double decker. Each container is configured using a
+	relative weight parameter as described in Section~\ref{sec:double_decker_architecture}. There is pool created for each configured container cache. This
+	pool represents an abstract design component which contains all the pages for a particular container are present in. 
+	There are several data structures which make up  for the \tmem implementation, however the most crucial one is a per pool tree structure that keeps 
+	track of all put objects.
+	
+	\dd{} is built upon existing the existing \tmem{} second cache caching framework for Linux as mentioned earlier. In specific it only works as a second
+	cache only clean (not dirty) disk backed pages. It doesn't cache anonymous (pages with VA mappings) or dirty disk backed pages. This ensures a simple 
+	form of consistency in case of system failure. 
+	
+	Inserts into the cache are referred to as \textit{PUTS} and accesses to these objects are referred to as \textit{GETS}. Cleaning up of pages are referred
+	to as \textit{FLUSHES}. Evictions in this triggered when the cache is full, and the application (VM followed by container) that is most exceeding it's 
+	limits are targeted first. Evictions are based on a simple LRU eviction algorithm for now. However any eviction algorithm is pluggable with this implementation.
+  
+    
   
       
 

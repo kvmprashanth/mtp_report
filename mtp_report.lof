@@ -5,15 +5,17 @@
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Mapping of pages to LRU lists\relax }}{7}{figure.caption.12}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Kernel Function Call Trace for System-Wide Reclamation\relax }}{8}{figure.caption.13}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Existing policy for Memory Reclamation\relax }}{9}{figure.caption.14}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Double-decker{} architecture: second cache caching for derivative clouds\relax }}{10}{figure.caption.15}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Double-decker{} internals\relax }}{11}{figure.caption.16}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Native container testbed\relax }}{14}{figure.caption.24}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Plots for analysis of reclamation when both containers are exceeding by same value\relax }}{16}{figure.caption.31}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Plots for when both containers are having same usage but no exceeds\relax }}{17}{figure.caption.37}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Plots for analyzing effect of workloads characteristics on reclamation\relax }}{18}{figure.caption.43}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Derivative cloud testbed\relax }}{19}{figure.caption.48}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Plots illustrating limitations in maintaining memory ratios in derivative clouds\relax }}{21}{figure.caption.54}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Native container testbed\relax }}{16}{figure.caption.26}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Plots for analysis of reclamation when both containers are exceeding by same value\relax }}{18}{figure.caption.33}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Plots for when both containers are having same usage but no exceeds\relax }}{19}{figure.caption.39}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Plots for analyzing effect of workloads characteristics on reclamation\relax }}{20}{figure.caption.45}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Derivative cloud testbed\relax }}{21}{figure.caption.50}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Plots illustrating limitations in maintaining memory ratios in derivative clouds\relax }}{23}{figure.caption.56}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Experimental testbed for checking correctness\relax }}{29}{figure.caption.68}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Experimental testbed for checking correctness\relax }}{31}{figure.caption.70}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

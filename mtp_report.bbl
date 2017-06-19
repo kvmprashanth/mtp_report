@@ -37,6 +37,18 @@ K.~Kolyshkin, ``Virtualization in linux,'' {\em White paper, OpenVZ}, vol.~3,
 P.~B. Menage, ``Adding generic process containers to the linux kernel,'' in
   {\em Proceedings of the Linux Symposium}, vol.~2, pp.~45--57, Citeseer, 2007.
 
+\bibitem{doubledecker}
+D.~Mishra and P.~Kulkarni, ``Doubledecker: Differentiated hypervisor caching
+  for derivative clouds,'' 2016.
+
+\bibitem{venkatesan2014ex}
+V.~Venkatesan, W.~Qingsong, and Y.~Tay, ``Ex-tmem: Extending transcendent
+  memory with non-volatile memory for virtual machines,'' in {\em High
+  Performance Computing and Communications, 2014 IEEE 6th Intl Symp on
+  Cyberspace Safety and Security, 2014 IEEE 11th Intl Conf on Embedded Software
+  and Syst (HPCC, CSS, ICESS), 2014 IEEE Intl Conf on}, pp.~966--973, IEEE,
+  2014.
+
 \bibitem{waldspurger2002memory}
 C.~A. Waldspurger, ``Memory resource management in vmware esx server,'' {\em
   ACM SIGOPS Operating Systems Review}, vol.~36, no.~SI, pp.~181--194, 2002.
@@ -51,14 +63,6 @@ G.~Molt{\'o}, M.~Caballer, E.~Romero, and C.~de~Alfonso, ``Elastic memory
 D.~Williams, H.~Jamjoom, Y.-H. Liu, and H.~Weatherspoon, ``Overdriver: Handling
   memory overload in an oversubscribed cloud,'' in {\em ACM SIGPLAN Notices},
   vol.~46, pp.~205--216, ACM, 2011.
-
-\bibitem{venkatesan2014ex}
-V.~Venkatesan, W.~Qingsong, and Y.~Tay, ``Ex-tmem: Extending transcendent
-  memory with non-volatile memory for virtual machines,'' in {\em High
-  Performance Computing and Communications, 2014 IEEE 6th Intl Symp on
-  Cyberspace Safety and Security, 2014 IEEE 11th Intl Conf on Embedded Software
-  and Syst (HPCC, CSS, ICESS), 2014 IEEE Intl Conf on}, pp.~966--973, IEEE,
-  2014.
 
 \bibitem{shen2011cloudscale}
 Z.~Shen, S.~Subbiah, X.~Gu, and J.~Wilkes, ``Cloudscale: elastic resource
