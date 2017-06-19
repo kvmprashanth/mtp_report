@@ -1,106 +1,106 @@
 \relax 
 \providecommand\hyper@newdestlabel[2]{}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Differentiated memory management controller for containers}{14}{chapter.4}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Differentiated memory management controller for containers}{13}{chapter.4}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Drawbacks of existing memory management for containers}{14}{section.4.1}}
-\newlabel{sec:controller_issues}{{4.1}{14}{Drawbacks of existing memory management for containers}{section.4.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Experimental setup}{14}{subsection.4.1.1}}
-\@writefile{toc}{\contentsline {subsubsection}{Experimental configurations}{14}{section*.17}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Drawbacks of existing memory management for containers}{13}{section.4.1}}
+\newlabel{sec:controller_issues}{{4.1}{13}{Drawbacks of existing memory management for containers}{section.4.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Experimental setup}{13}{subsection.4.1.1}}
+\@writefile{toc}{\contentsline {subsubsection}{Experimental configurations}{13}{section*.17}}
 \citation{stress}
 \citation{Mongodb}
-\@writefile{toc}{\contentsline {subsubsection}{Metrics of interest}{15}{section*.18}}
-\@writefile{toc}{\contentsline {subsubsection}{Workloads}{15}{section*.19}}
-\@writefile{toc}{\contentsline {paragraph}{Stress}{15}{section*.20}}
-\@writefile{toc}{\contentsline {paragraph}{Memory hogger}{15}{section*.21}}
-\@writefile{toc}{\contentsline {paragraph}{File hogger}{15}{section*.22}}
-\@writefile{toc}{\contentsline {paragraph}{MongoDB}{15}{section*.23}}
+\@writefile{toc}{\contentsline {subsubsection}{Metrics of interest}{14}{section*.18}}
+\@writefile{toc}{\contentsline {subsubsection}{Workloads}{14}{section*.19}}
+\@writefile{toc}{\contentsline {paragraph}{Stress}{14}{section*.20}}
+\@writefile{toc}{\contentsline {paragraph}{Memory hogger}{14}{section*.21}}
+\@writefile{toc}{\contentsline {paragraph}{File hogger}{14}{section*.22}}
+\@writefile{toc}{\contentsline {paragraph}{MongoDB}{14}{section*.23}}
 \citation{Redis}
 \citation{cooper2010benchmarking}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Native container testbed\relax }}{16}{figure.caption.26}}
-\newlabel{img:native_setup}{{4.1}{16}{Native container testbed\relax }{figure.caption.26}{}}
-\@writefile{toc}{\contentsline {paragraph}{Redis}{16}{section*.24}}
-\@writefile{toc}{\contentsline {paragraph}{YCSB benchmark}{16}{section*.25}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Issues in native environment}{16}{subsection.4.1.2}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Base configuration for native container experimentation\relax }}{17}{table.caption.29}}
-\newlabel{table_native_base}{{4.1}{17}{Base configuration for native container experimentation\relax }{table.caption.29}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Host}{17}{section*.27}}
-\@writefile{toc}{\contentsline {subsubsection}{Guest}{17}{section*.28}}
-\@writefile{toc}{\contentsline {subsubsection}{Reclamation above soft limits}{17}{section*.30}}
-\@writefile{toc}{\contentsline {paragraph}{Hypothesis}{17}{section*.31}}
-\newlabel{img_exceed_only_1_exceed}{{4.2a}{18}{Memory exceed plot\relax }{figure.caption.33}{}}
-\newlabel{sub@img_exceed_only_1_exceed}{{a}{18}{Memory exceed plot\relax }{figure.caption.33}{}}
-\newlabel{img_exceed_only_1_smr}{{4.2b}{18}{Cumulative soft memory reclaimed plot\relax }{figure.caption.33}{}}
-\newlabel{sub@img_exceed_only_1_smr}{{b}{18}{Cumulative soft memory reclaimed plot\relax }{figure.caption.33}{}}
-\newlabel{img_exceed_only_1_compare}{{4.2c}{18}{SMR versus GLR\relax }{figure.caption.33}{}}
-\newlabel{sub@img_exceed_only_1_compare}{{c}{18}{SMR versus GLR\relax }{figure.caption.33}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Plots for analysis of reclamation when both containers are exceeding by same value\relax }}{18}{figure.caption.33}}
-\@writefile{toc}{\contentsline {paragraph}{Procedure}{18}{section*.32}}
-\@writefile{toc}{\contentsline {paragraph}{Observations}{18}{section*.34}}
-\@writefile{toc}{\contentsline {paragraph}{Inference}{18}{section*.35}}
-\newlabel{img_no_sl_mu}{{4.3a}{19}{Memory Usage Plot\relax }{figure.caption.39}{}}
-\newlabel{sub@img_no_sl_mu}{{a}{19}{Memory Usage Plot\relax }{figure.caption.39}{}}
-\newlabel{img_no_sl_global_vs_local}{{4.3b}{19}{SMR versus GLR Plot\relax }{figure.caption.39}{}}
-\newlabel{sub@img_no_sl_global_vs_local}{{b}{19}{SMR versus GLR Plot\relax }{figure.caption.39}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Plots for when both containers are having same usage but no exceeds\relax }}{19}{figure.caption.39}}
-\@writefile{toc}{\contentsline {subsubsection}{Reclamation below soft limits}{19}{section*.36}}
-\@writefile{toc}{\contentsline {paragraph}{Hypothesis}{19}{section*.37}}
-\@writefile{toc}{\contentsline {paragraph}{Procedure}{19}{section*.38}}
-\@writefile{toc}{\contentsline {paragraph}{Observations}{19}{section*.40}}
-\@writefile{toc}{\contentsline {paragraph}{Inferences}{19}{section*.41}}
-\newlabel{img:workload_1_exceed}{{4.4a}{20}{Exceed plot for Experiment-4a\relax }{figure.caption.45}{}}
-\newlabel{sub@img:workload_1_exceed}{{a}{20}{Exceed plot for Experiment-4a\relax }{figure.caption.45}{}}
-\newlabel{img:workload_2_exceed}{{4.4b}{20}{Exceed plot for Experiment-4b\relax }{figure.caption.45}{}}
-\newlabel{sub@img:workload_2_exceed}{{b}{20}{Exceed plot for Experiment-4b\relax }{figure.caption.45}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Plots for analyzing effect of workloads characteristics on reclamation\relax }}{20}{figure.caption.45}}
-\@writefile{toc}{\contentsline {subsubsection}{Effect of workloads characteristics on reclamation}{20}{section*.42}}
-\@writefile{toc}{\contentsline {paragraph}{Question}{20}{section*.43}}
-\@writefile{toc}{\contentsline {paragraph}{Procedure}{20}{section*.44}}
-\@writefile{toc}{\contentsline {paragraph}{Observations}{20}{section*.46}}
-\@writefile{toc}{\contentsline {paragraph}{Inference}{20}{section*.47}}
-\@writefile{toc}{\contentsline {subsubsection}{Key Implications}{20}{section*.48}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Derivative cloud testbed\relax }}{21}{figure.caption.50}}
-\newlabel{img:derived_setup}{{4.5}{21}{Derivative cloud testbed\relax }{figure.caption.50}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.3}Amplification of issue in derivative clouds}{21}{subsection.4.1.3}}
-\@writefile{toc}{\contentsline {subsubsection}{Testbed}{21}{section*.49}}
-\@writefile{toc}{\contentsline {paragraph}{Host}{21}{section*.51}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Native container testbed\relax }}{15}{figure.caption.26}}
+\newlabel{img:native_setup}{{4.1}{15}{Native container testbed\relax }{figure.caption.26}{}}
+\@writefile{toc}{\contentsline {paragraph}{Redis}{15}{section*.24}}
+\@writefile{toc}{\contentsline {paragraph}{YCSB benchmark}{15}{section*.25}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Issues in native environment}{15}{subsection.4.1.2}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Base configuration for native container experimentation\relax }}{16}{table.caption.29}}
+\newlabel{table_native_base}{{4.1}{16}{Base configuration for native container experimentation\relax }{table.caption.29}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Host}{16}{section*.27}}
+\@writefile{toc}{\contentsline {subsubsection}{Guest}{16}{section*.28}}
+\@writefile{toc}{\contentsline {subsubsection}{Reclamation above soft limits}{16}{section*.30}}
+\@writefile{toc}{\contentsline {paragraph}{Hypothesis}{16}{section*.31}}
+\newlabel{img_exceed_only_1_exceed}{{4.2a}{17}{Memory exceed plot\relax }{figure.caption.33}{}}
+\newlabel{sub@img_exceed_only_1_exceed}{{a}{17}{Memory exceed plot\relax }{figure.caption.33}{}}
+\newlabel{img_exceed_only_1_smr}{{4.2b}{17}{Cumulative soft memory reclaimed plot\relax }{figure.caption.33}{}}
+\newlabel{sub@img_exceed_only_1_smr}{{b}{17}{Cumulative soft memory reclaimed plot\relax }{figure.caption.33}{}}
+\newlabel{img_exceed_only_1_compare}{{4.2c}{17}{SMR versus GLR\relax }{figure.caption.33}{}}
+\newlabel{sub@img_exceed_only_1_compare}{{c}{17}{SMR versus GLR\relax }{figure.caption.33}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Plots for analysis of reclamation when both containers are exceeding by same value\relax }}{17}{figure.caption.33}}
+\@writefile{toc}{\contentsline {paragraph}{Procedure}{17}{section*.32}}
+\@writefile{toc}{\contentsline {paragraph}{Observations}{17}{section*.34}}
+\@writefile{toc}{\contentsline {paragraph}{Inference}{17}{section*.35}}
+\newlabel{img_no_sl_mu}{{4.3a}{18}{Memory Usage Plot\relax }{figure.caption.39}{}}
+\newlabel{sub@img_no_sl_mu}{{a}{18}{Memory Usage Plot\relax }{figure.caption.39}{}}
+\newlabel{img_no_sl_global_vs_local}{{4.3b}{18}{SMR versus GLR Plot\relax }{figure.caption.39}{}}
+\newlabel{sub@img_no_sl_global_vs_local}{{b}{18}{SMR versus GLR Plot\relax }{figure.caption.39}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Plots for when both containers are having same usage but no exceeds\relax }}{18}{figure.caption.39}}
+\@writefile{toc}{\contentsline {subsubsection}{Reclamation below soft limits}{18}{section*.36}}
+\@writefile{toc}{\contentsline {paragraph}{Hypothesis}{18}{section*.37}}
+\@writefile{toc}{\contentsline {paragraph}{Procedure}{18}{section*.38}}
+\@writefile{toc}{\contentsline {paragraph}{Observations}{18}{section*.40}}
+\@writefile{toc}{\contentsline {paragraph}{Inferences}{18}{section*.41}}
+\newlabel{img:workload_1_exceed}{{4.4a}{19}{Exceed plot for Experiment-4a\relax }{figure.caption.45}{}}
+\newlabel{sub@img:workload_1_exceed}{{a}{19}{Exceed plot for Experiment-4a\relax }{figure.caption.45}{}}
+\newlabel{img:workload_2_exceed}{{4.4b}{19}{Exceed plot for Experiment-4b\relax }{figure.caption.45}{}}
+\newlabel{sub@img:workload_2_exceed}{{b}{19}{Exceed plot for Experiment-4b\relax }{figure.caption.45}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Plots for analyzing effect of workloads characteristics on reclamation\relax }}{19}{figure.caption.45}}
+\@writefile{toc}{\contentsline {subsubsection}{Effect of workloads characteristics on reclamation}{19}{section*.42}}
+\@writefile{toc}{\contentsline {paragraph}{Question}{19}{section*.43}}
+\@writefile{toc}{\contentsline {paragraph}{Procedure}{19}{section*.44}}
+\@writefile{toc}{\contentsline {paragraph}{Observations}{19}{section*.46}}
+\@writefile{toc}{\contentsline {paragraph}{Inference}{19}{section*.47}}
+\@writefile{toc}{\contentsline {subsubsection}{Key Implications}{19}{section*.48}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Derivative cloud testbed\relax }}{20}{figure.caption.50}}
+\newlabel{img:derived_setup}{{4.5}{20}{Derivative cloud testbed\relax }{figure.caption.50}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.3}Amplification of issue in derivative clouds}{20}{subsection.4.1.3}}
+\@writefile{toc}{\contentsline {subsubsection}{Testbed}{20}{section*.49}}
+\@writefile{toc}{\contentsline {paragraph}{Host}{20}{section*.51}}
 \citation{docker}
 \citation{Redis}
 \citation{Mongodb}
 \citation{cooper2010benchmarking}
-\@writefile{toc}{\contentsline {paragraph}{Guest}{22}{section*.52}}
-\@writefile{toc}{\contentsline {subsubsection}{Experimental Flow}{22}{section*.53}}
-\@writefile{toc}{\contentsline {subsubsection}{Impact in derivative environment}{22}{section*.55}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces Default configuration of the four application containers running in the derivative cloud setup\relax }}{23}{table.caption.54}}
-\newlabel{tbl:table_default_config}{{4.2}{23}{Default configuration of the four application containers running in the derivative cloud setup\relax }{table.caption.54}{}}
-\newlabel{plot_inference_redis}{{4.6a}{23}{\footnotesize Memory usage for \redis {} applications.\relax }{figure.caption.56}{}}
-\newlabel{sub@plot_inference_redis}{{a}{23}{\footnotesize Memory usage for \redis {} applications.\relax }{figure.caption.56}{}}
-\newlabel{plot_exceed_redis}{{4.6b}{23}{\footnotesize Extent of memory usage exceed for \redis {} applications.\relax }{figure.caption.56}{}}
-\newlabel{sub@plot_exceed_redis}{{b}{23}{\footnotesize Extent of memory usage exceed for \redis {} applications.\relax }{figure.caption.56}{}}
-\newlabel{plot_throughput_mongo}{{4.6c}{23}{\footnotesize Impact of improper memory allocations on \mongo {} applications.\relax }{figure.caption.56}{}}
-\newlabel{sub@plot_throughput_mongo}{{c}{23}{\footnotesize Impact of improper memory allocations on \mongo {} applications.\relax }{figure.caption.56}{}}
-\newlabel{plot_inference_ratio}{{4.6d}{23}{\footnotesize Memory allocation ratios.\relax }{figure.caption.56}{}}
-\newlabel{sub@plot_inference_ratio}{{d}{23}{\footnotesize Memory allocation ratios.\relax }{figure.caption.56}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Plots illustrating limitations in maintaining memory ratios in derivative clouds\relax }}{23}{figure.caption.56}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.4}Key Implications}{24}{subsection.4.1.4}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Requirements for a new memory management controller}{24}{section.4.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Proposed memory management controller}{24}{section.4.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Controller logic}{25}{subsection.4.3.1}}
-\newlabel{eqn:pa}{{4.3}{25}{Controller logic}{equation.4.3.3}{}}
-\newlabel{eqn:ex}{{4.4}{25}{Controller logic}{equation.4.3.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}Policies supported by our controller}{25}{subsection.4.3.2}}
-\@writefile{toc}{\contentsline {subsubsection}{Policy 1: Proportionate memory allocation}{25}{section*.57}}
-\@writefile{toc}{\contentsline {subsubsection}{Policy 2: Application-specific differentiated allocation}{26}{section*.58}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Modifications made to Linux memory Cgroup}{26}{section.4.4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Per container configurable weights}{26}{subsection.4.4.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}Flexible reclamation size}{26}{subsection.4.4.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.3}Deterministic reclamation}{26}{subsection.4.4.3}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}Empirical evaluation of our controller}{27}{section.4.5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.1}Effectiveness of our controller}{27}{subsection.4.5.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.2}Differential QOS containers}{27}{subsection.4.5.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.3}Impact of reclamation chunk size}{27}{subsection.4.5.3}}
+\@writefile{toc}{\contentsline {paragraph}{Guest}{21}{section*.52}}
+\@writefile{toc}{\contentsline {subsubsection}{Experimental Flow}{21}{section*.53}}
+\@writefile{toc}{\contentsline {subsubsection}{Impact in derivative environment}{21}{section*.55}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces Default configuration of the four application containers running in the derivative cloud setup\relax }}{22}{table.caption.54}}
+\newlabel{tbl:table_default_config}{{4.2}{22}{Default configuration of the four application containers running in the derivative cloud setup\relax }{table.caption.54}{}}
+\newlabel{plot_inference_redis}{{4.6a}{22}{\footnotesize Memory usage for \redis {} applications.\relax }{figure.caption.56}{}}
+\newlabel{sub@plot_inference_redis}{{a}{22}{\footnotesize Memory usage for \redis {} applications.\relax }{figure.caption.56}{}}
+\newlabel{plot_exceed_redis}{{4.6b}{22}{\footnotesize Extent of memory usage exceed for \redis {} applications.\relax }{figure.caption.56}{}}
+\newlabel{sub@plot_exceed_redis}{{b}{22}{\footnotesize Extent of memory usage exceed for \redis {} applications.\relax }{figure.caption.56}{}}
+\newlabel{plot_throughput_mongo}{{4.6c}{22}{\footnotesize Impact of improper memory allocations on \mongo {} applications.\relax }{figure.caption.56}{}}
+\newlabel{sub@plot_throughput_mongo}{{c}{22}{\footnotesize Impact of improper memory allocations on \mongo {} applications.\relax }{figure.caption.56}{}}
+\newlabel{plot_inference_ratio}{{4.6d}{22}{\footnotesize Memory allocation ratios.\relax }{figure.caption.56}{}}
+\newlabel{sub@plot_inference_ratio}{{d}{22}{\footnotesize Memory allocation ratios.\relax }{figure.caption.56}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Plots illustrating limitations in maintaining memory ratios in derivative clouds\relax }}{22}{figure.caption.56}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.4}Key Implications}{23}{subsection.4.1.4}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Requirements for a new memory management controller}{23}{section.4.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Proposed memory management controller}{23}{section.4.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Controller logic}{24}{subsection.4.3.1}}
+\newlabel{eqn:pa}{{4.3}{24}{Controller logic}{equation.4.3.3}{}}
+\newlabel{eqn:ex}{{4.4}{24}{Controller logic}{equation.4.3.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}Policies supported by our controller}{24}{subsection.4.3.2}}
+\@writefile{toc}{\contentsline {subsubsection}{Policy 1: Proportionate memory allocation}{24}{section*.57}}
+\@writefile{toc}{\contentsline {subsubsection}{Policy 2: Application-specific differentiated allocation}{25}{section*.58}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Modifications made to Linux memory Cgroup}{25}{section.4.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Per container configurable weights}{25}{subsection.4.4.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}Flexible reclamation size}{25}{subsection.4.4.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.3}Deterministic reclamation}{25}{subsection.4.4.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Empirical evaluation of our controller}{26}{section.4.5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.1}Effectiveness of our controller}{26}{subsection.4.5.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.2}Differential QOS containers}{26}{subsection.4.5.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.3}Impact of reclamation chunk size}{26}{subsection.4.5.3}}
 \@setckpt{4_controller/controller}{
-\setcounter{page}{28}
+\setcounter{page}{27}
 \setcounter{equation}{4}
 \setcounter{enumi}{6}
 \setcounter{enumii}{0}
@@ -120,7 +120,7 @@
 \setcounter{float@type}{4}
 \setcounter{Item}{74}
 \setcounter{Hfootnote}{0}
-\setcounter{bookmark@seq@number}{44}
+\setcounter{bookmark@seq@number}{42}
 \setcounter{ContinuedFloat}{0}
 \setcounter{subfigure}{4}
 \setcounter{subtable}{0}

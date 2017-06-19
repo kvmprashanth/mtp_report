@@ -337,6 +337,7 @@ using Stress workload running directly on the host machine.
 applications running on a derived cloud environment.
 
       \subsubsection{Testbed}
+      \label{sec:derivative_testbed}
 
       The derivative cloud testbed consisted of running server containers inside a virtual machine (VM-1) which was running on top of a 
 physical host machine. Another virtual machine (VM-2) was used to generate clients who connected to servers containers running inside VM-1 
@@ -640,9 +641,61 @@ the system falls under memory pressure.
     
   
   \section{Empirical evaluation of our controller}
+       
+    We show the effectiveness of our approach empirically in this section. Experimental set-up for the most part remains same as that 
+mentioned in Section~\ref{sec:derivative_testbed}. Any changes to the set-up is mentioned in the respective subsections. 
+
+\begin{figure}
+	  \includegraphics[scale=0.45]{mem_sol/sl=hl_mtp/memory_usage.png}
+	  \caption{\footnotesize Memory usage by Mongodb containers when SL=HL, using modified controller}
+	  \label{mem_sol_sl=hl_mongo}
+\end{figure}
+	~
+\begin{figure}
+	  \includegraphics[scale=0.45]{mem_sol/sl!=hl_mtp/memory_usage.png}
+	  \caption{\footnotesize Memory usage by Mongodb containers when SL!=HL, using modified controller}
+	  \label{mem_sol_sl!=hl_mongo}
+\end{figure}	
+	
+
+\begin{figure*}
+% 	\begin{subfigure}{0.5\textwidth}
+% 	  \includegraphics[scale=0.6]{mem_sol/sl=hl_mtp/memory_usage.png}
+% 	  \caption{\footnotesize Memory usage by Mongodb containers when SL=HL}
+% 	  \label{mem_sol_sl=hl_mongo}
+% 	\end{subfigure}
+% 	~
+% 	\begin{subfigure}{0.5\textwidth}
+% 	  \includegraphics[scale=0.6]{mem_sol/sl!=hl_mtp/memory_usage.png}
+% 	  \caption{\footnotesize Memory usage by Mongodb containers when SL!=HL}
+% 	  \label{mem_sol_sl!=hl_mongo}
+% 	\end{subfigure}	
+% 	~
+	\begin{subfigure}{0.33\textwidth}
+	  \includegraphics[scale=0.4]{mem_sol/memory_ratio_base.png}
+	  \caption{\footnotesize Memory usage ratios between MongoDB and Redis containers}
+	  \label{mem_sol_ratios}
+	\end{subfigure}
+	~
+	\begin{subfigure}{0.33\textwidth}
+	  \includegraphics[scale=0.4]{mem_sol/mongo_before.png}
+	  \caption{\footnotesize Application throughputs with existing memory controller}
+	  \label{throughput_mongo_before}
+	\end{subfigure}
+	~
+	\begin{subfigure}{0.33\textwidth}
+	  \includegraphics[scale=0.4]{mem_sol/mongo_after.png}
+	  \caption{\footnotesize Application throughputs with modified memory controller}
+	  \label{throughput_mongo_after}
+	\end{subfigure}	
+  \label{fig:mem_sol}
+\caption{Impact of modified controller on low and high priority containers}
+\end{figure*}
+
   
     \subsection{Effectiveness of our controller}
     
     \subsection{Differential QOS containers}
     
     \subsection{Impact of reclamation chunk size}
+    

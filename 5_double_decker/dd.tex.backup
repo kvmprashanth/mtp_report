@@ -1,11 +1,13 @@
 \chapter{Double decker - Memory management framework for derivative clouds}
 
+  
+
+
   \section{Application cache sensitivity}
   
     \subsection{Provisioning of caches at different levels based on application sensitivity}
     
-    \subsection{Inability of cache partitioning framework to support anonymous memory applications}
-    
+    \subsection{Inability of cache partitioning framework to support anonymous memory applications}    
     
 
   \section{Rethink of existing design}
