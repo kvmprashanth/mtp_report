@@ -66,15 +66,15 @@
 \contentsline {subsubsection}{Impact in derivative environment}{20}{section*.53}
 \contentsline {subsection}{\numberline {4.1.4}Key Implications}{22}{subsection.4.1.4}
 \contentsline {section}{\numberline {4.2}Requirements for a new memory management controller}{22}{section.4.2}
-\contentsline {section}{\numberline {4.3}Proposed memory management controller}{23}{section.4.3}
+\contentsline {section}{\numberline {4.3}Proposed memory management controller}{22}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Controller logic}{23}{subsection.4.3.1}
 \contentsline {subsection}{\numberline {4.3.2}Policies supported by our controller}{23}{subsection.4.3.2}
-\contentsline {subsubsection}{Policy 1: Proportionate memory allocation}{24}{section*.55}
+\contentsline {subsubsection}{Policy 1: Proportionate memory allocation}{23}{section*.55}
 \contentsline {subsubsection}{Policy 2: Application-specific differentiated allocation}{24}{section*.56}
 \contentsline {section}{\numberline {4.4}Modifications made to Linux memory Cgroup}{24}{section.4.4}
 \contentsline {subsection}{\numberline {4.4.1}Per container configurable weights}{24}{subsection.4.4.1}
 \contentsline {subsection}{\numberline {4.4.2}Flexible reclamation size}{24}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}Deterministic reclamation}{25}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.3}Deterministic reclamation}{24}{subsection.4.4.3}
 \contentsline {section}{\numberline {4.5}Empirical evaluation of our controller}{25}{section.4.5}
 \contentsline {subsection}{\numberline {4.5.1}Effectiveness of our controller}{25}{subsection.4.5.1}
 \contentsline {subsection}{\numberline {4.5.2}Differential QOS containers}{25}{subsection.4.5.2}

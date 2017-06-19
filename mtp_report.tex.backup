@@ -28,6 +28,7 @@
 
 \newcommand{\cg}{Cgroups}
 \newcommand{\dd}{Double-decker}
+<<<<<<< HEAD
 \newcommand{\sol}{soft-limit}
 \newcommand{\redis}{Redis}
 \newcommand{\hl}{hard-limit}
@@ -39,6 +40,14 @@
 % Table of contents display
 \setcounter{tocdepth}{2}
 \setcounter{secnumdepth}{2}
+=======
+
+\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\newline}
+
+% Table of contents display
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+>>>>>>> 5893c60fd24149cce74bac3e829b047f0ba0335e
 
 % Formatting
 %\titleformat{\chapter}{\normalfont\huge\bf}{\thechapter.}{20pt}{\huge\bf}
@@ -50,7 +59,10 @@
 \setlist[enumerate]{itemsep=0mm}
 \setlist[itemize]{itemsep=0mm}
 \setlist[enumerate]{nosep}
+<<<<<<< HEAD
 \setlist[itemize]{nosep}
+=======
+>>>>>>> 5893c60fd24149cce74bac3e829b047f0ba0335e
 
 \begin{document}
 

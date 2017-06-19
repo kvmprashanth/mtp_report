@@ -412,7 +412,7 @@ balloon size triggered from the host.
 	  \begin{center}	   
 	    \begin{tabular}{| l | c | c | c | c |}
 	      \hline
-	      Container & \hl{} (GB) & \sol{} (GB) & # of records & Usage (GB)  \\ 
+	      Container & \hl{} (GB) & \sol{} (GB) & \# of records & Usage (GB)  \\ 
 	      \hline
 	      \hline
 	      Redis-Low & 2 & 0.5 & 500K & 1.3 \\  
@@ -432,24 +432,24 @@ balloon size triggered from the host.
      \subsubsection{Impact in derivative environment}
 	
       \begin{figure*}
-	      \begin{subfigure}{0.49\textwidth}
+	      \begin{subfigure}{0.48\textwidth}
       %	  \includegraphics[scale=0.44]{images/inference/memory_usage_mongo.png}
 		\includegraphics[width=\textwidth]{images/controller_issues/derivative_issues/memory_usage_redis.png}
 		\caption{\footnotesize Memory usage for \redis{} applications.}
 		\label{plot_inference_redis}
 	      \end{subfigure}
-	      \begin{subfigure}{0.49\textwidth}
+	      \begin{subfigure}{0.48\textwidth}
 		\includegraphics[width=\textwidth]{images/controller_issues/derivative_issues/exceed_redis.png}
 		\caption{\footnotesize Extent of memory usage exceed for \redis{} applications.}
 		\label{plot_exceed_redis}
 	      \end{subfigure}
-	    \begin{subfigure}{0.49\textwidth}
+	    \begin{subfigure}{0.48\textwidth}
       %	  \includegraphics[scale=0.44]{images/inference/memory_usage_mongo.png}
 		\includegraphics[width=\textwidth]{images/controller_issues/derivative_issues/mongo_throughput.png}
 		\caption{\footnotesize Impact of improper memory allocations on \mongo{} applications.}
 		\label{plot_throughput_mongo}
 	      \end{subfigure}
-	      \begin{subfigure}{0.49\textwidth}
+	      \begin{subfigure}{0.48\textwidth}
 		\includegraphics[width=\textwidth]{images/controller_issues/derivative_issues/memory_ratio.png}
 		\caption{\footnotesize Memory allocation ratios.}
 		\label{plot_inference_ratio}
