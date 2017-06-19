@@ -15,17 +15,27 @@
       
     \subsection{Issues of caching frameworks in derivative clouds}
       \subsubsection{Lack of framework support in derivative clouds}
-      \subsubsection{Dual layers of isolated control}
-	
+      \subsubsection{Dual layers of isolated control}	
 	 \paragraph{Derivative provider has no control over cache partioning}
 	    Cache-level sentivity
 	 \paragraph{Native provider has no control over application memory allocations}
 	    Annoymous memory sensitivity
+      \subsection{Application cache sensitivity is unaccounted}
     
   \section{Problem description}
   
-   \subsection{Stage-1}
+   \subsection{Phase-1}
+   In our work we wish to,
+    
+    \begin{enumerate}
+      \item Understand the existing memory management policies used by Linux to manage containers.
+      \item Purpose hypotheses on existing memory management in containers and verify them using experimental results.
+      \item Extrapolate this understanding to analyze, how it impacts derivative cloud environment.
+      \item Identify issues with existing policies and purpose requirements for a new policy
+    \end{enumerate}
+
+   \subsection{Phase-2}
    
-   \subsection{Stage-2}
+   sadsa
   
   
