@@ -15,7 +15,10 @@
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Plots for analyzing effect of workloads characteristics on reclamation\relax }}{19}{figure.caption.45}
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Derivative cloud testbed\relax }}{20}{figure.caption.50}
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Plots illustrating limitations in maintaining memory ratios in derivative clouds\relax }}{22}{figure.caption.56}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Impact of modified controller on low and high priority containers\relax }}{26}{figure.caption.59}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces \relax \fontsize {9}{11}\selectfont \abovedisplayskip 8\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4.5\p@ plus2\p@ minus\p@ \topsep 9\p@ plus3\p@ minus5\p@ \itemsep 4.5\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip Memory usage plot showing implication of relative weights provide differential QOS guarantees\relax }}{27}{figure.caption.60}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces \relax \fontsize {9}{11}\selectfont \abovedisplayskip 8\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4.5\p@ plus2\p@ minus\p@ \topsep 9\p@ plus3\p@ minus5\p@ \itemsep 4.5\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip Memory usage ratio with different reclamation chunk size\relax }}{28}{figure.caption.61}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Experimental testbed for checking correctness\relax }}{30}{figure.caption.70}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Experimental testbed for checking correctness\relax }}{32}{figure.caption.73}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

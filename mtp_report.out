@@ -17,7 +17,7 @@
 \BOOKMARK [2][-]{subsection.2.1.3}{Memory reclamation without container support}{section.2.1}% 17
 \BOOKMARK [1][-]{section.2.2}{Containers}{chapter.2}% 18
 \BOOKMARK [2][-]{subsection.2.2.1}{Control groups}{section.2.2}% 19
-\BOOKMARK [1][-]{section.2.3}{Double-decker: Second chance cache for derivative clouds}{chapter.2}% 20
+\BOOKMARK [1][-]{section.2.3}{Second chance cache for derivative clouds}{chapter.2}% 20
 \BOOKMARK [2][-]{subsection.2.3.1}{Features}{section.2.3}% 21
 \BOOKMARK [2][-]{subsection.2.3.2}{Architecture}{section.2.3}% 22
 \BOOKMARK [2][-]{subsection.2.3.3}{Internals}{section.2.3}% 23
@@ -40,7 +40,7 @@
 \BOOKMARK [2][-]{subsection.4.5.1}{Effectiveness of our controller}{section.4.5}% 40
 \BOOKMARK [2][-]{subsection.4.5.2}{Differential QOS containers}{section.4.5}% 41
 \BOOKMARK [2][-]{subsection.4.5.3}{Impact of reclamation chunk size}{section.4.5}% 42
-\BOOKMARK [0][-]{chapter.5}{Double decker - Memory management framework for derivative clouds}{}% 43
+\BOOKMARK [0][-]{chapter.5}{Memory management framework for derivative clouds}{}% 43
 \BOOKMARK [1][-]{section.5.1}{Drawbacks of existing framework}{chapter.5}% 44
 \BOOKMARK [2][-]{subsection.5.1.1}{Provisioning of caches at different levels based on application requirements}{section.5.1}% 45
 \BOOKMARK [2][-]{subsection.5.1.2}{Inability of cache partitioning framework to support anonymous memory applications}{section.5.1}% 46

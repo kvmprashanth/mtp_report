@@ -1,12 +1,16 @@
 
 \chapter{Differentiated memory management controller for containers}
 
-  Overview here. TBD
+  The existing memory management controller posses a few issues when it comes to managing memory among containers in an
+  over-committed scenario. We initially bring out these issues, and then propose a solution and evaluate our solution
+  with respect to the existing controller.
   
   \section{Drawbacks of existing memory management for containers}
   \label{sec:controller_issues}
   
-    TBD.
+    We have used empirical evaluations to verify and demonstrate our hypotheses. These hypotheses bring out the issues existing container
+    memory management controller---Memory \cg{}. We have used both a native cloud testbed and an derivative cloud testbed to establish 
+    our issues.
     
     \subsection{Experimental setup}
     
@@ -317,6 +321,7 @@ using Stress workload running directly on the host machine.
 	    Workloads with page cache pages are reclaimed at larger chunks per SMR request
 	  
       \subsubsection{Key Implications}
+      \label{sec:mem_management}
     
 	Here are the list of key implications that were derivative from running the above experiments in an synthetic environment. We have 
     classified it based on the scenarios as discussed earlier.
@@ -431,6 +436,7 @@ balloon size triggered from the host.
 	\end{table}
     
      \subsubsection{Impact in derivative environment}
+     \label{sec:drawback_env}
 	
       \begin{figure*}
 	      \begin{subfigure}{0.48\textwidth}
@@ -593,6 +599,7 @@ the system falls under memory pressure.
 	  the 1:2 ratio in all memory pressure situations.
 	
 	\subsubsection{Policy 2: Application-specific differentiated allocation}
+	\label{sec:memory_distribution}
 	  This policy provides the flexibility of providing specific rules and or categories to application containers, e.g. gold, silver,
 	  bronze etc. Containers mapped to each of these categories have different reclamation rules or the categories themselves can 
 	  imply an ordering for reclamation.
@@ -643,48 +650,53 @@ the system falls under memory pressure.
   \section{Empirical evaluation of our controller}
        
     We show the effectiveness of our approach empirically in this section. Experimental set-up for the most part remains same as that 
-mentioned in Section~\ref{sec:derivative_testbed}. Any changes to the set-up is mentioned in the respective subsections. 
+mentioned in Section~\ref{sec:derivative_testbed}. Any changes to the set-up is mentioned in the respective subsections.
 
-\begin{figure}
-	  \includegraphics[scale=0.45]{mem_sol/sl=hl_mtp/memory_usage.png}
-	  \caption{\footnotesize Memory usage by Mongodb containers when SL=HL, using modified controller}
-	  \label{mem_sol_sl=hl_mongo}
-\end{figure}
-	~
-\begin{figure}
-	  \includegraphics[scale=0.45]{mem_sol/sl!=hl_mtp/memory_usage.png}
-	  \caption{\footnotesize Memory usage by Mongodb containers when SL!=HL, using modified controller}
-	  \label{mem_sol_sl!=hl_mongo}
-\end{figure}	
+    Experiments are performed with the same workload and set-up except for the size of VM-1. At the beginning of the experiment, size of VM-1 
+is 20 GB which is gradually reduced to 3.5 GB, at the rate of 1.5 GB every 20s (started at 50s). Relative memory weights for the \mongo{} 
+containers are in the ratio of 1:2 (1 for low and 2 for high priority containers) as are the relative weights for the \redis{} 
+containers. These weights are added using the newly added \textit{weight} parameter in the memory \textit{Cgroup}. 
+
+% \begin{figure}
+% 	  \includegraphics[scale=0.45]{images/mem_sol/sl=hl_mtp/memory_usage.png}
+% 	  \caption{\footnotesize Memory usage by Mongodb containers when SL=HL, using modified controller}
+% 	  \label{mem_sol_sl=hl_mongo}
+% \end{figure}
+% 	~
+% \begin{figure}
+% 	  \includegraphics[scale=0.45]{images/mem_sol/sl!=hl_mtp/memory_usage.png}
+% 	  \caption{\footnotesize Memory usage by Mongodb containers when SL!=HL, using modified controller}
+% 	  \label{mem_sol_sl!=hl_mongo}
+% \end{figure}	
 	
 
 \begin{figure*}
-% 	\begin{subfigure}{0.5\textwidth}
-% 	  \includegraphics[scale=0.6]{mem_sol/sl=hl_mtp/memory_usage.png}
-% 	  \caption{\footnotesize Memory usage by Mongodb containers when SL=HL}
-% 	  \label{mem_sol_sl=hl_mongo}
-% 	\end{subfigure}
-% 	~
-% 	\begin{subfigure}{0.5\textwidth}
-% 	  \includegraphics[scale=0.6]{mem_sol/sl!=hl_mtp/memory_usage.png}
-% 	  \caption{\footnotesize Memory usage by Mongodb containers when SL!=HL}
-% 	  \label{mem_sol_sl!=hl_mongo}
-% 	\end{subfigure}	
-% 	~
-	\begin{subfigure}{0.33\textwidth}
-	  \includegraphics[scale=0.4]{mem_sol/memory_ratio_base.png}
+	\begin{subfigure}{0.30\textwidth}
+	  \includegraphics[scale=0.4]{images/mem_sol/sl=hl_mtp/memory_usage.png}
+	  \caption{\footnotesize Memory usage by Mongodb containers when SL=HL}
+	  \label{mem_sol_sl=hl_mongo}
+	\end{subfigure}
+	~
+	\begin{subfigure}{0.30\textwidth}
+	  \includegraphics[scale=0.4]{images/mem_sol/sl!=hl_mtp/memory_usage.png}
+	  \caption{\footnotesize Memory usage by Mongodb containers when SL!=HL}
+	  \label{mem_sol_sl!=hl_mongo}
+	\end{subfigure}	
+	~
+	\begin{subfigure}{0.30\textwidth}
+	  \includegraphics[scale=0.4]{images/mem_sol/memory_ratio_base.png}
 	  \caption{\footnotesize Memory usage ratios between MongoDB and Redis containers}
 	  \label{mem_sol_ratios}
 	\end{subfigure}
 	~
-	\begin{subfigure}{0.33\textwidth}
-	  \includegraphics[scale=0.4]{mem_sol/mongo_before.png}
+	\begin{subfigure}{0.5\textwidth}
+	  \includegraphics[scale=0.6]{images/mem_sol/mongo_before.png}
 	  \caption{\footnotesize Application throughputs with existing memory controller}
 	  \label{throughput_mongo_before}
 	\end{subfigure}
 	~
-	\begin{subfigure}{0.33\textwidth}
-	  \includegraphics[scale=0.4]{mem_sol/mongo_after.png}
+	\begin{subfigure}{0.5\textwidth}
+	  \includegraphics[scale=0.6]{images/mem_sol/mongo_after.png}
 	  \caption{\footnotesize Application throughputs with modified memory controller}
 	  \label{throughput_mongo_after}
 	\end{subfigure}	
@@ -695,7 +707,70 @@ mentioned in Section~\ref{sec:derivative_testbed}. Any changes to the set-up is 
   
     \subsection{Effectiveness of our controller}
     
+      We have tested the effectiveness of our approach in both cases: (i) Soft Limit is equal to Hard Limit (SL=HL) and (ii) Soft Limit is not 
+equal to Hard  Limit (SL!=HL), because memory reclamation methods for both cases are different as mentioned in Section~\ref{sec:mem_management}. 
+
+Figure \ref{mem_sol_sl=hl_mongo} and Figure \ref{mem_sol_sl!=hl_mongo} depicts the memory usage patterns for \mongodb{} containers for cases 
+(i) and (ii) respectively. We observe a gradual decrease in memory allocated to the low and high priority containers in both cases once the 
+system runs out of free memory at about 120 seconds. The ratios of memory allocated to containers can be seen to be in accordance with
+their relative weights, unlike the earlier case when there is no modified controller.
+We observed similar pattern in case of \redis{} container. 
+%However unlike the earlier case (without our modified controller), the memory allocated to containers are in the ratios according to their relative weights. Similar pattern is also observed for Redis containers. 
+This pattern of relative memory allocations can be observed more prominently when comparing Figure \ref{plot_inference_ratio} and Figure \ref{mem_sol_ratios} 
+which shows memory usage ratios between low and high priority containers (closer to 2, the better) using existing controller and our 
+modified controller respectively.
+
+The effect of better memory allocation is notable in the application throughputs. The existing controller produces better throughputs 
+for the lower priority \mongodb{} containers in the interval 100-200s as seen in Figure \ref{throughput_mongo_before}. With our modified 
+controller, both the low priority and high priority containers produce similar throughput as seen in Figure \ref{throughput_mongo_after}. 
+The similar throughputs observed are strongly connected to the fact that low and high priority containers are provisioned with 1:2 memory 
+allocations and so are the ratio between their usage patterns (Provisioning is done to avoid contention due to any other resource). Similar 
+throughput impacts are also observed with \redis{} containers. Hence credit share not only produces better memory allocations, but also 
+enhances application performance for containers.
+    
     \subsection{Differential QOS containers}
+    
+      Consider the application specific differentiated allocation policy specified in Section 
+\ref{sec:memory_distribution} where we would like to prioritize a container from being 
+victimized. Let's call this container as a gold container. We have used same set-up 
+(SL!=HL) to test this. We have prioritized the gold container using the higher weights 
+(Weights of the order of $10^{3}$ relatively higher) to avoid reclamation from it unless it's necessary.
+There are also other containers running inside the VM with lower QOS and let's call them silver containers.
+
+In Figure \ref{priority_cont} we have plotted only the memory usage for the gold and one silver container for ease of analysis. We 
+observe that at about 120 seconds free memory drops and the reclamation kicks in. Victimization of gold container is much lesser than other 
+containers until the other containers usage near zero. This shows how we could use our weighted controller to enforce differential 
+service QOS containers.
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.7]{images/mem_sol/gold/memory_usage.png}
+  \caption{\footnotesize Memory usage plot showing implication of relative weights provide differential QOS guarantees}
+  \label{priority_cont}
+\end{figure}
     
     \subsection{Impact of reclamation chunk size}
     
+    
+    The native reclamation method has no notion of limit on the
+amount of memory that can be reclaimed from a targeted container. This leads to larger 
+reclamation amounts from a container thereby deviating it from the desired relative 
+allocations.
+
+Figure \ref{mem_ratio} shows the ratio of memory usage between \mongodb{} containers for default (native) case and reclamation
+chunk size of 50 MB. We consider observation after 120 seconds, as that is when the pressure kicks in and triggers 
+reclamation. Although the 50 MB capping of reclamation chunk provides better memory ratios than the default case most of
+the time, it still deviates from desired behavior in the interval 180-220 seconds as seen in Figure~\ref{mem_ratio}. 
+
+With smaller maximum reclamation size, we will have finer control over the memory allocation ratios, but this 
+comes at the cost of frequent updation. Further investigation has to be done to fix upon a reasonable size to 
+maintain balance between performance and precision here. For now, the reclamation chunk size is parameterized in our implementation and can 
+be easily modified using a kernel module to alter the maximum reclamation chunk size. We have used reclamation chunk size of 50 MB in our 
+implementation and this applies to all the experiments that we have run with our modified controller.
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.7]{images/mem_sol/memory_ratio.png}
+  \caption{\footnotesize Memory usage ratio with different reclamation chunk size}
+  \label{mem_ratio}
+\end{figure}

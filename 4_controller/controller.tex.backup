@@ -4,10 +4,7 @@
   Overview here. TBD
   
   \section{Drawbacks of existing memory management for containers}
-<<<<<<< HEAD
   \label{sec:controller_issues}
-=======
->>>>>>> 5893c60fd24149cce74bac3e829b047f0ba0335e
   
     TBD.
     
@@ -339,11 +336,9 @@ using Stress workload running directly on the host machine.
       The following experiment tries to establish the implications of previously established inferences, as to how these affect 
 applications running on a derived cloud environment.
 
-<<<<<<< HEAD
       \subsubsection{Testbed}
+      \label{sec:derivative_testbed}
 
-=======
->>>>>>> 5893c60fd24149cce74bac3e829b047f0ba0335e
       The derivative cloud testbed consisted of running server containers inside a virtual machine (VM-1) which was running on top of a 
 physical host machine. Another virtual machine (VM-2) was used to generate clients who connected to servers containers running inside VM-1 
 as shown in Fig~\ref{img:derived_setup}. This setup was used to understand the impact of existing memory reclamation patterns on real 
@@ -397,7 +392,6 @@ balloon size triggered from the host.
       
     \subsubsection{Experimental Flow}
       
-<<<<<<< HEAD
       To establish the limitations of nesting-agnostic memory reclamation we performed
       the following experiments. Two Linux+KVM virtual machines were used, one in a nesting setup,
       which hosted containers, the second generated workloads for the 
@@ -405,11 +399,11 @@ balloon size triggered from the host.
       and 16 GB memory and the workload generating VM has allocated 1 vcPU and 6 GB memory.
       The nesting setup consisted of four Docker containers~\cite{docker}
       which executed with \redis{}~\cite{Redis} and
-      \mongodb{}~\cite{mongodb} workloads. 
+      \mongo{}~\cite{Mongodb} workloads. 
       Default configurations of the applications executed within
       the contains is as shown in Table~\ref{tbl:table_default_config}.
       %The four containers consisted of 2 containers running Redis \cite{redis} and MongoDB \cite{mongodb} workloads each. 
-      The YSCB~\cite{cooper} workbench was used to generate workload datasets and 
+      The YSCB~\cite{cooper2010benchmarking} workbench was used to generate workload datasets and 
       as a workload generator. For the first 100 seconds the applications were executed without 
       memory pressure to consume as much memory as required. Beyond 100 seconds, memory pressure
       was generated from the host and memory from the nested VM reclaimed at rate of 2 GB
@@ -418,28 +412,12 @@ balloon size triggered from the host.
       \begin{table}[t]
 	  \begin{center}	   
 	    \begin{tabular}{| l | c | c | c | c |}
-		  \hline
-	                &   & \sol  & Key Size  & Usage  \\ 
-	      Container & (GB) & (GB)  & (\# records) & (GB) \\ 
-=======
-      In the experimental setup, 4 containers configured as discussed above. Containers contained server 
-    workloads (Redis/MongoDB) to which clients had to connect. There were two types of containers for each workload i.e Redis and MongoDB. One 
-    of each with low priority and other of each with higher priority. 
-
-    The relative avg. usage of the low : higher priority containers are in the ratio of 1:2 and so are their provisioning. Such provisioning 
-    makes us \textbf{expect as 1:1 throughput} in terms of application performance between the low and high priority workloads in each case in 
-    an ideal scenario. The default configurations for the four containers are given on Table~\ref{table:default_config}.
-
-	\begin{table}[!htb]
-	  \begin{center}	   
-	    \begin{tabular}{ l | p{2cm} | p{2cm} | p{4cm} | p{2cm} }
-	      Container & HL (GB) & SL (GB) & Workload Size (records) & Avg. Usage (GB) \\ 
->>>>>>> 5893c60fd24149cce74bac3e829b047f0ba0335e
+	      \hline
+	      Container & \hl{} (GB) & \sol{} (GB) & \# of records & Usage (GB)  \\ 
 	      \hline
 	      \hline
 	      Redis-Low & 2 & 0.5 & 500K & 1.3 \\  
 	      \hline
-<<<<<<< HEAD
 	      Redis-High & 4 & 1 & 1000K & 2.6 \\  
 	      \hline
 	      Mongo-Low & 2 & 0.5 & 500K & 1.3 \\
@@ -453,117 +431,90 @@ balloon size triggered from the host.
 	\end{table}
     
      \subsubsection{Impact in derivative environment}
+     \label{sec:drawback_env}
 	
       \begin{figure*}
-	      \begin{subfigure}{0.33\textwidth}
+	      \begin{subfigure}{0.48\textwidth}
       %	  \includegraphics[scale=0.44]{images/inference/memory_usage_mongo.png}
 		\includegraphics[width=\textwidth]{images/controller_issues/derivative_issues/memory_usage_redis.png}
 		\caption{\footnotesize Memory usage for \redis{} applications.}
 		\label{plot_inference_redis}
 	      \end{subfigure}
-	      \begin{subfigure}{0.33\textwidth}
+	      \begin{subfigure}{0.48\textwidth}
 		\includegraphics[width=\textwidth]{images/controller_issues/derivative_issues/exceed_redis.png}
 		\caption{\footnotesize Extent of memory usage exceed for \redis{} applications.}
 		\label{plot_exceed_redis}
 	      \end{subfigure}
-	      \begin{subfigure}{0.33\textwidth}
+	    \begin{subfigure}{0.48\textwidth}
+      %	  \includegraphics[scale=0.44]{images/inference/memory_usage_mongo.png}
+		\includegraphics[width=\textwidth]{images/controller_issues/derivative_issues/mongo_throughput.png}
+		\caption{\footnotesize Impact of improper memory allocations on \mongo{} applications.}
+		\label{plot_throughput_mongo}
+	      \end{subfigure}
+	      \begin{subfigure}{0.48\textwidth}
 		\includegraphics[width=\textwidth]{images/controller_issues/derivative_issues/memory_ratio.png}
 		\caption{\footnotesize Memory allocation ratios.}
 		\label{plot_inference_ratio}
 	      \end{subfigure}
       \caption{Plots illustrating limitations in maintaining memory ratios in derivative clouds}
       \end{figure*}
-=======
-	      Mongo-Low & 2 & 0.5 & 500K & 1.3 \\
-	      \hline
-	      Redis-High & 4 & 1 & 1000K & 2.6 \\  
-	      \hline
-	      Mongo-High & 4 & 1 & 1000K & 2.6
-	    \end{tabular}	  
-	  \end{center}
-	  \caption{Base configuration for derived cloud experimentation}
-	  \label{table:default_config}	  
-	\end{table}
-
-	Containers were created and datasets were loaded off-line to generated the initial memory pressure required. Each container 
-    had only two clients attached to each of them to avoid CPU bounded contention. The clients were setup on VM-2. All containers were 
-    over provisioned for all resources other than memory.     
-	
-    	
-	Initially 100s was given to allow the containers to setup and consume desired memory without any external pressure. Once they 
-    settled, pressure was constantly generated at a rate of x GB every 30s from the host using a balloon driver to constantly reduce the 
-    memory available to VM-1. Experiments were carried out by varying soft limits, workload size (usage) and external pressure (generated by 
-    balloon driver).
+      
+      Figure~\ref{plot_inference_redis} shows the memory consumed by the 
+      containers executing the two \redis{} workloads and free memory 
+      available in the virtual machine.
+      The two containers are configured to consume memory in the ratio of 1:2
+      (refer to Table~\ref{tbl:table_default_config}), via \hl{} and \sol{}
+      specifications. At 50 seconds, both the \redis{} workloads, which
+      are already at their \hl{}, try to allocate more memory, this results
+      in container-specific memory reclamation---the free memory in the
+      system increases and the memory usage of the two containers drops
+      to 1.35 GB and 2.7 GB.
+      At 100 seconds, the hypervisor-based balloon controllers starting
+      exerting memory pressure---demanding 2 GB every 30 seconds.
+      As shown in Figure~\ref{plot_inference_redis}.
+      just after 100 seconds, the free memory in the system drastically drops.
+      The extent of memory \emph{exceed} beyond 
+      the \sol{} specifications is shown in Figure~\ref{plot_exceed_redis}.
+      Since, the \redis-high application exceeds by a large extent (2 GB more
+      that \sol), the cg{} subsystem penalizes this container for 
+      reclamation.
+      Further, due
+      to the free memory available, and reduced memory consumption of the 
+      \redis-high workload, the usage for the \redis-low application 
+      increases for an epoch and just before 150 seconds, the extent
+      of exceed beyond the \sol{} specifications for both the containers
+      is similar. \emph{Note that this is how the cg{} subsystem operates,
+      it penalizes the container with the maximum extent of exceed, till
+      all of them exceed by the same absolute value and then 
+      penalizes them equally.} This process essentially does not
+      adhere to the memory usage ratios that were expected with the
+      \sol{} and \hl{} specifications. Figure~\ref{plot_inference_ratio}
+      shows the memory usage of the \redis{} and \mongo{} applications,
+      which drops below the 1:2 ratio from 100 seconds to 300 seconds.
+      At 300 seconds, the extent of exceed decreases to zero and
+      the system switches to the global reclamation (GLR) mode.
+      Beyond this point, the memory reclaimed is not container-agnostic
+      and variable ratios of usages are observed.
     
-     \subsubsection{Impact in derivative environment}
-	We demonstrate the impact of existing memory reclamation on containers in a derivative setup and how it affects its application performance.
-    
-      \begin{figure*}[t!]
-	  \centering
-	  \begin{subfigure}[t]{0.48\textwidth}
-	    \centering
-	    \includegraphics[width=1\textwidth]{images/controller_issues/derivative/complete.png}
-	    \caption{Exceed plot}
-	    \label{plot_inference_complete}
-	  \end{subfigure}
-	  ~ 
-	  \begin{subfigure}[t]{0.48\textwidth}
-	    \centering
-	    \includegraphics[width=1\textwidth]{images/controller_issues/derivative/complete_mongo.png}
-	    \caption{Throughput of MongoDB containers}
-	    \label{plot_inference_complete_mongo}
-	  \end{subfigure}
-	  ~ 
-	  \begin{subfigure}[t]{0.48\textwidth}
-	    \centering
-	    \includegraphics[width=1\textwidth]{images/controller_issues/derivative/complete_redis.png}
-	    \caption{Throughput of Redis containers}
-	    \label{plot_inference_complete_redis}
-	  \end{subfigure}
-	  \caption{Plots for analysis of complete (above \& below SL) reclamation in derivative setup}
-	\end{figure*}
-	
-	\subsubsection{Question:}
-	  \begin{enumerate}	    
-	    \item How does the entire process of reclamation after throughput of containers moving from all containers exceeding 
-	    their soft limits to none of them exceeding in a derivative environment ?
-	  \end{enumerate}	
-	
-	\subsubsection{Procedure:}
-	  We begin with containers configured as described in Table~\ref{table:default_config}. The balloon driver is inflated inside the 
-guest to change memory inside VM in steps of 16-14-12-10-9-8-7-6-5-4-3 GB every 30s. 
-	
-	\subsubsection{Observations:}
-	  \begin{enumerate}
-	    \item Fig~\ref{plot_inference_complete_mongo}, Fig~\ref{plot_inference_complete_redis} shows how application throughput of 
-MongoDB and Redis is impacted negatively using the existing knobs when provisioning for deterministic allocation as observed in between 
-t=100 and t=200.
-	    \item When reclamation goes agnostic of existing knobs (after t=200), it appears to have more desired throughputs but this 
-maybe accounted for the nature of the current workloads that actively consume memory. 
-	    \item  In case of a workload that uses memory after certain intervals, this situation may achieve undesired throughputs even 
-below soft limits. This needs further experimentation.
-	    \item As observed here container soft limits are violated when the system is under immense pressure or the container soft 
-limits are over provisioned. However, the system tries its best efforts to maintain soft limits.  
-	  \end{enumerate}
-	  
-	\subsubsection{Inferences:}
-	  \begin{enumerate}
-	    \item The container aware reclamation above soft limits impact negatively in when trying to achieve deterministic provisioning 
-with QOS guarantees.
-	    \item There is a lot of non determinism in reclamations below soft limits in the current policy.
-	    \item Soft limits are not guarantees, but are mere best effort approach.
-	  \end{enumerate}
-
-  \subsection{Key sights and drawbacks of existing system}
-    \begin{enumerate}
-      \item Reclamation above SL is based on exceed values of each container, may impact negatively while we try to provision containers 
-based on QOS guarantees.
-      \item Reclamation below SL falls back to host LRU based reclamation without taking into container provisioning and this leads to a 
-lot of non-determinism.
-      \item Soft Limit is not a definite guarantee, it is mere best effort approach.
-    \end{enumerate}
->>>>>>> 5893c60fd24149cce74bac3e829b047f0ba0335e
-    
+    \subsection{Key Implications}
+    The key takeaways from these experiment are as follows,
+      \begin{itemize}
+      \item Memory reclamation uses the extent of exceeded usage above a containers \sol{}.
+      Containers with higher exceed values are penalized to a larger extent.
+      \item The Linux cg{} systems attempts to maintain similar extent of exceed for
+      memory usage during reclamation when all container are above their \sol's.
+      %Reclamation is based on exceed values of each container when any of the containers are using more memory than their SLs. Containers with higher exceed values will be penalized more. Reclamation falls back to host LRU based reclamation without considering container provisioning when memory usage of every containers are below their SLs. Can user provide/ensure priority to a container over other containers using existing memory control knobs (SL and HL)?
+      % \item Reclamation falls back to host LRU based reclamation without considering container provisioning when memory usage of every containers are below their SLs. %Priority definition on the basis of SL and HL will become useless if exceed of all containers are zero.
+      % Can we define priority of containers using SL and HL?
+      \item A per-container \sol{} and \hl{} specification does not guarantee proportionate
+      memory allocation during memory pressure situations.
+      %Soft Limit is not a definite guarantee, it is mere best effort approach. Can we ensure SL as a definite guarantee to higher priority container(s), if possible?
+      \end{itemize}
+      This Linux \cg{} reclamation policy does not accommodate different user-specified policies
+      that are desired---proportionate memory usages at all instances,
+      order-of-reclamation across containers etc. This is especially required in nested
+      hosting environments where derivative service provides would be benefited
+      by providing a rich set of prioritization features.
     
   \section{Requirements for a new memory management controller}
   
@@ -586,7 +537,6 @@ the system falls under memory pressure.
     
   We would like to design a new controller keeping the above requirements in mind.
    
-<<<<<<< HEAD
   
   \section{Proposed memory management controller}
       
@@ -690,32 +640,62 @@ the system falls under memory pressure.
       Since the SMR policy is container-aware, this strategy
       provides us a better handle over memory provisioning for containers. 
     
-=======
-    
-  
-  \section{Proposed memory management controller}
-    
-      \subsection{Controller architecture}
-    
-      \subsection{Policies supported by the controller}
-	
-  
-  
-  \section{Modifications made to Linux memory Cgroup}
-  
-    \subsection{Per container configurable weights}
-    
-    \subsection{Deterministic reclamation}
-    
-    \subsection{Flexible reclamation size}
-    
-  
->>>>>>> 5893c60fd24149cce74bac3e829b047f0ba0335e
   
   \section{Empirical evaluation of our controller}
+       
+    We show the effectiveness of our approach empirically in this section. Experimental set-up for the most part remains same as that 
+mentioned in Section~\ref{sec:derivative_testbed}. Any changes to the set-up is mentioned in the respective subsections. 
+
+\begin{figure}{0.47\textwidth}
+	  \includegraphics[scale=0.45]{images/mem_sol/sl=hl_mtp/memory_usage.png}
+	  \caption{\footnotesize Memory usage by Mongodb containers when SL=HL, using modified controller}
+	  \label{mem_sol_sl=hl_mongo}
+\end{figure}
+	~
+\begin{figure}
+	  \includegraphics[scale=0.45]{images/mem_sol/sl!=hl_mtp/memory_usage.png}
+	  \caption{\footnotesize Memory usage by Mongodb containers when SL!=HL, using modified controller}
+	  \label{mem_sol_sl!=hl_mongo}
+\end{figure}	
+
+\begin{figure}
+  \includegraphics[scale=0.45]{images/mem_sol/memory_ratio_base.png}
+  \caption{\footnotesize Memory usage ratios between MongoDB and Redis containers}
+  \label{mem_sol_ratios}
+\end{figure}
+	
+
+\begin{figure*}
+% 	\begin{subfigure}{0.5\textwidth}
+% 	  \includegraphics[scale=0.6]{images/mem_sol/sl=hl_mtp/memory_usage.png}
+% 	  \caption{\footnotesize Memory usage by Mongodb containers when SL=HL}
+% 	  \label{mem_sol_sl=hl_mongo}
+% 	\end{subfigure}
+% 	~
+% 	\begin{subfigure}{0.5\textwidth}
+% 	  \includegraphics[scale=0.6]{images/mem_sol/sl!=hl_mtp/memory_usage.png}
+% 	  \caption{\footnotesize Memory usage by Mongodb containers when SL!=HL}
+% 	  \label{mem_sol_sl!=hl_mongo}
+% 	\end{subfigure}
+	\begin{subfigure}{0.47\textwidth}
+	  \includegraphics[scale=0.4]{images/mem_sol/mongo_before.png}
+	  \caption{\footnotesize Application throughputs with existing memory controller}
+	  \label{throughput_mongo_before}
+	\end{subfigure}
+	~
+	\begin{subfigure}{0.47\textwidth}
+	  \includegraphics[scale=0.4]{images/mem_sol/mongo_after.png}
+	  \caption{\footnotesize Application throughputs with modified memory controller}
+	  \label{throughput_mongo_after}
+	\end{subfigure}	
+  \label{fig:mem_sol}
+\caption{Impact of modified controller on low and high priority containers}
+\end{figure*}
+
   
     \subsection{Effectiveness of our controller}
     
     \subsection{Differential QOS containers}
     
     \subsection{Impact of reclamation chunk size}
+    
