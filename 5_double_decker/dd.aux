@@ -1,61 +1,70 @@
 \relax 
 \providecommand\hyper@newdestlabel[2]{}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Memory management framework for derivative clouds}{29}{chapter.5}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {1}Memory management framework for derivative clouds}{1}{chapter.1}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Drawbacks of existing framework}{29}{section.5.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Provisioning of caches at different levels based on application requirements}{29}{subsection.5.1.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Inability of cache partitioning framework to support anonymous memory applications}{29}{subsection.5.1.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Rethink of existing design}{29}{section.5.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Decentralized memory management framework}{29}{subsection.5.2.1}}
-\@writefile{toc}{\contentsline {subsubsection}{Native provider cache partitioning framework}{29}{section*.62}}
-\@writefile{toc}{\contentsline {subsubsection}{Derivative provider memory management framework}{29}{section*.63}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Hybrid cache}{29}{subsection.5.2.2}}
-\@writefile{toc}{\contentsline {subsubsection}{Multilevel configurable caches}{29}{section*.64}}
-\@writefile{toc}{\contentsline {subsubsection}{Movement of cache objects}{29}{section*.65}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Implementation details}{30}{section.5.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Existing implementation status}{30}{subsection.5.3.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Hybrid cache}{30}{subsection.5.3.2}}
-\@writefile{toc}{\contentsline {subsubsection}{Pools to accommodate both memory and SSD objects}{30}{section*.66}}
-\@writefile{toc}{\contentsline {subsubsection}{Asynchronous kernel threads for movement of objects}{30}{section*.67}}
-\@writefile{toc}{\contentsline {subsubsection}{Multilevel stats}{30}{section*.68}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.4}Correctness of implementation}{31}{section.5.4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Experimental setup}{31}{subsection.5.4.1}}
-\@writefile{toc}{\contentsline {paragraph}{Experimental configurations}{31}{section*.69}}
-\@writefile{toc}{\contentsline {paragraph}{Metrics of interest}{31}{section*.70}}
-\@writefile{toc}{\contentsline {paragraph}{Workload}{31}{section*.71}}
-\newlabel{section:correctness_workload}{{5.4.1}{31}{Workload}{section*.71}{}}
-\@writefile{toc}{\contentsline {paragraph}{Testbed}{31}{section*.72}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Experimental testbed for checking correctness\relax }}{32}{figure.caption.73}}
-\newlabel{img:correctness_testbed}{{5.1}{32}{Experimental testbed for checking correctness\relax }{figure.caption.73}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Arithematic validation of stats}{32}{subsection.5.4.2}}
-\@writefile{toc}{\contentsline {paragraph}{Question}{32}{section*.74}}
-\@writefile{toc}{\contentsline {paragraph}{Procedure}{32}{section*.75}}
-\@writefile{toc}{\contentsline {paragraph}{Observations}{32}{section*.76}}
-\@writefile{toc}{\contentsline {paragraph}{Inference}{32}{section*.77}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Comparison between expected and actual values\relax }}{33}{table.caption.81}}
-\newlabel{table:correctness_memtossd}{{5.1}{33}{Comparison between expected and actual values\relax }{table.caption.81}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.3}Movement of objects between both levels of cache}{33}{subsection.5.4.3}}
-\@writefile{toc}{\contentsline {subsubsection}{Memory to SSD cache}{33}{section*.78}}
-\@writefile{toc}{\contentsline {paragraph}{Question}{33}{section*.79}}
-\@writefile{toc}{\contentsline {paragraph}{Procedure}{33}{section*.80}}
-\@writefile{toc}{\contentsline {paragraph}{Observations}{33}{section*.82}}
-\@writefile{toc}{\contentsline {paragraph}{Inference}{34}{section*.83}}
-\@writefile{toc}{\contentsline {subsubsection}{SSD to memory cache}{34}{section*.84}}
-\@writefile{toc}{\contentsline {paragraph}{Question}{34}{section*.85}}
-\@writefile{toc}{\contentsline {paragraph}{Procedure}{34}{section*.86}}
-\@writefile{toc}{\contentsline {paragraph}{Observation}{34}{section*.87}}
-\@writefile{toc}{\contentsline {paragraph}{Inference}{34}{section*.88}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.5}Evaluation of Double Decker}{35}{section.5.5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.1}Experimental setup}{35}{subsection.5.5.1}}
-\@writefile{toc}{\contentsline {paragraph}{Experimental configurations}{35}{section*.89}}
-\@writefile{toc}{\contentsline {paragraph}{Metrics of interest}{35}{section*.90}}
-\@writefile{toc}{\contentsline {paragraph}{Workload}{35}{section*.91}}
-\@writefile{toc}{\contentsline {paragraph}{Testbed}{35}{section*.92}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.2}Provisioning for anonymous and file backed workloads}{35}{subsection.5.5.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.3}Hybrid cache provisioning}{35}{subsection.5.5.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.1}Drawbacks of existing framework}{1}{section.1.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.1}Experimental setup}{1}{subsection.1.1.1}}
+\newlabel{sec:dd_setup}{{1.1.1}{1}{Experimental setup}{subsection.1.1.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Testbed}{1}{section*.4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces Experimental testbed for checking correctness\relax }}{2}{figure.caption.5}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{img:correctness_testbed}{{1.1}{2}{Experimental testbed for checking correctness\relax }{figure.caption.5}{}}
+\@writefile{toc}{\contentsline {paragraph}{Experimental configurations}{2}{section*.6}}
+\@writefile{toc}{\contentsline {paragraph}{Metrics of interest}{2}{section*.7}}
+\citation{doubledecker}
+\citation{doubledecker}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces Inadequate exclusive two level cache provisioning framework\relax }}{3}{figure.caption.9}}
+\newlabel{plot:dd_hybrid_motivation}{{1.2}{3}{Inadequate exclusive two level cache provisioning framework\relax }{figure.caption.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.2}Provisioning of caches at different levels based on application requirements}{3}{subsection.1.1.2}}
+\@writefile{toc}{\contentsline {subsubsection}{Inadequate exclusive two level cache provisioning}{3}{section*.8}}
+\citation{koller2015centaur}
+\citation{schopp2006resizing}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.3}{\ignorespaces Split of memory allocation ratios (In-VM:Cache) to affect application performance\relax }}{4}{figure.caption.10}}
+\newlabel{plot:dd_decentrailze_motivation}{{1.3}{4}{Split of memory allocation ratios (In-VM:Cache) to affect application performance\relax }{figure.caption.10}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}Inability of cache partitioning framework to support anonymous memory applications}{4}{section.1.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.3}Rethink of existing design}{5}{section.1.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.1}Decentralized memory management framework}{5}{subsection.1.3.1}}
+\@writefile{toc}{\contentsline {subsubsection}{Native provider cache partitioning framework}{5}{section*.11}}
+\@writefile{toc}{\contentsline {subsubsection}{Derivative provider memory management framework}{5}{section*.12}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.2}Hybrid cache}{5}{subsection.1.3.2}}
+\@writefile{toc}{\contentsline {subsubsection}{Multilevel configurable caches}{5}{section*.13}}
+\@writefile{toc}{\contentsline {subsubsection}{Movement of cache objects}{5}{section*.14}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.4}Implementation details}{5}{section.1.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.1}Existing implementation status}{5}{subsection.1.4.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.2}Hybrid cache}{5}{subsection.1.4.2}}
+\@writefile{toc}{\contentsline {subsubsection}{Pools to accommodate both memory and SSD objects}{5}{section*.15}}
+\@writefile{toc}{\contentsline {subsubsection}{Asynchronous kernel threads for movement of objects}{5}{section*.16}}
+\@writefile{toc}{\contentsline {subsubsection}{Multilevel stats}{5}{section*.17}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.5}Correctness of implementation}{6}{section.1.5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.5.1}Arithematic validation of stats}{6}{subsection.1.5.1}}
+\@writefile{toc}{\contentsline {paragraph}{Question}{6}{section*.18}}
+\@writefile{toc}{\contentsline {paragraph}{Procedure}{6}{section*.19}}
+\@writefile{toc}{\contentsline {paragraph}{Observations}{6}{section*.20}}
+\@writefile{toc}{\contentsline {paragraph}{Inference}{6}{section*.21}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.5.2}Movement of objects between both levels of cache}{6}{subsection.1.5.2}}
+\@writefile{toc}{\contentsline {subsubsection}{Memory to SSD cache}{6}{section*.22}}
+\@writefile{toc}{\contentsline {paragraph}{Question}{6}{section*.23}}
+\@writefile{toc}{\contentsline {paragraph}{Procedure}{6}{section*.24}}
+\@writefile{lot}{\contentsline {table}{\numberline {1.1}{\ignorespaces Comparison between expected and actual values\relax }}{7}{table.caption.25}}
+\newlabel{table:correctness_memtossd}{{1.1}{7}{Comparison between expected and actual values\relax }{table.caption.25}{}}
+\@writefile{toc}{\contentsline {paragraph}{Observations}{7}{section*.26}}
+\@writefile{toc}{\contentsline {paragraph}{Inference}{7}{section*.27}}
+\@writefile{toc}{\contentsline {subsubsection}{SSD to memory cache}{7}{section*.28}}
+\@writefile{toc}{\contentsline {paragraph}{Question}{7}{section*.29}}
+\@writefile{toc}{\contentsline {paragraph}{Procedure}{7}{section*.30}}
+\@writefile{toc}{\contentsline {paragraph}{Observation}{8}{section*.31}}
+\@writefile{toc}{\contentsline {paragraph}{Inference}{8}{section*.32}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.6}Evaluation of Double Decker}{8}{section.1.6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.6.1}Experimental setup}{8}{subsection.1.6.1}}
+\@writefile{toc}{\contentsline {paragraph}{Experimental configurations}{8}{section*.33}}
+\@writefile{toc}{\contentsline {paragraph}{Metrics of interest}{8}{section*.34}}
+\@writefile{toc}{\contentsline {paragraph}{Workload}{8}{section*.35}}
+\@writefile{toc}{\contentsline {paragraph}{Testbed}{8}{section*.36}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.6.2}Provisioning for anonymous and file backed workloads}{8}{subsection.1.6.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.6.3}Hybrid cache provisioning}{8}{subsection.1.6.3}}
 \@setckpt{5_double_decker/dd}{
-\setcounter{page}{36}
+\setcounter{page}{9}
 \setcounter{equation}{2}
 \setcounter{enumi}{4}
 \setcounter{enumii}{0}
@@ -64,18 +73,18 @@
 \setcounter{footnote}{0}
 \setcounter{mpfootnote}{0}
 \setcounter{part}{0}
-\setcounter{chapter}{5}
-\setcounter{section}{5}
+\setcounter{chapter}{1}
+\setcounter{section}{6}
 \setcounter{subsection}{3}
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
-\setcounter{figure}{1}
+\setcounter{figure}{3}
 \setcounter{table}{1}
 \setcounter{float@type}{4}
-\setcounter{Item}{82}
+\setcounter{Item}{8}
 \setcounter{Hfootnote}{0}
-\setcounter{bookmark@seq@number}{60}
+\setcounter{bookmark@seq@number}{18}
 \setcounter{ContinuedFloat}{0}
 \setcounter{subfigure}{0}
 \setcounter{subtable}{0}

@@ -1,50 +1,46 @@
-\chapter{Double decker - Memory management framework for derivative clouds}
-
+\chapter{Memory management framework for derivative clouds}
   
-
-
-  \section{Application cache sensitivity}
+  Our objective here is to provide a memory management framework for derivative clouds. 
+  In order to achieve the same we start off with understanding existing memory management 
+  and cache partitioning frameworks. We analyzed them to come up their drawbacks while 
+  provisioning for a derivative cloud setup. We made updates to an previous caching partitioning
+  framework to make it a more full pledged memory management framework than just a cache partitioning
+  framework. My initial work involved understanding the existing infrastructure and come up with
+  drawbacks and make updates to the design to accommodate the downfalls. We came up with a revised 
+  design and implemented the same. We tested it for correctness and empirically evaluated it as well.
   
-    \subsection{Provisioning of caches at different levels based on application sensitivity}
+  \section{Drawbacks of existing framework}
+    The following section tries to bring out the drawbacks of existing hypervisor cache partitioning 
+    frameworks and how fail to satisfy application SLA requirements. We demonstrate how an two-level
+    exclusive (either level-1 or level-2) cache partitioning framework could fail to satisfy requirements 
+    and an intermediate partitioning framework would be desirable.
     
-    \subsection{Inability of cache partitioning framework to support anonymous memory applications}    
-    
-
-  \section{Rethink of existing design}
-  
-    \subsection{Decentralized memory management framework}
-	      
-      \subsubsection{Native provider cache partitioning framework}
-
-      \subsubsection{Derivative provider memory management framework}	
-
-    \subsection{Hybrid cache}
-      
-      \subsubsection{Multilevel configurable caches}
-      
-      \subsubsection{Movement of cache objects}
-      
-	
-  
-  \section{Implementation details}
-      
-    \subsection{Existing implementation status}
-    
-    \subsection{Hybrid cache}
-    
-      \subsubsection{Pools to accommodate both memory and SSD objects}
-      
-      \subsubsection{Asynchronous kernel threads for movement of objects}
-      
-      \subsubsection{Multilevel stats}
-  
-  \newpage
-  
-  \section{Correctness of implementation}
-  
     \subsection{Experimental setup}
+    \label{sec:dd_setup}
 	
-      The following section describes the experimental setup used to verify the correctness of our implementation. 
+      The following section describes the experimental setup used to establish issues, verify correctness and evaluate our 
+      solution. Any changes made to the below setup, shall be mentioned beforehand.
+      
+      \myparagraph{Testbed}	
+	Our testbed consists of a single VM, single container running on top of our hybrid implementation of Double decker as shown 
+	in Fig~\ref{img:correctness_testbed}. The hypervisor used is KVM, and the container manager used is LXC.  
+	
+	
+	\noindent The physical machine configuration used is as described below,
+	  \begin{enumerate}
+	   \item Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz
+	   \item 4 CPU cores (with multi-threading)
+	   \item 8 GB of physical RAM
+	   \item 120 GB SSD disk
+	  \end{enumerate}
+
+	
+	\begin{figure}
+	  \centering
+	  \includegraphics[width=0.9\textwidth]{images/correctness/exp_setup.png}
+	  \caption{Experimental testbed for checking correctness}
+	  \label{img:correctness_testbed}
+	\end{figure}
 	
       \myparagraph{Experimental configurations}	
 	The set of configurations used for an analysis of memory management framework for a derivative environment 
@@ -89,34 +85,90 @@ fit this criteria, and have been used for the evaluation.
 	   \item \textbf{Flushes:} Number of objects flushed from this container cache.
 	   \item \textbf{Evicts:} Number of objects evicted from this container cache.
 	   
-	  \end{itemize}	  
+	  \end{itemize}
+  
+    \subsection{Provisioning of caches at different levels based on application requirements}
+      Previous results using \dd{}\cite{doubledecker} have shown that certain application requirements 
+      (along with their configurations) could be satisfied better by provisioning on a cache of certain 
+      performance guarantees. In the previous work\cite{doubledecker} it was shown how an application like 
+      Mail-server could be better provisioned on the level-2 (SSD) cache, as its requirement involved 
+      having a large WSS (working set size) with slow access rates. On contrary it also showed by cache sensitive 
+      applications like the Web-server workload had to be provisioned onto the level-1 (memory) cache. 
+      Now let's see if this setup of an exclusive two level cache provisioning schema would satisfy application
+      specific need in all cases.
+	
+	\subsubsection{Inadequate exclusive two level cache provisioning}
+	  Consider the following scenario to demonstrate the short comings of the existing exclusive two level cache
+	  provisioning framework. Consider the case of a container to provisioned onto the hypervisor cache with 
+	  no-free memory to be further allocated at the guest VM and the hypervisor cache available is 0.5 GB at 
+	  level-1 (Memory) and 1 GB at level-2 (SSD). Consider a Web-server workload where the desired application
+	  throughput is 7000 op/s.
 	  
-	
-      \myparagraph{Workload}
-      \label{section:correctness_workload}
-	For establishing the correctness of our workload, we have considered a self generated workload generated using \texttt{cat} command 
-	that outputs the content of a file onto \texttt{/dev/null}.
-	
-      \myparagraph{Testbed}	
-	Our testbed consists of a single VM, single container running on top of our hybrid implementation of Double decker as shown 
-	in Fig~\ref{img:correctness_testbed}. The hypervisor used is KVM, and the container manager used is LXC.  
-	
-	
-	\noindent The physical machine configuration used is as described below,
-	  \begin{enumerate}
-	   \item Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz
-	   \item 4 CPU cores (with multi-threading)
-	   \item 8 GB of physical RAM
-	   \item 120 GB SSD disk
-	  \end{enumerate}
-
+	  \begin{figure}
+	    \centering
+	    \includegraphics[scale=0.8]{images/dd_hybrid_motivation/throughput.eps}
+	    \caption{Inadequate exclusive two level cache provisioning framework}
+	    \label{plot:dd_hybrid_motivation}
+	  \end{figure}
+	  
+	  Using our existing double decker cache, we can at max provision at 6000 op/s using memory cache of 0.5 GB as 
+	  shown in Fig~\ref{plot:dd_hybrid_motivation}. But say our requirement was beyond that at 7000 op/s. Is there a 
+	  workaround to satisfy this requirement ? Could we come up with a better design to satisfy this configuration ?
+	  
+    
+    \section{Inability of cache partitioning framework to support anonymous memory applications} 
 	
 	\begin{figure}
 	  \centering
-	  \includegraphics[width=0.9\textwidth]{images/correctness/exp_setup.png}
-	  \caption{Experimental testbed for checking correctness}
-	  \label{img:correctness_testbed}
+	  \includegraphics[scale=0.8]{images/dd_decentrailze_motivation/throughput.eps}
+	  \caption{Split of memory allocation ratios (In-VM:Cache) to affect application performance}
+	  \label{plot:dd_decentrailze_motivation}
 	\end{figure}
+	
+	Application memory requirements are of various types, 
+      
+      
+	  
+      
+      
+    
+
+  \section{Rethink of existing design}
+  
+    \subsection{Decentralized memory management framework}
+	      
+      \subsubsection{Native provider cache partitioning framework}
+
+      \subsubsection{Derivative provider memory management framework}	
+
+    \subsection{Hybrid cache}
+      
+      \subsubsection{Multilevel configurable caches}
+      
+      \subsubsection{Movement of cache objects}
+	
+  \section{Implementation details}
+      
+    \subsection{Existing implementation status}
+    
+    \subsection{Hybrid cache}
+    
+      \subsubsection{Pools to accommodate both memory and SSD objects}
+      
+      \subsubsection{Asynchronous kernel threads for movement of objects}
+      
+      \subsubsection{Multilevel stats}
+  
+  \newpage
+  
+  \section{Correctness of implementation}
+  
+      The experimental setup is just as described in Section~\ref{sec:dd_setup}.
+      For establishing the correctness of our workload, we have considered a self 
+      generated synthetic workload generated using \texttt{cat} command that 
+      outputs the content of a file onto \texttt{/dev/null}. This workloads helps 
+      us to validate the correctness of our implementation by predicting deterministic
+      outputs.
   
     \subsection{Arithematic validation of stats}
     
@@ -142,7 +194,7 @@ fit this criteria, and have been used for the evaluation.
     \subsection{Movement of objects between both levels of cache}
 	
 	To verify the correctness of our implementation empirically, we have taken our synthetic workload described in 
-	section~\ref{section:correctness_workload} and ran a couple of simple experiments to demonstrate the expected 
+	above and ran a couple of simple experiments to demonstrate the expected 
 	behavior of our cache to support cache operations like puts, gets, promotions and demotions.  
 	
 	\subsubsection{Memory to SSD cache}
@@ -254,7 +306,7 @@ fit this criteria, and have been used for the evaluation.
 	
 	\paragraph{Testbed}
   
-    \subsection{Performance comparion with old implementation}
+    %\subsection{Performance comparion with old implementation}
   
     \subsection{Provisioning for anonymous and file backed workloads}
     

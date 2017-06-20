@@ -1,0 +1,4 @@
+Broswer,Throughputs,min,max
+Memory Cache (0.5 GB),6110,150 
+SSD Cache (1.0 GB),4359,300
+Required,7000,0
