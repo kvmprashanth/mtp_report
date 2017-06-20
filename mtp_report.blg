@@ -1,49 +1,86 @@
 This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: mtp_report.aux
+A level-1 auxiliary file: 1_intro/introduction.aux
+A level-1 auxiliary file: 2_background/background.aux
+A level-1 auxiliary file: 3_related_work/related_work.aux
+A level-1 auxiliary file: 4_controller/controller.aux
 A level-1 auxiliary file: 5_double_decker/dd.aux
+A level-1 auxiliary file: 8_conclusions/conclusions.aux
+A level-1 auxiliary file: 9_future_work/future_work.aux
 The style file: ieeetr.bst
 Database file #1: mylit.bib
+Warning--entry type for "docker" isn't style-file defined
+--line 130 of file mylit.bib
+Warning--entry type for "lxd" isn't style-file defined
+--line 138 of file mylit.bib
+Warning--entry type for "manual" isn't style-file defined
+--line 164 of file mylit.bib
+Repeated entry---line 212 of file mylit.bib
+ : @inproceedings{dornemann2009demand
+ :                                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 221 of file mylit.bib
+ : @inproceedings{shen2011cloudscale
+ :                                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 230 of file mylit.bib
+ : @article{calheiros2012aneka
+ :                            ,
+I'm skipping whatever remains of this entry
+Warning--entry type for "stress" isn't style-file defined
+--line 250 of file mylit.bib
+Warning--entry type for "mongodb" isn't style-file defined
+--line 256 of file mylit.bib
+Warning--entry type for "redis" isn't style-file defined
+--line 262 of file mylit.bib
+Warning--entry type for "mysql" isn't style-file defined
+--line 268 of file mylit.bib
+Warning--entry type for "filebench" isn't style-file defined
+--line 274 of file mylit.bib
+Warning--entry type for "gcp" isn't style-file defined
+--line 280 of file mylit.bib
 Warning--empty booktitle in doubledecker
-You've used 6 entries,
+Warning--can't use both volume and number fields in williams2011overdriver
+You've used 30 entries,
             1876 wiz_defined-function locations,
-            511 strings with 4718 characters,
-and the built_in function-call counts, 1884 in all, are:
-= -- 174
-> -- 72
+            635 strings with 8648 characters,
+and the built_in function-call counts, 7899 in all, are:
+= -- 786
+> -- 252
 < -- 0
-+ -- 26
-- -- 20
-* -- 128
-:= -- 255
-add.period$ -- 6
-call.type$ -- 6
-change.case$ -- 6
++ -- 98
+- -- 68
+* -- 496
+:= -- 1002
+add.period$ -- 32
+call.type$ -- 30
+change.case$ -- 30
 chr.to.int$ -- 0
-cite$ -- 7
-duplicate$ -- 110
-empty$ -- 195
-format.name$ -- 20
-if$ -- 462
+cite$ -- 32
+duplicate$ -- 427
+empty$ -- 854
+format.name$ -- 68
+if$ -- 1996
 int.to.chr$ -- 0
-int.to.str$ -- 6
-missing$ -- 6
-newline$ -- 21
-num.names$ -- 6
-pop$ -- 40
+int.to.str$ -- 30
+missing$ -- 21
+newline$ -- 102
+num.names$ -- 22
+pop$ -- 190
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 68
+skip$ -- 293
 stack$ -- 0
-substring$ -- 124
-swap$ -- 39
+substring$ -- 522
+swap$ -- 159
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 1
-while$ -- 19
-width$ -- 7
-write$ -- 59
-(There was 1 warning)
+warning$ -- 2
+while$ -- 76
+width$ -- 32
+write$ -- 278
+(There were 3 error messages)

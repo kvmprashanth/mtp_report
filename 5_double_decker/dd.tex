@@ -42,7 +42,7 @@
 	  \label{img:correctness_testbed}
 	\end{figure}
 	
-      \myparagraph{Experimental configurations}	
+      \subsubsection{Experimental configurations}	
 	The set of configurations used for an analysis of memory management framework for a derivative environment 
 	must be relevant, and easy to apply. The following configurations
 fit this criteria, and have been used for the evaluation.
@@ -62,7 +62,7 @@ fit this criteria, and have been used for the evaluation.
 	  For the sake of simplicity in the evaluations of correctness of our setup. We have only considered a single container, single VM setup 
 	  which makes use of synthetic workload to stress our system.
 	
-      \myparagraph{Metrics of interest}	
+      \subsubsection{Metrics of interest}	
 	The following are the metrics of interest that would help us establish the correctness of our implementation.
 	  
 	  \begin{itemize}
@@ -86,6 +86,41 @@ fit this criteria, and have been used for the evaluation.
 	   \item \textbf{Evicts:} Number of objects evicted from this container cache.
 	   
 	  \end{itemize}
+    
+      \subsubsection{Workloads}
+      
+	This section presents the list of workloads that we have used as primary candidates to evaluate our empirical evaluations. All 
+    workloads are chosen keeping in mind the memory intensive nature of the requirement.  
+	
+	These are the list of workloads we have used to establish issues and evaluate our framework.
+	  
+	  \myparagraph{Synthetic workload}
+	    A self generated synthetic workload generated using \texttt{cat} command that outputs the 
+	    content of a file onto \texttt{/dev/null}
+	  
+	  \myparagraph{MongoDB}
+	    MongoDB \cite{Mongodb} is an open-source, document database designed for ease of development and scaling. Classified as a NoSQL 
+    database program, MongoDB avoids the traditional table-based relational database structure in favor of JSON-like documents with dynamic 
+    schema. It follows a memory hungry approach where it tries to use up most of system and it actually leaves it up to the OS's VMM to tell it 
+    to release the memory.
+
+	  \myparagraph{Redis}
+	    Redis \cite{Redis} is a in-memory data structure store, used as database, cache and message broker. It is used to store a large 
+    number of in-memory key-value pairs. Its in-memory nature makes it a prime candidate to use it as a workload in our empirical evaluations.
+      
+	  \myparagraph{MySQL}
+	    MySQL \cite{mysql} is a database workload that uses anonymous pages to configure its own user-space data cache. 
+	    
+	  \myparagraph{Filebench}
+	    Filebench \cite{filebench} is a synthetic workload used to generate workload patterns of different applications. In filebench we made
+	    use of the webserver workload to simulate a webserver.
+	  
+      
+	  \myparagraph{YCSB benchmark}
+	    We use YCSB \cite{cooper2010benchmarking} (Yahoo Cloud Server Benchmark) project as the benchmark to generate the clients evaluate 
+    to the performance of our real workloads i.e MongoDB, Redis and MySQL servers. The goal of YSCB is to develop performance comparisons of the new 
+    generation of cloud data serving systems. It is a framework and common set of workloads for evaluating the performance of different 
+    “key-value” stores.
   
     \subsection{Provisioning of caches at different levels based on application requirements}
       Previous results using \dd{}\cite{doubledecker} have shown that certain application requirements 
@@ -99,10 +134,10 @@ fit this criteria, and have been used for the evaluation.
 	
 	\subsubsection{Inadequate exclusive two level cache provisioning}
 	  Consider the following scenario to demonstrate the short comings of the existing exclusive two level cache
-	  provisioning framework. Consider the case of a container with a WSS to provisioned onto the hypervisor cache with 
-	  no-free memory to be further allocated at the guest VM and the hypervisor cache available is 0.5 GB at 
-	  level-1 (Memory) and 1 GB at level-2 (SSD). Consider a Web-server workload where the desired application
-	  throughput is 7000 op/s.
+	  provisioning framework. Consider the case of a container running web-server workload
+	  with a WSS to provisioned onto the hypervisor cache with  no-free memory to be further allocated 
+	  at the guest VM and the hypervisor cache available is 0.5 GB at level-1 (Memory) and 1 GB at 
+	  level-2 (SSD). Consider a Web-server workload where the desired application throughput is 7000 op/s.
 	  
 	  \begin{figure}
 	    \centering
@@ -116,7 +151,7 @@ fit this criteria, and have been used for the evaluation.
 	  workaround to satisfy this requirement ? Could we come up with a better design to satisfy this configuration ?
 	  
     
-    \section{Inability of cache partitioning framework to support anonymous memory applications} 
+    \section{Cache partitioning framework support for anonymous memory applications} 
 	
 	\begin{figure}
 	  \centering
@@ -143,32 +178,106 @@ fit this criteria, and have been used for the evaluation.
           
 
   \section{Rethink of existing design}
+    
+    Keeping the above drawbacks in mind, we re-design the existing differentiated derivative cloud cache partitioning
+    framework that \dd{} is and make it more of a memory management framework. There are two crucial ideas around which
+    the design is centered around,
+    
+    \begin{enumerate}
+      \item Decentralized memory management framework
+      \item Hybrid two-level configurable caches
+    \end{enumerate}
+    
+    \noindent These two components are discussed below.
   
+    \begin{figure}
+      \centering
+      \includegraphics[scale=0.26]{/home/prashanth/Stage-2/Report/images/dd_design/architecture.png}
+      \caption{Updated memory management framework}
+      \label{plot:dd_architecture}
+    \end{figure}
+        
     \subsection{Decentralized memory management framework}
+      Traditional caching frameworks and the earlier design of double decker centered around the idea 
+      of a hypervisor managed cache with the hypervisor admin (native cloud provider) as the single sole 
+      administrator of the system.
+      
+      We now propose a decentralized memory management framework with two control centers 
+      who roles each have been discussed below. Most of the decision making is moved onto the
+      derivative cloud provider sitting inside the virtual machine.
 	      
       \subsubsection{Native provider cache partitioning framework}
+	The native provider is now, only responsible for partitioning the caches for each VM
+	based on its native cloud provider SLA. The native provider need not worry about 
+	provisioning each of the container.
 
       \subsubsection{Derivative provider memory management framework}	
+	The derivative provider is now responsible for managing three levels of memory entities,
+	
+	\begin{enumerate}
+	  \item Container memory size
+	  \item In-memory or level-1 cache
+	  \item SSD or level-2 cache
+	\end{enumerate}
+	
+	The derivative provider maps each application SLA onto a combination of these three management
+	knobs to achieve desired application level objectives. This helps even provisioning of applications
+	that cannot be helped by cache partitioning schemas, that is that they are anonymous memory dependent.
+
 
     \subsection{Hybrid cache}
+      The hybrid cache is an updated version of the previous cache where each VM/container can be configured
+      with a in-memory and SSD cache simultaneously. But with two-levels of caches configured to each application
+      we need an mechanism to move objects (pages) of one level to another and vice-versa.
       
-      \subsubsection{Multilevel configurable caches}
+      Every PUT operation into the cache tries to first add the new object into the memory cache if configured, 
+      and if not it adds it to the SSD cache.
       
-      \subsubsection{Movement of cache objects}
+      \subsubsection{Movement of objects}	
+	There are two levels of cache movements, and have thresholds which trigger this movement. The movement of
+	objects are described below. The thresholds and the eviction batches are all configurable.
 	
-  \section{Implementation details}
+	The level-1 and level-2 caches have a higher threshold after which objects are either \textit{demoted} to the 
+	lower level (in the case of level-1, if level-2 is configured) or is evicted from the cache. Similarly
+	there is also an lower-threshold at level-1 and when the cache occupied at level-1 is below the lower threshold
+	and objects are present at level-2, objects are \textit{promoted} to level-1 is triggered.
+	
+	The target execution entity (VM/container) for promotions or demotions are purely based on the entities that
+	are exceeding their allocations the most (or) most under-utilizing their allocations. The order for selection
+	is VM is selected first, followed by the container.
       
-    \subsection{Existing implementation status}
+	
+  \section{Implementation specifics of the hybrid cache}
+
+    The hybrid cache implementation is built upon the existing implementation of the double decker cache as described in 
+    Section~\ref{sec:double_decker_internals}. Changes have been made to this implementation to accommodate the hybrid setup.
     
-    \subsection{Hybrid cache}
-    
-      \subsubsection{Pools to accommodate both memory and SSD objects}
-      
+    \begin{figure}
+      \centering
+      \includegraphics[width=0.75\textwidth]{/home/prashanth/Stage-2/Report/images/dd_design/implementation.png}
+      \caption{\dd{} internals}
+      \label{img:dd_internals}
+    \end{figure}
+  
+      \subsubsection{Pool to accommodate both memory and SSD objects}
+	The notion of pools as described in Section~\ref{sec:double_decker_internals} is carried over to the hybrid implementation.
+	However, every pool for a particular container now contains a memory and SSD weight parameter. The VM also has a memory
+	and SSD cache weight configuration parameter.
+	
+	The pool now stores both memory and SSD objects (as shown in Fig~\ref{img:dd_internals} using the same tree structure 
+	that earlier stored a single type of object. The search mechanism is the same on the tree, but the tree node now either 
+	points to a memory page or and SSD block based on the type of the node.  
+	
+	    
       \subsubsection{Asynchronous kernel threads for movement of objects}
+	Two kernel threads were used to promote and demote objects between the two levels of cache. These kernel threads also
+	performed eviction if movement of objects didn't clear up enough space. Asynchronous movement of threads required 
+	proper synchronization and locking mechanisms to ensure consistency in data structure being manipulated. 
       
       \subsubsection{Multilevel stats}
-  
-  \newpage
+	The stats that were earlier based on a single level, had to be changed to incorporate a multilevel stat. These 
+	multilevel stats are developed to help provisioning of the three level knobs at the guest to satisfy application
+	objectives.
   
   \section{Correctness of implementation}
   
@@ -304,20 +413,13 @@ fit this criteria, and have been used for the evaluation.
   
   
   \section{Evaluation of Double Decker}
-  
-    \subsection{Experimental setup}
-	
-	\paragraph{Experimental configurations}
-	
-	\paragraph{Metrics of interest}
-	
-	\paragraph{Workload}
-	
-	\paragraph{Testbed}
-  
+    Now, that we have established correctness of our implementation, we had put it to test its effectiveness in 
+    tackling in previously mentioned drawbacks.
+    
     %\subsection{Performance comparion with old implementation}
   
     \subsection{Provisioning for anonymous and file backed workloads}
+      
     
     \subsection{Hybrid cache provisioning}
     

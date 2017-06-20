@@ -1,47 +1,130 @@
-\contentsline {chapter}{\numberline {1}Memory management framework for derivative clouds}{1}{chapter.1}
-\contentsline {section}{\numberline {1.1}Drawbacks of existing framework}{1}{section.1.1}
-\contentsline {subsection}{\numberline {1.1.1}Experimental setup}{1}{subsection.1.1.1}
-\contentsline {paragraph}{Testbed}{1}{section*.4}
-\contentsline {paragraph}{Experimental configurations}{2}{section*.6}
-\contentsline {paragraph}{Metrics of interest}{2}{section*.7}
-\contentsline {subsection}{\numberline {1.1.2}Provisioning of caches at different levels based on application requirements}{3}{subsection.1.1.2}
-\contentsline {subsubsection}{Inadequate exclusive two level cache provisioning}{3}{section*.8}
-\contentsline {section}{\numberline {1.2}Inability of cache partitioning framework to support anonymous memory applications}{4}{section.1.2}
-\contentsline {section}{\numberline {1.3}Rethink of existing design}{5}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}Decentralized memory management framework}{5}{subsection.1.3.1}
-\contentsline {subsubsection}{Native provider cache partitioning framework}{5}{section*.11}
-\contentsline {subsubsection}{Derivative provider memory management framework}{5}{section*.12}
-\contentsline {subsection}{\numberline {1.3.2}Hybrid cache}{5}{subsection.1.3.2}
-\contentsline {subsubsection}{Multilevel configurable caches}{5}{section*.13}
-\contentsline {subsubsection}{Movement of cache objects}{5}{section*.14}
-\contentsline {section}{\numberline {1.4}Implementation details}{5}{section.1.4}
-\contentsline {subsection}{\numberline {1.4.1}Existing implementation status}{5}{subsection.1.4.1}
-\contentsline {subsection}{\numberline {1.4.2}Hybrid cache}{5}{subsection.1.4.2}
-\contentsline {subsubsection}{Pools to accommodate both memory and SSD objects}{5}{section*.15}
-\contentsline {subsubsection}{Asynchronous kernel threads for movement of objects}{5}{section*.16}
-\contentsline {subsubsection}{Multilevel stats}{5}{section*.17}
-\contentsline {section}{\numberline {1.5}Correctness of implementation}{6}{section.1.5}
-\contentsline {subsection}{\numberline {1.5.1}Arithematic validation of stats}{6}{subsection.1.5.1}
-\contentsline {paragraph}{Question}{6}{section*.18}
-\contentsline {paragraph}{Procedure}{6}{section*.19}
-\contentsline {paragraph}{Observations}{6}{section*.20}
-\contentsline {paragraph}{Inference}{6}{section*.21}
-\contentsline {subsection}{\numberline {1.5.2}Movement of objects between both levels of cache}{6}{subsection.1.5.2}
-\contentsline {subsubsection}{Memory to SSD cache}{6}{section*.22}
-\contentsline {paragraph}{Question}{6}{section*.23}
-\contentsline {paragraph}{Procedure}{6}{section*.24}
-\contentsline {paragraph}{Observations}{7}{section*.26}
-\contentsline {paragraph}{Inference}{7}{section*.27}
-\contentsline {subsubsection}{SSD to memory cache}{7}{section*.28}
-\contentsline {paragraph}{Question}{7}{section*.29}
-\contentsline {paragraph}{Procedure}{7}{section*.30}
-\contentsline {paragraph}{Observation}{8}{section*.31}
-\contentsline {paragraph}{Inference}{8}{section*.32}
-\contentsline {section}{\numberline {1.6}Evaluation of Double Decker}{8}{section.1.6}
-\contentsline {subsection}{\numberline {1.6.1}Experimental setup}{8}{subsection.1.6.1}
-\contentsline {paragraph}{Experimental configurations}{8}{section*.33}
-\contentsline {paragraph}{Metrics of interest}{8}{section*.34}
-\contentsline {paragraph}{Workload}{8}{section*.35}
-\contentsline {paragraph}{Testbed}{8}{section*.36}
-\contentsline {subsection}{\numberline {1.6.2}Provisioning for anonymous and file backed workloads}{8}{subsection.1.6.2}
-\contentsline {subsection}{\numberline {1.6.3}Hybrid cache provisioning}{8}{subsection.1.6.3}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Memory management in clouds}{1}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Issues in native container environment}{1}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Amplification of issues in derivative cloud environment}{1}{subsection.1.1.2}
+\contentsline {section}{\numberline {1.2}Caching in the cloud}{1}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Drawbacks of caching in native (VM) cloud setups}{1}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Hypervisor managed caching}{1}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.3}Issues of caching frameworks in derivative clouds}{1}{subsection.1.2.3}
+\contentsline {subsubsection}{Lack of framework support in derivative clouds}{1}{section*.4}
+\contentsline {subsubsection}{Dual layers of isolated control}{1}{section*.5}
+\contentsline {paragraph}{Derivative provider has no control over cache partioning}{1}{section*.6}
+\contentsline {paragraph}{Native provider has no control over application memory allocations}{1}{section*.7}
+\contentsline {subsection}{\numberline {1.2.4}Application cache sensitivity is unaccounted}{2}{subsection.1.2.4}
+\contentsline {section}{\numberline {1.3}Problem description}{2}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Phase-1}{2}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Phase-2}{2}{subsection.1.3.2}
+\contentsline {chapter}{\numberline {2}Background}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Memory management between processes in Linux}{3}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Memory pages used by a process}{3}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Memory allocation}{3}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Memory reclamation without container support}{4}{subsection.2.1.3}
+\contentsline {section}{\numberline {2.2}Containers}{4}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Control groups}{5}{subsection.2.2.1}
+\contentsline {subsubsection}{Memory Cgroups{}}{6}{section*.10}
+\contentsline {paragraph}{Memory reclamation with Cgroups{}}{6}{figure.caption.12}
+\contentsline {section}{\numberline {2.3}Second chance cache for derivative clouds}{9}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Features}{10}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Architecture}{10}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Internals}{11}{subsection.2.3.3}
+\contentsline {chapter}{\numberline {3}Related work}{12}{chapter.3}
+\contentsline {chapter}{\numberline {4}Differentiated memory management controller for containers}{13}{chapter.4}
+\contentsline {section}{\numberline {4.1}Drawbacks of existing memory management for containers}{13}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Experimental setup}{13}{subsection.4.1.1}
+\contentsline {subsubsection}{Experimental configurations}{13}{section*.17}
+\contentsline {subsubsection}{Metrics of interest}{14}{section*.18}
+\contentsline {subsubsection}{Workloads}{14}{section*.19}
+\contentsline {paragraph}{Stress}{14}{section*.20}
+\contentsline {paragraph}{Memory hogger}{14}{section*.21}
+\contentsline {paragraph}{File hogger}{14}{section*.22}
+\contentsline {paragraph}{MongoDB}{15}{section*.23}
+\contentsline {paragraph}{Redis}{15}{section*.24}
+\contentsline {paragraph}{YCSB benchmark}{15}{section*.25}
+\contentsline {subsection}{\numberline {4.1.2}Issues in native environment}{15}{subsection.4.1.2}
+\contentsline {subsubsection}{Host}{16}{section*.27}
+\contentsline {subsubsection}{Guest}{16}{section*.28}
+\contentsline {subsubsection}{Reclamation above soft limits}{16}{section*.30}
+\contentsline {paragraph}{Hypothesis}{16}{section*.31}
+\contentsline {paragraph}{Procedure}{17}{section*.32}
+\contentsline {paragraph}{Observations}{17}{section*.34}
+\contentsline {paragraph}{Inference}{17}{section*.35}
+\contentsline {subsubsection}{Reclamation below soft limits}{18}{section*.36}
+\contentsline {paragraph}{Hypothesis}{18}{section*.37}
+\contentsline {paragraph}{Procedure}{18}{section*.38}
+\contentsline {paragraph}{Observations}{18}{section*.40}
+\contentsline {paragraph}{Inferences}{18}{section*.41}
+\contentsline {subsubsection}{Effect of workloads characteristics on reclamation}{19}{section*.42}
+\contentsline {paragraph}{Question}{19}{section*.43}
+\contentsline {paragraph}{Procedure}{19}{section*.44}
+\contentsline {paragraph}{Observations}{19}{section*.46}
+\contentsline {paragraph}{Inference}{19}{section*.47}
+\contentsline {subsubsection}{Key Implications}{19}{section*.48}
+\contentsline {subsection}{\numberline {4.1.3}Amplification of issue in derivative clouds}{20}{subsection.4.1.3}
+\contentsline {subsubsection}{Testbed}{20}{section*.49}
+\contentsline {paragraph}{Host}{20}{section*.51}
+\contentsline {paragraph}{Guest}{21}{section*.52}
+\contentsline {subsubsection}{Experimental Flow}{21}{section*.53}
+\contentsline {subsubsection}{Impact in derivative environment}{21}{section*.55}
+\contentsline {subsection}{\numberline {4.1.4}Key Implications}{23}{subsection.4.1.4}
+\contentsline {section}{\numberline {4.2}Requirements for a new memory management controller}{23}{section.4.2}
+\contentsline {section}{\numberline {4.3}Proposed memory management controller}{23}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Controller logic}{24}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Policies supported by our controller}{24}{subsection.4.3.2}
+\contentsline {subsubsection}{Policy 1: Proportionate memory allocation}{24}{section*.57}
+\contentsline {subsubsection}{Policy 2: Application-specific differentiated allocation}{25}{section*.58}
+\contentsline {section}{\numberline {4.4}Modifications made to Linux memory Cgroup}{25}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Per container configurable weights}{25}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Flexible reclamation size}{25}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Deterministic reclamation}{25}{subsection.4.4.3}
+\contentsline {section}{\numberline {4.5}Empirical evaluation of our controller}{26}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Effectiveness of our controller}{26}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Differential QOS containers}{27}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}Impact of reclamation chunk size}{28}{subsection.4.5.3}
+\contentsline {chapter}{\numberline {5}Memory management framework for derivative clouds}{29}{chapter.5}
+\contentsline {section}{\numberline {5.1}Drawbacks of existing framework}{29}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Experimental setup}{29}{subsection.5.1.1}
+\contentsline {paragraph}{Testbed}{29}{section*.62}
+\contentsline {subsubsection}{Experimental configurations}{30}{section*.64}
+\contentsline {subsubsection}{Metrics of interest}{30}{section*.65}
+\contentsline {subsubsection}{Workloads}{31}{section*.66}
+\contentsline {paragraph}{Synthetic workload}{31}{section*.67}
+\contentsline {paragraph}{MongoDB}{31}{section*.68}
+\contentsline {paragraph}{Redis}{31}{section*.69}
+\contentsline {paragraph}{MySQL}{31}{section*.70}
+\contentsline {paragraph}{Filebench}{31}{section*.71}
+\contentsline {paragraph}{YCSB benchmark}{31}{section*.72}
+\contentsline {subsection}{\numberline {5.1.2}Provisioning of caches at different levels based on application requirements}{32}{subsection.5.1.2}
+\contentsline {subsubsection}{Inadequate exclusive two level cache provisioning}{32}{section*.73}
+\contentsline {section}{\numberline {5.2}Cache partitioning framework support for anonymous memory applications}{33}{section.5.2}
+\contentsline {section}{\numberline {5.3}Rethink of existing design}{33}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Decentralized memory management framework}{34}{subsection.5.3.1}
+\contentsline {subsubsection}{Native provider cache partitioning framework}{34}{section*.77}
+\contentsline {subsubsection}{Derivative provider memory management framework}{34}{section*.78}
+\contentsline {subsection}{\numberline {5.3.2}Hybrid cache}{35}{subsection.5.3.2}
+\contentsline {subsubsection}{Movement of objects}{35}{section*.79}
+\contentsline {section}{\numberline {5.4}Implementation specifics of the hybrid cache}{35}{section.5.4}
+\contentsline {subsubsection}{Pool to accommodate both memory and SSD objects}{35}{section*.81}
+\contentsline {subsubsection}{Asynchronous kernel threads for movement of objects}{36}{section*.82}
+\contentsline {subsubsection}{Multilevel stats}{36}{section*.83}
+\contentsline {section}{\numberline {5.5}Correctness of implementation}{36}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Arithematic validation of stats}{37}{subsection.5.5.1}
+\contentsline {paragraph}{Question}{37}{section*.84}
+\contentsline {paragraph}{Procedure}{37}{section*.85}
+\contentsline {paragraph}{Observations}{37}{section*.86}
+\contentsline {paragraph}{Inference}{37}{section*.87}
+\contentsline {subsection}{\numberline {5.5.2}Movement of objects between both levels of cache}{37}{subsection.5.5.2}
+\contentsline {subsubsection}{Memory to SSD cache}{37}{section*.88}
+\contentsline {paragraph}{Question}{37}{section*.89}
+\contentsline {paragraph}{Procedure}{37}{section*.90}
+\contentsline {paragraph}{Observations}{38}{section*.92}
+\contentsline {paragraph}{Inference}{38}{section*.93}
+\contentsline {subsubsection}{SSD to memory cache}{38}{section*.94}
+\contentsline {paragraph}{Question}{38}{section*.95}
+\contentsline {paragraph}{Procedure}{38}{section*.96}
+\contentsline {paragraph}{Observation}{39}{section*.97}
+\contentsline {paragraph}{Inference}{39}{section*.98}
+\contentsline {section}{\numberline {5.6}Evaluation of Double Decker}{39}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}Provisioning for anonymous and file backed workloads}{39}{subsection.5.6.1}
+\contentsline {subsection}{\numberline {5.6.2}Hybrid cache provisioning}{39}{subsection.5.6.2}
+\contentsline {chapter}{\numberline {6}Conclusions}{40}{chapter.6}
+\contentsline {chapter}{\numberline {7}Future Extensions}{41}{chapter.7}

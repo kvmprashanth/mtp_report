@@ -178,6 +178,74 @@ International Symposium On},
   publisher={ACM}
 }
 
+@inproceedings{williams2011overdriver,
+  title={Overdriver: Handling memory overload in an oversubscribed cloud},
+  author={Williams, Dan and Jamjoom, Hani and Liu, Yew-Huey and Weatherspoon, Hakim},
+  booktitle={ACM SIGPLAN Notices},
+  volume={46},
+  number={7},
+  pages={205--216},
+  year={2011},
+  organization={ACM}
+}
+
+@article{molto2013elastic,
+  title={Elastic memory management of virtualized infrastructures for applications with dynamic memory requirements},
+  author={Molt{\'o}, Germ{\'a}n and Caballer, Miguel and Romero, Eloy and de Alfonso, Carlos},
+  journal={Procedia Computer Science},
+  volume={18},
+  pages={159--168},
+  year={2013},
+  publisher={Elsevier}
+}
+
+@inproceedings{venkatesan2014ex,
+  title={Ex-tmem: Extending transcendent memory with non-volatile memory for virtual machines},
+  author={Venkatesan, Vimalraj and Qingsong, Wei and Tay, YC},
+  booktitle={High Performance Computing and Communications, 2014 IEEE 6th Intl Symp on Cyberspace Safety and Security, 2014 IEEE 11th Intl 
+Conf on Embedded Software and Syst (HPCC, CSS, ICESS), 2014 IEEE Intl Conf on},
+  pages={966--973},
+  year={2014},
+  organization={IEEE}
+}
+
+@inproceedings{dornemann2009demand,
+  title={On-demand resource provisioning for BPEL workflows using Amazon's elastic compute cloud},
+  author={D{\"o}rnemann, Tim and Juhnke, Ernst and Freisleben, Bernd},
+  booktitle={Cluster Computing and the Grid, 2009. CCGRID'09. 9th IEEE/ACM International Symposium on},
+  pages={140--147},
+  year={2009},
+  organization={IEEE}
+}
+
+@inproceedings{shen2011cloudscale,
+  title={Cloudscale: elastic resource scaling for multi-tenant cloud systems},
+  author={Shen, Zhiming and Subbiah, Sethuraman and Gu, Xiaohui and Wilkes, John},
+  booktitle={Proceedings of the 2nd ACM Symposium on Cloud Computing},
+  pages={5},
+  year={2011},
+  organization={ACM}
+}
+
+@article{calheiros2012aneka,
+  title={The Aneka platform and QoS-driven resource provisioning for elastic applications on hybrid Clouds},
+  author={Calheiros, Rodrigo N and Vecchiola, Christian and Karunamoorthy, Dileban and Buyya, Rajkumar},
+  journal={Future Generation Computer Systems},
+  volume={28},
+  number={6},
+  pages={861--870},
+  year={2012},
+  publisher={Elsevier}
+}
+
+@inproceedings{he2012elastic,
+  title={Elastic application container: A lightweight approach for cloud resource provisioning},
+  author={He, Sijin and Guo, Li and Guo, Yike and Wu, Chao and Ghanem, Moustafa and Han, Rui},
+  booktitle={2012 IEEE 26th International Conference on Advanced Information Networking and Applications},
+  pages={15--22},
+  year={2012},
+  organization={IEEE}
+}
 
 @online{stress,
   title = {Stress Workload Generator},
@@ -197,6 +265,12 @@ International Symposium On},
   urldate = {2016-10-09}
 }
 
+@online{gcp,
+  title = {Google cloud plalform},
+  note={\url{https://cloud.google.com/container-engine/}},
+  urldate = {2017-06-19}
+}
+
 @inproceedings{cooper2010benchmarking,
   title={Benchmarking cloud serving systems with YCSB},
   author={Cooper, Brian F and Silberstein, Adam and Tam, Erwin and Ramakrishnan, Raghu and Sears, Russell},
@@ -206,8 +280,68 @@ International Symposium On},
   organization={ACM}
 }
 
+@inproceedings{doubledecker,
+  title={DoubleDecker: Differentiated Hypervisor Caching for Derivative Clouds},
+  author={Debadatta Mishra and Purushottam Kulkarni},
+  year={2016}
+}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@inproceedings{williams2012xen,
+  title={The Xen-Blanket: virtualize once, run everywhere},
+  author={Williams, Dan and Jamjoom, Hani and Weatherspoon, Hakim},
+  booktitle={Proceedings of the 7th ACM european conference on Computer Systems},
+  pages={113--126},
+  year={2012},
+  organization={ACM}
+}
+
+@inproceedings{lu2007virtual,
+  title={Virtual Machine Memory Access Tracing with Hypervisor Exclusive Cache.},
+  author={Lu, Pin and Shen, Kai},
+  booktitle={Usenix Annual Technical Conference},
+  pages={29--43},
+  year={2007}
+}
+
+@inproceedings{magenheimer2009transcendent,
+  title={Transcendent memory and linux},
+  author={Magenheimer, Dan and Mason, Chris and McCracken, Dave and Hackel, Kurt},
+  booktitle={Proceedings of the Linux Symposium},
+  pages={191--200},
+  year={2009},
+  organization={Citeseer}
+}
+
+@inproceedings{mishra2014comparative,
+  title={Comparative analysis of page cache provisioning in virtualized environments},
+  author={Mishra, Debadatta and Kulkarni, Purushottam},
+  booktitle={Modelling, Analysis \& Simulation of Computer and Telecommunication Systems (MASCOTS), 2014 IEEE 22nd International Symposium on},
+  pages={213--222},
+  year={2014},
+  organization={IEEE}
+}
+
+@inproceedings{schopp2006resizing,
+  title={Resizing memory with balloons and hotplug},
+  author={Schopp, Joel H and Fraser, Keir and Silbermann, Martine J},
+  booktitle={Proceedings of the Linux Symposium},
+  volume={2},
+  pages={313--319},
+  year={2006}
+}
+
+@inproceedings{koller2015centaur,
+  title={Centaur: Host-side SSD caching for storage performance control},
+  author={Koller, Ricardo and Mashtizadeh, Ali Jos{\'e} and Rangaswami, Raju},
+  booktitle={Autonomic Computing (ICAC), 2015 IEEE International Conference on},
+  pages={51--60},
+  year={2015},
+  organization={IEEE}
+}
+
+
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
