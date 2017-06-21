@@ -147,4 +147,22 @@ B.~F. Cooper, A.~Silberstein, E.~Tam, R.~Ramakrishnan, and R.~Sears,
 ``Filebench.''
 \newblock \url{https://github.com/filebench/filebench/wiki}.
 
+\bibitem{zhao2009dynamic}
+W.~Zhao, Z.~Wang, and Y.~Luo, ``Dynamic memory balancing for virtual
+  machines,'' {\em ACM SIGOPS Operating Systems Review}, vol.~43, no.~3,
+  pp.~37--47, 2009.
+
+\bibitem{zhou2004dynamic}
+P.~Zhou, V.~Pandey, J.~Sundaresan, A.~Raghuraman, Y.~Zhou, and S.~Kumar,
+  ``Dynamic tracking of page miss ratio curve for memory management,'' in {\em
+  ACM SIGOPS Operating Systems Review}, vol.~38, pp.~177--188, ACM, 2004.
+
+\bibitem{zhao2011low}
+W.~Zhao, X.~Jin, Z.~Wang, X.~Wang, Y.~Luo, and X.~Li, ``Low cost working set
+  size tracking.,'' in {\em USENIX Annual Technical Conference}, 2011.
+
+\bibitem{waldspurger2015efficient}
+C.~A. Waldspurger, N.~Park, A.~T. Garthwaite, and I.~Ahmad, ``Efficient mrc
+  construction with shards.,'' in {\em FAST}, pp.~95--110, 2015.
+
 \end{thebibliography}

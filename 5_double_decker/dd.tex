@@ -123,6 +123,7 @@ fit this criteria, and have been used for the evaluation.
     “key-value” stores.
   
     \subsection{Provisioning of caches at different levels based on application requirements}
+    
       Previous results using \dd{}\cite{doubledecker} have shown that certain application requirements 
       (along with their configurations) could be satisfied better by provisioning on a cache of certain 
       performance guarantees. In the previous work\cite{doubledecker} it was shown how an application like 
@@ -133,12 +134,19 @@ fit this criteria, and have been used for the evaluation.
       specific need in all cases.
 	
 	\subsubsection{Inadequate exclusive two level cache provisioning}
-	  Consider the following scenario to demonstrate the short comings of the existing exclusive two level cache
-	  provisioning framework. Consider the case of a container running web-server workload
-	  with a WSS to provisioned onto the hypervisor cache with  no-free memory to be further allocated 
-	  at the guest VM and the hypervisor cache available is 0.5 GB at level-1 (Memory) and 1 GB at 
-	  level-2 (SSD). Consider a Web-server workload where the desired application throughput is 7000 op/s.
+	\label{sec:dd_hybrid_motivation}
 	  
+	  \myparagraph{Objective}
+	    To demonstrate Inadequacy in exclusive two level cache provisioning under a tight memory-cache bound
+	    scenario.  
+	    
+	  \myparagraph{Procedure}
+	    Consider the following scenario to demonstrate the short comings of the existing exclusive two level cache
+	    provisioning framework. Consider the case of a container running web-server workload
+	    with a WSS to provisioned onto the hypervisor cache with  no-free memory to be further allocated 
+	    at the guest VM and the hypervisor cache available is 0.5 GB at level-1 (Memory) and 1 GB at 
+	    level-2 (SSD). Consider a Web-server workload where the desired application throughput is 7000 op/s.
+	    
 	  \begin{figure}
 	    \centering
 	    \includegraphics[scale=0.8]{images/dd_hybrid_motivation/throughput.eps}
@@ -146,10 +154,11 @@ fit this criteria, and have been used for the evaluation.
 	    \label{plot:dd_hybrid_motivation}
 	  \end{figure}
 	  
-	  Using our existing double decker cache, we can at max provision at 6000 op/s using memory cache of 0.5 GB as 
-	  shown in Fig~\ref{plot:dd_hybrid_motivation}. But say our requirement was beyond that at 7000 op/s. Is there a 
-	  workaround to satisfy this requirement ? Could we come up with a better design to satisfy this configuration ?
-	  
+	  \myparagraph{Inferences}
+	    Using our existing double decker cache, we can at max provision at 6000 op/s using memory cache of 0.5 GB as 
+	    shown in Fig~\ref{plot:dd_hybrid_motivation}. But say our requirement was beyond that at 7000 op/s. Is there a 
+	    workaround to satisfy this requirement ? Could we come up with a better design to satisfy this configuration ?
+	    
     
     \section{Cache partitioning framework support for anonymous memory applications} 
 	
@@ -160,22 +169,32 @@ fit this criteria, and have been used for the evaluation.
 	  \label{plot:dd_decentrailze_motivation}
 	\end{figure}
 	
-	Application memory requirement is vastly classified into two types - \textit{anonymous and disk backed}.
-	Application that require disk backed memory pages can be satisfied be either provisioning them at the 
-	VM(guest) memory or at the hypervisor cache. This effect is seen in Fig~\ref{plot:dd_decentrailze_motivation}
-	where the memory requirement is split in ratios of in-VM:cache allocations. The plot shows how applications like
-	Web-server and \mongo{} which require disk backed pages can be satisfied either in-VM or at the hypervisor cache.
-	Kindly note that the application performance is nearly constant in all cases of both these applications as the 
-	in-VM memory and the hypervisor cache operate at similar speeds in this case, and had there been difference in
-	operational speeds, we would have observed degradation in application performance when moving from left to right 
-	in the plot.
+	\myparagraph{Objective}
+	  To understand impact of memory provisioning at different levels of memory (In-VM or cache)
+	  and how it impact application performance.
 	
-	Now, if you look at applications like \redis{} and MySQL, their performance is highly affected while provisioning
-	them on cache, as they heavily depend on anonymous memory allocated to them (especially Redis). Hence such applications
-	need to be provisioned at the guest, however existing cache partitioning frameworks 
-	\cite{koller2015centaur, schopp2006resizing} can provision for disk backed workloads fail to address the needs of 
-	anonymous memory hungry workloads.
-          
+	\myparagraph{Procedure}
+	  Application memory requirement is vastly classified into two types - \textit{anonymous and disk backed}.
+	  Application that require disk backed memory pages can be satisfied be either provisioning them at the 
+	  VM(guest) memory or at the hypervisor cache. We ran four different applications namely, Redis, \mongo{}
+	  MySQL and Webserver and analyzed their impacts on memory provisioning.
+	  
+	\myparagraph{Observations}	  
+	  This effect is seen in Fig~\ref{plot:dd_decentrailze_motivation}
+	  where the memory requirement is split in ratios of in-VM:cache allocations. The plot shows how applications like
+	  Web-server and \mongo{} which require disk backed pages can be satisfied either in-VM or at the hypervisor cache.
+	  Kindly note that the application performance is nearly constant in all cases of both these applications as the 
+	  in-VM memory and the hypervisor cache operate at similar speeds in this case, and had there been difference in
+	  operational speeds, we would have observed degradation in application performance when moving from left to right 
+	  in the plot.
+	
+	\myparagraph{Inference}
+	  Now, if you look at applications like \redis{} and MySQL, their performance is highly affected while provisioning
+	  them on cache, as they heavily depend on anonymous memory allocated to them (especially Redis). Hence such applications
+	  need to be provisioned at the guest, however existing cache partitioning frameworks 
+	  \cite{koller2015centaur, schopp2006resizing} can provision for disk backed workloads fail to address the needs of 
+	  anonymous memory hungry workloads.
+	    
 
   \section{Rethink of existing design}
     
@@ -199,7 +218,7 @@ fit this criteria, and have been used for the evaluation.
         
     \subsection{Decentralized memory management framework}
       Traditional caching frameworks and the earlier design of double decker centered around the idea 
-      of a hypervisor managed cache with the hypervisor admin (native cloud provider) as the single sole 
+      of a hypervisor managed cache with the hypervisor administrator (native cloud provider) as the single sole 
       administrator of the system.
       
       We now propose a decentralized memory management framework with two control centers 
@@ -414,12 +433,112 @@ fit this criteria, and have been used for the evaluation.
   
   \section{Evaluation of Double Decker}
     Now, that we have established correctness of our implementation, we had put it to test its effectiveness in 
-    tackling in previously mentioned drawbacks.
+    tackling in previously mentioned drawbacks. The experimental setup is configured as described in Section~\ref{sec:dd_setup}
     
     %\subsection{Performance comparion with old implementation}
   
-    \subsection{Provisioning for anonymous and file backed workloads}
-      
-    
     \subsection{Hybrid cache provisioning}
+    
+       \myparagraph{Objective}
+	To demonstrate the effectiveness of the hybrid cache partitioning design to achieve application objectives
+	better than an exclusive two level cache partitioning.
+	
+      \myparagraph{Setup}
+	Setup used is as described in Section~\ref{sec:dd_setup}.
+	
+      \myparagraph{Procedure}
+	Configuration of the experiment is given at Section~\ref{sec:dd_hybrid_motivation}, the WSS of the workload is
+	1 GB. We fix the total cache allocation (Memory + SSD) at 1 GB.	To demonstrate the effectiveness of our 
+	implementation we vary cache allocation ratios from all cache allocations at level-1 to all at level-2 and 
+	see how this affects application performance.
+	
+	\begin{figure}
+	  \centering
+	  \includegraphics[scale=1]{images/dd_hybrid_eval/throughput.eps}
+	  \caption{Varying of cache allocation ratios while achieving application level throughputs}
+	  \label{plot:dd_sdc_results}
+	\end{figure}
+	
+      \myparagraph{Observation}
+	The application throughput increase as moving the cache partitioned from memory onto the SSD as expected.
+	To satisfy an application objective of 7000 ops/sec as discussed in Section~\ref{sec:dd_hybrid_motivation}, 
+	cache would have to partitioned at about 4:4 ratio in this case, which refers to 512MB of memory and SSD 
+	cache each.
+	
+      \myparagraph{Inference}
+	An hybrid implementation is more effective at satisfying SLA objectives for cases where an two level exclusive
+	caching setup fails.
+	
+    \subsection{Effectiveness of our decentralized memory management framework}
+      
+      \myparagraph{Objective}
+	To demonstrate the effectiveness of the cooperative memory management framework in achieving desired application 
+	objectives which traditional cache partitioning frameworks cannot.
+	
+      \myparagraph{Setup}
+	VM hosted 4 application containers and executed the MongoDB, Redis, MySQL data stores and
+	the Filebench webserver workload. The data stores acted as backends for YCSB clients. The VM 
+	was provisioned with 6GB memory and 8 CPUs (2 CPUs pinned to each application container). 
+	The hypervisor cache was provisioned to 2GB.
+	
+      \myparagraph{Procedure}
+	To approximate the best cache partitioning framework, we iterated through a series of possible 
+	configurations and have reported the best cache partitioning schema. 
+	
+	Consider the case where the application throughput requirements of the different applications running
+	are as described in Table~\ref{table:desired_app_throughputs}
+	
+	    \begin{table}
+		\begin{center}
+		  \begin{tabular}{ l | l | l | l | l }	      	    
+			Workload & MongoDB & MySQL & Redis & Webserver \\ 
+		    \hline
+			Required throughput & 15 ops/sec & 100 ops/sec & 5000 ops/sec & 300 ops/sec \\		   
+		  \end{tabular}
+		\caption{Application SLA requirements}
+		\label{table:desired_app_throughputs}
+		\end{center}	  
+	      \end{table}
+	  
+	The best configuration was the one met individual application SLAs and yielded the maximum application 
+	throughputs.	
+		
+	We have taken frameworks as described below and compare them against one another in achieving application level objectives.
+	  \begin{enumerate}
+	    \item \textbf{Best cache partitioning - No memory allocations:} Double decker configurations with best cache partitioning
+	    and no memory allocation.
+	    \item \textbf{Best cache partitioning - Uniform memory allocations:} Double decker configurations with best cache partitioning
+	    and uniform memory allocation.
+	    \item \textbf{Best cache partitioning - Best memory allocations:} Double decker configurations with best cache partitioning
+	    and best memory allocations given based on requirement stats obtained from memory \cg{}.
+	  \end{enumerate}
+    
+      \myparagraph{Observations}
+	As Observed in Fig~\ref{plot:dd_sdc_results}, our decentralized memory management framework depicted by 
+	\textit{Best cache partitioning - Best memory allocations} is the only able to achieve application level 
+	objectives. This prominently true in cases of Redis and MySQL which are anonymous memory hungry workloads
+	as provisioning in the cache isn't going to help them achieving application throughputs.
+	
+	\begin{figure}
+	  \centering
+	  \includegraphics[scale=1]{images/dd_sdc_plot/sdc_dd.eps}
+	  \caption{Achieved application performance using different types of frameworks}
+	  \label{plot:dd_sdc_results}
+	\end{figure}
+	
+      
+      \myparagraph{Inference}
+	Two-level provisioning capability of \dd{} enables holistic memory configurations 
+	which can account for application characteristics and requirements, and yield improved
+	application-level and system-wide performance. For workload provisioning in an adaptive manner, 
+	\dd{} can employ well known techniques like MRC \cite{zhao2009dynamic, zhou2004dynamic}, 
+	WSS estimation \cite{zhao2011low}, SHARDS \cite{waldspurger2015efficient} etc.. Note that, the estimation
+	should be done from within the VM which allows the guest
+	OS memory manager to provision memory resources at the
+	two levels. Centralized nesting agnostic hypervisor cache
+	management techniques cannot explore such provisioning
+	configurations
+      
+      
+      
     

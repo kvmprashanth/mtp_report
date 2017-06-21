@@ -42,45 +42,46 @@ Warning--entry type for "gcp" isn't style-file defined
 --line 280 of file mylit.bib
 Warning--empty booktitle in doubledecker
 Warning--can't use both volume and number fields in williams2011overdriver
-You've used 30 entries,
+Warning--can't use both volume and number fields in zhou2004dynamic
+You've used 34 entries,
             1876 wiz_defined-function locations,
-            635 strings with 8648 characters,
-and the built_in function-call counts, 7899 in all, are:
-= -- 786
-> -- 252
+            655 strings with 9305 characters,
+and the built_in function-call counts, 9186 in all, are:
+= -- 901
+> -- 317
 < -- 0
-+ -- 98
-- -- 68
-* -- 496
-:= -- 1002
-add.period$ -- 32
-call.type$ -- 30
-change.case$ -- 30
++ -- 121
+- -- 87
+* -- 598
+:= -- 1182
+add.period$ -- 36
+call.type$ -- 34
+change.case$ -- 34
 chr.to.int$ -- 0
-cite$ -- 32
-duplicate$ -- 427
-empty$ -- 854
-format.name$ -- 68
-if$ -- 1996
+cite$ -- 37
+duplicate$ -- 494
+empty$ -- 977
+format.name$ -- 87
+if$ -- 2303
 int.to.chr$ -- 0
-int.to.str$ -- 30
-missing$ -- 21
-newline$ -- 102
-num.names$ -- 22
-pop$ -- 190
+int.to.str$ -- 34
+missing$ -- 25
+newline$ -- 114
+num.names$ -- 26
+pop$ -- 210
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 293
+skip$ -- 334
 stack$ -- 0
-substring$ -- 522
-swap$ -- 159
+substring$ -- 605
+swap$ -- 184
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 2
-while$ -- 76
-width$ -- 32
-write$ -- 278
+warning$ -- 3
+while$ -- 89
+width$ -- 36
+write$ -- 317
 (There were 3 error messages)
