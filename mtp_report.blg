@@ -6,8 +6,8 @@ A level-1 auxiliary file: 2_background/background.aux
 A level-1 auxiliary file: 3_related_work/related_work.aux
 A level-1 auxiliary file: 4_controller/controller.aux
 A level-1 auxiliary file: 5_double_decker/dd.aux
-A level-1 auxiliary file: 8_conclusions/conclusions.aux
-A level-1 auxiliary file: 9_future_work/future_work.aux
+A level-1 auxiliary file: 6_conclusions/conclusions.aux
+A level-1 auxiliary file: 7_future_work/future_work.aux
 The style file: ieeetr.bst
 Database file #1: mylit.bib
 Warning--entry type for "docker" isn't style-file defined

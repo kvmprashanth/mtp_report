@@ -1,0 +1,36 @@
+
+\chapter{Conclusions}
+  
+    We have made an initial attempt to understand the working of memory management in Linux
+    containers. We identified issues with the existing memory management controller used to
+    provision containers in a native and derivative cloud environment. We have empirical 
+    verified our hypotheses. 
+    
+    We then have proposed a differentiated memory management 
+    controller by making modifications to the existing controller. Our controller supports
+    different types of memory management policies among containers provisioned using a Linux
+    containers framework. We have demonstrated the working of this controller and evaluated the 
+    effectiveness of controller in overcoming the pitfalls of the existing controller. 
+    Our controller has shown its ability of differentiated memory provisioning among containers 
+    and how it positively impacts application performance.
+  
+    We made an attempt in understanding hypervisor caching frameworks and how they are used to 
+    meet application level objectives. We then proposed modifications to existing cache partitioning
+    frameworks to support derivative clouds, however such a framework still failed to help anonymous 
+    memory sensitive applications and other complicated cache partitioning constraints. 
+    
+    We then proposed a decentralized memory management framework where the hypervisor is only responsible 
+    for partitioning the caches at the VM level and the controller inside the guest is responsible allocating the 
+    - container memory and other levels of caches at the hypervisor to meet application specific needs. Our new design 
+    also incorporates an hybrid cache design where cache partitioning at the hypervisor can incorporate a 
+    two level hybrid partition. We demonstrated the effectiveness of our new controller by provisioning for
+    applications of all kinds and showed how our memory management framework triumphs over other traditional 
+    cache partitioning frameworks in meeting application objectives. We also demonstrated the effectiveness of
+    our hybrid implementation by provisioning an application at two levels simultaneously. 
+    
+    Our former contribution on a differentiated memory management controller has been accepted at 
+    \textit{IEEE ICDCS '17 (International Conference on Distributed Computing Systems 2017)} in the poster track, 
+    and the latter contribution on \dd{}---Decentralized management framework for derivative clouds is in
+    submission at \textit{ACM Middleware '17}.
+    
+    

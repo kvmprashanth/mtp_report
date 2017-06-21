@@ -1,0 +1,16 @@
+
+\chapter{Conclusions}
+  
+    We have made an initial attempt to understand the working of memory management in Linux
+    containers. We identified issues with the existing memory management controller used to
+    provision containers in a native and derivative cloud environment. We have empirical 
+    verified our hypotheses. We then have proposed a differentiated memory management 
+    controller by making modifications to the existing controller. Our controller supports
+    different types of memory management policies among containers provisioned using a Linux
+    containers framework. We have demonstrated the working of this controller and evaluated the 
+    effectiveness of controller in overcoming the pitfalls of the existing controller. 
+    Our controller has shown its ability of differentiated memory provisioning among containers 
+    and how it positively impacts application performance.
+  
+    We made an attempt to understanding hypervisor caching frameworks and how they are used to 
+    meet application level objectives. 
