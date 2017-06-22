@@ -5,11 +5,34 @@ A level-1 auxiliary file: 1_intro/introduction.aux
 A level-1 auxiliary file: 2_background/background.aux
 A level-1 auxiliary file: 3_related_work/related_work.aux
 A level-1 auxiliary file: 4_controller/controller.aux
+Case mismatch error between cite keys Redis and redis
+---line 17 of file 4_controller/controller.aux
+ : \citation{Redis
+ :                }
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys Redis and redis
+---line 70 of file 4_controller/controller.aux
+ : \citation{Redis
+ :                }
+I'm skipping whatever remains of this command
 A level-1 auxiliary file: 5_double_decker/dd.aux
+Case mismatch error between cite keys Redis and redis
+---line 15 of file 5_double_decker/dd.aux
+ : \citation{Redis
+ :                }
+I'm skipping whatever remains of this command
 A level-1 auxiliary file: 6_conclusions/conclusions.aux
 A level-1 auxiliary file: 7_future_work/future_work.aux
 The style file: ieeetr.bst
 Database file #1: mylit.bib
+Warning--entry type for "forbes" isn't style-file defined
+--line 1 of file mylit.bib
+Repeated entry---line 8 of file mylit.bib
+ : @online{forbes
+ :               ,
+I'm skipping whatever remains of this entry
+Warning--entry type for "amazonec2" isn't style-file defined
+--line 54 of file mylit.bib
 Warning--entry type for "docker" isn't style-file defined
 --line 130 of file mylit.bib
 Warning--entry type for "lxd" isn't style-file defined
@@ -38,50 +61,52 @@ Warning--entry type for "mysql" isn't style-file defined
 --line 268 of file mylit.bib
 Warning--entry type for "filebench" isn't style-file defined
 --line 274 of file mylit.bib
-Warning--entry type for "gcp" isn't style-file defined
+Warning--entry type for "memcached" isn't style-file defined
 --line 280 of file mylit.bib
+Warning--entry type for "gcp" isn't style-file defined
+--line 288 of file mylit.bib
 Warning--empty booktitle in doubledecker
 Warning--can't use both volume and number fields in williams2011overdriver
 Warning--can't use both volume and number fields in zhou2004dynamic
-You've used 34 entries,
+You've used 42 entries,
             1876 wiz_defined-function locations,
-            655 strings with 9305 characters,
-and the built_in function-call counts, 9186 in all, are:
-= -- 901
-> -- 317
+            688 strings with 10771 characters,
+and the built_in function-call counts, 11209 in all, are:
+= -- 1091
+> -- 402
 < -- 0
-+ -- 121
-- -- 87
-* -- 598
-:= -- 1182
-add.period$ -- 36
-call.type$ -- 34
-change.case$ -- 34
++ -- 153
+- -- 111
+* -- 732
+:= -- 1449
+add.period$ -- 44
+call.type$ -- 42
+change.case$ -- 42
 chr.to.int$ -- 0
-cite$ -- 37
-duplicate$ -- 494
-empty$ -- 977
-format.name$ -- 87
-if$ -- 2303
+cite$ -- 45
+duplicate$ -- 597
+empty$ -- 1192
+format.name$ -- 111
+if$ -- 2808
 int.to.chr$ -- 0
-int.to.str$ -- 34
-missing$ -- 25
-newline$ -- 114
-num.names$ -- 26
-pop$ -- 210
+int.to.str$ -- 42
+missing$ -- 30
+newline$ -- 140
+num.names$ -- 32
+pop$ -- 261
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 334
+skip$ -- 402
 stack$ -- 0
-substring$ -- 605
-swap$ -- 184
+substring$ -- 719
+swap$ -- 219
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 89
-width$ -- 36
-write$ -- 317
-(There were 3 error messages)
+while$ -- 108
+width$ -- 44
+write$ -- 389
+(There were 7 error messages)
