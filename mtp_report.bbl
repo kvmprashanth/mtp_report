@@ -1,15 +1,16 @@
 \begin{thebibliography}{10}
 
-\bibitem{felter2015updated}
-W.~Felter, A.~Ferreira, R.~Rajamony, and J.~Rubio, ``An updated performance
-  comparison of virtual machines and linux containers,'' in {\em Performance
-  Analysis of Systems and Software (ISPASS), 2015 IEEE International Symposium
-  On}, pp.~171--172, IEEE, 2015.
+\bibitem{gcp}
+``Google cloud plalform.''
+\newblock \url{https://cloud.google.com/container-engine/}.
 
-\bibitem{morabito2015hypervisors}
-R.~Morabito, J.~Kjallman, and M.~Komu, ``Hypervisors vs. lightweight
-  virtualization: a performance comparison,'' in {\em Cloud Engineering (IC2E),
-  2015 IEEE International Conference on}, pp.~386--393, IEEE, 2015.
+\bibitem{heroku}
+``Heroku.''
+\newblock \url{http://www.heroku.com}.
+
+\bibitem{sapcp}
+``Sap cloud platform.''
+\newblock \url{https://cloudplatform.sap.com/index.html}.
 
 \bibitem{sharma2015spotcheck}
 P.~Sharma, S.~Lee, T.~Guo, D.~Irwin, and P.~Shenoy, ``Spotcheck: Designing a
@@ -51,6 +52,17 @@ R.~N. Calheiros, C.~Vecchiola, D.~Karunamoorthy, and R.~Buyya, ``The aneka
   platform and qos-driven resource provisioning for elastic applications on
   hybrid clouds,'' {\em Future Generation Computer Systems}, vol.~28, no.~6,
   pp.~861--870, 2012.
+
+\bibitem{felter2015updated}
+W.~Felter, A.~Ferreira, R.~Rajamony, and J.~Rubio, ``An updated performance
+  comparison of virtual machines and linux containers,'' in {\em Performance
+  Analysis of Systems and Software (ISPASS), 2015 IEEE International Symposium
+  On}, pp.~171--172, IEEE, 2015.
+
+\bibitem{morabito2015hypervisors}
+R.~Morabito, J.~Kjallman, and M.~Komu, ``Hypervisors vs. lightweight
+  virtualization: a performance comparison,'' in {\em Cloud Engineering (IC2E),
+  2015 IEEE International Conference on}, pp.~386--393, IEEE, 2015.
 
 \bibitem{agarwal2015containing}
 K.~Agarwal, B.~Jain, and D.~E. Porter, ``Containing the hype,'' in {\em
@@ -146,10 +158,6 @@ S.~He, L.~Guo, Y.~Guo, C.~Wu, M.~Ghanem, and R.~Han, ``Elastic application
 D.~Williams, H.~Jamjoom, and H.~Weatherspoon, ``The xen-blanket: virtualize
   once, run everywhere,'' in {\em Proceedings of the 7th ACM european
   conference on Computer Systems}, pp.~113--126, ACM, 2012.
-
-\bibitem{gcp}
-``Google cloud plalform.''
-\newblock \url{https://cloud.google.com/container-engine/}.
 
 \bibitem{lu2007virtual}
 P.~Lu and K.~Shen, ``Virtual machine memory access tracing with hypervisor

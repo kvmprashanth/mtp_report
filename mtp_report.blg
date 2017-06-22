@@ -28,71 +28,75 @@ Repeated entry---line 8 of file mylit.bib
 I'm skipping whatever remains of this entry
 Warning--entry type for "amazonec2" isn't style-file defined
 --line 54 of file mylit.bib
-Warning--entry type for "docker" isn't style-file defined
+Warning--entry type for "heroku" isn't style-file defined
+--line 124 of file mylit.bib
+Warning--entry type for "sapcp" isn't style-file defined
 --line 130 of file mylit.bib
+Warning--entry type for "docker" isn't style-file defined
+--line 137 of file mylit.bib
 Warning--entry type for "lxd" isn't style-file defined
---line 138 of file mylit.bib
+--line 145 of file mylit.bib
 Warning--entry type for "manual" isn't style-file defined
---line 164 of file mylit.bib
-Repeated entry---line 212 of file mylit.bib
+--line 171 of file mylit.bib
+Repeated entry---line 219 of file mylit.bib
  : @inproceedings{dornemann2009demand
  :                                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 221 of file mylit.bib
+Repeated entry---line 228 of file mylit.bib
  : @inproceedings{shen2011cloudscale
  :                                  ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 230 of file mylit.bib
+Repeated entry---line 237 of file mylit.bib
  : @article{calheiros2012aneka
  :                            ,
 I'm skipping whatever remains of this entry
 Warning--entry type for "stress" isn't style-file defined
---line 250 of file mylit.bib
+--line 257 of file mylit.bib
 Warning--entry type for "mongodb" isn't style-file defined
---line 256 of file mylit.bib
+--line 263 of file mylit.bib
 Warning--entry type for "redis" isn't style-file defined
---line 262 of file mylit.bib
+--line 269 of file mylit.bib
 Warning--entry type for "mysql" isn't style-file defined
---line 268 of file mylit.bib
+--line 275 of file mylit.bib
 Warning--entry type for "filebench" isn't style-file defined
---line 274 of file mylit.bib
+--line 281 of file mylit.bib
 Warning--entry type for "memcached" isn't style-file defined
---line 280 of file mylit.bib
+--line 287 of file mylit.bib
 Warning--entry type for "gcp" isn't style-file defined
---line 288 of file mylit.bib
+--line 295 of file mylit.bib
 Warning--empty booktitle in doubledecker
 Warning--can't use both volume and number fields in williams2011overdriver
 Warning--can't use both volume and number fields in zhou2004dynamic
-You've used 42 entries,
+You've used 44 entries,
             1876 wiz_defined-function locations,
-            688 strings with 10771 characters,
-and the built_in function-call counts, 11209 in all, are:
-= -- 1091
-> -- 402
+            694 strings with 10879 characters,
+and the built_in function-call counts, 11425 in all, are:
+= -- 1115
+> -- 404
 < -- 0
-+ -- 153
++ -- 155
 - -- 111
-* -- 732
-:= -- 1449
-add.period$ -- 44
-call.type$ -- 42
-change.case$ -- 42
+* -- 736
+:= -- 1467
+add.period$ -- 46
+call.type$ -- 44
+change.case$ -- 44
 chr.to.int$ -- 0
-cite$ -- 45
-duplicate$ -- 597
-empty$ -- 1192
+cite$ -- 47
+duplicate$ -- 605
+empty$ -- 1228
 format.name$ -- 111
-if$ -- 2808
+if$ -- 2872
 int.to.chr$ -- 0
-int.to.str$ -- 42
+int.to.str$ -- 44
 missing$ -- 30
-newline$ -- 140
+newline$ -- 148
 num.names$ -- 32
-pop$ -- 261
+pop$ -- 279
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 402
+skip$ -- 408
 stack$ -- 0
 substring$ -- 719
 swap$ -- 219
@@ -102,6 +106,6 @@ top$ -- 0
 type$ -- 0
 warning$ -- 3
 while$ -- 108
-width$ -- 44
-write$ -- 389
+width$ -- 46
+write$ -- 403
 (There were 6 error messages)

@@ -82,7 +82,7 @@
       \normalsize under the guidance of \\
       \vspace{0.5em}      
       \large \textbf{Prof. Purushottam Kulkarni} \\
-      \vspace{5em}
+      \vspace{3em}
       
       \putiitblogo \\
       \Large 
@@ -98,27 +98,27 @@
   \end{center}
   \vspace*{3em}
   \normalsize 
-    Cloud computing has emerged as one of the hot topics in the computing community today. Most servers these days are either 
-already running on cloud, or are in the virtue of shifting base to cloud. Cloud providers traditionally multiplex a set of compute 
-resources, to group of isolated clients using hardware level virtualization techniques that make use of Virtual Machines (VM) to deploy 
-isolated Virtual Environments (VE). 
+    
+    Derivative clouds---nesting of virtualization entities to provision cloud platforms, has gained popularity 
+    with the emergence of container based virtualization techniques. Several large cloud providers \cite{gcp, heroku, sapcp} have
+    have adopted derivative clouds by provisioning containers within virtual machines to provide cloud services to their 
+    customers. 
+    
+    As a part of our initial work, we have made an attempt to understand memory management in containers in an native(non-nested)
+    and derivative cloud setup. We had identified drawbacks in the memory management controller provided by Linux, and proposed
+    updates to the existing controller and evaluated the same. Our controller was able to differentially provision memory as
+    a resource among several container executing both in an native and derivative setup. The effects of such differentially 
+    provisioned containers were observable in their application throughputs.
+    
+    We then moved onto analyzing cache partitioning frameworks and how they impact in achieving application performance 
+    objectives (SLAs). We identified that existing cache partitioning frameworks had no support for derivative clouds and
+    hence made changes to it to support derivative clouds. However we established that mere cache partitioning frameworks fail
+    to support applications have in-VM memory requirements. Hence we moved to a decentralized memory management framework that
+    supports provisioning both memory and cache as a resource at the derivative provider. 
 
-    Although VMs provide a very effective methodology in provisioning compute over the cloud, they incur heavy overheads there by degrading 
-efficiency while provisioning. Lately, there has been a new direction in the flow of research in virtualization, i.e OS-level virtualization 
-in which compute resources in a system are virtualized at an OS-level to provision light weight isolated VEs called Containers. Containers 
-provide similar features to that as VMs but incur much lesser overheads \cite{felter2015updated} \cite{morabito2015hypervisors} . A recent 
-work \cite{sharma2015spotcheck} has also tried to take it a step ahead, by provisioning compute resources to clients using an nested 
-approach in which repackages and resells resources purchased from native Infrastructure-as-a-service (IaaS) cloud provider. This approach is 
-coined as derivative cloud.
-
-    In this work, we have made an initial attempt to understand memory management between containers. We started off with purposing 
-hypotheses based on theoretical evidences. We performed analysis to verify the correctness of our purposed hypotheses and understand parts 
-of memory management for which hypotheses couldn't be drawn. We then tried to extrapolate its implications on real world applications 
-running inside a derivative cloud environment running VMs on the host machine and containers in the guest machine. These implications 
-strongly suggested that existing memory management techniques may impact higher provisioned containers negatively. We conclude by purposing 
-the requirements of a new desired policy that provides this notion of a differentiated reclamation to enforce deterministic allocation when 
-the system is under memory pressure. The end goal of our work is to provide an adaptive deterministic resource provisioning framework for 
-container based services. 
+    
+  
+  . 
     
     \newpage
     \begin{center}
@@ -138,8 +138,8 @@ container based services.
     
   \pagenumbering{roman}
   \tableofcontents
-  \listoftables
   \listoffigures
+  \listoftables
   \cleardoublepage
   \setcounter{page}{1}
   \pagenumbering{arabic}
@@ -159,11 +159,13 @@ container based services.
   \appendix
   %\include{8/source_code}
   %\include{appendix/benchmarks}
-  \section{Test 3}
-  \section{Test 3}
-  
   \begin{appendices}
-    \chapter{Reference to work}
+    \chapter{\dd{} source code}
+      The complete source code for \dd{} is available at \url{https://github.com/kvmprashanth/double_decker}.
+      
+      \dd{} is implemented as an loadable kernel module. To know the complete procedure for setting up double decker on
+      a Linux machine, kindly follow the steps provided in the README.md in the given above link.
+    
   \end{appendices}
 
 \end{document}
