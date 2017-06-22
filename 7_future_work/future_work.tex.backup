@@ -2,21 +2,17 @@
   
     The following are a list of the future possible directions of memory management controller, 
     
-      \begin{itemize}
+      \begin{enumerate}
 	\item The policy enforcement using existing memory controller framework is using static weight setting,
 	we could expand this to incorporate a dynamic weight setting based on an higher level overall application
 	objective. 
 	\item Explore other Linux \cg{} - analyze their behavior, bring forward their drawbacks and design solutions to
 	fix their drawbacks.
-      \end{itemize}
+      \end{enumerate}
 
   The following are a list of the future possible directions for \dd{} : decentralized memory management for double decker, 
     
-      \begin{itemize}
-	\item To build a memory-cache allocation logic spread over the 3 levels - VM-memory, memory cache, and SSD cache. 
-	\item To come up with policies that are enforceable using our controller dynamically based on application usage 
-	patterns.
-	\item To build a fully independent adaptive memory management framework that provisions containers across all layers
-	satisfying individual application objectives and maximizing global allocation objectives.
-      \end{itemize}
+      \begin{enumerate}
+	\item 
+      \end{enumerate}
 

@@ -15,6 +15,7 @@
 \usepackage{pifont}
 \usepackage{array}
 \usepackage{amsmath}
+\usepackage[titletoc]{appendix}
 
 % Referencing macros
 \newcommand{\Eqref}[1]{Equation~\eqref{#1}}
@@ -118,7 +119,22 @@ strongly suggested that existing memory management techniques may impact higher 
 the requirements of a new desired policy that provides this notion of a differentiated reclamation to enforce deterministic allocation when 
 the system is under memory pressure. The end goal of our work is to provide an adaptive deterministic resource provisioning framework for 
 container based services. 
-
+    
+    \newpage
+    \begin{center}
+      \huge \textbf{Acknowledgements}
+    \end{center}
+    \vspace*{3em}
+    \normalsize 
+    
+    I would like to thank my advisor Prof. Purushottam Kulkarni for his constant support and advice which has helped me take 
+    this thesis to it’s completion. I would also like to thank Prof. Umesh Bellur for his guidance during the Phase-1 of my 
+    M.Tech. thesis project. Lastly, I would like to thank Debadatta Mishra and Chandra Prakash with whom I have collaborated by 
+    research works with for being as supportive as possible.
+    
+    \vspace*{2em}
+    \noindent Prashanth
+    
     
   \pagenumbering{roman}
   \tableofcontents
@@ -140,9 +156,17 @@ container based services.
   \bibliographystyle{ieeetr}
   \bibliography{mylit}  
   
-  %\appendix
-  %\include{appendix/demos}
+  \appendix
+  %\include{8/source_code}
   %\include{appendix/benchmarks}
+  \begin{appendices}
+    \chapter{\dd{} source code}
+      The complete source code for \dd{} is available at \url{https://github.com/kvmprashanth/double_decker}.
+      
+      \dd{} is implemented as an loadable kernel module. To know the complete procedure for setting up double decker on
+      a Linux machine, kindly follow the steps provided in the ReadMe.md in the given above link.
+    
+  \end{appendices}
 
 \end{document}
 

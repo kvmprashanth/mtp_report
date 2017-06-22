@@ -16,6 +16,11 @@ P.~Sharma, S.~Lee, T.~Guo, D.~Irwin, and P.~Shenoy, ``Spotcheck: Designing a
   derivative iaas cloud on the spot market,'' in {\em Proceedings of the Tenth
   European Conference on Computer Systems}, p.~16, ACM, 2015.
 
+\bibitem{manual}
+``Getting your hands dirty with containers.''
+\newblock
+  \url{https://www.cse.iitb.ac.in/~prashanth/containers/seminar/manual.pdf}.
+
 \bibitem{forbes}
 J.~McKendrick, ``Forbes bussiness magzine: Is all-cloud computing inevitable?
   analysts suggest it is,'' 2016.
@@ -91,11 +96,6 @@ I.~Stefanovici, E.~Thereska, G.~O'Shea, B.~Schroeder, H.~Ballani,
 \bibitem{doubledecker}
 D.~Mishra and P.~Kulkarni, ``Doubledecker: Differentiated hypervisor caching
   for derivative clouds,'' 2016.
-
-\bibitem{manual}
-``Getting your hands dirty with containers.''
-\newblock
-  \url{https://www.cse.iitb.ac.in/~prashanth/containers/seminar/manual.pdf}.
 
 \bibitem{docker}
 D.~Inc., ``Docker offical documentation,'' 2016.

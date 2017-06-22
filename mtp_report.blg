@@ -16,11 +16,6 @@ Case mismatch error between cite keys Redis and redis
  :                }
 I'm skipping whatever remains of this command
 A level-1 auxiliary file: 5_double_decker/dd.aux
-Case mismatch error between cite keys Redis and redis
----line 15 of file 5_double_decker/dd.aux
- : \citation{Redis
- :                }
-I'm skipping whatever remains of this command
 A level-1 auxiliary file: 6_conclusions/conclusions.aux
 A level-1 auxiliary file: 7_future_work/future_work.aux
 The style file: ieeetr.bst
@@ -109,4 +104,4 @@ warning$ -- 3
 while$ -- 108
 width$ -- 44
 write$ -- 389
-(There were 7 error messages)
+(There were 6 error messages)

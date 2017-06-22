@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper,openright]{report}
+\documentclass[11pt,a4paper]{report}
 
 \usepackage{float}
 \usepackage{booktabs}
@@ -15,6 +15,7 @@
 \usepackage{pifont}
 \usepackage{array}
 \usepackage{amsmath}
+\usepackage[titletoc]{appendix}
 
 % Referencing macros
 \newcommand{\Eqref}[1]{Equation~\eqref{#1}}
@@ -28,11 +29,12 @@
 
 \newcommand{\cg}{Cgroups}
 \newcommand{\dd}{Double-decker}
-<<<<<<< HEAD
 \newcommand{\sol}{soft-limit}
 \newcommand{\redis}{Redis}
 \newcommand{\hl}{hard-limit}
+\newcommand{\mongo}{MongoDB}
 \newcommand{\mongodb}{MongoDB}
+\newcommand{\tmem}{T-Mem}
 
 %\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\newline}
 \newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\\}
@@ -40,14 +42,6 @@
 % Table of contents display
 \setcounter{tocdepth}{2}
 \setcounter{secnumdepth}{2}
-=======
-
-\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\newline}
-
-% Table of contents display
-\setcounter{tocdepth}{3}
-\setcounter{secnumdepth}{3}
->>>>>>> 5893c60fd24149cce74bac3e829b047f0ba0335e
 
 % Formatting
 %\titleformat{\chapter}{\normalfont\huge\bf}{\thechapter.}{20pt}{\huge\bf}
@@ -59,10 +53,7 @@
 \setlist[enumerate]{itemsep=0mm}
 \setlist[itemize]{itemsep=0mm}
 \setlist[enumerate]{nosep}
-<<<<<<< HEAD
 \setlist[itemize]{nosep}
-=======
->>>>>>> 5893c60fd24149cce74bac3e829b047f0ba0335e
 
 \begin{document}
 
@@ -128,7 +119,22 @@ strongly suggested that existing memory management techniques may impact higher 
 the requirements of a new desired policy that provides this notion of a differentiated reclamation to enforce deterministic allocation when 
 the system is under memory pressure. The end goal of our work is to provide an adaptive deterministic resource provisioning framework for 
 container based services. 
-
+    
+    \newpage
+    \begin{center}
+      \huge \textbf{Acknowledgements}
+    \end{center}
+    \vspace*{3em}
+    \normalsize 
+    
+    I would like to thank my advisor Prof. Purushottam Kulkarni for his constant support and advice which has helped me take 
+    this thesis to it’s completion. I would also like to thank Prof. Umesh Bellur for his guidance during the Phase-1 of my 
+    M.Tech. thesis project. Lastly, I would like to thank Debadatta Mishra and Chandra Prakash with whom I have collaborated by 
+    research works with for being as supportive as possible.
+    
+    \vspace*{2em}
+    \noindent Prashanth
+    
     
   \pagenumbering{roman}
   \tableofcontents
@@ -144,17 +150,21 @@ container based services.
   \include{3_related_work/related_work}
   \include{4_controller/controller}
   \include{5_double_decker/dd}
-  %\include{6_implementation/implementation}
-  %\include{7_evaluation/evaluation}
-  \include{8_conclusions/conclusions}
-  \include{9_future_work/future_work}
+  \include{6_conclusions/conclusions}
+  \include{7_future_work/future_work}
   
   \bibliographystyle{ieeetr}
   \bibliography{mylit}  
   
-  %\appendix
-  %\include{appendix/demos}
+  \appendix
+  %\include{8/source_code}
   %\include{appendix/benchmarks}
+  \section{Test 3}
+  \section{Test 3}
+  
+  \begin{appendices}
+    \chapter{Reference to work}
+  \end{appendices}
 
 \end{document}
 
