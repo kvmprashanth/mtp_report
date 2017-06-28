@@ -37,7 +37,7 @@
 	
 	\begin{figure}
 	  \centering
-	  \includegraphics[width=0.9\textwidth]{images/correctness/exp_setup.png}
+	  \includegraphics[width=0.8\textwidth]{images/correctness/exp_setup.png}
 	  \caption{Experimental testbed for checking correctness}
 	  \label{img:correctness_testbed}
 	\end{figure}
@@ -112,8 +112,8 @@ fit this criteria, and have been used for the evaluation.
 	    MySQL \cite{mysql} is a database workload that uses anonymous pages to configure its own user-space data cache. 
 	    
 	  \myparagraph{Filebench}
-	    Filebench \cite{filebench} is a synthetic workload used to generate workload patterns of different applications. In filebench we made
-	    use of the webserver workload to simulate a webserver.
+	    Filebench \cite{filebench} is a synthetic workload used to generate workload patterns of different applications. In 
+	    Filebench we made use of the Webserver workload to simulate a Webserver.
 	  
       
 	  \myparagraph{YCSB benchmark}
@@ -122,8 +122,7 @@ fit this criteria, and have been used for the evaluation.
     generation of cloud data serving systems. It is a framework and common set of workloads for evaluating the performance of different 
     “key-value” stores.
   
-    \subsection{Provisioning of caches at different levels based on application requirements}
-    
+    \subsection{Provisioning of caches at different levels based on application requirements}    
       Previous results using \dd{}\cite{doubledecker} have shown that certain application requirements 
       (along with their configurations) could be satisfied better by provisioning on a cache of certain 
       performance guarantees. In the previous work\cite{doubledecker} it was shown how an application like 
@@ -142,29 +141,31 @@ fit this criteria, and have been used for the evaluation.
 	    
 	  \myparagraph{Procedure}
 	    Consider the following scenario to demonstrate the short comings of the existing exclusive two level cache
-	    provisioning framework. Consider the case of a container running web-server workload
+	    provisioning framework. Consider the case of a container running web-server or MongoDB workload
 	    with a WSS to provisioned onto the hypervisor cache with  no-free memory to be further allocated 
 	    at the guest VM and the hypervisor cache available is 0.5 GB at level-1 (Memory) and 1 GB at 
-	    level-2 (SSD). Consider a Web-server workload where the desired application throughput is 7000 op/s.
+	    level-2 (SSD). Consider a Web-server workload where the desired application throughput is 7000 op/s
+	    and a MongoDB workload where desired throughput is 300 ops/s.
 	    
 	  \begin{figure}
 	    \centering
-	    \includegraphics[scale=0.8]{images/dd_hybrid_motivation/throughput.eps}
+	    \includegraphics[scale=0.35]{images/dd_hybrid_motivation/throughput.png}
 	    \caption{Inadequate exclusive two level cache provisioning framework}
 	    \label{plot:dd_hybrid_motivation}
 	  \end{figure}
 	  
 	  \myparagraph{Inferences}
 	    Using our existing double decker cache, we can at max provision at 6000 op/s using memory cache of 0.5 GB as 
-	    shown in Fig~\ref{plot:dd_hybrid_motivation}. But say our requirement was beyond that at 7000 op/s. Is there a 
-	    workaround to satisfy this requirement ? Could we come up with a better design to satisfy this configuration ?
+	    shown in Fig~\ref{plot:dd_hybrid_motivation}. But say our requirement was beyond that at 7000 op/s. Similar
+	    requirements for MongoDB. Is there a workaround to satisfy this requirement ? Could we come up with a 
+	    better design to satisfy this configuration ?
 	    
     
     \section{Cache partitioning framework support for anonymous memory applications} 
 	
 	\begin{figure}
 	  \centering
-	  \includegraphics[scale=0.8]{images/dd_decentrailze_motivation/throughput.eps}
+	  \includegraphics[scale=0.6]{images/dd_decentrailze_motivation/throughput.png}
 	  \caption{Split of memory allocation ratios (In-VM:Cache) to affect application performance}
 	  \label{plot:dd_decentrailze_motivation}
 	\end{figure}
@@ -196,7 +197,7 @@ fit this criteria, and have been used for the evaluation.
 	  anonymous memory hungry workloads.
 	    
 
-  \section{Rethink of existing design}
+  \section{Decentralized memory management framework with a hybrid cache}
     
     Keeping the above drawbacks in mind, we re-design the existing differentiated derivative cloud cache partitioning
     framework that \dd{} is and make it more of a memory management framework. There are two crucial ideas around which
@@ -212,11 +213,11 @@ fit this criteria, and have been used for the evaluation.
     \begin{figure}
       \centering
       \includegraphics[scale=0.26]{/home/prashanth/Stage-2/Report/images/dd_design/architecture.png}
-      \caption{Updated memory management framework}
+      \caption{Decentralized memory management framework with a hybrid cache}
       \label{plot:dd_architecture}
     \end{figure}
         
-    \subsection{Decentralized memory management framework}
+    \section{Decentralized memory management framework}
       Traditional caching frameworks and the earlier design of double decker centered around the idea 
       of a hypervisor managed cache with the hypervisor administrator (native cloud provider) as the single sole 
       administrator of the system.
@@ -225,12 +226,12 @@ fit this criteria, and have been used for the evaluation.
       who roles each have been discussed below. Most of the decision making is moved onto the
       derivative cloud provider sitting inside the virtual machine.
 	      
-      \subsubsection{Native provider cache partitioning framework}
+      \subsection{Native provider cache partitioning framework}
 	The native provider is now, only responsible for partitioning the caches for each VM
 	based on its native cloud provider SLA. The native provider need not worry about 
 	provisioning each of the container.
 
-      \subsubsection{Derivative provider memory management framework}	
+      \subsection{Derivative provider memory management framework}	
 	The derivative provider is now responsible for managing three levels of memory entities,
 	
 	\begin{enumerate}
@@ -241,10 +242,10 @@ fit this criteria, and have been used for the evaluation.
 	
 	The derivative provider maps each application SLA onto a combination of these three management
 	knobs to achieve desired application level objectives. This helps even provisioning of applications
-	that cannot be helped by cache partitioning schemas, that is that they are anonymous memory dependent.
+	that cannot be helped by cache partitioning schemes, that is that they are anonymous memory dependent.
 
 
-    \subsection{Hybrid cache}
+    \section{Hybrid cache}
       The hybrid cache is an updated version of the previous cache where each VM/container can be configured
       with a in-memory and SSD cache simultaneously. But with two-levels of caches configured to each application
       we need an mechanism to move objects (pages) of one level to another and vice-versa.
@@ -252,9 +253,18 @@ fit this criteria, and have been used for the evaluation.
       Every PUT operation into the cache tries to first add the new object into the memory cache if configured, 
       and if not it adds it to the SSD cache.
       
-      \subsubsection{Movement of objects}	
+      \subsection{Movement of objects}	
+      
+	\begin{figure}
+	  \centering
+	  \includegraphics[width=0.75\textwidth]{/home/prashanth/Stage-2/Report/images/dd_design/movement.png}
+	  \caption{\dd{} movement of objects across cache levels}
+	  \label{img:dd_movement}
+	\end{figure}
+	
 	There are two levels of cache movements, and have thresholds which trigger this movement. The movement of
-	objects are described below. The thresholds and the eviction batches are all configurable.
+	objects are described below. The thresholds and the eviction batches are all configurable. The Fig~\ref{img:dd_movement}
+	for the same is shown.
 	
 	The level-1 and level-2 caches have a higher threshold after which objects are either \textit{demoted} to the 
 	lower level (in the case of level-1, if level-2 is configured) or is evicted from the cache. Similarly
@@ -452,18 +462,32 @@ fit this criteria, and have been used for the evaluation.
 	implementation we vary cache allocation ratios from all cache allocations at level-1 to all at level-2 and 
 	see how this affects application performance.
 	
-	\begin{figure}
+	\begin{figure*}[t!]
 	  \centering
-	  \includegraphics[scale=1]{images/dd_hybrid_eval/throughput.eps}
+	  \begin{subfigure}[t]{0.49\textwidth}
+	    \centering
+	    \includegraphics[width=1\textwidth]{images/dd_hybrid_eval/webserver.eps}
+	    \caption{Webserver}
+	    \label{img:webserver_th}
+	  \end{subfigure}
+	  ~ 
+	  \begin{subfigure}[t]{0.48\textwidth}
+	    \centering
+	    \includegraphics[width=1\textwidth]{images/dd_hybrid_eval/throughput.png}
+	    \caption{MongoDB}
+	    \label{img:mongo_th}
+	  \end{subfigure}
 	  \caption{Varying of cache allocation ratios while achieving application level throughputs}
-	  \label{plot:dd_sdc_results}
-	\end{figure}
+	\end{figure*}
 	
       \myparagraph{Observation}
 	The application throughput increase as moving the cache partitioned from memory onto the SSD as expected.
 	To satisfy an application objective of 7000 ops/sec as discussed in Section~\ref{sec:dd_hybrid_motivation}, 
-	cache would have to partitioned at about 4:4 ratio in this case, which refers to 512MB of memory and SSD 
-	cache each.
+	cache would have to partitioned at about 3:5 ratio as seen from Fig~\ref{img:webserver_th}, which refers to 
+	384 MB of memory cache and 640 MB of SSD cache. 
+	
+	To satisfy application objective of 300 ops/sec, the case would have to be configured at 4:4 as seen from 
+	Fig~\ref{img:mongo_th} which translates to 512 MB of cache each.
 	
       \myparagraph{Inference}
 	An hybrid implementation is more effective at satisfying SLA objectives for cases where an two level exclusive
@@ -477,7 +501,7 @@ fit this criteria, and have been used for the evaluation.
 	
       \myparagraph{Setup}
 	VM hosted 4 application containers and executed the MongoDB, Redis, MySQL data stores and
-	the Filebench Web-server workload. The data stores acted as backends for YCSB clients. The VM 
+	the Filebench Web-server workload. The data stores acted as back-ends for YCSB clients. The VM 
 	was provisioned with 6GB memory and 8 CPUs (2 CPUs pinned to each application container). 
 	The hypervisor cache was provisioned to 2GB.
 	

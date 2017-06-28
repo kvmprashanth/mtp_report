@@ -1,38 +1,65 @@
 
 \chapter{Related work}
-
-  There have been several attempts to provide efficient memory management for virtual machines. The most prominent used approach is of 
-that Ballooning \cite{waldspurger2002memory}. Ballooning is an mechanism that reclaims pages considered least valuable by the guest OS 
-running inside the virtual machine. This allows the VM to decide which memory pages to release instead of the host trying to determine this.
-Gerḿan Molt́o \cite{molto2013elastic} expands the idea of Ballooning to provide a system to monitor the VM memory and apply vertical 
-elasticity rules in order to dynamically change its memory size by using the memory ballooning technique provided the KVM hypervisor. 
-Overdriver \cite{williams2011overdriver} on the other hand presents a system that handles all durations of memory overload. It adapts its 
-mitigation strategy to balance the trade offs between migration and cooperative swap to handle memory overcommitments. Ex-Tmem 
-\cite{venkatesan2014ex} stores clean pages in a two-level buffering hierarchy with locality-aware data placement and replacement. It 
-enables memory-to-memory swapping by using non-volatile memory and eliminates expensive I/O caused by swapping.
+  The following is a comprehensive list of related works. Although most of these related works are motivating factors to that 
+  drive our work, none of them are similar works.
   
-  Looking at researches that have looked at resource provisioning, CloudScale \cite{shen2011cloudscale} can resolve scaling conflicts 
-between applications using migration, and integrates dynamic CPU voltage/frequency scaling to achieve energy savings with minimal effect on 
-application SLOs. Tim Dornemanna\cite{dornemann2009demand} proposed a solution that automatically schedules workflow steps to underutilized 
-hosts and provides new hosts using cloud computing infrastructures in peak-load. The system was based on BPEL to support on-demand resource 
-provisioning. Aneka \cite{calheiros2012aneka}, is a platform for developing scalable applications on the Cloud, that supports provisioning 
-resources from different sources and supporting different application models. It support the integration between Desktop Grids and Clouds. 
-Elastic Application Container (EAC) \cite{he2012elastic} is a virtual resource unit for delivering better resource efficiency and more 
-scalable cloud applications. 
-
-  A derivative cloud is a nested setup, virtual machines nested in virtual machines\cite{williams2012xen} or containers deployed in virtual machine 
-  \cite{sharma2015spotcheck, gcp}, the latter being the focus of this work.  
-
-  There has been extensive work carried out in hypervisor caching\cite{lu2007virtual, magenheimer2009transcendent, mishra2014comparative, schopp2006resizing}.
-  On top of this there has been work carried out to partition hypervisor caches based on application SLAs \cite{schopp2006resizing, koller2015centaur}.
-
-  Although there are several existing works in elastic resource provisioning (including memory) for virtual machines as listed above. There 
-  has been no attempt to provide an deterministic memory management policy for containers. To our knowledge this is our first attempt to do 
-  so.
+  \section{Memory management in virtualized environments}
+    There have been several attempts to provide efficient memory management for virtual machines. The most prominent used approach is of 
+    that Ballooning \cite{waldspurger2002memory}. Ballooning is an mechanism that reclaims pages considered least valuable by the guest OS 
+    running inside the virtual machine. This allows the VM to decide which memory pages to release instead of the host trying to determine this.
+    Gerḿan Molt́o \cite{molto2013elastic} expands the idea of Ballooning to provide a system to monitor the VM memory and apply vertical 
+    elasticity rules in order to dynamically change its memory size by using the memory ballooning technique provided the KVM hypervisor. 
+    Overdriver \cite{williams2011overdriver} on the other hand presents a system that handles all durations of memory overload. It adapts its 
+    mitigation strategy to balance the trade offs between migration and cooperative swap to handle memory overcommitments. Ex-Tmem 
+    \cite{venkatesan2014ex} stores clean pages in a two-level buffering hierarchy with locality-aware data placement and replacement. It 
+    enables memory-to-memory swapping by using non-volatile memory and eliminates expensive I/O caused by swapping.
   
-  Applicability of hypervisor caching in a derivative cloud setup is hindered due to inability of existing frameworks to support this sort of
-  provisioning, and also we would like to look at the overall picture of memory management at all levels of the hierarchy along with the cache
-  partitioning to satisfy application SLA. 
+  \section{Resource provisioning in virtualized environments}
+    Looking at researches that have looked at resource provisioning, CloudScale \cite{shen2011cloudscale} can resolve scaling conflicts 
+    between applications using migration, and integrates dynamic CPU voltage/frequency scaling to achieve energy savings with minimal effect on 
+    application SLOs. Tim Dornemanna\cite{dornemann2009demand} proposed a solution that automatically schedules workflow steps to underutilized 
+    hosts and provides new hosts using cloud computing infrastructures in peak-load. The system was based on BPEL to support on-demand resource 
+    provisioning. Aneka \cite{calheiros2012aneka}, is a platform for developing scalable applications on the Cloud, that supports provisioning 
+    resources from different sources and supporting different application models. It support the integration between Desktop Grids and Clouds. 
+    Elastic Application Container (EAC) \cite{he2012elastic} is a virtual resource unit for delivering better resource efficiency and more 
+    scalable cloud applications. 
+
+  \section{Nested virtualization}
+    A derivative cloud is a nested setup, virtual machines nested in virtual machines\cite{williams2012xen} or containers deployed in virtual machine 
+    \cite{sharma2015spotcheck, gcp}, the latter being the focus of this work.  
+    
+  \section{Hypervisor managed caches}
+    There has been extensive literature centered around hypervisor caching
+    \cite{lu2007virtual, mishra2014comparative, schopp2006resizing}.
+    There are several types of hypervisor caching addressed in various works, however the framework 
+    we have used to build upon in our implementation is described below. 
+    
+    \subsection{Transcendent Memory}
+      Transcendent Memory (Tmem)\cite{magenheimer2009transcendent} is an approach make proper utilization of underutilized
+      memory present in Linux based system by provisioning an in-memory cache. This was then extended to virtualized setups
+      to be able to build caches for individual VMs. However there have been attempts \cite{venkatesan2014ex} to make this 
+      single level Tmem cache to an hybrid multi-level setup in a non-virtualized by environments. Tmem caches however only
+      cache clean disk pages. They don't cache dirty disk or anonymous pages.
+      
+   \subsection{Hypervisor cache partitioning}
+    
+       On top of this there has been work carried out to partition hypervisor caches based on 
+       application SLAs\cite{schopp2006resizing, koller2015centaur}. In these works, each application 
+       is treated as a VM and provisioned accordingly. Centuar\cite{koller2015centaur} proposes a single
+       level cache partitioned on a per VM bases by satisfying individual application objects or a global
+       hypervisor level policy. SDC\cite{schopp2006resizing} follows a similar approach but provides 
+       heuristics for even a multi-level cache and how application requirements could be satisfied. Both
+       There approaches make use of MRC construction techniques\cite{zhou2004dynamic, zhao2011low, waldspurger2015efficient}.  
+  
+
+  \section{Conclusions}
+    Although there are several existing works in elastic resource provisioning (including memory) for virtual machines as listed above. There 
+    has been no attempt to provide an deterministic memory management policy for containers. To our knowledge this is our first attempt to do 
+    so.
+    
+    Applicability of hypervisor caching in a derivative cloud setup is hindered due to inability of existing frameworks to support this sort of
+    provisioning, and also we would like to look at the overall picture of memory management at all levels of the hierarchy along with the cache
+    partitioning to satisfy application SLA. 
 
 %   \subsection{Hypervisor managed caching}
 %       \subsubsection{T-MEM cache}

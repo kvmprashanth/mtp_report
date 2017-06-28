@@ -1,5 +1,7 @@
 \chapter{Background}
 
+  This chapter provides a background to our works that exists. These background are either derived from looking into kernel code or 
+  are parts of existing design details.
   
   \section{Memory management between processes in Linux}
   
@@ -75,7 +77,7 @@ them to form the building structure. The deploy their own controllers on top of 
 packages, libraries, and application programs.
     \end{enumerate}
     
-    For the pupose of this discussion, we would focus on control \cg{} (\cg{}) as this provides the mechanism to control resources 
+    For the purpose of this discussion, we would focus on control \cg{} (\cg{}) as this provides the mechanism to control resources 
 which includes performing memory management.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -231,9 +233,6 @@ do the same.
     \dd{} is built upon existing the existing \tmem{} second cache caching framework for Linux. There have been implementations\cite{venkatesan2014ex} of \tmem{} 
     to support a per-VM partitioning schema. \dd{} builds upon this framework by providing a per-container partitioning framework.
     
-    
-    \subsection{Features}
-    
     \noindent The following are a comprehensive list of features supported by \dd{},
       \begin{enumerate}
 	\item Supports a \textbf{two level configurable caches}. These partitions are either in-memory or at the SSD. 
@@ -244,7 +243,7 @@ do the same.
 	\item Exclusive caching at all levels.
       \end{enumerate}
       
-   \subsection{Architecture}
+   \paragraph{Architecture}
     \label{sec:double_decker_architecture}
     
       \begin{figure}
@@ -270,7 +269,7 @@ do the same.
 	host cache configuration. The cache is partitioned based on a higher level SLA requirements at each of the cloud provider. This SLA could
 	be fixed for a particular container using a higher level policy. 
 	  
-    \subsection{Internals}
+    \paragraph{Internals}
     \label{sec:double_decker_internals}
     
       \begin{figure}
@@ -280,7 +279,7 @@ do the same.
 	\label{img:doube_decker_internals}
       \end{figure}
 	  
-	The Fig:~\ref{img:doube_decker_internals} describes the \tmem{} implementation overview of double decker. Each container is configured using a
+	The Fig~~\ref{img:doube_decker_internals} describes the \tmem{} implementation overview of double decker. Each container is configured using a
 	relative weight parameter as described in Section~\ref{sec:double_decker_architecture}. There is pool created for each configured container cache. This
 	pool represents an abstract design component which contains all the pages for a particular container are present in. 
 	There are several data structures which make up  for the \tmem implementation, however the most crucial one is a per pool tree structure that keeps 

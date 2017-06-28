@@ -164,15 +164,28 @@ P.~Lu and K.~Shen, ``Virtual machine memory access tracing with hypervisor
   exclusive cache.,'' in {\em Usenix Annual Technical Conference}, pp.~29--43,
   2007.
 
+\bibitem{schopp2006resizing}
+J.~H. Schopp, K.~Fraser, and M.~J. Silbermann, ``Resizing memory with balloons
+  and hotplug,'' in {\em Proceedings of the Linux Symposium}, vol.~2,
+  pp.~313--319, 2006.
+
 \bibitem{magenheimer2009transcendent}
 D.~Magenheimer, C.~Mason, D.~McCracken, and K.~Hackel, ``Transcendent memory
   and linux,'' in {\em Proceedings of the Linux Symposium}, pp.~191--200,
   Citeseer, 2009.
 
-\bibitem{schopp2006resizing}
-J.~H. Schopp, K.~Fraser, and M.~J. Silbermann, ``Resizing memory with balloons
-  and hotplug,'' in {\em Proceedings of the Linux Symposium}, vol.~2,
-  pp.~313--319, 2006.
+\bibitem{zhou2004dynamic}
+P.~Zhou, V.~Pandey, J.~Sundaresan, A.~Raghuraman, Y.~Zhou, and S.~Kumar,
+  ``Dynamic tracking of page miss ratio curve for memory management,'' in {\em
+  ACM SIGOPS Operating Systems Review}, vol.~38, pp.~177--188, ACM, 2004.
+
+\bibitem{zhao2011low}
+W.~Zhao, X.~Jin, Z.~Wang, X.~Wang, Y.~Luo, and X.~Li, ``Low cost working set
+  size tracking.,'' in {\em USENIX Annual Technical Conference}, 2011.
+
+\bibitem{waldspurger2015efficient}
+C.~A. Waldspurger, N.~Park, A.~T. Garthwaite, and I.~Ahmad, ``Efficient mrc
+  construction with shards.,'' in {\em FAST}, pp.~95--110, 2015.
 
 \bibitem{stress}
 ``Stress workload generator.''
@@ -199,18 +212,5 @@ B.~F. Cooper, A.~Silberstein, E.~Tam, R.~Ramakrishnan, and R.~Sears,
 W.~Zhao, Z.~Wang, and Y.~Luo, ``Dynamic memory balancing for virtual
   machines,'' {\em ACM SIGOPS Operating Systems Review}, vol.~43, no.~3,
   pp.~37--47, 2009.
-
-\bibitem{zhou2004dynamic}
-P.~Zhou, V.~Pandey, J.~Sundaresan, A.~Raghuraman, Y.~Zhou, and S.~Kumar,
-  ``Dynamic tracking of page miss ratio curve for memory management,'' in {\em
-  ACM SIGOPS Operating Systems Review}, vol.~38, pp.~177--188, ACM, 2004.
-
-\bibitem{zhao2011low}
-W.~Zhao, X.~Jin, Z.~Wang, X.~Wang, Y.~Luo, and X.~Li, ``Low cost working set
-  size tracking.,'' in {\em USENIX Annual Technical Conference}, 2011.
-
-\bibitem{waldspurger2015efficient}
-C.~A. Waldspurger, N.~Park, A.~T. Garthwaite, and I.~Ahmad, ``Efficient mrc
-  construction with shards.,'' in {\em FAST}, pp.~95--110, 2015.
 
 \end{thebibliography}

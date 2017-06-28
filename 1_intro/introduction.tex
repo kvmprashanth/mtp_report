@@ -1,11 +1,10 @@
 \chapter{Introduction}
   
-  The present era has observed extreme levels of inflation in the number of compute systems being used to automate day to day tasks. 
-Historically this process of automation was typically carried over a system existing locally. However, the past couple of 
-decades has witnessed an hostile take over by \textit{The Internet}, which has been helpful in connecting systems over the 
-globe. Overtime, several businesses have started offering computational resources as a service, over the Internet. This has lead to 
-the establishment of a new paradigm of computation known as \textit{Cloud Computing} or simply the Cloud and such businesses are called 
-cloud service providers. 
+  The term computing is pervasive today. In additional to this, the past couple of decades has witnessed an hostile 
+  take over by \textit{The Internet}, which has been helpful in connecting systems over the globe. 
+  Overtime, several businesses have started offering computational resources as a service, over the Internet. This has lead to 
+  the establishment of a new paradigm of computation known as \textit{Cloud Computing} or simply the Cloud and such businesses 
+  are called cloud service providers. 
 
   The objective of a customer is to run his application on the cloud without affecting the performance of his application. On the 
 other hand, the objective of a cloud provider is to minimize running costs when serving multiple such customers with promised guarantees to 
@@ -54,7 +53,7 @@ issues. More about containers shall be provided in the coming chapters.
 
     \begin{figure}
       \centering
-      \includegraphics[width=0.7\textwidth]{images/intro/derivative_cloud.png}
+      \includegraphics[width=0.6\textwidth]{images/intro/derivative_cloud.png}
       \caption{Depiction of a derivative IaaS cloud platform, Source:\cite{sharma2015spotcheck}}
       \label{img_derivative_cloud}
     \end{figure}
@@ -63,7 +62,7 @@ issues. More about containers shall be provided in the coming chapters.
 recent work \cite{sharma2015spotcheck} which repackages and resells resources purchased from native IaaS platforms. A derivative cloud can 
 offer resources to customers with different pricing models and availability guarantees not provided by native platforms using a mix of 
 resources purchased under different contract. Derivative cloud providers rent resources from native cloud providers to resell services to 
-customers as shown in Fig:\ref{img_derivative_cloud}.
+customers as shown in Fig~\ref{img_derivative_cloud}.
 
     Although containers support has been provided in most major operating systems today, it is most popular and widely used in operating 
 systems running on a Linux kernel. Our entire work would focus on elastic provisioning of containers in a native Linux environment and 
@@ -155,12 +154,12 @@ which free memory in the system gradually reduces by generating of memory pressu
 	  \item Case-3: Desired throughputs under pressure
 	\end{itemize}
 	
-	Fig:\ref{plot_intro_native} shows the simple case where both the containers achieve desired throughputs when running on a system 
+	Fig~\ref{plot_intro_native} shows the simple case where both the containers achieve desired throughputs when running on a system 
 with no container specific provisioning. The containers start execution with no memory pressure and hence must be able to each equal 
 throughputs initially in all 3 cases although. Case-2 still shows lower levels of application performance for higher provisioned 
-containers even when the system is under no pressure. In observed throughputs under pressure Fig:\ref{plot_intro_observed}, we 
+containers even when the system is under no pressure. In observed throughputs under pressure Fig~\ref{plot_intro_observed}, we 
 observe that throughputs of Mongo-High (Container with higher priority) is negatively affected at some point or the other, when in reality 
-its throughput had to be better if not same as shown in Fig:\ref{plot_intro_desired} considering its higher resource allocations. 
+its throughput had to be better if not same as shown in Fig~\ref{plot_intro_desired} considering its higher resource allocations. 
 	
 	\pagebreak
 
@@ -180,7 +179,7 @@ its throughput had to be better if not same as shown in Fig:\ref{plot_intro_desi
 	  \end{center}	  
 	\end{table}
 	
-	Table:\ref{table_intro_th} shows how average throughputs vary in each case. It can be seen that the average throughput in case-2 
+	Table~\ref{table_intro_th} shows how average throughputs vary in each case. It can be seen that the average throughput in case-2 
 which is the provisioning of containers using existing knobs may negatively impact containers with higher allocations. By looking at the 
 example here, we can conclude by saying that 
 	
@@ -289,9 +288,7 @@ driver (eg: Balloon Driver)
     
   \section{Problem description}  
     Keeping the above drawbacks in mind, the following are the detailed problem descriptions of our work.
-  
-   \subsection{Memory management for containers}
-      In the initial phase of our work we wish to 
+    In the initial phase of our work we wished to 
       \begin{enumerate}
 	\item Understand the existing memory management policies used by Linux to manage containers.
 	\item Identify issues with existing policies and purpose new policies to be supported for.
@@ -299,8 +296,7 @@ driver (eg: Balloon Driver)
 	\item Design a solution to support purposed policies and empirically evaluate its correctness.
       \end{enumerate}
 
-   \subsection{Holistic cache and memory management for containers}
-      In this phase of our work we wish to
+   \noindent In this phase of our work we wish to
       \begin{enumerate}
 	\item Understand existing cache partitioning frameworks.
 	\item Identify drawbacks with the existing frameworks in achieving application objectives.

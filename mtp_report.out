@@ -8,54 +8,61 @@
 \BOOKMARK [2][-]{subsection.1.3.2}{Hypervisor managed caching}{section.1.3}% 8
 \BOOKMARK [2][-]{subsection.1.3.3}{Issues of caching frameworks in derivative clouds}{section.1.3}% 9
 \BOOKMARK [1][-]{section.1.4}{Problem description}{chapter.1}% 10
-\BOOKMARK [2][-]{subsection.1.4.1}{Memory management for containers}{section.1.4}% 11
-\BOOKMARK [2][-]{subsection.1.4.2}{Holistic cache and memory management for containers}{section.1.4}% 12
-\BOOKMARK [1][-]{section.1.5}{Contributions}{chapter.1}% 13
-\BOOKMARK [0][-]{chapter.2}{Background}{}% 14
-\BOOKMARK [1][-]{section.2.1}{Memory management between processes in Linux}{chapter.2}% 15
-\BOOKMARK [2][-]{subsection.2.1.1}{Memory pages used by a process}{section.2.1}% 16
-\BOOKMARK [2][-]{subsection.2.1.2}{Memory allocation}{section.2.1}% 17
-\BOOKMARK [2][-]{subsection.2.1.3}{Memory reclamation without container support}{section.2.1}% 18
-\BOOKMARK [1][-]{section.2.2}{Containers}{chapter.2}% 19
-\BOOKMARK [2][-]{subsection.2.2.1}{Control groups}{section.2.2}% 20
-\BOOKMARK [1][-]{section.2.3}{Second chance cache for derivative clouds}{chapter.2}% 21
-\BOOKMARK [2][-]{subsection.2.3.1}{Features}{section.2.3}% 22
-\BOOKMARK [2][-]{subsection.2.3.2}{Architecture}{section.2.3}% 23
-\BOOKMARK [2][-]{subsection.2.3.3}{Internals}{section.2.3}% 24
-\BOOKMARK [0][-]{chapter.3}{Related work}{}% 25
-\BOOKMARK [0][-]{chapter.4}{Differentiated memory management controller for containers}{}% 26
-\BOOKMARK [1][-]{section.4.1}{Drawbacks of existing memory management for containers}{chapter.4}% 27
-\BOOKMARK [2][-]{subsection.4.1.1}{Experimental setup}{section.4.1}% 28
-\BOOKMARK [2][-]{subsection.4.1.2}{Issues in native environment}{section.4.1}% 29
-\BOOKMARK [2][-]{subsection.4.1.3}{Amplification of issue in derivative clouds}{section.4.1}% 30
-\BOOKMARK [2][-]{subsection.4.1.4}{Key Implications}{section.4.1}% 31
-\BOOKMARK [1][-]{section.4.2}{Requirements for a new memory management controller}{chapter.4}% 32
-\BOOKMARK [1][-]{section.4.3}{Proposed memory management controller}{chapter.4}% 33
-\BOOKMARK [2][-]{subsection.4.3.1}{Controller logic}{section.4.3}% 34
-\BOOKMARK [2][-]{subsection.4.3.2}{Policies supported by our controller}{section.4.3}% 35
-\BOOKMARK [1][-]{section.4.4}{Modifications made to Linux memory Cgroup}{chapter.4}% 36
-\BOOKMARK [2][-]{subsection.4.4.1}{Per container configurable weights}{section.4.4}% 37
-\BOOKMARK [2][-]{subsection.4.4.2}{Flexible reclamation size}{section.4.4}% 38
-\BOOKMARK [2][-]{subsection.4.4.3}{Deterministic reclamation}{section.4.4}% 39
-\BOOKMARK [1][-]{section.4.5}{Empirical evaluation of our controller}{chapter.4}% 40
-\BOOKMARK [2][-]{subsection.4.5.1}{Effectiveness of our controller}{section.4.5}% 41
-\BOOKMARK [2][-]{subsection.4.5.2}{Differential QOS containers}{section.4.5}% 42
-\BOOKMARK [2][-]{subsection.4.5.3}{Impact of reclamation chunk size}{section.4.5}% 43
-\BOOKMARK [0][-]{chapter.5}{Memory management framework for derivative clouds}{}% 44
-\BOOKMARK [1][-]{section.5.1}{Drawbacks of existing framework}{chapter.5}% 45
-\BOOKMARK [2][-]{subsection.5.1.1}{Experimental setup}{section.5.1}% 46
-\BOOKMARK [2][-]{subsection.5.1.2}{Provisioning of caches at different levels based on application requirements}{section.5.1}% 47
-\BOOKMARK [1][-]{section.5.2}{Cache partitioning framework support for anonymous memory applications}{chapter.5}% 48
-\BOOKMARK [1][-]{section.5.3}{Rethink of existing design}{chapter.5}% 49
-\BOOKMARK [2][-]{subsection.5.3.1}{Decentralized memory management framework}{section.5.3}% 50
-\BOOKMARK [2][-]{subsection.5.3.2}{Hybrid cache}{section.5.3}% 51
-\BOOKMARK [1][-]{section.5.4}{Implementation specifics of the hybrid cache}{chapter.5}% 52
-\BOOKMARK [1][-]{section.5.5}{Correctness of implementation}{chapter.5}% 53
-\BOOKMARK [2][-]{subsection.5.5.1}{Arithematic validation of stats}{section.5.5}% 54
-\BOOKMARK [2][-]{subsection.5.5.2}{Movement of objects between both levels of cache}{section.5.5}% 55
-\BOOKMARK [1][-]{section.5.6}{Evaluation of Double Decker}{chapter.5}% 56
-\BOOKMARK [2][-]{subsection.5.6.1}{Hybrid cache provisioning}{section.5.6}% 57
-\BOOKMARK [2][-]{subsection.5.6.2}{Effectiveness of our decentralized memory management framework}{section.5.6}% 58
-\BOOKMARK [0][-]{chapter.6}{Conclusions}{}% 59
-\BOOKMARK [0][-]{chapter.7}{Future Extensions}{}% 60
-\BOOKMARK [0][-]{Appendix.1.A}{Appendix Double-decker source code}{}% 61
+\BOOKMARK [1][-]{section.1.5}{Contributions}{chapter.1}% 11
+\BOOKMARK [0][-]{chapter.2}{Background}{}% 12
+\BOOKMARK [1][-]{section.2.1}{Memory management between processes in Linux}{chapter.2}% 13
+\BOOKMARK [2][-]{subsection.2.1.1}{Memory pages used by a process}{section.2.1}% 14
+\BOOKMARK [2][-]{subsection.2.1.2}{Memory allocation}{section.2.1}% 15
+\BOOKMARK [2][-]{subsection.2.1.3}{Memory reclamation without container support}{section.2.1}% 16
+\BOOKMARK [1][-]{section.2.2}{Containers}{chapter.2}% 17
+\BOOKMARK [2][-]{subsection.2.2.1}{Control groups}{section.2.2}% 18
+\BOOKMARK [1][-]{section.2.3}{Second chance cache for derivative clouds}{chapter.2}% 19
+\BOOKMARK [0][-]{chapter.3}{Related work}{}% 20
+\BOOKMARK [1][-]{section.3.1}{Memory management in virtualized environments}{chapter.3}% 21
+\BOOKMARK [1][-]{section.3.2}{Resource provisioning in virtualized environments}{chapter.3}% 22
+\BOOKMARK [1][-]{section.3.3}{Nested virtualization}{chapter.3}% 23
+\BOOKMARK [1][-]{section.3.4}{Hypervisor managed caches}{chapter.3}% 24
+\BOOKMARK [2][-]{subsection.3.4.1}{Transcendent Memory}{section.3.4}% 25
+\BOOKMARK [2][-]{subsection.3.4.2}{Hypervisor cache partitioning}{section.3.4}% 26
+\BOOKMARK [1][-]{section.3.5}{Conclusions}{chapter.3}% 27
+\BOOKMARK [0][-]{chapter.4}{Differentiated memory management controller for containers}{}% 28
+\BOOKMARK [1][-]{section.4.1}{Drawbacks of existing memory management for containers}{chapter.4}% 29
+\BOOKMARK [2][-]{subsection.4.1.1}{Experimental setup}{section.4.1}% 30
+\BOOKMARK [2][-]{subsection.4.1.2}{Issues in native environment}{section.4.1}% 31
+\BOOKMARK [2][-]{subsection.4.1.3}{Amplification of issue in derivative clouds}{section.4.1}% 32
+\BOOKMARK [2][-]{subsection.4.1.4}{Key Implications}{section.4.1}% 33
+\BOOKMARK [1][-]{section.4.2}{Requirements for a new memory management controller}{chapter.4}% 34
+\BOOKMARK [1][-]{section.4.3}{Proposed memory management controller}{chapter.4}% 35
+\BOOKMARK [2][-]{subsection.4.3.1}{Controller logic}{section.4.3}% 36
+\BOOKMARK [2][-]{subsection.4.3.2}{Policies supported by our controller}{section.4.3}% 37
+\BOOKMARK [1][-]{section.4.4}{Modifications made to Linux memory Cgroup}{chapter.4}% 38
+\BOOKMARK [2][-]{subsection.4.4.1}{Per container configurable weights}{section.4.4}% 39
+\BOOKMARK [2][-]{subsection.4.4.2}{Flexible reclamation size}{section.4.4}% 40
+\BOOKMARK [2][-]{subsection.4.4.3}{Deterministic reclamation}{section.4.4}% 41
+\BOOKMARK [1][-]{section.4.5}{Empirical evaluation of our controller}{chapter.4}% 42
+\BOOKMARK [2][-]{subsection.4.5.1}{Effectiveness of our controller}{section.4.5}% 43
+\BOOKMARK [2][-]{subsection.4.5.2}{Differential QOS containers}{section.4.5}% 44
+\BOOKMARK [2][-]{subsection.4.5.3}{Impact of reclamation chunk size}{section.4.5}% 45
+\BOOKMARK [0][-]{chapter.5}{Memory management framework for derivative clouds}{}% 46
+\BOOKMARK [1][-]{section.5.1}{Drawbacks of existing framework}{chapter.5}% 47
+\BOOKMARK [2][-]{subsection.5.1.1}{Experimental setup}{section.5.1}% 48
+\BOOKMARK [2][-]{subsection.5.1.2}{Provisioning of caches at different levels based on application requirements}{section.5.1}% 49
+\BOOKMARK [1][-]{section.5.2}{Cache partitioning framework support for anonymous memory applications}{chapter.5}% 50
+\BOOKMARK [1][-]{section.5.3}{Decentralized memory management framework with a hybrid cache}{chapter.5}% 51
+\BOOKMARK [1][-]{section.5.4}{Decentralized memory management framework}{chapter.5}% 52
+\BOOKMARK [2][-]{subsection.5.4.1}{Native provider cache partitioning framework}{section.5.4}% 53
+\BOOKMARK [2][-]{subsection.5.4.2}{Derivative provider memory management framework}{section.5.4}% 54
+\BOOKMARK [1][-]{section.5.5}{Hybrid cache}{chapter.5}% 55
+\BOOKMARK [2][-]{subsection.5.5.1}{Movement of objects}{section.5.5}% 56
+\BOOKMARK [1][-]{section.5.6}{Implementation specifics of the hybrid cache}{chapter.5}% 57
+\BOOKMARK [1][-]{section.5.7}{Correctness of implementation}{chapter.5}% 58
+\BOOKMARK [2][-]{subsection.5.7.1}{Arithematic validation of stats}{section.5.7}% 59
+\BOOKMARK [2][-]{subsection.5.7.2}{Movement of objects between both levels of cache}{section.5.7}% 60
+\BOOKMARK [1][-]{section.5.8}{Evaluation of Double Decker}{chapter.5}% 61
+\BOOKMARK [2][-]{subsection.5.8.1}{Hybrid cache provisioning}{section.5.8}% 62
+\BOOKMARK [2][-]{subsection.5.8.2}{Effectiveness of our decentralized memory management framework}{section.5.8}% 63
+\BOOKMARK [0][-]{chapter.6}{Conclusions}{}% 64
+\BOOKMARK [1][-]{section.6.1}{Differentiated memory management controller}{chapter.6}% 65
+\BOOKMARK [1][-]{section.6.2}{Decentralized memory management framework}{chapter.6}% 66
+\BOOKMARK [0][-]{chapter.7}{Future Extensions}{}% 67
+\BOOKMARK [0][-]{Appendix.1.A}{Appendix DoubleDecker source code}{}% 68

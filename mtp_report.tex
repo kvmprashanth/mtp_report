@@ -28,7 +28,7 @@
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
 
 \newcommand{\cg}{Cgroups}
-\newcommand{\dd}{Double-decker}
+\newcommand{\dd}{DoubleDecker}
 \newcommand{\sol}{soft-limit}
 \newcommand{\redis}{Redis}
 \newcommand{\hl}{hard-limit}
@@ -61,8 +61,8 @@
   \begin{titlepage}    
     \begin{center}
    
-      \Large \textbf{Adapative memory management frameworks \\for derivative clouds}  \\
-      \vspace{5em}
+      \huge \textbf{Adaptive memory management frameworks \\for derivative clouds}  \\
+      \vspace{4em}
       
       \large \textbf{Master's Thesis Report} \\
       \vspace{5em}
@@ -100,25 +100,23 @@
   \normalsize 
     
     Derivative clouds---nesting of virtualization entities to provision cloud platforms, has gained popularity 
-    with the emergence of container based virtualization techniques. Several large cloud providers \cite{gcp, heroku, sapcp} have
+    with the emergence of container based virtualization techniques. Several large cloud providers \cite{gcp, heroku, sapcp}
     have adopted derivative clouds by provisioning containers within virtual machines to provide cloud services to their 
-    customers. 
+    customers and to stay at par with the industry standards, we also have followed a similar setup to emulate our derivative 
+    cloud setup.
     
     As a part of our initial work, we have made an attempt to understand memory management in containers in an native(non-nested)
-    and derivative cloud setup. We had identified drawbacks in the memory management controller provided by Linux, and proposed
-    updates to the existing controller and evaluated the same. Our controller was able to differentially provision memory as
+    and derivative cloud setup. We have identified drawbacks in the memory management controller provided by Linux, thereafter which
+    we proposed updates to the existing controller and evaluated the same. Our controller was able to differentially provision memory as
     a resource among several container executing both in an native and derivative setup. The effects of such differentially 
-    provisioned containers were observable in their application throughputs.
+    provisioned containers proportionally impacted application throughputs.
     
     We then moved onto analyzing cache partitioning frameworks and how they impact in achieving application performance 
     objectives (SLAs). We identified that existing cache partitioning frameworks had no support for derivative clouds and
     hence made changes to it. However we established that mere cache partitioning frameworks fail to support applications 
     having in-VM memory requirements. Hence we moved to a decentralized (multi-level) memory management framework that
     supports provisioning both memory and cache as a resource at the VM-level (derivative provider). With our memory 
-    management framework we were able to provision for a wider range of applications.
-
-    
-  
+    management framework we were able to provision for a wider range of applications. 
   . 
     
     \newpage
@@ -162,7 +160,8 @@
   %\include{appendix/benchmarks}
   \begin{appendices}
     \chapter{\dd{} source code}
-      The complete source code for \dd{} is available at \url{https://github.com/kvmprashanth/double_decker}.
+      The complete source code for \dd{} is available at \url{https://github.com/kvmprashanth/double_decker} and
+      \url{https://github.com/provm/double_decker}.
       
       \dd{} is implemented as an loadable kernel module. To know the complete procedure for setting up double decker on
       a Linux machine, kindly follow the steps provided in the README.md in the given above link.

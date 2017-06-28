@@ -100,21 +100,23 @@
   \normalsize 
     
     Derivative clouds---nesting of virtualization entities to provision cloud platforms, has gained popularity 
-    with the emergence of container based virtualization techniques. Several large cloud providers \cite{gcp, heroku, sapcp} have
+    with the emergence of container based virtualization techniques. Several large cloud providers \cite{gcp, heroku, sapcp}
     have adopted derivative clouds by provisioning containers within virtual machines to provide cloud services to their 
-    customers. 
+    customers and to stay at par with the industry standards, we also have followed a similar setup to emulate our derivative 
+    cloud setup.
     
     As a part of our initial work, we have made an attempt to understand memory management in containers in an native(non-nested)
-    and derivative cloud setup. We had identified drawbacks in the memory management controller provided by Linux, and proposed
-    updates to the existing controller and evaluated the same. Our controller was able to differentially provision memory as
+    and derivative cloud setup. We have identified drawbacks in the memory management controller provided by Linux, thereafter which
+    we propose updates to the existing controller and evaluate the same. Our controller was able to differentially provision memory as
     a resource among several container executing both in an native and derivative setup. The effects of such differentially 
-    provisioned containers were observable in their application throughputs.
+    provisioned containers proportionally impacted application throughputs.
     
     We then moved onto analyzing cache partitioning frameworks and how they impact in achieving application performance 
     objectives (SLAs). We identified that existing cache partitioning frameworks had no support for derivative clouds and
-    hence made changes to it to support derivative clouds. However we established that mere cache partitioning frameworks fail
-    to support applications have in-VM memory requirements. Hence we moved to a decentralized memory management framework that
-    supports provisioning both memory and cache as a resource at the derivative provider. 
+    hence made changes to it. However we established that mere cache partitioning frameworks fail to support applications 
+    having in-VM memory requirements. Hence we moved to a decentralized (multi-level) memory management framework that
+    supports provisioning both memory and cache as a resource at the VM-level (derivative provider). With our memory 
+    management framework we were able to provision for a wider range of applications.
 
     
   

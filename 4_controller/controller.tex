@@ -81,7 +81,7 @@
     to release the memory.
 
 	\myparagraph{Redis}
-	    Redis \cite{Redis} is a in-memory data structure store, used as database, cache and message broker. It is used to store a large 
+	    Redis \cite{redis} is a in-memory data structure store, used as database, cache and message broker. It is used to store a large 
     number of in-memory key-value pairs. Its in-memory nature makes it a prime candidate to use it as a workload in our empirical evaluations.
       
 	\myparagraph{YCSB benchmark}
@@ -186,21 +186,21 @@ using Stress workload running directly on the host machine.
 	    \centering
 	    \begin{subfigure}[t]{0.48\textwidth}
 	      \centering
-	      \includegraphics[width=0.8\textwidth]{images/controller_issues/exceed_only/Exceed.png}
+	      \includegraphics[width=1\textwidth]{images/controller_issues/exceed_only/Exceed.png}
 	      \caption{Memory exceed plot}
 	      \label{img_exceed_only_1_exceed}
 	    \end{subfigure}
 	    ~ 
 	    \begin{subfigure}[t]{0.48\textwidth}
 	      \centering
-	      \includegraphics[width=0.8\textwidth]{images/controller_issues/exceed_only/Memory_Reclaimed.png}
+	      \includegraphics[width=1\textwidth]{images/controller_issues/exceed_only/Memory_Reclaimed.png}
 	      \caption{Cumulative soft memory reclaimed plot}
 	      \label{img_exceed_only_1_smr}
 	    \end{subfigure}
 	    ~ 
 	    \begin{subfigure}[t]{0.48\textwidth}
 	      \centering
-	      \includegraphics[width=0.8\textwidth]{images/controller_issues/exceed_only/compare.png}
+	      \includegraphics[width=1\textwidth]{images/controller_issues/exceed_only/compare.png}
 	      \caption{SMR versus GLR}
 	    \label{img_exceed_only_1_compare}
 	    \end{subfigure}
@@ -240,14 +240,14 @@ using Stress workload running directly on the host machine.
 	    \centering
 	    \begin{subfigure}[t]{0.48\textwidth}
 	      \centering
-	      \includegraphics[width=0.8\textwidth]{images/controller_issues/global_lru/mu.png}
+	      \includegraphics[width=1\textwidth]{images/controller_issues/global_lru/mu.png}
 	      \caption{Memory Usage Plot}
 	      \label{img_no_sl_mu}
 	    \end{subfigure}
 	    ~ 
 	    \begin{subfigure}[t]{0.48\textwidth}
 	      \centering
-	      \includegraphics[width=0.8\textwidth]{images/controller_issues/global_lru/compare.png}
+	      \includegraphics[width=1\textwidth]{images/controller_issues/global_lru/compare.png}
 	      \caption{SMR versus GLR Plot}
 	      \label{img_no_sl_global_vs_local}
 	    \end{subfigure}
@@ -289,15 +289,15 @@ using Stress workload running directly on the host machine.
 	    \centering
 	    \begin{subfigure}[t]{0.48\textwidth}
 	      \centering
-	      \includegraphics[width=0.8\textwidth]{images/controller_issues/workload/1/Exceed.png}
-	      \caption{Exceed plot for Experiment-4a}
+	      \includegraphics[width=1\textwidth]{images/controller_issues/workload/1/Exceed.png}
+	      \caption{Exceed plot for memory hogger}
 	      \label{img:workload_1_exceed}
 	    \end{subfigure}
 	    ~ 
 	    \begin{subfigure}[t]{0.48\textwidth}
 	      \centering
-	      \includegraphics[width=0.8\textwidth]{images/controller_issues/workload/2/Exceed.png}
-	      \caption{Exceed plot for Experiment-4b}
+	      \includegraphics[width=1\textwidth]{images/controller_issues/workload/2/Exceed.png}
+	      \caption{Exceed plot for file hogger}
 	      \label{img:workload_2_exceed}
 	    \end{subfigure}
 	    \caption{Plots for analyzing effect of workloads characteristics on reclamation}
@@ -403,7 +403,7 @@ balloon size triggered from the host.
       container-hosted applications. The nested VM was provisioning with 6 vCPUs
       and 16 GB memory and the workload generating VM has allocated 1 vcPU and 6 GB memory.
       The nesting setup consisted of four Docker containers~\cite{docker}
-      which executed with \redis{}~\cite{Redis} and
+      which executed with \redis{}~\cite{redis} and
       \mongo{}~\cite{Mongodb} workloads. 
       Default configurations of the applications executed within
       the contains is as shown in Table~\ref{tbl:table_default_config}.
@@ -519,7 +519,7 @@ balloon size triggered from the host.
       that are desired---proportionate memory usages at all instances,
       order-of-reclamation across containers etc. This is especially required in nested
       hosting environments where derivative service provides would be benefited
-      by providing a rich set of prioritization features.
+      by providing a rich set of prioratization features.
     
   \section{Requirements for a new memory management controller}
   
@@ -532,7 +532,7 @@ balloon size triggered from the host.
 although the notion of priority exists in other resources. The existing knobs fail to enforce priority used to manage memory in containers. 
       \item \textbf{Deterministic provisioning:} The policy to be designed must eliminate existing non determinism that exists while 
 managing memory between containers in existing system.
-      \item \textbf{Elastic provisioning:} Memory allocated must be resizable as and when required. 
+      \item \textbf{Elastic provisioning:} Memory allocated must be re-sizable as and when required. 
       \item \textbf{Adaptive:} On changing resources provisioned to the system as in the case of an derivative environment, the policy 
 enforced must still do it's best in maintaining promised QOS.
       \item \textbf{Differentiated memory reclamation:} The policy could build around the notion of differentiated memory reclamation when 
