@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: mtp_report.aux
 A level-1 auxiliary file: 1_intro/introduction.aux
@@ -18,10 +18,6 @@ Repeated entry---line 8 of file mylit.bib
 I'm skipping whatever remains of this entry
 Warning--entry type for "amazonec2" isn't style-file defined
 --line 54 of file mylit.bib
-Warning--entry type for "heroku" isn't style-file defined
---line 124 of file mylit.bib
-Warning--entry type for "sapcp" isn't style-file defined
---line 130 of file mylit.bib
 Warning--entry type for "docker" isn't style-file defined
 --line 137 of file mylit.bib
 Warning--entry type for "lxd" isn't style-file defined
@@ -57,36 +53,36 @@ Warning--entry type for "gcp" isn't style-file defined
 Warning--empty booktitle in doubledecker
 Warning--can't use both volume and number fields in williams2011overdriver
 Warning--can't use both volume and number fields in zhou2004dynamic
-You've used 44 entries,
+You've used 42 entries,
             1876 wiz_defined-function locations,
-            694 strings with 10879 characters,
-and the built_in function-call counts, 11425 in all, are:
-= -- 1115
-> -- 404
+            688 strings with 10771 characters,
+and the built_in function-call counts, 11209 in all, are:
+= -- 1091
+> -- 402
 < -- 0
-+ -- 155
++ -- 153
 - -- 111
-* -- 736
-:= -- 1467
-add.period$ -- 46
-call.type$ -- 44
-change.case$ -- 44
+* -- 732
+:= -- 1449
+add.period$ -- 44
+call.type$ -- 42
+change.case$ -- 42
 chr.to.int$ -- 0
-cite$ -- 47
-duplicate$ -- 605
-empty$ -- 1228
+cite$ -- 45
+duplicate$ -- 597
+empty$ -- 1192
 format.name$ -- 111
-if$ -- 2872
+if$ -- 2808
 int.to.chr$ -- 0
-int.to.str$ -- 44
+int.to.str$ -- 42
 missing$ -- 30
-newline$ -- 148
+newline$ -- 140
 num.names$ -- 32
-pop$ -- 279
+pop$ -- 261
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 408
+skip$ -- 402
 stack$ -- 0
 substring$ -- 719
 swap$ -- 219
@@ -96,6 +92,6 @@ top$ -- 0
 type$ -- 0
 warning$ -- 3
 while$ -- 108
-width$ -- 46
-write$ -- 403
+width$ -- 44
+write$ -- 389
 (There were 4 error messages)

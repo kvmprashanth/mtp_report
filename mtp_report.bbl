@@ -1,17 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{gcp}
-``Google cloud plalform.''
-\newblock \url{https://cloud.google.com/container-engine/}.
-
-\bibitem{heroku}
-``Heroku.''
-\newblock \url{http://www.heroku.com}.
-
-\bibitem{sapcp}
-``Sap cloud platform.''
-\newblock \url{https://cloudplatform.sap.com/index.html}.
-
 \bibitem{sharma2015spotcheck}
 P.~Sharma, S.~Lee, T.~Guo, D.~Irwin, and P.~Shenoy, ``Spotcheck: Designing a
   derivative iaas cloud on the spot market,'' in {\em Proceedings of the Tenth
@@ -158,6 +146,10 @@ S.~He, L.~Guo, Y.~Guo, C.~Wu, M.~Ghanem, and R.~Han, ``Elastic application
 D.~Williams, H.~Jamjoom, and H.~Weatherspoon, ``The xen-blanket: virtualize
   once, run everywhere,'' in {\em Proceedings of the 7th ACM european
   conference on Computer Systems}, pp.~113--126, ACM, 2012.
+
+\bibitem{gcp}
+``Google cloud plalform.''
+\newblock \url{https://cloud.google.com/container-engine/}.
 
 \bibitem{lu2007virtual}
 P.~Lu and K.~Shen, ``Virtual machine memory access tracing with hypervisor
