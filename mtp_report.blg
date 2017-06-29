@@ -17,81 +17,81 @@ Repeated entry---line 8 of file mylit.bib
  :               ,
 I'm skipping whatever remains of this entry
 Warning--entry type for "amazonec2" isn't style-file defined
---line 54 of file mylit.bib
+--line 62 of file mylit.bib
 Warning--entry type for "docker" isn't style-file defined
---line 137 of file mylit.bib
-Warning--entry type for "lxd" isn't style-file defined
 --line 145 of file mylit.bib
+Warning--entry type for "lxd" isn't style-file defined
+--line 153 of file mylit.bib
 Warning--entry type for "manual" isn't style-file defined
---line 171 of file mylit.bib
-Repeated entry---line 219 of file mylit.bib
+--line 179 of file mylit.bib
+Repeated entry---line 227 of file mylit.bib
  : @inproceedings{dornemann2009demand
  :                                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 228 of file mylit.bib
+Repeated entry---line 236 of file mylit.bib
  : @inproceedings{shen2011cloudscale
  :                                  ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 237 of file mylit.bib
+Repeated entry---line 245 of file mylit.bib
  : @article{calheiros2012aneka
  :                            ,
 I'm skipping whatever remains of this entry
 Warning--entry type for "stress" isn't style-file defined
---line 257 of file mylit.bib
+--line 265 of file mylit.bib
 Warning--entry type for "mongodb" isn't style-file defined
---line 263 of file mylit.bib
+--line 271 of file mylit.bib
 Warning--entry type for "redis" isn't style-file defined
---line 269 of file mylit.bib
+--line 277 of file mylit.bib
 Warning--entry type for "mysql" isn't style-file defined
---line 275 of file mylit.bib
+--line 283 of file mylit.bib
 Warning--entry type for "filebench" isn't style-file defined
---line 281 of file mylit.bib
+--line 289 of file mylit.bib
 Warning--entry type for "memcached" isn't style-file defined
---line 287 of file mylit.bib
-Warning--entry type for "gcp" isn't style-file defined
 --line 295 of file mylit.bib
+Warning--entry type for "gcp" isn't style-file defined
+--line 303 of file mylit.bib
 Warning--empty booktitle in doubledecker
 Warning--can't use both volume and number fields in williams2011overdriver
 Warning--can't use both volume and number fields in zhou2004dynamic
-You've used 42 entries,
+You've used 43 entries,
             1876 wiz_defined-function locations,
-            688 strings with 10771 characters,
-and the built_in function-call counts, 11209 in all, are:
-= -- 1091
-> -- 402
+            693 strings with 10994 characters,
+and the built_in function-call counts, 11386 in all, are:
+= -- 1104
+> -- 410
 < -- 0
-+ -- 153
-- -- 111
-* -- 732
-:= -- 1449
-add.period$ -- 44
-call.type$ -- 42
-change.case$ -- 42
++ -- 156
+- -- 113
+* -- 743
+:= -- 1475
+add.period$ -- 45
+call.type$ -- 43
+change.case$ -- 43
 chr.to.int$ -- 0
-cite$ -- 45
-duplicate$ -- 597
-empty$ -- 1192
-format.name$ -- 111
-if$ -- 2808
+cite$ -- 46
+duplicate$ -- 610
+empty$ -- 1216
+format.name$ -- 113
+if$ -- 2851
 int.to.chr$ -- 0
-int.to.str$ -- 42
-missing$ -- 30
-newline$ -- 140
-num.names$ -- 32
-pop$ -- 261
+int.to.str$ -- 43
+missing$ -- 31
+newline$ -- 143
+num.names$ -- 33
+pop$ -- 268
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 402
+skip$ -- 405
 stack$ -- 0
 substring$ -- 719
-swap$ -- 219
+swap$ -- 220
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 108
-width$ -- 44
-write$ -- 389
+while$ -- 109
+width$ -- 45
+write$ -- 398
 (There were 4 error messages)

@@ -97,6 +97,11 @@ I.~Stefanovici, E.~Thereska, G.~O'Shea, B.~Schroeder, H.~Ballani,
 D.~Mishra and P.~Kulkarni, ``Doubledecker: Differentiated hypervisor caching
   for derivative clouds,'' 2016.
 
+\bibitem{prashanth2017}
+P.~K. Chandra~Prakash, Prashanth and U.~Bellur, ``Mitigating nesting-agnostic
+  hypervisor policies in derivative clouds,'' in {\em Poster, International
+  Conference on Distributed Computing Systems (ICDCS)}, IEEE, 2017.
+
 \bibitem{docker}
 D.~Inc., ``Docker offical documentation,'' 2016.
 \newblock \url{https://docs.docker.com/}.

@@ -22,6 +22,14 @@
   organization={IEEE}
 }
 
+@inproceedings{prashanth2017,
+  title={Mitigating nesting-agnostic hypervisor policies in derivative clouds},
+  author={Chandra Prakash, Prashanth, Purushottam Kulkarni and Umesh Bellur},
+  booktitle={Cluster Computing and the Grid, 2009. CCGRID'09. 9th IEEE/ACM International Symposium on},
+  year={2017},
+  organization={IEEE}
+}
+
 @inproceedings{shen2011cloudscale,
   title={Cloudscale: elastic resource scaling for multi-tenant cloud systems},
   author={Shen, Zhiming and Subbiah, Sethuraman and Gu, Xiaohui and Wilkes, John},
@@ -126,6 +134,13 @@ International Symposium On},
   note={\url{http://www.heroku.com}},
   urldate = {2016-10-09}
 }
+
+@online{sapcp,
+  title = {SAP Cloud Platform},
+  note={\url{https://cloudplatform.sap.com/index.html}},
+  urldate = {2017-06-17}
+}
+
 
 @online{docker,
   author = {Docker Inc.},
@@ -265,6 +280,26 @@ Conf on Embedded Software and Syst (HPCC, CSS, ICESS), 2014 IEEE Intl Conf on},
   urldate = {2016-10-09}
 }
 
+@online{mysql,
+  title = {MySQL database server},
+  note={\url{https://www.mysql.com/}},
+  urldate = {2017-06-19}
+}
+
+@online{filebench,
+  title = {Filebench},
+  note={\url{https://github.com/filebench/filebench/wiki}},
+  urldate = {2017-06-19}
+}
+
+@online{memcached,
+  title = {Memcached Distributed In-Memory key-value store},
+  note={\url{https://memcached.org/}},
+  urldate = {2017-06-19}
+}}},
+  urldate = {2016-10-09}
+}
+
 @online{gcp,
   title = {Google cloud plalform},
   note={\url{https://cloud.google.com/container-engine/}},
@@ -339,10 +374,56 @@ Conf on Embedded Software and Syst (HPCC, CSS, ICESS), 2014 IEEE Intl Conf on},
   organization={IEEE}
 }
 
+@inproceedings{stefanovici2015software,
+  title={Software-defined caching: Managing caches in multi-tenant data centers},
+  author={Stefanovici, Ioan and Thereska, Eno and O'Shea, Greg and Schroeder, Bianca and Ballani, Hitesh and Karagiannis, Thomas and Rowstron, Antony and Talpey, Tom},
+  booktitle={Proceedings of the Sixth ACM Symposium on Cloud Computing},
+  pages={174--181},
+  year={2015},
+  organization={ACM}
+}
 
 
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+@article{zhao2009dynamic,
+  title={Dynamic memory balancing for virtual machines},
+  author={Zhao, Weiming and Wang, Zhenlin and Luo, Yingwei},
+  journal={ACM SIGOPS Operating Systems Review},
+  volume={43},
+  number={3},
+  pages={37--47},
+  year={2009},
+  publisher={ACM}
+}
+
+@inproceedings{zhou2004dynamic,
+  title={Dynamic tracking of page miss ratio curve for memory management},
+  author={Zhou, Pin and Pandey, Vivek and Sundaresan, Jagadeesan and Raghuraman, Anand and Zhou, Yuanyuan and Kumar, Sanjeev},
+  booktitle={ACM SIGOPS Operating Systems Review},
+  volume={38},
+  number={5},
+  pages={177--188},
+  year={2004},
+  organization={ACM}
+}
+
+@inproceedings{zhao2011low,
+  title={Low Cost Working Set Size Tracking.},
+  author={Zhao, Weiming and Jin, Xinxin and Wang, Zhenlin and Wang, Xiaolin and Luo, Yingwei and Li, Xiaoming},
+  booktitle={USENIX Annual Technical Conference},
+  year={2011}
+}
+
+@inproceedings{waldspurger2015efficient,
+  title={Efficient MRC Construction with SHARDS.},
+  author={Waldspurger, Carl A and Park, Nohhyun and Garthwaite, Alexander T and Ahmad, Irfan},
+  booktitle={FAST},
+  pages={95--110},
+  year={2015}
+}
+
 
