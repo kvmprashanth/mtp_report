@@ -51,7 +51,7 @@
 \contentsline {paragraph}{Hypothesis}{23}{section*.38}
 \contentsline {paragraph}{Procedure}{24}{section*.39}
 \contentsline {paragraph}{Observations}{24}{section*.41}
-\contentsline {paragraph}{Inference}{25}{section*.42}
+\contentsline {paragraph}{Inference}{24}{section*.42}
 \contentsline {subsubsection}{Reclamation below soft limits}{25}{section*.43}
 \contentsline {paragraph}{Hypothesis}{25}{section*.44}
 \contentsline {paragraph}{Procedure}{25}{section*.45}
@@ -62,28 +62,28 @@
 \contentsline {paragraph}{Procedure}{26}{section*.51}
 \contentsline {paragraph}{Observations}{26}{section*.53}
 \contentsline {paragraph}{Inference}{26}{section*.54}
-\contentsline {subsubsection}{Key Implications}{27}{section*.55}
+\contentsline {subsubsection}{Key Implications}{26}{section*.55}
 \contentsline {subsection}{\numberline {4.1.3}Amplification of issue in derivative clouds}{27}{subsection.4.1.3}
 \contentsline {subsubsection}{Testbed}{27}{section*.56}
-\contentsline {paragraph}{Host}{28}{section*.58}
+\contentsline {paragraph}{Host}{27}{section*.58}
 \contentsline {paragraph}{Guest}{28}{section*.59}
 \contentsline {subsubsection}{Experimental Flow}{28}{section*.60}
-\contentsline {subsubsection}{Impact in derivative environment}{29}{section*.62}
+\contentsline {subsubsection}{Impact in derivative environment}{28}{section*.62}
 \contentsline {subsection}{\numberline {4.1.4}Key Implications}{30}{subsection.4.1.4}
 \contentsline {section}{\numberline {4.2}Requirements for a new memory management controller}{30}{section.4.2}
-\contentsline {section}{\numberline {4.3}Proposed memory management controller}{31}{section.4.3}
+\contentsline {section}{\numberline {4.3}Proposed memory management controller}{30}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Controller logic}{31}{subsection.4.3.1}
 \contentsline {subsection}{\numberline {4.3.2}Policies supported by our controller}{31}{subsection.4.3.2}
-\contentsline {subsubsection}{Policy 1: Proportionate memory allocation}{32}{section*.64}
+\contentsline {subsubsection}{Policy 1: Proportionate memory allocation}{31}{section*.64}
 \contentsline {subsubsection}{Policy 2: Application-specific differentiated allocation}{32}{section*.65}
 \contentsline {section}{\numberline {4.4}Modifications made to Linux memory Cgroup}{32}{section.4.4}
 \contentsline {subsection}{\numberline {4.4.1}Per container configurable weights}{32}{subsection.4.4.1}
 \contentsline {subsection}{\numberline {4.4.2}Flexible reclamation size}{32}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}Deterministic reclamation}{33}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.3}Deterministic reclamation}{32}{subsection.4.4.3}
 \contentsline {section}{\numberline {4.5}Empirical evaluation of our controller}{33}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Effectiveness of our controller}{34}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.1}Effectiveness of our controller}{33}{subsection.4.5.1}
 \contentsline {subsection}{\numberline {4.5.2}Differential QOS containers}{34}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}Impact of reclamation chunk size}{34}{subsection.4.5.3}
+\contentsline {subsection}{\numberline {4.5.3}Impact of reclamation chunk size}{35}{subsection.4.5.3}
 \contentsline {chapter}{\numberline {5}Memory management framework for derivative clouds}{36}{chapter.5}
 \contentsline {section}{\numberline {5.1}Drawbacks of existing framework}{36}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}Experimental setup}{36}{subsection.5.1.1}

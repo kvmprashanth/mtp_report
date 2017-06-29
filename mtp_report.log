@@ -1,15 +1,15 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.5)  29 JUN 2017 02:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.6.13)  29 JUN 2017 11:39
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
  %&-line parsing enabled.
 **mtp_report.tex
 (./mtp_report.tex
-LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 2 languages loaded.
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
-Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
-File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@chapter=\count80
@@ -25,26 +25,26 @@ File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \bibindent=\dimen102
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
-Package: pdfpages 2013/08/25 v0.4v Insert pages of external PDF documents (AM)
+Package: pdfpages 2015/09/18 v0.5d Insert pages of external PDF documents (AM)
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count88
 \calc@Bcount=\count89
 \calc@Adimen=\dimen103
 \calc@Bdimen=\dimen104
 \calc@Askip=\skip43
 \calc@Bskip=\skip44
-LaTeX Info: Redefining \setlength on input line 76.
-LaTeX Info: Redefining \addtolength on input line 77.
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count90
 \calc@Cskip=\skip45
 )
 (/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
-Package: eso-pic 2013/10/06 v2.0d eso-pic (RN)
+Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/atbegshi.sty
 Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
@@ -60,10 +60,10 @@ Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/usr/share/texmf/tex/latex/xcolor/xcolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
@@ -86,24 +86,27 @@ Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 91.
+Package graphics Info: Driver file: pdftex.def on input line 95.
 )
 \Gin@req@height=\dimen105
 \Gin@req@width=\dimen106
 )
+\AM@pagewidth=\dimen107
+\AM@pageheight=\dimen108
+
 (/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pppdftex.def
-File: pppdftex.def 2013/08/25 v0.4v Pdfpages driver for pdfTeX (AM)
+File: pppdftex.def 2015/09/18 v0.5d Pdfpages driver for pdfTeX (AM)
 )
 \AM@pagebox=\box26
 \AM@toc@title=\toks15
@@ -120,23 +123,23 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
-\heavyrulewidth=\dimen107
-\lightrulewidth=\dimen108
-\cmidrulewidth=\dimen109
-\belowrulesep=\dimen110
-\belowbottomsep=\dimen111
-\aboverulesep=\dimen112
-\abovetopsep=\dimen113
-\cmidrulesep=\dimen114
-\cmidrulekern=\dimen115
-\defaultaddspace=\dimen116
+\heavyrulewidth=\dimen109
+\lightrulewidth=\dimen110
+\cmidrulewidth=\dimen111
+\belowrulesep=\dimen112
+\belowbottomsep=\dimen113
+\aboverulesep=\dimen114
+\abovetopsep=\dimen115
+\cmidrulesep=\dimen116
+\cmidrulekern=\dimen117
+\defaultaddspace=\dimen118
 \@cmidla=\count94
 \@cmidlb=\count95
-\@aboverulesep=\dimen117
-\@belowrulesep=\dimen118
+\@aboverulesep=\dimen119
+\@belowrulesep=\dimen120
 \@thisruleclass=\count96
 \@lastruleclass=\count97
-\@thisrulewidth=\dimen119
+\@thisrulewidth=\dimen121
 )
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
@@ -151,29 +154,35 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@cnth=\count98
 \Gm@cntv=\count99
 \c@Gm@tempcnt=\count100
-\Gm@bindingoffset=\dimen120
-\Gm@wd@mp=\dimen121
-\Gm@odd@mp=\dimen122
-\Gm@even@mp=\dimen123
-\Gm@layoutwidth=\dimen124
-\Gm@layoutheight=\dimen125
-\Gm@layouthoffset=\dimen126
-\Gm@layoutvoffset=\dimen127
+\Gm@bindingoffset=\dimen122
+\Gm@wd@mp=\dimen123
+\Gm@odd@mp=\dimen124
+\Gm@even@mp=\dimen125
+\Gm@layoutwidth=\dimen126
+\Gm@layoutheight=\dimen127
+\Gm@layouthoffset=\dimen128
+\Gm@layoutvoffset=\dimen129
 \Gm@dimlist=\toks18
 )
 (/usr/share/texlive/texmf-dist/tex/latex/savetrees/savetrees.sty
-Package: savetrees 2013/04/09 v2.1 Pack as much text as possible onto each page
+Package: savetrees 2014/12/19 v2.3 Pack as much text as possible onto each page
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
-Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 
 (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks19
 \XKV@tempa@toks=\toks20
+)
 \XKV@depth=\count101
-File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
 \everypar=\toks21
 )
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
@@ -181,7 +190,7 @@ Package: microtype 2013/05/23 v2.5a Micro-typographical refinements (RS)
 \MT@toks=\toks22
 \MT@count=\count102
 LaTeX Info: Redefining \textls on input line 766.
-\MT@outer@kern=\dimen128
+\MT@outer@kern=\dimen130
 LaTeX Info: Redefining \textmicrotypecontext on input line 1285.
 \MT@listname@count=\count103
 
@@ -200,7 +209,7 @@ File: microtype.cfg 2013/05/23 v2.5a microtype main configuration file (RS)
 (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \labelindent=\skip47
-\enit@outerparindent=\dimen129
+\enit@outerparindent=\dimen131
 \enit@toks=\toks23
 \enit@inbox=\box30
 \enitdp@description=\count104
@@ -217,8 +226,7 @@ Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
 Package hobsub Info: Skipping package `ltxcmds' (already loaded).
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `ifluatex' (already loaded).
 Package hobsub Info: Skipping package `ifvtex' (already loaded).
 Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
 Package hobsub Info: Skipping package `ifpdf' (already loaded).
@@ -257,7 +265,7 @@ Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
-\@linkdim=\dimen130
+\@linkdim=\dimen132
 \Hy@linkcounter=\count105
 \Hy@pagecounter=\count106
 
@@ -284,10 +292,10 @@ Package hyperref Info: Bookmarks ON on input line 4688.
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen131
+\XeTeXLinkMargin=\dimen133
 \Fld@menulength=\count109
-\Field@Width=\dimen132
-\Fld@charsize=\dimen133
+\Field@Width=\dimen134
+\Fld@charsize=\dimen135
 Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
@@ -317,25 +325,25 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \Hy@SectionHShift=\skip48
 )
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 57.
-\captionmargin=\dimen134
-\captionmargin@=\dimen135
-\captionwidth=\dimen136
-\caption@tempdima=\dimen137
-\caption@indent=\dimen138
-\caption@parindent=\dimen139
-\caption@hangindent=\dimen140
+Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen136
+\captionmargin@=\dimen137
+\captionwidth=\dimen138
+\caption@tempdima=\dimen139
+\caption@indent=\dimen140
+\caption@parindent=\dimen141
+\caption@hangindent=\dimen142
 )
 \c@ContinuedFloat=\count115
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+Package: subcaption 2016/02/20 v1.1-142 Sub-captions (AR)
 \c@subfigure=\count116
 \c@subtable=\count117
 )
@@ -363,48 +371,48 @@ LaTeX Font Info:    Try loading font information for U+psy on input line 64.
 File: upsy.fd 2001/06/04 font definitions for U/psy.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
-Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen141
-\extrarowheight=\dimen142
+Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen143
+\extrarowheight=\dimen144
 \NC@list=\toks25
 \extratabsurround=\skip49
 \backup@length=\skip50
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2013/01/14 v2.14 AMS math features
+Package: amsmath 2016/03/03 v2.15a AMS math features
 \@mathmargin=\skip51
 
 For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
-Package: amstext 2000/06/29 v2.01
+Package: amstext 2000/06/29 v2.01 AMS text
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
-File: amsgen.sty 1999/11/30 v2.0
+File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks26
-\ex@=\dimen143
+\ex@=\dimen145
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
-Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen144
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen146
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count118
-LaTeX Info: Redefining \frac on input line 210.
+LaTeX Info: Redefining \frac on input line 199.
 \uproot@=\count119
 \leftroot@=\count120
-LaTeX Info: Redefining \overline on input line 306.
+LaTeX Info: Redefining \overline on input line 297.
 \classnum@=\count121
 \DOTSCASE@=\count122
-LaTeX Info: Redefining \ldots on input line 378.
-LaTeX Info: Redefining \dots on input line 381.
-LaTeX Info: Redefining \cdots on input line 466.
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
 \Mathstrutbox@=\box31
 \strutbox@=\box32
-\big@size=\dimen145
-LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\big@size=\dimen147
+LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
 \macc@depth=\count123
 \c@MaxMatrixCols=\count124
 \dotsspace@=\muskip11
@@ -415,18 +423,18 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \column@=\count128
 \maxfields@=\count129
 \andhelp@=\toks28
-\eqnshift@=\dimen146
-\alignsep@=\dimen147
-\tagshift@=\dimen148
-\tagwidth@=\dimen149
-\totwidth@=\dimen150
-\lineht@=\dimen151
+\eqnshift@=\dimen148
+\alignsep@=\dimen149
+\tagshift@=\dimen150
+\tagwidth@=\dimen151
+\totwidth@=\dimen152
+\lineht@=\dimen153
 \@envbody=\toks29
 \multlinegap=\skip52
 \multlinetaggap=\skip53
 \mathdisplay@stack=\toks30
-LaTeX Info: Redefining \[ on input line 2665.
-LaTeX Info: Redefining \] on input line 2666.
+LaTeX Info: Redefining \[ on input line 2735.
+LaTeX Info: Redefining \] on input line 2736.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
 Package: appendix 2009/09/02 v1.2b extra appendix facilities
@@ -459,13 +467,13 @@ LaTeX Font Info:    ... okay on input line 59.
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count133
-\scratchdimen=\dimen152
+\scratchdimen=\dimen154
 \scratchbox=\box34
 \nofMPsegments=\count134
 \nofMParguments=\count135
 \everyMPshowfont=\toks31
 \MPscratchCnt=\count136
-\MPscratchDim=\dimen153
+\MPscratchDim=\dimen155
 \MPnumerator=\count137
 \makeMPintoPDFobject=\count138
 \everyMPtoPDFconversion=\toks32
@@ -484,6 +492,14 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/pdflscape.sty
+Package: pdflscape 2008/08/11 v0.10 Display of landscape pages in PDF (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
+)
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -722,37 +738,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 106--107
 []|\OT1/cmr/m/n/10.95/-25ls Desired
  []
 
-[3] <images/intro/native.png, id=528, 451.6875pt x 376.40625pt>
+[3] <images/intro/native.png, id=528, 602.25pt x 461.725pt>
 File: images/intro/native.png Graphic file (type png)
 
 <use images/intro/native.png>
 Package pdftex.def Info: images/intro/native.png used on input line 126.
-(pdftex.def)             Requested size: 224.36092pt x 186.9678pt.
+(pdftex.def)             Requested size: 224.36092pt x 172.01215pt.
 
-<images/intro/observed.png, id=529, 451.6875pt x 376.40625pt>
+<images/intro/observed.png, id=529, 602.25pt x 463.7325pt>
 File: images/intro/observed.png Graphic file (type png)
 
 <use images/intro/observed.png>
 Package pdftex.def Info: images/intro/observed.png used on input line 133.
-(pdftex.def)             Requested size: 224.36092pt x 186.9678pt.
+(pdftex.def)             Requested size: 224.36092pt x 172.76003pt.
 
-<images/intro/desired.png, id=530, 451.6875pt x 376.40625pt>
+<images/intro/desired.png, id=530, 602.25pt x 464.73625pt>
 File: images/intro/desired.png Graphic file (type png)
 
 <use images/intro/desired.png>
 Package pdftex.def Info: images/intro/desired.png used on input line 140.
-(pdftex.def)             Requested size: 224.36092pt x 186.9678pt.
+(pdftex.def)             Requested size: 224.36092pt x 173.13396pt.
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 152.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 152.
  [4 <./images/intro/native.png> <./images/intro/observed.png> <./images/intro/d
 esired.png>]
-<images/intro/issues_in_hypervisor.png, id=546, 1259.70625pt x 926.46124pt>
+<images/intro/issues_in_hypervisor.png, id=543, 1259.70625pt x 926.46124pt>
 File: images/intro/issues_in_hypervisor.png Graphic file (type png)
 
 <use images/intro/issues_in_hypervisor.png>
@@ -760,7 +776,7 @@ Package pdftex.def Info: images/intro/issues_in_hypervisor.png used on input li
 ne 225.
 (pdftex.def)             Requested size: 373.93962pt x 275.01422pt.
  [5]
-<images/intro/hc.png, id=562, 1208.515pt x 930.47626pt>
+<images/intro/hc.png, id=559, 1208.515pt x 930.47626pt>
 File: images/intro/hc.png Graphic file (type png)
 
 <use images/intro/hc.png>
@@ -776,7 +792,7 @@ Chapter 2.
 
 
 
-] <images/background/container_vs_vm.png, id=607, 1397.22pt x 643.34471pt>
+] <images/background/container_vs_vm.png, id=604, 1397.22pt x 643.34471pt>
 File: images/background/container_vs_vm.png Graphic file (type png)
 
 <use images/background/container_vs_vm.png>
@@ -784,7 +800,7 @@ Package pdftex.def Info: images/background/container_vs_vm.png used on input li
 ne 62.
 (pdftex.def)             Requested size: 467.42276pt x 215.21994pt.
 
-<images/background/control_groups.png, id=612, 1982.4653pt x 1537.50882pt>
+<images/background/control_groups.png, id=609, 1982.4653pt x 1537.50882pt>
 File: images/background/control_groups.png Graphic file (type png)
 
 <use images/background/control_groups.png>
@@ -797,7 +813,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
  [11 <./images/background/container_vs_vm.png>]
-<images/background/page_mapping.png, id=636, 1045.78941pt x 647.59589pt>
+<images/background/page_mapping.png, id=633, 1045.78941pt x 647.59589pt>
 File: images/background/page_mapping.png Graphic file (type png)
 
 <use images/background/page_mapping.png>
@@ -805,7 +821,7 @@ Package pdftex.def Info: images/background/page_mapping.png used on input line
 148.
 (pdftex.def)             Requested size: 373.93962pt x 231.5533pt.
  [12 <./images/background/control_groups.png>]
-<images/background/reclamation_call_trace.jpg, id=642, 1085.05376pt x 1107.1362
+<images/background/reclamation_call_trace.jpg, id=639, 1085.05376pt x 1107.1362
 5pt>
 File: images/background/reclamation_call_trace.jpg Graphic file (type jpg)
  <use images/background/reclamation_call_trace.jpg>
@@ -813,7 +829,7 @@ Package pdftex.def Info: images/background/reclamation_call_trace.jpg used on i
 nput line 179.
 (pdftex.def)             Requested size: 467.42276pt x 476.93777pt.
 
-<images/background/high_level_Reclamation.png, id=643, 1194.58058pt x 813.39177
+<images/background/high_level_Reclamation.png, id=640, 1194.58058pt x 813.39177
 pt>
 File: images/background/high_level_Reclamation.png Graphic file (type png)
  <use images/background/high_level_Reclamation.png>
@@ -823,7 +839,7 @@ nput line 186.
  [13 <./images/background/page_mapping.png>] [14 <./images/background/reclamati
 on_call_trace.jpg>]
 [15 <./images/background/high_level_Reclamation.png>]
-<images/background/double_decker.png, id=668, 1491.5725pt x 1009.7725pt>
+<images/background/double_decker.png, id=665, 1491.5725pt x 1009.7725pt>
 File: images/background/double_decker.png Graphic file (type png)
 
 <use images/background/double_decker.png>
@@ -831,7 +847,7 @@ Package pdftex.def Info: images/background/double_decker.png used on input line
  251.
 (pdftex.def)             Requested size: 467.42276pt x 316.43138pt.
 
-<images/background/single_level_implementation.png, id=670, 857.2025pt x 803.0p
+<images/background/single_level_implementation.png, id=667, 857.2025pt x 803.0p
 t>
 File: images/background/single_level_implementation.png Graphic file (type png)
 
@@ -870,7 +886,7 @@ Missing character: There is no ‚ in font cmr10-25ls!
 Missing character: There is no Ä in font cmr10-25ls!
 Missing character: There is no ù in font cmr10-25ls!
 
-<images/controller_issues/native_testbed.png, id=759, 610.75235pt x 627.75706pt
+<images/controller_issues/native_testbed.png, id=756, 610.75235pt x 627.75706pt
 >
 File: images/controller_issues/native_testbed.png Graphic file (type png)
  <use images/controller_issues/native_testbed.png>
@@ -878,76 +894,76 @@ Package pdftex.def Info: images/controller_issues/native_testbed.png used on in
 put line 101.
 (pdftex.def)             Requested size: 233.71138pt x 240.21687pt.
  [22 <./images/controller_issues/native_testbed.png>] [23]
-<images/controller_issues/exceed_only/Exceed.png, id=795, 376.40625pt x 301.125
-pt>
+<images/controller_issues/exceed_only/Exceed.png, id=792, 501.875pt x 359.3425p
+t>
 File: images/controller_issues/exceed_only/Exceed.png Graphic file (type png)
  <use images/controller_issues/exceed_only/Exceed.png>
 Package pdftex.def Info: images/controller_issues/exceed_only/Exceed.png used o
 n input line 189.
-(pdftex.def)             Requested size: 224.36092pt x 179.49551pt.
+(pdftex.def)             Requested size: 224.36092pt x 160.64438pt.
 
-<images/controller_issues/exceed_only/Memory_Reclaimed.png, id=796, 376.40625pt
- x 301.125pt>
+<images/controller_issues/exceed_only/Memory_Reclaimed.png, id=793, 501.875pt x
+ 359.3425pt>
 File: images/controller_issues/exceed_only/Memory_Reclaimed.png Graphic file (t
 ype png)
  <use images/controller_issues/exceed_only/Memory_Reclaimed.png>
 Package pdftex.def Info: images/controller_issues/exceed_only/Memory_Reclaimed.
 png used on input line 196.
-(pdftex.def)             Requested size: 224.36092pt x 179.49551pt.
+(pdftex.def)             Requested size: 224.36092pt x 160.64438pt.
 
-<images/controller_issues/exceed_only/compare.png, id=797, 376.40625pt x 301.12
-5pt>
+<images/controller_issues/exceed_only/compare.png, id=794, 498.86375pt x 364.36
+125pt>
 File: images/controller_issues/exceed_only/compare.png Graphic file (type png)
  <use images/controller_issues/exceed_only/compare.png>
 Package pdftex.def Info: images/controller_issues/exceed_only/compare.png used 
 on input line 203.
-(pdftex.def)             Requested size: 224.36092pt x 179.49551pt.
+(pdftex.def)             Requested size: 224.36092pt x 163.86653pt.
  [24 <./images/controller_issues/exceed_only/Exceed.png> <./images/controller_i
 ssues/exceed_only/Memory_Reclaimed.png> <./images/controller_issues/exceed_only
 /compare.png>]
-<images/controller_issues/global_lru/mu.png, id=813, 376.40625pt x 301.125pt>
+<images/controller_issues/global_lru/mu.png, id=808, 501.875pt x 361.35pt>
 File: images/controller_issues/global_lru/mu.png Graphic file (type png)
 
 <use images/controller_issues/global_lru/mu.png>
 Package pdftex.def Info: images/controller_issues/global_lru/mu.png used on inp
 ut line 243.
-(pdftex.def)             Requested size: 224.36092pt x 179.49551pt.
+(pdftex.def)             Requested size: 224.36092pt x 161.54184pt.
 
-<images/controller_issues/global_lru/compare.png, id=814, 376.40625pt x 301.125
-pt>
+<images/controller_issues/global_lru/compare.png, id=809, 501.875pt x 365.365pt
+>
 File: images/controller_issues/global_lru/compare.png Graphic file (type png)
  <use images/controller_issues/global_lru/compare.png>
 Package pdftex.def Info: images/controller_issues/global_lru/compare.png used o
 n input line 250.
-(pdftex.def)             Requested size: 224.36092pt x 179.49551pt.
+(pdftex.def)             Requested size: 224.36092pt x 163.33675pt.
  [25 <./images/controller_issues/global_lru/mu.png> <./images/controller_issues
 /global_lru/compare.png>]
-<images/controller_issues/workload/1/Exceed.png, id=830, 376.40625pt x 301.125p
-t>
+<images/controller_issues/workload/1/Exceed.png, id=822, 501.875pt x 361.35pt>
 File: images/controller_issues/workload/1/Exceed.png Graphic file (type png)
- <use images/controller_issues/workload/1/Exceed.png>
+
+<use images/controller_issues/workload/1/Exceed.png>
 Package pdftex.def Info: images/controller_issues/workload/1/Exceed.png used on
  input line 292.
-(pdftex.def)             Requested size: 224.36092pt x 179.49551pt.
+(pdftex.def)             Requested size: 224.36092pt x 161.54184pt.
 
-<images/controller_issues/workload/2/Exceed.png, id=831, 376.40625pt x 301.125p
-t>
+<images/controller_issues/workload/2/Exceed.png, id=823, 501.875pt x 367.3725pt
+>
 File: images/controller_issues/workload/2/Exceed.png Graphic file (type png)
  <use images/controller_issues/workload/2/Exceed.png>
 Package pdftex.def Info: images/controller_issues/workload/2/Exceed.png used on
  input line 299.
-(pdftex.def)             Requested size: 224.36092pt x 179.49551pt.
+(pdftex.def)             Requested size: 224.36092pt x 164.23419pt.
 LaTeX Font Info:    Try loading font information for OML+cmr on input line 315.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
-File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 315.
  [26 <./images/controller_issues/workload/1/Exceed.png> <./images/controller_is
 sues/workload/2/Exceed.png>]
-<images/controller_issues/derivative_setup.png, id=848, 1191.74648pt x 685.8564
+<images/controller_issues/derivative_setup.png, id=839, 1191.74648pt x 685.8564
 8pt>
 File: images/controller_issues/derivative_setup.png Graphic file (type png)
  <use images/controller_issues/derivative_setup.png>
@@ -955,7 +971,7 @@ Package pdftex.def Info: images/controller_issues/derivative_setup.png used on
 input line 354.
 (pdftex.def)             Requested size: 467.42276pt x 269.00041pt.
  [27 <./images/controller_issues/derivative_setup.png>]
-<images/controller_issues/derivative_issues/memory_usage_redis.png, id=865, 401
+<images/controller_issues/derivative_issues/memory_usage_redis.png, id=860, 401
 .5pt x 301.125pt>
 File: images/controller_issues/derivative_issues/memory_usage_redis.png Graphic
  file (type png)
@@ -965,7 +981,7 @@ Package pdftex.def Info: images/controller_issues/derivative_issues/memory_usag
 e_redis.png used on input line 444.
 (pdftex.def)             Requested size: 224.36092pt x 168.27504pt.
 
-<images/controller_issues/derivative_issues/exceed_redis.png, id=866, 401.5pt x
+<images/controller_issues/derivative_issues/exceed_redis.png, id=861, 401.5pt x
  301.125pt>
 File: images/controller_issues/derivative_issues/exceed_redis.png Graphic file 
 (type png)
@@ -974,7 +990,7 @@ Package pdftex.def Info: images/controller_issues/derivative_issues/exceed_redi
 s.png used on input line 449.
 (pdftex.def)             Requested size: 224.36092pt x 168.27504pt.
 
-<images/controller_issues/derivative_issues/mongo_throughput.png, id=867, 401.5
+<images/controller_issues/derivative_issues/mongo_throughput.png, id=862, 401.5
 pt x 301.125pt>
 File: images/controller_issues/derivative_issues/mongo_throughput.png Graphic f
 ile (type png)
@@ -984,7 +1000,7 @@ Package pdftex.def Info: images/controller_issues/derivative_issues/mongo_throu
 ghput.png used on input line 455.
 (pdftex.def)             Requested size: 224.36092pt x 168.27504pt.
 
-<images/controller_issues/derivative_issues/memory_ratio.png, id=868, 401.5pt x
+<images/controller_issues/derivative_issues/memory_ratio.png, id=863, 401.5pt x
  301.125pt>
 File: images/controller_issues/derivative_issues/memory_ratio.png Graphic file 
 (type png)
@@ -1001,7 +1017,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 442--464
 <./images/controller_issues/derivative_issues/exceed_redis.png> <./images/contr
 oller_issues/derivative_issues/mongo_throughput.png> <./images/controller_issue
 s/derivative_issues/memory_ratio.png>] [30] [31] [32]
-<images/mem_sol/sl=hl_mtp/memory_usage.png, id=941, 401.5pt x 301.125pt>
+<images/mem_sol/sl=hl_mtp/memory_usage.png, id=931, 401.5pt x 301.125pt>
 File: images/mem_sol/sl=hl_mtp/memory_usage.png Graphic file (type png)
 
 <use images/mem_sol/sl=hl_mtp/memory_usage.png>
@@ -1018,7 +1034,7 @@ Underfull \hbox (badness 2376) in paragraph at lines 676--676
 []\OT1/cmr/m/n/10/-25ls (a) |\OT1/cmr/m/n/9/-25ls Mem-ory us-age by Mon-godb
  []
 
-<images/mem_sol/sl!=hl_mtp/memory_usage.png, id=942, 401.5pt x 301.125pt>
+<images/mem_sol/sl!=hl_mtp/memory_usage.png, id=932, 401.5pt x 301.125pt>
 File: images/mem_sol/sl!=hl_mtp/memory_usage.png Graphic file (type png)
 
 <use images/mem_sol/sl!=hl_mtp/memory_usage.png>
@@ -1035,7 +1051,7 @@ Underfull \hbox (badness 2165) in paragraph at lines 682--682
 []\OT1/cmr/m/n/10/-25ls (b) |\OT1/cmr/m/n/9/-25ls Mem-ory us-age by Mon-godb
  []
 
-<images/mem_sol/memory_ratio_base.png, id=943, 401.5pt x 301.125pt>
+<images/mem_sol/memory_ratio_base.png, id=933, 401.5pt x 301.125pt>
 File: images/mem_sol/memory_ratio_base.png Graphic file (type png)
 
 <use images/mem_sol/memory_ratio_base.png>
@@ -1047,7 +1063,7 @@ Overfull \hbox (20.36891pt too wide) in paragraph at lines 687--688
 [][] 
  []
 
-<images/mem_sol/mongo_before.png, id=944, 401.5pt x 301.125pt>
+<images/mem_sol/mongo_before.png, id=934, 401.5pt x 301.125pt>
 File: images/mem_sol/mongo_before.png Graphic file (type png)
 
 <use images/mem_sol/mongo_before.png>
@@ -1059,7 +1075,7 @@ Overfull \hbox (7.19046pt too wide) in paragraph at lines 693--694
 [][] 
  []
 
-<images/mem_sol/mongo_after.png, id=945, 401.5pt x 301.125pt>
+<images/mem_sol/mongo_after.png, id=935, 401.5pt x 301.125pt>
 File: images/mem_sol/mongo_after.png Graphic file (type png)
 
 <use images/mem_sol/mongo_after.png>
@@ -1084,32 +1100,31 @@ Overfull \hbox (7.02626pt too wide) in paragraph at lines 674--704
 [33 <./images/mem_sol/sl=hl_mtp/memory_usage.png> <./images/mem_sol/sl!=hl_mtp/
 memory_usage.png> <./images/mem_sol/memory_ratio_base.png> <./images/mem_sol/mo
 ngo_before.png> <./images/mem_sol/mongo_after.png>]
-<images/mem_sol/gold/memory_usage.png, id=959, 401.5pt x 301.125pt>
+<images/mem_sol/gold/memory_usage.png, id=949, 401.5pt x 301.125pt>
 File: images/mem_sol/gold/memory_usage.png Graphic file (type png)
 
 <use images/mem_sol/gold/memory_usage.png>
 Package pdftex.def Info: images/mem_sol/gold/memory_usage.png used on input lin
 e 747.
 (pdftex.def)             Requested size: 281.04808pt x 210.78606pt.
- [34]
-<images/mem_sol/memory_ratio.png, id=968, 401.5pt x 301.125pt>
+ [34 <./images/mem_sol/gold/memory_usage.png>] <images/mem_sol/memory_ratio.png
+, id=958, 401.5pt x 301.125pt>
 File: images/mem_sol/memory_ratio.png Graphic file (type png)
 
 <use images/mem_sol/memory_ratio.png>
 Package pdftex.def Info: images/mem_sol/memory_ratio.png used on input line 773
 .
 (pdftex.def)             Requested size: 281.04808pt x 210.78606pt.
-) [35 <./images/mem_sol/gold/memory_usage.png> <./images/mem_sol/memory_ratio.p
-ng>]
+) [35 <./images/mem_sol/memory_ratio.png>]
 \openout2 = `5_double_decker/dd.aux'.
 
- (./5_double_decker/dd.tex
+(./5_double_decker/dd.tex
 Chapter 5.
 [36
 
 
 
-] <images/correctness/exp_setup.png, id=982, 637.38126pt x 379.4175pt>
+] <images/correctness/exp_setup.png, id=972, 637.38126pt x 379.4175pt>
 File: images/correctness/exp_setup.png Graphic file (type png)
 
 <use images/correctness/exp_setup.png>
@@ -1124,7 +1139,7 @@ Missing character: There is no ‚ in font cmr10-25ls!
 Missing character: There is no Ä in font cmr10-25ls!
 Missing character: There is no ù in font cmr10-25ls!
  [38]
-<images/dd_hybrid_motivation/throughput.png, id=1011, 752.8125pt x 602.25pt>
+<images/dd_hybrid_motivation/throughput.png, id=1001, 752.8125pt x 602.25pt>
 File: images/dd_hybrid_motivation/throughput.png Graphic file (type png)
 
 <use images/dd_hybrid_motivation/throughput.png>
@@ -1132,7 +1147,7 @@ Package pdftex.def Info: images/dd_hybrid_motivation/throughput.png used on inp
 ut line 152.
 (pdftex.def)             Requested size: 263.48831pt x 210.79065pt.
 
-<images/dd_decentrailze_motivation/throughput.png, id=1013, 602.25pt x 376.4062
+<images/dd_decentrailze_motivation/throughput.png, id=1003, 602.25pt x 376.4062
 5pt>
 File: images/dd_decentrailze_motivation/throughput.png Graphic file (type png)
  <use images/dd_decentrailze_motivation/throughput.png>
@@ -1141,7 +1156,7 @@ on input line 168.
 (pdftex.def)             Requested size: 361.35278pt x 225.84547pt.
  [39 <./images/dd_hybrid_motivation/throughput.png>] [40 <./images/dd_decentrai
 lze_motivation/throughput.png>]
-</home/prashanth/Stage-2/Report/images/dd_design/architecture.png, id=1036, 173
+</home/prashanth/Stage-2/Report/images/dd_design/architecture.png, id=1026, 173
 3.47626pt x 1481.535pt>
 File: /home/prashanth/Stage-2/Report/images/dd_design/architecture.png Graphic 
 file (type png)
@@ -1151,7 +1166,7 @@ Package pdftex.def Info: /home/prashanth/Stage-2/Report/images/dd_design/archit
 ecture.png used on input line 215.
 (pdftex.def)             Requested size: 450.6932pt x 385.19002pt.
  [41 </home/prashanth/Stage-2/Report/images/dd_design/architecture.png>]
-</home/prashanth/Stage-2/Report/images/dd_design/movement.png, id=1043, 1217.54
+</home/prashanth/Stage-2/Report/images/dd_design/movement.png, id=1033, 1217.54
 875pt x 779.91376pt>
 File: /home/prashanth/Stage-2/Report/images/dd_design/movement.png Graphic file
  (type png)
@@ -1161,7 +1176,7 @@ Package pdftex.def Info: /home/prashanth/Stage-2/Report/images/dd_design/moveme
 nt.png used on input line 260.
 (pdftex.def)             Requested size: 350.56706pt x 224.55072pt.
 
-</home/prashanth/Stage-2/Report/images/dd_design/implementation.png, id=1046, 8
+</home/prashanth/Stage-2/Report/images/dd_design/implementation.png, id=1036, 8
 57.2025pt x 803.0pt>
 File: /home/prashanth/Stage-2/Report/images/dd_design/implementation.png Graphi
 c file (type png)
@@ -1175,18 +1190,18 @@ entation.png used on input line 286.
 [44 </home/prashanth/Stage-2/Report/images/dd_design/implementation.png>]
 [45] [46]
 Package epstopdf Info: Source file: <images/dd_hybrid_eval/webserver.eps>
-(epstopdf)                    date: 2017-06-29 02:05:51
+(epstopdf)                    date: 2017-06-29 02:43:59
 (epstopdf)                    size: 20471 bytes
 (epstopdf)             Output file: <images/dd_hybrid_eval/webserver-eps-conver
 ted-to.pdf>
-(epstopdf)                    date: 2017-06-29 02:05:51
+(epstopdf)                    date: 2017-06-29 11:34:29
 (epstopdf)                    size: 7296 bytes
-(epstopdf)             Command: <epstopdf --outfile=images/dd_hybrid_eval/webse
-rver-eps-converted-to.pdf images/dd_hybrid_eval/webserver.eps>
+(epstopdf)             Command: <repstopdf --outfile=images/dd_hybrid_eval/webs
+erver-eps-converted-to.pdf images/dd_hybrid_eval/webserver.eps>
 (epstopdf)             \includegraphics on input line 469.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/dd_hybrid_eval/webserver-eps-converted-to.pdf, id=1102, 361.35pt x 252.
+<images/dd_hybrid_eval/webserver-eps-converted-to.pdf, id=1092, 361.35pt x 252.
 945pt>
 File: images/dd_hybrid_eval/webserver-eps-converted-to.pdf Graphic file (type p
 df)
@@ -1195,7 +1210,7 @@ Package pdftex.def Info: images/dd_hybrid_eval/webserver-eps-converted-to.pdf u
 sed on input line 469.
 (pdftex.def)             Requested size: 229.03972pt x 160.32881pt.
 
-<images/dd_hybrid_eval/throughput.png, id=1103, 602.25pt x 451.6875pt>
+<images/dd_hybrid_eval/throughput.png, id=1093, 602.25pt x 451.6875pt>
 File: images/dd_hybrid_eval/throughput.png Graphic file (type png)
 
 <use images/dd_hybrid_eval/throughput.png>
@@ -1205,18 +1220,18 @@ e 476.
  [47 <./images/dd_hybrid_eval/webserver-eps-converted-to.pdf> <./images/dd_hybr
 id_eval/throughput.png>] [48]
 Package epstopdf Info: Source file: <images/dd_sdc_plot/sdc_dd.eps>
-(epstopdf)                    date: 2017-06-29 02:05:45
+(epstopdf)                    date: 2017-06-29 02:43:59
 (epstopdf)                    size: 23142 bytes
 (epstopdf)             Output file: <images/dd_sdc_plot/sdc_dd-eps-converted-to
 .pdf>
-(epstopdf)                    date: 2017-06-29 02:05:45
+(epstopdf)                    date: 2017-06-29 02:43:59
 (epstopdf)                    size: 8087 bytes
-(epstopdf)             Command: <epstopdf --outfile=images/dd_sdc_plot/sdc_dd-e
-ps-converted-to.pdf images/dd_sdc_plot/sdc_dd.eps>
+(epstopdf)             Command: <repstopdf --outfile=images/dd_sdc_plot/sdc_dd-
+eps-converted-to.pdf images/dd_sdc_plot/sdc_dd.eps>
 (epstopdf)             \includegraphics on input line 548.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/dd_sdc_plot/sdc_dd-eps-converted-to.pdf, id=1134, 361.35pt x 252.945pt>
+<images/dd_sdc_plot/sdc_dd-eps-converted-to.pdf, id=1124, 361.35pt x 252.945pt>
 File: images/dd_sdc_plot/sdc_dd-eps-converted-to.pdf Graphic file (type pdf)
 <use images/dd_sdc_plot/sdc_dd-eps-converted-to.pdf>
 Package pdftex.def Info: images/dd_sdc_plot/sdc_dd-eps-converted-to.pdf used on
@@ -1268,13 +1283,13 @@ Package rerunfilecheck Info: File `mtp_report.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 176.
  ) 
 Here is how much of TeX's memory you used:
- 12594 strings out of 495028
- 199938 string characters out of 6181498
- 328787 words of memory out of 5000000
- 14767 multiletter control sequences out of 15000+600000
+ 12671 strings out of 493029
+ 201543 string characters out of 6136234
+ 334283 words of memory out of 5000000
+ 15159 multiletter control sequences out of 15000+600000
  42960 words of font info for 292 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 53i,18n,92p,707b,633s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 1141 hyphenation exceptions out of 8191
+ 53i,18n,92p,707b,637s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
@@ -1289,9 +1304,9 @@ amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on mtp_report.pdf (65 pages, 2046932 bytes).
+Output written on mtp_report.pdf (65 pages, 2063576 bytes).
 PDF statistics:
- 1335 PDF objects out of 1440 (max. 8388607)
+ 1325 PDF objects out of 1440 (max. 8388607)
  1170 compressed objects within 12 object streams
  413 named destinations out of 1000 (max. 500000)
  50976 words of extra memory for PDF output out of 51595 (max. 10000000)
