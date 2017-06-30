@@ -679,7 +679,7 @@ containers. These weights are added using the newly added \textit{weight} parame
 	~
 	\begin{subfigure}{0.30\textwidth}
 	  \includegraphics[scale=0.4]{images/mem_sol/sl!=hl_mtp/memory_usage.png}
-	  \caption{\footnotesize Memory usage by Mongodb containers when SL!=HL}
+	  \caption{\footnotesize Memory usage by Mongodb containers when SL$\neq$HL}
 	  \label{mem_sol_sl!=hl_mongo}
 	\end{subfigure}	
 	~
@@ -708,7 +708,7 @@ containers. These weights are added using the newly added \textit{weight} parame
     \subsection{Effectiveness of our controller}
     
       We have tested the effectiveness of our approach in both cases: (i) Soft Limit is equal to Hard Limit (SL=HL) and (ii) Soft Limit is not 
-equal to Hard  Limit (SL!=HL), because memory reclamation methods for both cases are different as mentioned in Section~\ref{sec:mem_management}. 
+equal to Hard  Limit (SL$\neq$HL), because memory reclamation methods for both cases are different as mentioned in Section~\ref{sec:mem_management}. 
 
 Figure \ref{mem_sol_sl=hl_mongo} and Figure \ref{mem_sol_sl!=hl_mongo} depicts the memory usage patterns for \mongodb{} containers for cases 
 (i) and (ii) respectively. We observe a gradual decrease in memory allocated to the low and high priority containers in both cases once the 
@@ -733,7 +733,7 @@ enhances application performance for containers.
       Consider the application specific differentiated allocation policy specified in Section 
 \ref{sec:memory_distribution} where we would like to prioritize a container from being 
 victimized. Let's call this container as a gold container. We have used same set-up 
-(SL!=HL) to test this. We have prioritized the gold container using the higher weights 
+(SL$\neq$HL) to test this. We have prioritized the gold container using the higher weights 
 (Weights of the order of $10^{3}$ relatively higher) to avoid reclamation from it unless it's necessary.
 There are also other containers running inside the VM with lower QOS and let's call them silver containers.
 
@@ -744,8 +744,8 @@ service QOS containers.
 
 \begin{figure}
   \centering
-  \includegraphics[scale=0.7]{images/mem_sol/gold/memory_usage.png}
-  \caption{\footnotesize Memory usage plot showing implication of relative weights provide differential QOS guarantees}
+  \includegraphics[scale=0.6]{images/mem_sol/gold/memory_usage.png}
+  \caption{Memory usage plot showing implication of relative weights provide differential QOS guarantees}
   \label{priority_cont}
 \end{figure}
     
@@ -770,7 +770,7 @@ implementation and this applies to all the experiments that we have run with our
 
 \begin{figure}
   \centering
-  \includegraphics[scale=0.7]{images/mem_sol/memory_ratio.png}
-  \caption{\footnotesize Memory usage ratio with different reclamation chunk size}
+  \includegraphics[scale=0.6]{images/mem_sol/memory_ratio.png}
+  \caption{Memory usage ratio with different reclamation chunk size}
   \label{mem_ratio}
 \end{figure}
